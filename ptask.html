@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Basic DataGrid - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="JS/jquery-easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="JS/jquery-easyui/themes/icon.css">
+	<script type="text/javascript" src="JS/jquery-easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="JS/jquery-easyui/jquery.easyui.min.js"></script>
+    <script src="JS/common2.js" type="text/javascript"></script> 
+    
+	<script>
+	    function loadwork(rowIndex, rowData) {
+	        //动态加载标题和数据
+	       // alert(rowIndex);
+	        $("#pworktable").datagrid({
+	            class: "easyui-datagrid"   
+	        });
+	        $.ajax({
+                url: "ajax/handlericmo.ashx?o=work&rowindex="+rowIndex,
+                type: "post",
+                dataType: "text",
+                success: function (result) {
+                    map = $.parseJSON(result);
+                    //alert(result);
+                   // alert(result.title);
+                    //alert(map.total);
+                   // alert("maprows" + map.rows[0].FBillNo);
+                    //alert("maptitlw" + map.titleds[0].toString()); 
+                   // $("#pworktable").datagrid({
+                     //   columns: [map.title]    //动态取标题
+                   // });
+                  //  $("#pworktable").datagrid("loadData", result.rows);  //动态取数据
+                    if (map.rows) {
+                          $("#pworktable").datagrid({
+                              columns: [map.titleds]    //动态取标题
+                            });
+
+                        $('#pworktable').datagrid('loadData', map.rows); //将返回的数据绑定到datagrid  
+
+                    } else {
+                        $.messager.alert('Info', "没有找到记录！", 'info');
+                    }  
+  
+                }
+            });
+        }
+
+
+        $(function () {
+            $('#ptasktable').datagrid({
+                onDblClickRow: function (rowIndex, rowData) {
+                    $('#w').window('open');
+                    loadwork(rowIndex, rowData);
+                }
+            });
+        });
+    </script> 
+</head>
+
+ 
+<body>
+	<h2>生产任务单</h2>
+	<p></p>
+	<div style="margin:20px 0;"></div>
+	
+	<table id="ptasktable" class="easyui-datagrid" title="单据" style="width:98%;height:500px"
+			data-options="singleSelect:true,collapsible:true,url:'Ajax/HandlerICMO.ashx?o=ptask',method:'get'">
+		<thead>
+			<tr>
+				<th data-options="field:'FBillNo',width:70">编号</th>
+                <th data-options="field:'',width:80">制单日期</th>
+				<th data-options="field:'FStatus',width:60">订单状态</th>
+                <th data-options="field:'',width:60">关闭标志</th>
+                 <th data-options="field:'FName',width:80,align:'center'">物料名称</th>
+                  <th data-options="field:'FModel',width:80,align:'center'">规格型号</th>
+				<th data-options="field:'FQty',width:70,align:'right'">计划数量</th>
+				<th data-options="field:'FCommitQty',width:70,align:'right'">实际数量</th>
+                <th data-options="field:' ',width:70,align:'right'">入库数量</th>
+                <th data-options="field:'FPlanCommitDate',width:80, formatter:jsonDateFormat" >计划开工日期</th>
+			 <th data-options="field:'FPlanFinishDate',width:80,align:'center', formatter:jsonDateFormat">计划完工日期</th>
+                <th data-options="field:' ',width:80,align:'right', formatter:jsonDateFormat">单据下达日期</th>
+                <th data-options="field:'FStartDate',width:80,align:'center', formatter:jsonDateFormat">实际开工日期</th>
+                <th data-options="field:'FFinishDate',width:80,align:'center', formatter:jsonDateFormat">实际完工日期</th>
+                <th data-options="field:'FType',width:60,align:'center'">表单类型</th>
+                <th data-options="field:' ',width:60,align:'center'">是否领料</th>
+                <th data-options="field:'FItemID',width:60,align:'center'">物料代码</th>
+         			</tr>
+		</thead>
+	</table>
+	
+<!-- 	<div style="margin:20px 0;">
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="$('#w').window('open')">Open</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="$('#w').window('close')">Close</a>
+	</div> -->
+	
+	<div id="w" class="easyui-window" title="Custom Window Tools" closed="true" data-options="iconCls:'icon-save',minimizable:false,tools:'#tt'" style="width:800px;height:400px;padding:10px;">
+		The window content.
+		<table id="pworktable" data-options="rownumbers:true, singleSelect:true, autoRowHeight:false, pagination:true, resizeHandle:'right'">
+ <thead> 
+		<tr>
+			<th data-options="field:'FBillNo',width:70">编号</th>
+               <th data-options="field:'',width:80">产品名称</th>
+			<th data-options="field:'FStatus',width:60">规格型号</th>
+                <th data-options="field:'',width:60">数量</th>
+                 <th data-options="field:'FName',width:80,align:'center'">计划开工日期</th>
+                  <th data-options="field:'FModel',width:80,align:'center'">计划完工日期</th>
+				<th data-options="field:'FQty',width:70,align:'right'">审核日期</th>
+				<th data-options="field:'FCommitQty',width:70,align:'right'">工序名称</th>
+                <th data-options="field:' ',width:70,align:'right'">单据状态</th>				
+                <th data-options="field:'FPlanCommitDate',width:80, formatter:jsonDateFormat" >工作中心名称</th>
+			<th data-options="field:'FPlanFinishDate',width:80,align:'center', formatter:jsonDateFormat">运行时间</th>
+                <th data-options="field:' ',width:80,align:'right', formatter:jsonDateFormat">设计验证开始日期</th>
+                <th data-options="field:'FStartDate',width:80,align:'center', formatter:jsonDateFormat">设计验证结束日期</th>
+                <th data-options="field:'FFinishDate',width:80,align:'center', formatter:jsonDateFormat">制图开始日期</th>
+                <th data-options="field:'FType',width:60,align:'center'">制图结束日期</th>
+                <th data-options="field:' ',width:60,align:'center'">工艺开始日期</th>
+                <th data-options="field:'FItemID',width:60,align:'center'">工艺结束日期</th>
+         </tr>
+
+ </thead>  </table>
+	</div>
+	<div id="tt">
+		<a href="javascript:void(0)" class="icon-add" onclick="javascript:alert('add')"></a>
+		<a href="javascript:void(0)" class="icon-edit" onclick="javascript:alert('edit')"></a>
+		<a href="javascript:void(0)" class="icon-cut" onclick="javascript:alert('cut')"></a>
+		<a href="javascript:void(0)" class="icon-help" onclick="javascript:alert('help')"></a>
+	</div>
+
+
+ <div style="margin:20px 0;">  </div>
+</body>
+</html>
