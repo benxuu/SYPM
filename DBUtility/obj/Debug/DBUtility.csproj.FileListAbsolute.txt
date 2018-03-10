@@ -36,3 +36,7 @@ E:\Seafile\科研资料\双益机械\MgtCommon\DBUtility\bin\Debug\DBUtility.pdb
 E:\Seafile\科研资料\双益机械\MgtCommon\DBUtility\obj\Debug\ResolveAssemblyReference.cache
 E:\Seafile\科研资料\双益机械\MgtCommon\DBUtility\obj\Debug\DBUtility.dll
 E:\Seafile\科研资料\双益机械\MgtCommon\DBUtility\obj\Debug\DBUtility.pdb
+D:\github\SYPM\DBUtility\bin\Debug\DBUtility.dll
+D:\github\SYPM\DBUtility\bin\Debug\DBUtility.pdb
+D:\github\SYPM\DBUtility\obj\Debug\DBUtility.dll
+D:\github\SYPM\DBUtility\obj\Debug\DBUtility.pdb

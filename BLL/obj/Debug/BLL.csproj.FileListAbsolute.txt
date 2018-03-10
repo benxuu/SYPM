@@ -86,3 +86,14 @@ E:\Seafile\科研资料\双益机械\MgtCommon\BLL\bin\Debug\DBUtility.pdb
 E:\Seafile\科研资料\双益机械\MgtCommon\BLL\obj\Debug\ResolveAssemblyReference.cache
 E:\Seafile\科研资料\双益机械\MgtCommon\BLL\obj\Debug\BLL.dll
 E:\Seafile\科研资料\双益机械\MgtCommon\BLL\obj\Debug\BLL.pdb
+D:\github\SYPM\BLL\bin\Debug\BLL.dll
+D:\github\SYPM\BLL\bin\Debug\BLL.pdb
+D:\github\SYPM\BLL\bin\Debug\DAL.dll
+D:\github\SYPM\BLL\bin\Debug\Model.dll
+D:\github\SYPM\BLL\bin\Debug\DBUtility.dll
+D:\github\SYPM\BLL\bin\Debug\DAL.pdb
+D:\github\SYPM\BLL\bin\Debug\Model.pdb
+D:\github\SYPM\BLL\bin\Debug\DBUtility.pdb
+D:\github\SYPM\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\github\SYPM\BLL\obj\Debug\BLL.dll
+D:\github\SYPM\BLL\obj\Debug\BLL.pdb

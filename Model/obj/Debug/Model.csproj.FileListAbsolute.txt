@@ -36,3 +36,7 @@ E:\Seafile\科研资料\双益机械\MgtCommon\Model\obj\Debug\Model.dll
 E:\Seafile\科研资料\双益机械\MgtCommon\Model\obj\Debug\Model.pdb
 E:\Seafile\科研资料\双益机械\MgtCommon\Model\bin\Debug\Model.dll
 E:\Seafile\科研资料\双益机械\MgtCommon\Model\bin\Debug\Model.pdb
+D:\github\SYPM\Model\obj\Debug\Model.dll
+D:\github\SYPM\Model\obj\Debug\Model.pdb
+D:\github\SYPM\Model\bin\Debug\Model.dll
+D:\github\SYPM\Model\bin\Debug\Model.pdb

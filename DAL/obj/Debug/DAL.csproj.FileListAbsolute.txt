@@ -70,3 +70,12 @@ E:\Seafile\科研资料\双益机械\MgtCommon\DAL\bin\Debug\Model.pdb
 E:\Seafile\科研资料\双益机械\MgtCommon\DAL\obj\Debug\ResolveAssemblyReference.cache
 E:\Seafile\科研资料\双益机械\MgtCommon\DAL\obj\Debug\DAL.dll
 E:\Seafile\科研资料\双益机械\MgtCommon\DAL\obj\Debug\DAL.pdb
+D:\github\SYPM\DAL\bin\Debug\DAL.dll
+D:\github\SYPM\DAL\bin\Debug\DAL.pdb
+D:\github\SYPM\DAL\bin\Debug\DBUtility.dll
+D:\github\SYPM\DAL\bin\Debug\Model.dll
+D:\github\SYPM\DAL\bin\Debug\DBUtility.pdb
+D:\github\SYPM\DAL\bin\Debug\Model.pdb
+D:\github\SYPM\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\github\SYPM\DAL\obj\Debug\DAL.dll
+D:\github\SYPM\DAL\obj\Debug\DAL.pdb

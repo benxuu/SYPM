@@ -7,6 +7,6 @@ namespace Model
 {
     class work
     {
-        public string 
-    }
+       // public string work;
+    };
 }
