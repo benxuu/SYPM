@@ -1,3 +1,4 @@
+git@github.com:benxuu/SYPM.git
 
 功能介绍：
 	采用三层架构开发，涉及技术有Ajax,Jquery等！
