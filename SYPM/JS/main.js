@@ -1,10 +1,12 @@
 ﻿var _menus = { "menus": [
-						 { "menuid": "8", "icon": "icon-sys", "menuname": "工单管理",
-						     "menus": [{ "menuid": "21", "menuname": "生产任务单", "icon": "icon-nav", "url": "ptask.html" + '?t=' + Math.random() },
-									{ "menuid": "22", "menuname": "工单报表", "icon": "icon-nav", "url": "Ajax/HandlerICMO.ashx?o=ptask" + '?t=' + Math.random() },
-                                    { "menuid": "23", "menuname": "工单查询", "icon": "icon-nav", "url": "plans.html" + '?t=' + Math.random() }
+						 { "menuid": "8", "icon": "icon-sys", "menuname": "项目管理",
+						     "menus": [{ "menuid": "21", "menuname": "项目查看", "icon": "icon-nav", "url": "ptask.html" + '?t=' + Math.random() },
+									{ "menuid": "22", "menuname": "项目维护", "icon": "icon-nav", "url": "Ajax/HandlerICMO.ashx?o=ptask" + '?t=' + Math.random() },
+                                    { "menuid": "23", "menuname": "项目查询", "icon": "icon-nav", "url": "plans.html" + '?t=' + Math.random() },
+                                    { "menuid": "23", "menuname": "项目进度报表", "icon": "icon-nav", "url": "plans.html" + '?t=' + Math.random() },
+                                    { "menuid": "23", "menuname": "项目成本报表", "icon": "icon-nav", "url": "plans.html" + '?t=' + Math.random() }
 								]
-						}, { "menuid": "56", "icon": "icon-sys", "menuname": "排产管理",
+						}, { "menuid": "56", "icon": "icon-sys", "menuname": "生产管理",
 						    "menus": [{ "menuid": "31", "menuname": "添加计划", "icon": "icon-nav", "url": "plans2.html" + '?t=' + Math.random() },
 									{ "menuid": "32", "menuname": "计划排产", "icon": "icon-nav", "url": "Ajax/work.ashx" + '?t=' + Math.random() }
 								]
@@ -13,10 +15,12 @@
 									{ "menuid": "42", "menuname": "报表统计", "icon": "icon-nav", "url": "demo1.html" },
 									{ "menuid": "43", "menuname": "添加支出", "icon": "icon-nav", "url": "demo2.html" }
 								]
-						}, { "menuid": "39", "icon": "icon-sys", "menuname": "车间管理",
-						    "menus": [{ "menuid": "51", "menuname": "产品分类", "icon": "icon-nav", "url": "demo.html" },
-									{ "menuid": "52", "menuname": "工艺列表", "icon": "icon-nav", "url": "demo1.html" },
-									{ "menuid": "53", "menuname": "商品订单", "icon": "icon-nav", "url": "demo2.html" }
+						}, { "menuid": "39", "icon": "icon-sys", "menuname": "系统设置",
+						    "menus": [{ "menuid": "51", "menuname": "用户管理", "icon": "icon-nav", "url": "demo.html" },
+									{ "menuid": "52", "menuname": "部门管理", "icon": "icon-nav", "url": "demo1.html" },
+									{ "menuid": "53", "menuname": "客户管理", "icon": "icon-nav", "url": "demo2.html" },
+                                    { "menuid": "54", "menuname": "供应商管理", "icon": "icon-nav", "url": "demo2.html" },
+                                    { "menuid": "55", "menuname": "设备管理", "icon": "icon-nav", "url": "demo2.html" }
 								]
 						},{ "menuid": "1", "icon": "icon-sys", "menuname": "控制面板",
 						    "menus": [{ "menuid": "11", "menuname": "百度搜索", "icon": "icon-nav", "url": "http://www.baidu.com/" },
