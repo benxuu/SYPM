@@ -1,19 +1,28 @@
 ﻿var _menus = { "menus": [
+{ "menuid": "100", "icon": "icon-sys", "menuname": "开发测试",
+    "menus": [{ "menuid": "21", "menuname": "甘特图设计器", "icon": "icon-nav", "url": "gantt/gantt.html" + '?t=' + Math.random() },
+									{ "menuid": "22", "menuname": "甘特图", "icon": "icon-nav", "url": "gantt/gt.html" + '?t=' + Math.random() },
+                                    { "menuid": "23", "menuname": "甘特图只读", "icon": "icon-nav", "url": "gantt/ganttview.html" + '?t=' + Math.random() },
+                                    { "menuid": "24", "menuname": "项目进度报表", "icon": "icon-nav", "url": "plans.html" + '?t=' + Math.random() },
+                                    { "menuid": "25", "menuname": "项目成本报表", "icon": "icon-nav", "url": "plans.html" + '?t=' + Math.random() }
+								]
+},
 						 { "menuid": "8", "icon": "icon-sys", "menuname": "项目管理",
 						     "menus": [{ "menuid": "21", "menuname": "项目查看", "icon": "icon-nav", "url": "ptask.html" + '?t=' + Math.random() },
 									{ "menuid": "22", "menuname": "项目维护", "icon": "icon-nav", "url": "Ajax/HandlerICMO.ashx?o=ptask" + '?t=' + Math.random() },
                                     { "menuid": "23", "menuname": "项目查询", "icon": "icon-nav", "url": "plans.html" + '?t=' + Math.random() },
-                                    { "menuid": "23", "menuname": "项目进度报表", "icon": "icon-nav", "url": "plans.html" + '?t=' + Math.random() },
-                                    { "menuid": "23", "menuname": "项目成本报表", "icon": "icon-nav", "url": "plans.html" + '?t=' + Math.random() }
+                                    { "menuid": "24", "menuname": "项目进度报表", "icon": "icon-nav", "url": "plans.html" + '?t=' + Math.random() },
+                                    { "menuid": "25", "menuname": "项目成本报表", "icon": "icon-nav", "url": "plans.html" + '?t=' + Math.random() }
 								]
 						}, { "menuid": "56", "icon": "icon-sys", "menuname": "生产管理",
-						    "menus": [{ "menuid": "31", "menuname": "添加计划", "icon": "icon-nav", "url": "plans2.html" + '?t=' + Math.random() },
-									{ "menuid": "32", "menuname": "计划排产", "icon": "icon-nav", "url": "Ajax/work.ashx" + '?t=' + Math.random() }
+						    "menus": [{ "menuid": "31", "menuname": "车间信息", "icon": "icon-nav", "url": "plans2.html" + '?t=' + Math.random() },
+									{ "menuid": "32", "menuname": "排产管理", "icon": "icon-nav", "url": "Ajax/work.ashx" + '?t=' + Math.random() },
+                                    { "menuid": "33", "menuname": "委外管理", "icon": "icon-nav", "url": "Ajax/work.ashx" + '?t=' + Math.random() }
 								]
 						}, { "menuid": "28", "icon": "icon-sys", "menuname": "绩效管理",
-						    "menus": [{ "menuid": "41", "menuname": "部门任务", "icon": "icon-nav", "url": "js/jquery-easyui/demo/datagrid/cacheeditor.html" },
-									{ "menuid": "42", "menuname": "报表统计", "icon": "icon-nav", "url": "demo1.html" },
-									{ "menuid": "43", "menuname": "添加支出", "icon": "icon-nav", "url": "demo2.html" }
+						    "menus": [{ "menuid": "41", "menuname": "考评标准", "icon": "icon-nav", "url": "js/jquery-easyui/demo/datagrid/cacheeditor.html" },
+									{ "menuid": "42", "menuname": "任务进度", "icon": "icon-nav", "url": "demo1.html" },
+									{ "menuid": "43","hide":"true", "menuname": "**", "icon": "icon-nav", "url": "demo2.html" }
 								]
 						}, { "menuid": "39", "icon": "icon-sys", "menuname": "系统设置",
 						    "menus": [{ "menuid": "51", "menuname": "用户管理", "icon": "icon-nav", "url": "demo.html" },

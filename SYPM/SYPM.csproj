@@ -59,6 +59,52 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="datagrid.html" />
+    <Content Include="gantt\gantt.css" />
+    <Content Include="gantt\gantt.html" />
+    <Content Include="gantt\ganttDrawerSVG.js" />
+    <Content Include="gantt\ganttGridEditor.js" />
+    <Content Include="gantt\ganttMaster.js" />
+    <Content Include="gantt\ganttPrint.css" />
+    <Content Include="gantt\ganttTask.js" />
+    <Content Include="gantt\ganttTestSuite.js" />
+    <Content Include="gantt\ganttUtilities.js" />
+    <Content Include="gantt\ganttZoom.js" />
+    <Content Include="gantt\libs\date.js" />
+    <Content Include="gantt\libs\dialogs.js" />
+    <Content Include="gantt\libs\forms.js" />
+    <Content Include="gantt\libs\i18nJs.js" />
+    <Content Include="gantt\libs\jquery\dateField\img\next.png" />
+    <Content Include="gantt\libs\jquery\dateField\img\prev.png" />
+    <Content Include="gantt\libs\jquery\dateField\img\today.png" />
+    <Content Include="gantt\libs\jquery\dateField\jquery.dateField.css" />
+    <Content Include="gantt\libs\jquery\dateField\jquery.dateField.js" />
+    <Content Include="gantt\libs\jquery\jquery-ui.min.js" />
+    <Content Include="gantt\libs\jquery\jquery.livequery.1.1.1.min.js" />
+    <Content Include="gantt\libs\jquery\jquery.min.js" />
+    <Content Include="gantt\libs\jquery\jquery.timers.js" />
+    <Content Include="gantt\libs\jquery\JST\jquery.JST.js" />
+    <Content Include="gantt\libs\jquery\svg\jquery.svg.min.js" />
+    <Content Include="gantt\libs\jquery\svg\jquery.svgdom.1.8.js" />
+    <Content Include="gantt\libs\jquery\svg\jquery.svgdom.pack.js" />
+    <Content Include="gantt\libs\layout.js" />
+    <Content Include="gantt\libs\utilities.js" />
+    <Content Include="gantt\platform.css" />
+    <Content Include="gantt\res\alert.gif" />
+    <Content Include="gantt\res\black_70.png" />
+    <Content Include="gantt\res\closeBig.png" />
+    <Content Include="gantt\res\ganttSplitterGrip.png" />
+    <Content Include="gantt\res\hasExternalDeps.png" />
+    <Content Include="gantt\res\icons.svg" />
+    <Content Include="gantt\res\indentIcon.png" />
+    <Content Include="gantt\res\linkArrow.png" />
+    <Content Include="gantt\res\milestone.png" />
+    <Content Include="gantt\res\toggle-expand.png" />
+    <Content Include="gantt\res\toggle_collapse.png" />
+    <Content Include="gantt\res\twBanner.jpg" />
+    <Content Include="gantt\res\twGanttLogo.png" />
+    <Content Include="gantt\res\twproject-badge.png" />
+    <Content Include="gantt\gt.html" />
+    <Content Include="gantt\副本 gantt.html" />
     <Content Include="index.html" />
     <Content Include="JS\common.js" />
     <Content Include="JS\cookie.js" />
@@ -847,7 +893,9 @@
     <Content Include="plans.html" />
     <Content Include="Styles\Site.css" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -928,6 +976,11 @@
     <Content Include="Ajax\HandlerICMO.ashx" />
     <Content Include="Ajax\work.ashx" />
     <None Include="ClassDiagram1.cd" />
+    <Content Include="gantt\ganttview.html" />
+    <None Include="gantt\README.md" />
+    <None Include="gantt\res\icons.eot" />
+    <None Include="gantt\res\icons.ttf" />
+    <None Include="gantt\res\icons.woff" />
     <None Include="JS\jquery-easyui\demo\accordion\datagrid_data1.json" />
     <None Include="JS\jquery-easyui\demo\combobox\combobox_data1.json" />
     <None Include="JS\jquery-easyui\demo\combobox\combobox_data2.json" />
