@@ -1,0 +1,14 @@
+# user-defined
+
+
+# Byte-compiled / optimized / DLL files
+BLL/bin/
+BLL/obj/
+DAL/bin/
+DAL/obj/
+DBUtility/bin/
+DBUtility/obj/
+Model/bin/
+Model/obj/
+SYPM/bin/
+SYPM/obj/

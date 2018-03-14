@@ -864,6 +864,28 @@
         }
 
         /// <summary>
+        /// 执行查询的基方法,返回DataTable
+        /// </summary>
+        /// <param name="sql">有效的sql语句</param>
+        /// <returns>返回DataTable</returns>
+        public static DataTable ExcuteDataQuery(string SQLString)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                DataTable dt = new DataTable();
+                try
+                {
+                    connection.Open();
+                    new SqlDataAdapter(SQLString, connection).Fill(dt);
+                }
+                catch (SqlException exception)
+                {
+                    throw new Exception(exception.Message);
+                }
+                return dt;
+            }
+        }
+        /// <summary>
         /// 执行查询语句，返回DataSet
         /// </summary>
         /// <param name="SQLString">查询语句</param>

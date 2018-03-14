@@ -1,0 +1,15 @@
+USE [AIS20160715075257]
+GO
+/****** 对象:  Table [dbo].[AA_project]    脚本日期: 03/14/2018 21:42:55 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[AA_project](
+	[projectNb] [nvarchar](50) NOT NULL,
+	[ProjectName] [nvarchar](50) NULL,
+	[approvalTime] [datetime] NULL,
+	[designTime] [datetime] NULL,
+	[presetTime] [datetime] NULL,
+	[completionTime] [datetime] NULL
+) ON [PRIMARY]

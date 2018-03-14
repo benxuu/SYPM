@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ICMO.cs" />
     <Compile Include="ProductiveTask.cs" />
+    <Compile Include="project.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="work.cs" />

@@ -950,6 +950,9 @@
     <Compile Include="Ajax\work.ashx.cs">
       <DependentUpon>work.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Ajax\HandlerProject.ashx.cs">
+      <DependentUpon>HandlerProject.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -975,6 +978,7 @@
     <Content Include="Ajax\HandlerLogin.ashx" />
     <Content Include="Ajax\HandlerICMO.ashx" />
     <Content Include="Ajax\work.ashx" />
+    <Content Include="Ajax\HandlerProject.ashx" />
     <None Include="ClassDiagram1.cd" />
     <Content Include="gantt\ganttview.html" />
     <None Include="gantt\README.md" />
