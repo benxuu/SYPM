@@ -47,3 +47,10 @@ I:\my Github\SYPM\DBUtility\bin\Debug\Model.pdb
 I:\my Github\SYPM\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
 I:\my Github\SYPM\DBUtility\obj\Debug\DBUtility.dll
 I:\my Github\SYPM\DBUtility\obj\Debug\DBUtility.pdb
+E:\github\SYPM\DBUtility\bin\Debug\DBUtility.dll
+E:\github\SYPM\DBUtility\bin\Debug\DBUtility.pdb
+E:\github\SYPM\DBUtility\bin\Debug\Model.dll
+E:\github\SYPM\DBUtility\bin\Debug\Model.pdb
+E:\github\SYPM\DBUtility\obj\Debug\ResolveAssemblyReference.cache
+E:\github\SYPM\DBUtility\obj\Debug\DBUtility.dll
+E:\github\SYPM\DBUtility\obj\Debug\DBUtility.pdb

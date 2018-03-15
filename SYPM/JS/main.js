@@ -1,15 +1,15 @@
 ﻿var _menus = { "menus": [
 { "menuid": "100", "icon": "icon-sys", "menuname": "开发测试",
     "menus": [{ "menuid": "21", "menuname": "甘特图设计器", "icon": "icon-nav", "url": "gantt/gantt.html" + '?t=' + Math.random() },
-									{ "menuid": "22", "menuname": "甘特图", "icon": "icon-nav", "url": "gantt/gt.html" + '?t=' + Math.random() },
-                                    { "menuid": "23", "menuname": "甘特图只读", "icon": "icon-nav", "url": "gantt/ganttview.html" + '?t=' + Math.random() },
+									{ "menuid": "22", "menuname": "甘特图2", "icon": "icon-nav", "url": "gantt2.html" + '?t=' + Math.random() },
+                                    { "menuid": "23", "menuname": "甘特图zd", "icon": "icon-nav", "url": "gantt/ganttview.html" + '?t=' + Math.random() },
                                     { "menuid": "24", "menuname": "项目进度报表", "icon": "icon-nav", "url": "plans.html" + '?t=' + Math.random() },
-                                    { "menuid": "25", "menuname": "项目成本报表", "icon": "icon-nav", "url": "plans.html" + '?t=' + Math.random() }
+                                    { "menuid": "25", "menuname": "gantt Json", "icon": "icon-nav", "url": "Ajax/projectHandler.ashx?o=getproject" + '&t=' + Math.random() }
 								]
 },
 						 { "menuid": "8", "icon": "icon-sys", "menuname": "项目管理",
 						     "menus": [{ "menuid": "21", "menuname": "项目查看", "icon": "icon-nav", "url": "ptask.html" + '?t=' + Math.random() },
-									{ "menuid": "22", "menuname": "项目维护", "icon": "icon-nav", "url": "Ajax/HandlerICMO.ashx?o=ptask" + '?t=' + Math.random() },
+									{ "menuid": "22", "menuname": "项目维护", "icon": "icon-nav", "url": "Ajax/HandlerICMO.ashx?o=ptask" + '&t=' + Math.random() },
                                     { "menuid": "23", "menuname": "项目查询", "icon": "icon-nav", "url": "plans.html" + '?t=' + Math.random() },
                                     { "menuid": "24", "menuname": "项目进度报表", "icon": "icon-nav", "url": "plans.html" + '?t=' + Math.random() },
                                     { "menuid": "25", "menuname": "项目成本报表", "icon": "icon-nav", "url": "plans.html" + '?t=' + Math.random() }

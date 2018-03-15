@@ -54,11 +54,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Account\ChangePassword.aspx" />
-    <Content Include="Account\ChangePasswordSuccess.aspx" />
-    <Content Include="Account\Login.aspx" />
-    <Content Include="Account\Register.aspx" />
     <Content Include="datagrid.html" />
+    <Content Include="gantt2.html" />
     <Content Include="gantt\gantt.css" />
     <Content Include="gantt\gantt.html" />
     <Content Include="gantt\ganttDrawerSVG.js" />
@@ -108,10 +105,19 @@
     <Content Include="index.html" />
     <Content Include="JS\common.js" />
     <Content Include="JS\cookie.js" />
+    <Content Include="JS\data.js" />
+    <Content Include="JS\date.js" />
+    <Content Include="JS\jquery-1.4.2.js" />
+    <Content Include="JS\jquery-migrate-1.2.1.min.js" />
+    <Content Include="JS\jquery-ui-1.8.4.css" />
+    <Content Include="JS\jquery-ui-1.8.4.js" />
+    <Content Include="JS\jquery.ganttView.css" />
+    <Content Include="JS\jquery.ganttView.js" />
     <Content Include="JS\loading.js" />
     <Content Include="JS\main.js" />
     <Content Include="JS\menu.js" />
     <Content Include="JS\common2.js" />
+    <Content Include="JS\reset.css" />
     <Content Include="main.html" />
     <Content Include="JS\jquery-easyui\changelog.txt" />
     <Content Include="JS\jquery-easyui\demo-mobile\accordion\basic.html" />
@@ -891,7 +897,6 @@
     <Content Include="JS\wikmain.js" />
     <Content Include="JS\wikmenu.js" />
     <Content Include="plans.html" />
-    <Content Include="Styles\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -913,45 +918,17 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Account\ChangePassword.aspx.cs">
-      <DependentUpon>ChangePassword.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\ChangePassword.aspx.designer.cs">
-      <DependentUpon>ChangePassword.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
-      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
-      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Ajax\HandlerICMO.ashx.cs">
       <DependentUpon>HandlerICMO.ashx</DependentUpon>
     </Compile>
     <Compile Include="Ajax\HandlerLogin.ashx.cs">
       <DependentUpon>HandlerLogin.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Ajax\projectHandler.ashx.cs">
+      <DependentUpon>projectHandler.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Ajax\work.ashx.cs">
       <DependentUpon>work.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="Ajax\HandlerProject.ashx.cs">
-      <DependentUpon>HandlerProject.ashx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -971,14 +948,13 @@
     <Folder Include="JS\images\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Account\Web.config" />
     <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ajax\HandlerLogin.ashx" />
     <Content Include="Ajax\HandlerICMO.ashx" />
     <Content Include="Ajax\work.ashx" />
-    <Content Include="Ajax\HandlerProject.ashx" />
+    <Content Include="Ajax\projectHandler.ashx" />
     <None Include="ClassDiagram1.cd" />
     <Content Include="gantt\ganttview.html" />
     <None Include="gantt\README.md" />
