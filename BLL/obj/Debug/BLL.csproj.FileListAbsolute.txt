@@ -97,3 +97,14 @@ D:\github\SYPM\BLL\bin\Debug\DBUtility.pdb
 D:\github\SYPM\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 D:\github\SYPM\BLL\obj\Debug\BLL.dll
 D:\github\SYPM\BLL\obj\Debug\BLL.pdb
+I:\my Github\SYPM\BLL\bin\Debug\BLL.dll
+I:\my Github\SYPM\BLL\bin\Debug\BLL.pdb
+I:\my Github\SYPM\BLL\bin\Debug\DAL.dll
+I:\my Github\SYPM\BLL\bin\Debug\Model.dll
+I:\my Github\SYPM\BLL\bin\Debug\DBUtility.dll
+I:\my Github\SYPM\BLL\bin\Debug\DAL.pdb
+I:\my Github\SYPM\BLL\bin\Debug\Model.pdb
+I:\my Github\SYPM\BLL\bin\Debug\DBUtility.pdb
+I:\my Github\SYPM\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+I:\my Github\SYPM\BLL\obj\Debug\BLL.dll
+I:\my Github\SYPM\BLL\obj\Debug\BLL.pdb

@@ -79,3 +79,12 @@ D:\github\SYPM\DAL\bin\Debug\Model.pdb
 D:\github\SYPM\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 D:\github\SYPM\DAL\obj\Debug\DAL.dll
 D:\github\SYPM\DAL\obj\Debug\DAL.pdb
+I:\my Github\SYPM\DAL\bin\Debug\DAL.dll
+I:\my Github\SYPM\DAL\bin\Debug\DAL.pdb
+I:\my Github\SYPM\DAL\bin\Debug\DBUtility.dll
+I:\my Github\SYPM\DAL\bin\Debug\Model.dll
+I:\my Github\SYPM\DAL\bin\Debug\DBUtility.pdb
+I:\my Github\SYPM\DAL\bin\Debug\Model.pdb
+I:\my Github\SYPM\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+I:\my Github\SYPM\DAL\obj\Debug\DAL.dll
+I:\my Github\SYPM\DAL\obj\Debug\DAL.pdb

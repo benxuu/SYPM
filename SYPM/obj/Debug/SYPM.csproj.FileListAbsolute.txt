@@ -44,3 +44,16 @@ D:\github\SYPM\SYPM\bin\Newtonsoft.Json.xml
 D:\github\SYPM\SYPM\obj\Debug\SYPM.csprojResolveAssemblyReference.cache
 D:\github\SYPM\SYPM\obj\Debug\SYPM.dll
 D:\github\SYPM\SYPM\obj\Debug\SYPM.pdb
+I:\my Github\SYPM\SYPM\bin\SYPM.dll
+I:\my Github\SYPM\SYPM\bin\SYPM.pdb
+I:\my Github\SYPM\SYPM\bin\BLL.dll
+I:\my Github\SYPM\SYPM\bin\DAL.dll
+I:\my Github\SYPM\SYPM\bin\DBUtility.dll
+I:\my Github\SYPM\SYPM\bin\Model.dll
+I:\my Github\SYPM\SYPM\bin\BLL.pdb
+I:\my Github\SYPM\SYPM\bin\DAL.pdb
+I:\my Github\SYPM\SYPM\bin\DBUtility.pdb
+I:\my Github\SYPM\SYPM\bin\Model.pdb
+I:\my Github\SYPM\SYPM\obj\Debug\SYPM.csprojResolveAssemblyReference.cache
+I:\my Github\SYPM\SYPM\obj\Debug\SYPM.dll
+I:\my Github\SYPM\SYPM\obj\Debug\SYPM.pdb

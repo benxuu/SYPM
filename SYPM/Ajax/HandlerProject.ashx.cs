@@ -30,18 +30,21 @@ namespace SYPM.Ajax
                
                 switch (context.Request.QueryString["o"])
                 {
-                    case "icmo":
-
-                        context.Response.Write(getICMO());
-
+                    case "getproject":
+                        //context.Response.Write(getProject());
+                        //context.Response.Write("getproject");
+                        context.Response.Write(getwork());
+                        //context.Response.Write("it works");
                         break;
 
                     case "ptask":
-                        context.Response.Write(getptask());
+                        //context.Response.Write(getptask());
+                        context.Response.Write("it works ptask");
                         break;
 
                     case "work":
-                        context.Response.Write(getwork());
+                       // context.Response.Write(getwork());
+                        context.Response.Write("it works work");
                         break;
 
                 }
@@ -63,9 +66,9 @@ namespace SYPM.Ajax
         {
             int Pgcount;
             List<Model.project> list= DAL.project.GetProjectList(1,out Pgcount);
-            //JsonBuilder jb=new JsonBuilder();
+            JsonBuilder jb=new JsonBuilder();
 
-            return jb.
+            return jb.ListToGantt(list);
         }
         public string getICMO()
         {

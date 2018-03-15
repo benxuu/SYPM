@@ -40,3 +40,7 @@ D:\github\SYPM\Model\obj\Debug\Model.dll
 D:\github\SYPM\Model\obj\Debug\Model.pdb
 D:\github\SYPM\Model\bin\Debug\Model.dll
 D:\github\SYPM\Model\bin\Debug\Model.pdb
+I:\my Github\SYPM\Model\bin\Debug\Model.dll
+I:\my Github\SYPM\Model\bin\Debug\Model.pdb
+I:\my Github\SYPM\Model\obj\Debug\Model.dll
+I:\my Github\SYPM\Model\obj\Debug\Model.pdb
