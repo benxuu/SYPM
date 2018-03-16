@@ -1,6 +1,6 @@
 ﻿var _menus = { "menus": [
 { "menuid": "100", "icon": "icon-sys", "menuname": "开发测试",
-    "menus": [{ "menuid": "21", "menuname": "甘特图设计器", "icon": "icon-nav", "url": "ganttedit/gantt.html" + '?t=' + Math.random() },
+    "menus": [{ "menuid": "21", "menuname": "甘特图设计器", "icon": "icon-nav", "url": "ganttedit/ganttview.html" + '?t=' + Math.random() },
 									{ "menuid": "22", "menuname": "甘特图1", "icon": "icon-nav", "url": "gantt1/projectgantt.html" + '?t=' + Math.random() },
                                     { "menuid": "23", "menuname": "甘特图2", "icon": "icon-nav", "url": "gantt2/projectgantt.html" + '?t=' + Math.random() },
                                     { "menuid": "24", "menuname": "项目进度报表", "icon": "icon-nav", "url": "plans.html" + '?t=' + Math.random() },
