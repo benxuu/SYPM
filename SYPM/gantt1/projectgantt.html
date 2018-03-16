@@ -1,0 +1,78 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <title>jQuery.Gantt</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link href="css/prettify.min.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 13px;
+            padding: 0 0 50px 0;
+        }
+
+        .contain {
+            width: 800px;
+            margin: 0 auto;
+        }
+        /*隐藏甘特图底部按钮*/
+        .fn-gantt .bottom {
+            display: none;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="gantt_ot" style="width:800px; margin:100px auto;">
+        <div class="gantt"></div>
+    </div>
+</body>
+</html>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fn.gantt.js"></script>
+<script src="js/prettify.min.js"></script>
+<script>
+
+    $(function () {
+        //"use strict";
+        //初始化gantt
+        $(".gantt").gantt({
+            source: "../Ajax/projectHandler.ashx?o=gantt1",
+            navigate: 'scroll',//buttons  scroll
+            scale: "weeks",// months  weeks days  hours
+            maxScale: "months",
+            minScale: "days",
+            itemsPerPage: 10,
+            onItemClick: function (data) {
+                alert("Item clicked - show some details");
+            },
+            onAddClick: function (dt, rowId) {
+                alert("Empty space clicked - add an item!");
+            },
+            onRender: function () {
+                if (window.console && typeof console.log === "function") {
+                    console.log("chart rendered");
+                }
+            }
+        });
+
+
+        //弹窗功能
+        $(".gantt").popover({
+            selector: ".bar",
+            title: "I'm a popover",
+            content: "And I'm the content of said popover.",
+            trigger: "hover",
+            placement: "auto right"
+        });
+
+
+        //prettyPrint();
+    });
+
+
+</script>
