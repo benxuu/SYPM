@@ -15,6 +15,7 @@ namespace AchieveCommon
     {
         //读取配置文件里的数据库连接字符串
         public static readonly string connStr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+        public static readonly string connStrK3 = ConfigurationManager.ConnectionStrings["K3ConnectionString"].ConnectionString;
 
         //空构造
         public SqlHelper() { }

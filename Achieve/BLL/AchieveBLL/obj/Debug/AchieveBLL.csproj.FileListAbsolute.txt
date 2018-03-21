@@ -50,3 +50,16 @@ E:\github\Achieve\BLL\AchieveBLL\bin\Debug\AchieveEntity.pdb
 E:\github\Achieve\BLL\AchieveBLL\obj\Debug\AchieveBLL.csprojResolveAssemblyReference.cache
 E:\github\Achieve\BLL\AchieveBLL\obj\Debug\AchieveBLL.dll
 E:\github\Achieve\BLL\AchieveBLL\obj\Debug\AchieveBLL.pdb
+E:\github\SYPM\Achieve\BLL\AchieveBLL\bin\Debug\AchieveBLL.dll
+E:\github\SYPM\Achieve\BLL\AchieveBLL\bin\Debug\AchieveBLL.pdb
+E:\github\SYPM\Achieve\BLL\AchieveBLL\bin\Debug\AchieveCommon.dll
+E:\github\SYPM\Achieve\BLL\AchieveBLL\bin\Debug\AchieveDALFactory.dll
+E:\github\SYPM\Achieve\BLL\AchieveBLL\bin\Debug\AchieveEntity.dll
+E:\github\SYPM\Achieve\BLL\AchieveBLL\bin\Debug\AchieveInterfaceDAL.dll
+E:\github\SYPM\Achieve\BLL\AchieveBLL\bin\Debug\AchieveCommon.pdb
+E:\github\SYPM\Achieve\BLL\AchieveBLL\bin\Debug\AchieveDALFactory.pdb
+E:\github\SYPM\Achieve\BLL\AchieveBLL\bin\Debug\AchieveInterfaceDAL.pdb
+E:\github\SYPM\Achieve\BLL\AchieveBLL\bin\Debug\AchieveEntity.pdb
+E:\github\SYPM\Achieve\BLL\AchieveBLL\obj\Debug\AchieveBLL.csprojResolveAssemblyReference.cache
+E:\github\SYPM\Achieve\BLL\AchieveBLL\obj\Debug\AchieveBLL.dll
+E:\github\SYPM\Achieve\BLL\AchieveBLL\obj\Debug\AchieveBLL.pdb

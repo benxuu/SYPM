@@ -51,6 +51,7 @@
     <Compile Include="MyTestDAL.cs" />
     <Compile Include="DataTypeDAL.cs" />
     <Compile Include="HtmlTypeDAL.cs" />
+    <Compile Include="ProduceDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NewsDAL.cs" />
     <Compile Include="RequestionDAL.cs" />

@@ -17,3 +17,8 @@ E:\github\Achieve\Entity\AchieveEntity\bin\Debug\AchieveEntity.pdb
 E:\github\Achieve\Entity\AchieveEntity\obj\Debug\AchieveEntity.csprojResolveAssemblyReference.cache
 E:\github\Achieve\Entity\AchieveEntity\obj\Debug\AchieveEntity.dll
 E:\github\Achieve\Entity\AchieveEntity\obj\Debug\AchieveEntity.pdb
+E:\github\SYPM\Achieve\Entity\AchieveEntity\bin\Debug\AchieveEntity.dll
+E:\github\SYPM\Achieve\Entity\AchieveEntity\bin\Debug\AchieveEntity.pdb
+E:\github\SYPM\Achieve\Entity\AchieveEntity\obj\Debug\AchieveEntity.dll
+E:\github\SYPM\Achieve\Entity\AchieveEntity\obj\Debug\AchieveEntity.pdb
+E:\github\SYPM\Achieve\Entity\AchieveEntity\obj\Debug\AchieveEntity.csprojResolveAssemblyReference.cache

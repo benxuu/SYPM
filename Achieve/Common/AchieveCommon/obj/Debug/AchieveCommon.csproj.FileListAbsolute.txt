@@ -20,3 +20,8 @@ E:\github\Achieve\Common\AchieveCommon\bin\Debug\AchieveCommon.pdb
 E:\github\Achieve\Common\AchieveCommon\obj\Debug\AchieveCommon.csprojResolveAssemblyReference.cache
 E:\github\Achieve\Common\AchieveCommon\obj\Debug\AchieveCommon.dll
 E:\github\Achieve\Common\AchieveCommon\obj\Debug\AchieveCommon.pdb
+E:\github\SYPM\Achieve\Common\AchieveCommon\bin\Debug\AchieveCommon.dll
+E:\github\SYPM\Achieve\Common\AchieveCommon\bin\Debug\AchieveCommon.pdb
+E:\github\SYPM\Achieve\Common\AchieveCommon\obj\Debug\AchieveCommon.csprojResolveAssemblyReference.cache
+E:\github\SYPM\Achieve\Common\AchieveCommon\obj\Debug\AchieveCommon.dll
+E:\github\SYPM\Achieve\Common\AchieveCommon\obj\Debug\AchieveCommon.pdb

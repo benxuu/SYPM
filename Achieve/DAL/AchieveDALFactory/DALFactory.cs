@@ -43,6 +43,11 @@ namespace AchieveDALFactory
             IMenuDAL dal = GetInstance("MenuDAL") as IMenuDAL;
             return dal;
         }
+        public static IProduceDAL GetProduceDAL()
+        {
+            IProduceDAL dal = GetInstance("ProduceDAL") as IProduceDAL;
+            return dal;
+        }
 
 
         public static IRoleDAL GetRoleDAL()

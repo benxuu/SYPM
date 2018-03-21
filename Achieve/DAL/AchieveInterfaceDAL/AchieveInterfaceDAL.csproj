@@ -50,6 +50,7 @@
     <Compile Include="INewsDAL.cs" />
     <Compile Include="IDataTypeDAL.cs" />
     <Compile Include="IHtmlTypeDAL.cs" />
+    <Compile Include="IProduceDAL.cs" />
     <Compile Include="IRequestionDAL.cs" />
     <Compile Include="INewsTypeDAL.cs" />
     <Compile Include="IRequestionTypeDAL.cs" />

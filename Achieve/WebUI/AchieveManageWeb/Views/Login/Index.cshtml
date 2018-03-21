@@ -52,10 +52,11 @@
                 this.src = "@Url.Action("GetValidatorGraphics", "Validator")?time=" + (new Date()).getTime();
             });
 
-            //本地运行时使用 发布时注释
+            //本地运行时使用 发布时注释,测试默认admin登陆
             var code = getCookie('ValidatorCode');
             $("#loginVerificationCode").val(code);
-
+            $("#loginName").val('admin');
+            $("#loginPwd").val('admin');
             $("#loginName").focus();
         })
 
@@ -67,8 +68,7 @@
                     CookieExpires: $("#remember").val()
                 };
                 //异步实现登录功能
-                $.post("/Login/CheckUserLogin", postData, function (data) {
-                    alert(data);
+                $.post("/Login/CheckUserLogin", postData, function (data) {                   
                     if (data == "OK") {
                         window.location.href = "/Home/Index";
                     }
