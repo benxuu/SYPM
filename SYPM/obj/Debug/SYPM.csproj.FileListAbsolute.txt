@@ -67,6 +67,6 @@ E:\github\SYPM\SYPM\bin\BLL.pdb
 E:\github\SYPM\SYPM\bin\DAL.pdb
 E:\github\SYPM\SYPM\bin\DBUtility.pdb
 E:\github\SYPM\SYPM\bin\Model.pdb
-E:\github\SYPM\SYPM\obj\Debug\ResolveAssemblyReference.cache
 E:\github\SYPM\SYPM\obj\Debug\SYPM.dll
 E:\github\SYPM\SYPM\obj\Debug\SYPM.pdb
+E:\github\SYPM\SYPM\obj\Debug\SYPM.csprojResolveAssemblyReference.cache

@@ -94,6 +94,6 @@ E:\github\SYPM\DAL\bin\Debug\DBUtility.dll
 E:\github\SYPM\DAL\bin\Debug\Model.dll
 E:\github\SYPM\DAL\bin\Debug\DBUtility.pdb
 E:\github\SYPM\DAL\bin\Debug\Model.pdb
-E:\github\SYPM\DAL\obj\Debug\ResolveAssemblyReference.cache
 E:\github\SYPM\DAL\obj\Debug\DAL.dll
 E:\github\SYPM\DAL\obj\Debug\DAL.pdb
+E:\github\SYPM\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache

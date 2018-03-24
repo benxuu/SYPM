@@ -116,6 +116,6 @@ E:\github\SYPM\BLL\bin\Debug\DBUtility.dll
 E:\github\SYPM\BLL\bin\Debug\DAL.pdb
 E:\github\SYPM\BLL\bin\Debug\Model.pdb
 E:\github\SYPM\BLL\bin\Debug\DBUtility.pdb
-E:\github\SYPM\BLL\obj\Debug\ResolveAssemblyReference.cache
 E:\github\SYPM\BLL\obj\Debug\BLL.dll
 E:\github\SYPM\BLL\obj\Debug\BLL.pdb
+E:\github\SYPM\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache

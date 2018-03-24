@@ -47,6 +47,33 @@ namespace AchieveCommon
             //int.TryParse(paras[6].Value, out totalCount);
             return dt;
         }
+        public static DataTable GetPagerK3(string tableName, string columns, string order, int pageSize, int pageIndex, string where, out int totalCount)
+        {
+            SqlParameter[] paras = { 
+                                   new SqlParameter("@tablename",SqlDbType.VarChar,100),
+                                   new SqlParameter("@columns",SqlDbType.VarChar,500),
+                                   new SqlParameter("@order",SqlDbType.VarChar,100),
+                                   new SqlParameter("@pageSize",SqlDbType.Int),
+                                   new SqlParameter("@pageIndex",SqlDbType.Int),
+                                   new SqlParameter("@where",SqlDbType.VarChar,2000),
+                                   new SqlParameter("@totalCount",SqlDbType.Int)
+                                   };
+            paras[0].Value = tableName;
+            paras[1].Value = columns;
+            paras[2].Value = order;
+            paras[3].Value = pageSize;
+            paras[4].Value = pageIndex;
+            paras[5].Value = where;
+            paras[6].Direction = ParameterDirection.Output;   //输出参数
+            paras[6].IsNullable = false;
+
+            DataTable dt = SqlHelper.GetDataTable(SqlHelper.connStrK3, CommandType.StoredProcedure, "sp_Pager", paras);
+            totalCount = Convert.ToInt32(paras[6].Value);   //赋值输出参数，即当前记录总数           
+            //totalCount = 1;
+            //int totalCount;
+            //int.TryParse(paras[6].Value, out totalCount);
+            return dt;
+        }
 
     }
 }

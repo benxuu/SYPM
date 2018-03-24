@@ -44,3 +44,8 @@ I:\my Github\SYPM\Model\bin\Debug\Model.dll
 I:\my Github\SYPM\Model\bin\Debug\Model.pdb
 I:\my Github\SYPM\Model\obj\Debug\Model.dll
 I:\my Github\SYPM\Model\obj\Debug\Model.pdb
+E:\github\SYPM\Model\bin\Debug\Model.dll
+E:\github\SYPM\Model\bin\Debug\Model.pdb
+E:\github\SYPM\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+E:\github\SYPM\Model\obj\Debug\Model.dll
+E:\github\SYPM\Model\obj\Debug\Model.pdb
