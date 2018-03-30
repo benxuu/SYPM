@@ -46,6 +46,9 @@ namespace AchieveManageWeb.Controllers
             if (adddateend.Trim() != "")
                 strWhere += " and CreateTime < '" + adddateend.Trim() + "'";
 
+            //抽取主作业计划单,规则不包含-、_两种连接符
+            strWhere +=  "and Fbillno not like '%v_%'  ESCAPE   'v'  and  Fbillno not like '%v-%' ESCAPE   'v'";           
+
             int totalCount;   //输出参数
             DataTable dt = AchieveCommon.SqlPagerHelper.GetPagerK3("ICMO", "FBillNo,FStatus,FQty,FCommitQty,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FType,FWorkShop,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
              dt.Columns.Add(new DataColumn("FModel"));
