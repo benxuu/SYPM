@@ -208,14 +208,18 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\HomeLogo.png" />
-    <Content Include="Content\images\Logo.png" />
+    <Content Include="Content\images\Logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\images\PermitLogo.jpg" />
     <Content Include="Content\themes\table.css" />
     <Content Include="Content\images\bar.gif" />
     <Content Include="Content\images\favicon.ico" />
     <Content Include="Content\images\invbar.gif" />
     <Content Include="Content\images\meneame.jpg" />
-    <Content Include="Content\js\common.js" />
+    <Content Include="Content\js\common.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\js\export.js" />
     <Content Include="Content\js\init.js" />
     <Content Include="Content\pagerstyles.css" />
@@ -1834,6 +1838,64 @@
     <Content Include="Content\themes\icon\zoom_in.png" />
     <Content Include="Content\themes\icon\zoom_out.png" />
     <Content Include="DB\AchieveDB.sql" />
+    <Content Include="gantt\.gitignore" />
+    <Content Include="gantt\data.js" />
+    <Content Include="gantt\gantt2.html" />
+    <Content Include="gantt\jquery-ganttview.png" />
+    <Content Include="gantt\jquery.ganttView.css" />
+    <Content Include="gantt\jquery.ganttView.js" />
+    <Content Include="gantt\lib\date.js" />
+    <Content Include="gantt\lib\jquery-1.4.2.js" />
+    <Content Include="gantt\lib\jquery-ui-1.8.4.css" />
+    <Content Include="gantt\lib\jquery-ui-1.8.4.js" />
+    <Content Include="gantt\projectgantt.html" />
+    <Content Include="gantt\reset.css" />
+    <Content Include="ganttedit\gantt.css" />
+    <Content Include="ganttedit\gantt.html" />
+    <Content Include="ganttedit\ganttDrawerSVG.js" />
+    <Content Include="ganttedit\ganttGridEditor.js" />
+    <Content Include="ganttedit\ganttMaster.js" />
+    <Content Include="ganttedit\ganttPrint.css" />
+    <Content Include="ganttedit\ganttTask.js" />
+    <Content Include="ganttedit\ganttTestSuite.js" />
+    <Content Include="ganttedit\ganttUtilities.js" />
+    <Content Include="ganttedit\ganttview.html" />
+    <Content Include="ganttedit\ganttZoom.js" />
+    <Content Include="ganttedit\gt.html" />
+    <Content Include="ganttedit\libs\date.js" />
+    <Content Include="ganttedit\libs\dialogs.js" />
+    <Content Include="ganttedit\libs\forms.js" />
+    <Content Include="ganttedit\libs\i18nJs.js" />
+    <Content Include="ganttedit\libs\jquery\dateField\img\next.png" />
+    <Content Include="ganttedit\libs\jquery\dateField\img\prev.png" />
+    <Content Include="ganttedit\libs\jquery\dateField\img\today.png" />
+    <Content Include="ganttedit\libs\jquery\dateField\jquery.dateField.css" />
+    <Content Include="ganttedit\libs\jquery\dateField\jquery.dateField.js" />
+    <Content Include="ganttedit\libs\jquery\jquery-ui.min.js" />
+    <Content Include="ganttedit\libs\jquery\jquery.livequery.1.1.1.min.js" />
+    <Content Include="ganttedit\libs\jquery\jquery.min.js" />
+    <Content Include="ganttedit\libs\jquery\jquery.timers.js" />
+    <Content Include="ganttedit\libs\jquery\JST\jquery.JST.js" />
+    <Content Include="ganttedit\libs\jquery\svg\jquery.svg.min.js" />
+    <Content Include="ganttedit\libs\jquery\svg\jquery.svgdom.1.8.js" />
+    <Content Include="ganttedit\libs\jquery\svg\jquery.svgdom.pack.js" />
+    <Content Include="ganttedit\libs\layout.js" />
+    <Content Include="ganttedit\libs\utilities.js" />
+    <Content Include="ganttedit\platform.css" />
+    <Content Include="ganttedit\res\alert.gif" />
+    <Content Include="ganttedit\res\black_70.png" />
+    <Content Include="ganttedit\res\closeBig.png" />
+    <Content Include="ganttedit\res\ganttSplitterGrip.png" />
+    <Content Include="ganttedit\res\hasExternalDeps.png" />
+    <Content Include="ganttedit\res\indentIcon.png" />
+    <Content Include="ganttedit\res\linkArrow.png" />
+    <Content Include="ganttedit\res\milestone.png" />
+    <Content Include="ganttedit\res\toggle-expand.png" />
+    <Content Include="ganttedit\res\toggle_collapse.png" />
+    <Content Include="ganttedit\res\twBanner.jpg" />
+    <Content Include="ganttedit\res\twGanttLogo.png" />
+    <Content Include="ganttedit\res\twproject-badge.png" />
+    <Content Include="ganttedit\副本 gantt.html" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\bootstrap\images\Thumbs.db" />
@@ -1842,6 +1904,12 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Config\log4net.config" />
+    <Content Include="ganttedit\README.md" />
+    <Content Include="ganttedit\res\icons.eot" />
+    <Content Include="ganttedit\res\icons.svg" />
+    <Content Include="ganttedit\res\icons.ttf" />
+    <Content Include="ganttedit\res\icons.woff" />
+    <Content Include="gantt\README.markdown" />
     <None Include="Properties\PublishProfiles\soulefu_manage_test.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="kindeditor-4.1.3\asp.net\bin\LitJSON.dll" />
@@ -2785,6 +2853,9 @@
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Project\ganttview.cshtml" />
+    <None Include="Views\Project\Indexgantt.cshtml" />
+    <Content Include="Views\Project\test.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -2862,6 +2933,8 @@
     <Content Include="Views\Project\Index.cshtml" />
     <Content Include="Views\Shared\Blank.cshtml" />
     <Content Include="Views\Produce\Index.cshtml" />
+    <Content Include="Views\Project\test.cshtml" />
+    <Content Include="Views\Project\projectGantt.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

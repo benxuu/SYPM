@@ -247,6 +247,8 @@ E:\github\Achieve\WebUI\AchieveManageWeb\bin\zh-Hans\System.Web.WebPages.Razor.r
 E:\github\Achieve\WebUI\AchieveManageWeb\obj\Debug\AchieveManageWeb.csprojResolveAssemblyReference.cache
 E:\github\Achieve\WebUI\AchieveManageWeb\obj\Debug\AchieveManageWeb.dll
 E:\github\Achieve\WebUI\AchieveManageWeb\obj\Debug\AchieveManageWeb.pdb
+E:\github\SYPM\Achieve\WebUI\AchieveManageWeb\bin\Content\images\Logo.png
+E:\github\SYPM\Achieve\WebUI\AchieveManageWeb\bin\Content\js\common.js
 E:\github\SYPM\Achieve\WebUI\AchieveManageWeb\bin\AchieveManageWeb.dll.config
 E:\github\SYPM\Achieve\WebUI\AchieveManageWeb\bin\AchieveManageWeb.dll
 E:\github\SYPM\Achieve\WebUI\AchieveManageWeb\bin\AchieveManageWeb.pdb
@@ -303,6 +305,6 @@ E:\github\SYPM\Achieve\WebUI\AchieveManageWeb\bin\zh-Hans\System.Web.Razor.resou
 E:\github\SYPM\Achieve\WebUI\AchieveManageWeb\bin\zh-Hans\System.Web.WebPages.resources.dll
 E:\github\SYPM\Achieve\WebUI\AchieveManageWeb\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 E:\github\SYPM\Achieve\WebUI\AchieveManageWeb\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
+E:\github\SYPM\Achieve\WebUI\AchieveManageWeb\obj\Debug\AchieveManageWeb.csprojResolveAssemblyReference.cache
 E:\github\SYPM\Achieve\WebUI\AchieveManageWeb\obj\Debug\AchieveManageWeb.dll
 E:\github\SYPM\Achieve\WebUI\AchieveManageWeb\obj\Debug\AchieveManageWeb.pdb
-E:\github\SYPM\Achieve\WebUI\AchieveManageWeb\obj\Debug\AchieveManageWeb.csprojResolveAssemblyReference.cache
