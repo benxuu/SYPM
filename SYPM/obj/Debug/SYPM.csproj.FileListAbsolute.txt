@@ -39,8 +39,6 @@ D:\github\SYPM\SYPM\bin\BLL.pdb
 D:\github\SYPM\SYPM\bin\DAL.pdb
 D:\github\SYPM\SYPM\bin\DBUtility.pdb
 D:\github\SYPM\SYPM\bin\Model.pdb
-D:\github\SYPM\SYPM\bin\Newtonsoft.Json.pdb
-D:\github\SYPM\SYPM\bin\Newtonsoft.Json.xml
 D:\github\SYPM\SYPM\obj\Debug\SYPM.csprojResolveAssemblyReference.cache
 D:\github\SYPM\SYPM\obj\Debug\SYPM.dll
 D:\github\SYPM\SYPM\obj\Debug\SYPM.pdb

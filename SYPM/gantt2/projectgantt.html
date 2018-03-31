@@ -29,7 +29,9 @@
 	<script type="text/javascript">
 		$(function () {
 			$("#ganttChart").ganttView({
-			    data: "../Ajax/projectHandler.ashx?o=gantt2",
+			    //data: ganttdata,
+			    //dataUrl: "../Ajax/projectHandler.ashx?o=gantt2",
+			    dataUrl: "data.json",
 				slideWidth: 900,
 				behavior: {
 					onClick: function (data) { 

@@ -58,6 +58,7 @@
     <Content Include="gantt1\projectgantt.html" />
     <Content Include="gantt2.html" />
     <Content Include="gantt2\projectgantt.html" />
+    <None Include="gantt2\data.json" />
     <Content Include="ganttedit\gantt.css" />
     <Content Include="ganttedit\gantt.html" />
     <Content Include="ganttedit\ganttDrawerSVG.js" />
