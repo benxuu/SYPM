@@ -1,0 +1,21 @@
+ [
+	{
+		"id": 1, "name": "Feature 1", "series": [
+			{ "name": "Planned", "start": 1396994400000, "end": 1399586399999 },
+			{ "name": "Actual", "start": 1396994400000, "end": 1398203999999, "color": "#f0f0f0" }
+		]
+	}, 
+	{
+		"id": 2, "name": "Feature 2", "series": [
+			{ "name": "Planned", "start": 1396994400000, "end": 1397167199999 },
+			{ "name": "Actual", "start": 1397167200000, "end": 1397685599999, "color": "#f0f0f0" },
+			{ "name": "Projected", "start": 1397167200000, "end": 1397685599999, "color": "#e0e0e0" }
+		]
+	}, 
+	{
+		"id": 3, "name": "Feature 3", "series": [
+			{ "name": "Planned", "start": 1397167200000, "end": 1397685599999 },
+			{ "name": "Actual", "start": 1396994400000, "end": 1398203999999, "color": "#f0f0f0" }
+		]
+	}
+]
