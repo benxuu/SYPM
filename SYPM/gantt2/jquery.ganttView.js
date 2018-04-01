@@ -24,22 +24,16 @@ behavior: {
 */
 
 (function (jQuery) {
-
     jQuery.fn.ganttView = function () {
-
         var args = Array.prototype.slice.call(arguments);
-
         if (args.length == 1 && typeof (args[0]) == "object") {
             build.call(this, args[0]);
         }
-
         if (args.length == 2 && typeof (args[0]) == "string") {
-            handleMethod.call(this, args[0], args[1]);
-        }
+            handleMethod.call(this, args[0], args[1]);        }
     };
 
     function build(options) {
-
         var els = this;
         var defaults = {
             showWeekends: true,
@@ -55,7 +49,6 @@ behavior: {
         };
 
         var opts = jQuery.extend(true, defaults, options);
-
         if (opts.data) {
             build();
         } else if (opts.dataUrl) {
@@ -63,16 +56,23 @@ behavior: {
         }
 
         function build() {
-        //json对象中日期字符串转换为日期对象
-            $.each(opts.data, function (Property, Value) {
-                if (Property == "start" || Property == "end") {
-                    //使用正则表达式将生日属性中的非数字（\D）删除
-                    //并把得到的毫秒数转换成数字类型
-                    var Milliseconds = parseInt(Value.replace(/\D/igm, ""));
-                    //实例化一个新的日期格式，使用1970 年 1 月 1 日至今的毫秒数为参数
-                    Value = new Date(Milliseconds);
-                }
-            })
+        //json对象中日期字符串转换为日期对象,当前使用整形数字
+			for(var i=0;i<opts.data.length;i++){ 			
+			var plan=opts.data[i].series;
+			for(var j=0;j<plan.length;j++){ 
+			//alert("start:"+plan[j].start+",end:"+plan[j].end); 
+			 //var ms1 = parseInt(plan[j].start.replace(/\D/igm, ""));
+			 var ms1=plan[j].start;
+				var day1 = new Date(ms1);
+				//var ms2 = parseInt(plan[j].end.replace(/\D/igm, ""));
+				var ms1=plan[j].end;
+				var day2 = new Date(ms1);
+				opts.data[i].series[j].start=day1;
+				opts.data[i].series[j].end=day2;
+			}
+}
+
+
 
             var minDays = Math.floor((opts.slideWidth / opts.cellWidth) + 5);
             var startEnd = DateUtils.getBoundaryDatesFromData(opts.data, minDays);
@@ -126,8 +126,8 @@ behavior: {
             applyLastClass(div.parent());
         }
 
-        var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-
+        //var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+		var monthNames = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
         // Creates a 3 dimensional array [year][month][day] of every day 
         // between the given start and end dates
         function getDates(start, end) {
