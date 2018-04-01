@@ -54,3 +54,6 @@ E:\github\SYPM\DBUtility\bin\Debug\Model.pdb
 E:\github\SYPM\DBUtility\obj\Debug\DBUtility.dll
 E:\github\SYPM\DBUtility\obj\Debug\DBUtility.pdb
 E:\github\SYPM\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+D:\github\SYPM\DBUtility\bin\Debug\Model.dll
+D:\github\SYPM\DBUtility\bin\Debug\Model.pdb
+D:\github\SYPM\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache

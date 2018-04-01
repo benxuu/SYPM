@@ -93,9 +93,11 @@ namespace SYPM.Ajax
             sb.Append("{	\"name\": \"task  3\",	\"desc\": \"from server\",	\"values\": [{\"from\": \"/Date(1323802400000)/\",	\"to\": \"/Date(1325685200000)/\",	\"label\": \"\",	\"customClass\": \"ganttGreen\"	}]}, ");
             sb.Append("{	\"name\": \"more\",	\"desc\": \"for gantt2\",	\"values\": [{	\"from\": \"/Date(1322611200000)/\",	\"to\": \"/Date(1323302400000)/\",		\"label\": \"\",		\"customClass\": \"ganttBlue\"	}, {		\"from\": \"/Date(1323802400000)/\",		\"to\": \"/Date(1325685200000)/\",		\"label\": \"\",		\"customClass\": \"ganttorange\"	}]}");
             sb.Append(" ]");
+           // string s = "[{\"id\": 1, \"name\": \"server 1\", \"series\": [{ \"name\": \"Planned\", \"start\": new Date(2010,00,01), \"end\": new Date(2010,00,03) },	{ \"name\": \"Actual\", \"start\": \"new Date(2010,00,02)\", \"end\": \"new Date(2010,00,05)\", \"color\": \"#f0f0f0\" }]}]";
+            string s = "[{\"id\": 1, \"name\": \"server 1\", \"series\": [{ \"name\": \"Planned\", \"start\":\"/Date(1323802400000)/\", \"end\": \"/Date(1325685200000)/\" }]}]";
 
 
-            return sb.ToString();
+            return s;
         }
 
        public bool IsReusable
