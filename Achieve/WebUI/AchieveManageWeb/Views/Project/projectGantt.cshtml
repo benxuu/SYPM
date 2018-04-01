@@ -6,6 +6,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>项目管理</title>
 
     <link rel="stylesheet" type="text/css" href="~/gantt/lib/jquery-ui-1.8.4.css" />
@@ -15,7 +16,6 @@
     <script type="text/javascript" src="~/gantt/lib/date.js"></script>
     <script type="text/javascript" src="~/gantt/lib/jquery-ui-1.8.4.js"></script>
     <script type="text/javascript" src="~/gantt/jquery.ganttView.js"></script>
-    <script type="text/javascript" src="~/gantt/data.js"></script>
     <style type="text/css">
         body {
             font-family: tahoma, verdana, helvetica;
@@ -33,21 +33,20 @@
 
     <script type="text/javascript">
         $(function () {
-            $("#ganttChart").ganttView({
-                //data: "/Project/getGantt2Demo",
-                source: "/Project/getGantt2Demo",
+            $("#ganttChart").ganttView({                
+                dataUrl: "/Project/getGantt2Demo",
                 slideWidth: 900,
                 behavior: {
                     onClick: function (data) {
-                        var msg = "You clicked on an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
+                        var msg = "点击事件: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
                         $("#eventMessage").text(msg);
                     },
                     onResize: function (data) {
-                        var msg = "You resized an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
+                        var msg = "调整事件: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
                         $("#eventMessage").text(msg);
                     },
                     onDrag: function (data) {
-                        var msg = "You dragged an event: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
+                        var msg = "拖拽事件: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
                         $("#eventMessage").text(msg);
                     }
                 }

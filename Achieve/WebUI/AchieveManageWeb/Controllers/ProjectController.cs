@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Text;
+using System.Data;
 
 namespace AchieveManageWeb.Controllers
 {
@@ -16,15 +17,77 @@ namespace AchieveManageWeb.Controllers
 
         public ActionResult getGantt2Demo()
         {
-            StringBuilder sb = new StringBuilder();
-            sb.Append(" [");
-            sb.Append("{	\"name\": \"task  3\",	\"desc\": \"from server\",	\"values\": [{\"from\": \"/Date(1323802400000)/\",	\"to\": \"/Date(1325685200000)/\",	\"label\": \"\",	\"customClass\": \"ganttGreen\"	}]}, ");
-            sb.Append("{	\"name\": \"more\",	\"desc\": \"for gantt2\",	\"values\": [{	\"from\": \"/Date(1322611200000)/\",	\"to\": \"/Date(1323302400000)/\",		\"label\": \"\",		\"customClass\": \"ganttBlue\"	}, {		\"from\": \"/Date(1323802400000)/\",		\"to\": \"/Date(1325685200000)/\",		\"label\": \"\",		\"customClass\": \"ganttorange\"	}]}");
-            sb.Append(" ]");
+            string strWhere = "1=1";
+            string sort = Request["sort"] == null ? "FBillNo" : Request["sort"];
+            string order = Request["order"] == null ? "desc" : Request["order"];
 
+            //首先获取前台传递过来的参数
+            int pageindex = Request["page"] == null ? 1 : Convert.ToInt32(Request["page"]);
+            int pagesize = Request["rows"] == null ? 10 : Convert.ToInt32(Request["rows"]);
+            string userid = Request["accountid"] == null ? "" : Request["accountid"];
+            string username = Request["username"] == null ? "" : Request["username"];
+            string isable = Request["isable"] == null ? "" : Request["isable"];
+            string ifchangepwd = Request["ifchangepwd"] == null ? "" : Request["ifchangepwd"];
+            string userperson = Request["userperson"] == null ? "" : Request["userperson"];
+            string adddatestart = Request["adddatestart"] == null ? "" : Request["adddatestart"];
+            string adddateend = Request["adddateend"] == null ? "" : Request["adddateend"];
 
-            return Content(sb.ToString());
+            if (userid.Trim() != "" && !SqlInjection.GetString(userid))   //防止sql注入
+                strWhere += string.Format(" and AccountName like '%{0}%'", userid.Trim());
+            if (username.Trim() != "" && !SqlInjection.GetString(username))
+                strWhere += string.Format(" and RealName like '%{0}%'", username.Trim());
+            if (isable.Trim() != "select" && isable.Trim() != "")
+                strWhere += " and IsAble = '" + isable.Trim() + "'";
+            if (ifchangepwd.Trim() != "select" && ifchangepwd.Trim() != "")
+                strWhere += " and IfChangePwd = '" + ifchangepwd.Trim() + "'";
+            if (adddatestart.Trim() != "")
+                strWhere += " and CreateTime > '" + adddatestart.Trim() + "'";
+            if (adddateend.Trim() != "")
+                strWhere += " and CreateTime < '" + adddateend.Trim() + "'";
+
+            //抽取主作业计划单,规则不包含-、_两种连接符
+            strWhere += "and Fbillno not like '%v_%'  ESCAPE   'v'  and  Fbillno not like '%v-%' ESCAPE   'v'";
+
+            int totalCount;   //输出参数
+            DataTable dt = AchieveCommon.SqlPagerHelper.GetPagerK3("ICMO", "FBillNo,FStatus,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
+            //dt.Columns.Add(new DataColumn("FModel"));
+            //dt.Columns.Add(new DataColumn("FName"));
+            //for (int i = 0; i < dt.Rows.Count; i++)
+            //{
+            //    DataTable dticitemcore = ProduceController.GetFNameByFItemID(Convert.ToInt32(dt.Rows[i]["FItemID"]));
+            //    dt.Rows[i]["FModel"] = AchieveCommon.JsonHelper.ColumnToJson(dticitemcore, 0);
+            //    dt.Rows[i]["FName"] = AchieveCommon.JsonHelper.ColumnToJson(dticitemcore, 1);
+            //}
+            string strJson = ToGanttJson(dt);
+
+           // var jsonResult = new { total = totalCount.ToString(), rows = strJson };
+            return Content(strJson);
         }
+
+        public string ToGanttJson(DataTable dt)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("[");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {               
+                StringBuilder sb1 = new StringBuilder();
+                string plandateS=dt.Rows[i]["FPlanCommitDate"].ToString();
+                string plandateE=dt.Rows[i]["FPlanFinishDate"].ToString();
+                string realdateS=dt.Rows[i]["FStartDate"].ToString();
+                string realdateE=dt.Rows[i]["FFinishDate"].ToString();
+
+                sb1.AppendFormat("{{\"id\":{0},\"name\":{1},",i, "\""+dt.Rows[i]["FBillNo"].ToString()+"\"");
+                sb1.AppendFormat("\"series\":[{{\"name\":\"计划日程\",\"start\":\"{0}\",\"end\":\"{1}\",\"color\":\"{2}\" }},",plandateS,plandateE,"#f0f0f0");
+                sb1.AppendFormat("{{\"name\":\"实际日程\",\"start\":\"{0}\",\"end\":\"{1}\",\"color\":\"{2}\" }}]}}",realdateS,realdateE,"#8C7853");
+                if (i < dt.Rows.Count - 1)
+                    sb.Append(sb1.ToString()+",");
+                else
+                   sb.Append(sb1.ToString());
+            }
+            sb.Append("]");
+            return sb.ToString();
+        }
+
         public ActionResult GetGanttDemo()
         {
             StringBuilder sb = new StringBuilder();

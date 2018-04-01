@@ -983,6 +983,7 @@
     <Content Include="Ajax\projectHandler.ashx" />
     <None Include="ClassDiagram1.cd" />
     <Content Include="ganttedit\ganttview.html" />
+    <None Include="gantt2\data2.json" />
     <None Include="ganttedit\README.md" />
     <None Include="ganttedit\res\icons.eot" />
     <None Include="ganttedit\res\icons.ttf" />

@@ -64,7 +64,7 @@ namespace AchieveManageWeb.Controllers
             var jsonResult = new { total = totalCount.ToString(), rows = strJson };
             return Content("{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}");
         }
-        public DataTable GetFNameByFItemID(int FItemID)
+        public static DataTable GetFNameByFItemID(int FItemID)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("select FModel,FName from t_icitemcore");
