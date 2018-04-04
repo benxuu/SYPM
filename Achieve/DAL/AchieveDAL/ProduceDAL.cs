@@ -8,6 +8,9 @@ using System.Data;
 using System.Data.SqlClient;
 namespace AchieveDAL
 {
+    /// <summary>
+    /// 生产任务的数据库实现
+    /// </summary>
     public class ProduceDAL:IProduceDAL
     {
         public DataTable GetAllProduceData(string strwhere)
@@ -19,6 +22,6 @@ namespace AchieveDAL
             
             return SqlHelper.GetDataTable(SqlHelper.connStrK3, CommandType.Text, strSql.ToString(), null);
         }
-
+          
     }
 }

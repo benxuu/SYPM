@@ -14,13 +14,26 @@ namespace AchieveManageWeb.Controllers
     public class ProduceController : Controller
     {
 
+        public ActionResult GetAllProduceDetail()
+        {
 
+            string FBillNo = Request["FBillNo"];
+            string sort = "FBillNo desc";
+            int pageindex = Request["page"] == null ? 1 : Convert.ToInt32(Request["page"]);
+            int pagesize = Request["rows"] == null ? 8 : Convert.ToInt32(Request["rows"]);
+           
+            //抽取主作业计划单,规则不包含-、_两种连接符
+             string strWhere = "FBillNo like '" + FBillNo + "%'";
+            int totalCount;   //输出参数           
+            string strJson = new ProjectBLL().GetJsonPager("ICMO", "FBillNo,FStatus,FQty,FCommitQty,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FType,FWorkShop,FItemID", sort, pagesize, pageindex, strWhere, out totalCount);
+            return Content("{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}");   
+        }
 
         public ActionResult GetAllProduceInfo()
         {
             string strWhere = "1=1";
-            string sort = Request["sort"] == null ? "ID" : Request["sort"];
-            string order = Request["order"] == null ? "asc" : Request["order"];
+            string sort = Request["sort"] == null ? "FPlanCommitDate" : Request["sort"];
+            string order = Request["order"] == null ? "desc" : Request["order"];
 
             //首先获取前台传递过来的参数
             int pageindex = Request["page"] == null ? 1 : Convert.ToInt32(Request["page"]);
@@ -49,30 +62,16 @@ namespace AchieveManageWeb.Controllers
             //抽取主作业计划单,规则不包含-、_两种连接符
             strWhere +=  "and Fbillno not like '%v_%'  ESCAPE   'v'  and  Fbillno not like '%v-%' ESCAPE   'v'";           
 
-            int totalCount;   //输出参数
-            DataTable dt = AchieveCommon.SqlPagerHelper.GetPagerK3("ICMO", "FBillNo,FStatus,FQty,FCommitQty,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FType,FWorkShop,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
-             dt.Columns.Add(new DataColumn("FModel"));
-             dt.Columns.Add(new DataColumn("FName"));
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                DataTable dticitemcore = GetFNameByFItemID(Convert.ToInt32(dt.Rows[i]["FItemID"]));
-                dt.Rows[i]["FModel"] = AchieveCommon.JsonHelper.ColumnToJson(dticitemcore, 0);
-                dt.Rows[i]["FName"] = AchieveCommon.JsonHelper.ColumnToJson(dticitemcore, 1);
-            }
-            string strJson = AchieveCommon.JsonHelper.ToJson(dt);
-
-            var jsonResult = new { total = totalCount.ToString(), rows = strJson };
-            return Content("{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}");
+            int totalCount;   //输出参数           
+            string strJson = new ProjectBLL().GetJsonPager("ICMO", "FBillNo,FStatus,FQty,FCommitQty,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FType,FWorkShop,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
+            //var jsonResult = new { total = totalCount.ToString(), rows = strJson };
+            return Content("{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}");           
         }
-        public static DataTable GetFNameByFItemID(int FItemID)
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.Append("select FModel,FName from t_icitemcore");
-            sb.Append(" where FItemID=@Id");
-            return SqlHelper.GetDataTable(SqlHelper.connStrK3, CommandType.Text, sb.ToString(), new SqlParameter("@Id", FItemID));
-        }
-       
+      
 
+
+
+     
         //
         // GET: /Produce/
 
@@ -80,7 +79,10 @@ namespace AchieveManageWeb.Controllers
         {
             return View();
         }
-
+        public ActionResult IndexDetail()
+        {
+            return View();
+        }
         //
         // GET: /Produce/Details/5
 

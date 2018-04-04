@@ -18,12 +18,12 @@ namespace AchieveManageWeb.Controllers
         public ActionResult getGantt2Demo()
         {
             string strWhere = "1=1";
-            string sort = Request["sort"] == null ? "FBillNo" : Request["sort"];
+            string sort = Request["sort"] == null ? "FPlanCommitDate" : Request["sort"];
             string order = Request["order"] == null ? "desc" : Request["order"];
 
             //首先获取前台传递过来的参数
             int pageindex = Request["page"] == null ? 1 : Convert.ToInt32(Request["page"]);
-            int pagesize = Request["rows"] == null ? 10 : Convert.ToInt32(Request["rows"]);
+            int pagesize = Request["rows"] == null ? 8 : Convert.ToInt32(Request["rows"]);
             string userid = Request["accountid"] == null ? "" : Request["accountid"];
             string username = Request["username"] == null ? "" : Request["username"];
             string isable = Request["isable"] == null ? "" : Request["isable"];
@@ -49,18 +49,8 @@ namespace AchieveManageWeb.Controllers
             strWhere += "and Fbillno not like '%v_%'  ESCAPE   'v'  and  Fbillno not like '%v-%' ESCAPE   'v'";
 
             int totalCount;   //输出参数
-            DataTable dt = AchieveCommon.SqlPagerHelper.GetPagerK3("ICMO", "FBillNo,FStatus,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
-            //dt.Columns.Add(new DataColumn("FModel"));
-            //dt.Columns.Add(new DataColumn("FName"));
-            //for (int i = 0; i < dt.Rows.Count; i++)
-            //{
-            //    DataTable dticitemcore = ProduceController.GetFNameByFItemID(Convert.ToInt32(dt.Rows[i]["FItemID"]));
-            //    dt.Rows[i]["FModel"] = AchieveCommon.JsonHelper.ColumnToJson(dticitemcore, 0);
-            //    dt.Rows[i]["FName"] = AchieveCommon.JsonHelper.ColumnToJson(dticitemcore, 1);
-            //}
+            DataTable dt = new ProjectBLL().GetDataTablePager("ICMO", "FBillNo,FStatus,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
             string strJson = ToGanttJson(dt);
-
-           // var jsonResult = new { total = totalCount.ToString(), rows = strJson };
             return Content(strJson);
         }
 
