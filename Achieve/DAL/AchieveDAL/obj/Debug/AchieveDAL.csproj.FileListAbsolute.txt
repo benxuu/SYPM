@@ -53,3 +53,14 @@ E:\github\SYPM\Achieve\DAL\AchieveDAL\bin\Debug\AchieveInterfaceDAL.pdb
 E:\github\SYPM\Achieve\DAL\AchieveDAL\obj\Debug\AchieveDAL.csprojResolveAssemblyReference.cache
 E:\github\SYPM\Achieve\DAL\AchieveDAL\obj\Debug\AchieveDAL.dll
 E:\github\SYPM\Achieve\DAL\AchieveDAL\obj\Debug\AchieveDAL.pdb
+D:\github\SYPM\Achieve\DAL\AchieveDAL\bin\Debug\AchieveDAL.dll
+D:\github\SYPM\Achieve\DAL\AchieveDAL\bin\Debug\AchieveDAL.pdb
+D:\github\SYPM\Achieve\DAL\AchieveDAL\bin\Debug\AchieveCommon.dll
+D:\github\SYPM\Achieve\DAL\AchieveDAL\bin\Debug\AchieveEntity.dll
+D:\github\SYPM\Achieve\DAL\AchieveDAL\bin\Debug\AchieveInterfaceDAL.dll
+D:\github\SYPM\Achieve\DAL\AchieveDAL\bin\Debug\AchieveEntity.pdb
+D:\github\SYPM\Achieve\DAL\AchieveDAL\bin\Debug\AchieveCommon.pdb
+D:\github\SYPM\Achieve\DAL\AchieveDAL\bin\Debug\AchieveInterfaceDAL.pdb
+D:\github\SYPM\Achieve\DAL\AchieveDAL\obj\Debug\AchieveDAL.csprojResolveAssemblyReference.cache
+D:\github\SYPM\Achieve\DAL\AchieveDAL\obj\Debug\AchieveDAL.dll
+D:\github\SYPM\Achieve\DAL\AchieveDAL\obj\Debug\AchieveDAL.pdb

@@ -43,3 +43,12 @@ E:\github\SYPM\Achieve\DAL\AchieveDALFactory\bin\Debug\AchieveInterfaceDAL.pdb
 E:\github\SYPM\Achieve\DAL\AchieveDALFactory\obj\Debug\AchieveDALFactory.csprojResolveAssemblyReference.cache
 E:\github\SYPM\Achieve\DAL\AchieveDALFactory\obj\Debug\AchieveDALFactory.dll
 E:\github\SYPM\Achieve\DAL\AchieveDALFactory\obj\Debug\AchieveDALFactory.pdb
+D:\github\SYPM\Achieve\DAL\AchieveDALFactory\bin\Debug\AchieveDALFactory.dll
+D:\github\SYPM\Achieve\DAL\AchieveDALFactory\bin\Debug\AchieveDALFactory.pdb
+D:\github\SYPM\Achieve\DAL\AchieveDALFactory\bin\Debug\AchieveEntity.dll
+D:\github\SYPM\Achieve\DAL\AchieveDALFactory\bin\Debug\AchieveInterfaceDAL.dll
+D:\github\SYPM\Achieve\DAL\AchieveDALFactory\bin\Debug\AchieveEntity.pdb
+D:\github\SYPM\Achieve\DAL\AchieveDALFactory\bin\Debug\AchieveInterfaceDAL.pdb
+D:\github\SYPM\Achieve\DAL\AchieveDALFactory\obj\Debug\AchieveDALFactory.csprojResolveAssemblyReference.cache
+D:\github\SYPM\Achieve\DAL\AchieveDALFactory\obj\Debug\AchieveDALFactory.dll
+D:\github\SYPM\Achieve\DAL\AchieveDALFactory\obj\Debug\AchieveDALFactory.pdb
