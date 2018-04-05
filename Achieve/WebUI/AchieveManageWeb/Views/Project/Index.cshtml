@@ -9,18 +9,123 @@
     <meta name="viewport" content="width=device-width" />
     <title>项目管理</title>
     <link href="~/Scripts/jquery-easyui-1.4.4/themes/bootstrap/easyui.css" rel="stylesheet" />
+    <script src="~/gantt/lib/jquery-1.4.2.js"></script>
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
     <script src="~/Scripts/jquery-easyui-1.4.4/jquery.min.js"></script>
+   
     <script src="~/Scripts/jquery-easyui-1.4.4/jquery.easyui.min.js"></script>
     <script src="~/Scripts/jquery-easyui-1.4.4/locale/easyui-lang-zh_CN.js"></script>
     <link href="~/Content/themes/icon.css" rel="stylesheet" />
     <script src="~/Content/js/common.js"></script>
-    <link href="~/Content/themes/table.css" rel="stylesheet" />       
+    <link href="~/Content/themes/table.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="~/gantt/lib/date.js"></script>
+
+    
+    <script src="~/gantt/lib/date.js"></script>
+    <script type="text/javascript" src="~/gantt/jquery.ganttView.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/gantt/reset.css" />
+    <link rel="stylesheet" type="text/css" href="~/gantt/jquery.ganttView.css" />
+
+    <script type="text/javascript">
+    $(function () {
+        $("#ganttChart").ganttView({
+            dataUrl: "/Project/getGantt2Demo",
+            slideWidth: $(window).width() - 300,
+            behavior: {
+                onClick: function (data) {
+                    var msg = "点击事件: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
+                    $("#eventMessage").text(msg);
+                },
+                onResize: function (data) {
+                    var msg = "调整事件: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
+                    $("#eventMessage").text(msg);
+                },
+                onDrag: function (data) {
+                    var msg = "拖拽事件: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
+                    $("#eventMessage").text(msg);
+                }
+            }
+        });
+
+        // $("#ganttChart").ganttView("setSlideWidth", 600);
+    });
+    </script>
+
+
 
 </head>
 <body>
     <div id="ui_user_layout" class="easyui-layout" data-options="fit:true,border:false">
-        <div>这个项目很重要</div> 
-          
+        <div data-options="region:'north',split:true,border:true,collapsed:false" title="搜索条件" style="height:104px;">
+            <div id="ui_user_search">
+                <table class="tableForm" style="width: 99%; height: 100%; background: #F5F5F5;">
+                    <tr>
+                        <th>
+                            订单号：
+                        </th>
+                        <td>
+                            <input name="txtUserId" id="txtUserId" class="easyui-validatebox textbox" style="width:150px;height:22px;" />
+                        </td>
+
+                        <th>
+                            物料名称：
+                        </th>
+                        <td>
+                            <input name="txtUserName" id="txtUserName" class="easyui-validatebox textbox" style="width:150px;height:22px;" />
+                        </td>
+
+                        <th>
+                            订单状态：
+                        </th>
+                        <td>
+                            <select name="selUserIsable" id="selUserIsable">
+                                <option value="select">请选择</option>
+                                <option value="true">已完成</option>
+                                <option value="false">未完成</option>
+                            </select>
+                        </td>
+                        <th>
+                            是否领料：
+                        </th>
+                        <td>
+                            <select name="selIfChangepwd" id="selIfChangepwd">
+                                <option value="select">请选择</option>
+                                <option value="true">已领料</option>
+                                <option value="false">未领料</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            计划开工时间：
+                        </th>
+                        <td>
+                            <input name="txtAddBeginDate" id="txtAddBeginDate" class="easyui-datetimebox"
+                                   editable="false" style="width:150px;height:22px;" />
+                        </td>
+
+                        <th>
+                            计划完工时间：
+                        </th>
+                        <td>
+                            <input name="txtAddEndDate" id="txtAddEndDate" class="easyui-datetimebox"
+                                   editable="false" style="width:150px;height:22px;" />
+                        </td>
+                        <td colspan="4">
+                            <a href="javascript:void(0);" class="easyui-linkbutton" iconcls="icon-search" plain="true"
+                               onclick="ui_user_searchdata();">搜索</a>
+                            <a href="javascript:void(0);" class="easyui-linkbutton" iconcls="icon-clear" plain="true"
+                               onclick="ui_user_cleardata();">清空条件</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+     
+        <div id="ganttChart" data-options="region:'center',border:false"></div>
+        <br /><br />
+        <div id="eventMessage" data-options="region:'center',border:false"></div>
     </div>
 </body>
 </html>

@@ -59,22 +59,19 @@ behavior: {
         }
 
         function build() {
-            //json对象中日期字符串转换为日期对象,当前使用整形数字或时间字符串'2017-01-04'
+            //json对象中日期字符串转换为日期对象,当前使用整形数字或时间字符串'2017-01-04',
 			for(var i=0;i<opts.data.length;i++){ 			
 			var plan=opts.data[i].series;
 			for(var j=0;j<plan.length;j++){ 
 			//alert("start:"+plan[j].start+",end:"+plan[j].end); 
-			 //var ms1 = parseInt(plan[j].start.replace(/\D/igm, ""));
+			    //var ms1 = parseInt(plan[j].start.replace(/\D/igm, ""));
+			    var reg = /[\u4E00-\u9FA5]/g;//检测汉字，新版本.net输出日期字符串带有“星期几”，js转换时不兼容
+			    //var result = title.replace(reg, '');
 			    var ms1 = plan[j].start;
-			    var day1 = new Date(ms1);
-			    if (ms1.length == 0) { day1 = new Date(); }
-				
-				//var ms2 = parseInt(plan[j].end.replace(/\D/igm, ""));
-				var ms2=plan[j].end;
-				var day2 = new Date(ms2);
-				if (ms2.length == 0) { day2 = new Date(); }
-				opts.data[i].series[j].start=day1;
-				opts.data[i].series[j].end=day2;
+			   // var day1 = new Date(ms1);
+			    if (ms1.length == 0) { opts.data[i].series[j].start = new Date(); } else { opts.data[i].series[j].start = new Date(ms1.replace(reg, '')); }
+				var ms2=plan[j].end;			
+				if (ms2.length == 0) { opts.data[i].series[j].end = new Date(); } else { opts.data[i].series[j].end = new Date(ms2.replace(reg, '')); }
 			}
 }
 
@@ -296,7 +293,9 @@ behavior: {
         }
 
         function bindBlockClick(div, callback) {
-            jQuery("div.ganttview-block", div).live("click", function () {
+            //by Ben 升级兼容新版jQuery
+            // jQuery("div.ganttview-block", div).live("click", function () {
+            $('#div.ganttview-block').on('click', 'div', function() {
                 if (callback) { callback(jQuery(this).data("block-data")); }
             });
         }
