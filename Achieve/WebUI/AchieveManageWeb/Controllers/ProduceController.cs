@@ -23,7 +23,7 @@ namespace AchieveManageWeb.Controllers
             int pagesize = Request["rows"] == null ? 8 : Convert.ToInt32(Request["rows"]);
            
             //抽取主作业计划单,规则不包含-、_两种连接符
-             string strWhere = "FBillNo like '" + FBillNo + "%'";
+             string strWhere = "FBillNo like '" + FBillNo + "_%'";
             int totalCount;   //输出参数           
             string strJson = new ProjectBLL().GetJsonPager("ICMO", "FBillNo,FStatus,FQty,FCommitQty,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FType,FWorkShop,FItemID", sort, pagesize, pageindex, strWhere, out totalCount);
             return Content("{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}");   

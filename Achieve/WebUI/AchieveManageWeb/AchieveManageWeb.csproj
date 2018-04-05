@@ -1840,6 +1840,7 @@
     <Content Include="DB\AchieveDB.sql" />
     <Content Include="gantt\.gitignore" />
     <Content Include="gantt\data.js" />
+    <Content Include="gantt\easyUI.ganttView.js" />
     <Content Include="gantt\gantt2.html" />
     <Content Include="gantt\jquery-ganttview.png" />
     <Content Include="gantt\jquery.ganttView.css" />

@@ -9,60 +9,50 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>项目管理</title>
 
-    <link href="~/Scripts/jquery-easyui-1.4.4/themes/bootstrap/easyui.css" rel="stylesheet" />
-    <link href="~/Content/themes/icon.css" rel="stylesheet" />
+    <link href="~/Content/themes/icon.css" rel="stylesheet" />  
     <!--
+   
+        -->
     <script src="~/Scripts/jquery-easyui-1.4.4/jquery.min.js"></script>
     <script src="~/Scripts/jquery-easyui-1.4.4/jquery.easyui.min.js"></script>
     <script src="~/Scripts/jquery-easyui-1.4.4/locale/easyui-lang-zh_CN.js"></script>
-        -->
-    <link rel="stylesheet" type="text/css" href="~/gantt/lib/jquery-ui-1.8.4.css" />
-    <link rel="stylesheet" type="text/css" href="~/gantt/reset.css" />
+
     <link rel="stylesheet" type="text/css" href="~/gantt/jquery.ganttView.css" />
-
-
-    <script type="text/javascript" src="~/gantt/lib/jquery-1.4.2.js"></script>
-    <script type="text/javascript" src="~/gantt/lib/date.js"></script>
-    <script type="text/javascript" src="~/gantt/lib/jquery-ui-1.8.4.js"></script>
-    <script type="text/javascript" src="~/gantt/jquery.ganttView.js"></script>
-
-    <link href="~/Content/themes/icon.css" rel="stylesheet" />  
+    <script type="text/javascript" src="~/gantt/lib/date.js"></script>  
+    <script src="~/gantt/easyUI.ganttView.js"></script>
+    <link href="~/Scripts/jquery-easyui-1.4.4/themes/bootstrap/easyui.css" rel="stylesheet" />
+    
     <link href="~/Content/themes/table.css" rel="stylesheet" /> 
-    <style type="text/css">
-        body {
-            font-family: tahoma, verdana, helvetica;
-            font-size: 0.8em;
-            padding: 10px;
-        }
-    </style>
+    <script type="text/javascript">
+    $(function () {
+        $("#ganttChart").ganttView({
+            dataUrl: "/Project/getGantt2Demo",
+            slideWidth: $(window).width() - 300,
+            behavior: {
+                onClick: function (data) {
+                    var msg = "点击事件: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
+                    $("#eventMessage").text(msg);
+                },
+                onResize: function (data) {
+                    var msg = "调整事件: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
+                    $("#eventMessage").text(msg);
+                }//,
+                // onDrag: function (data) {
+                //   var msg = "拖拽事件: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
+                // $("#eventMessage").text(msg);
+                //}
+            }
+        });
+
+        // $("#ganttChart").ganttView("setSlideWidth", 600);
+    });
+</script>
+
 </head>
 
 
 <body>
-       <script type="text/javascript">      
-        $(function () {
-            $("#ganttChart").ganttView({                
-                dataUrl: "/Project/getGantt2Demo",
-                slideWidth: $(window).width()-300,
-                behavior: {
-                    onClick: function (data) {
-                        var msg = "点击事件: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
-                        $("#eventMessage").text(msg);
-                    },
-                    onResize: function (data) {
-                        var msg = "调整事件: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
-                        $("#eventMessage").text(msg);
-                    },
-                    onDrag: function (data) {
-                        var msg = "拖拽事件: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
-                        $("#eventMessage").text(msg);
-                    }
-                }
-            });
-
-            // $("#ganttChart").ganttView("setSlideWidth", 600);
-        });
-    </script>
+ 
 
     <div id="ui_user_layout" class="easyui-layout" data-options="fit:true,border:false">
         <div data-options="region:'north',split:true,border:true,collapsed:false" title="搜索条件" style="height:104px;">
@@ -130,11 +120,14 @@
                 </table>
             </div>
         </div>
-        <div id="ganttChart"></div>
-        <br /><br />
-        <div id="eventMessage"></div>
+        <div data-options="region:'center',border:false">             
+            <div id="ganttChart" data-options="fit:true,border:false"></div>
+            <br />
+            <div id="eventMessage"></div>
+        </div>
+        
        
     </div>
-
+ 
 </body>
 </html>
