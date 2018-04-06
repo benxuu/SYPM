@@ -26,8 +26,8 @@
     <script type="text/javascript">
     $(function () {
         $("#ganttChart").ganttView({
-            dataUrl: "/Project/getGantt2Demo",
-            slideWidth: $(window).width() - 300,
+            dataUrl: "/Project/GetPageProjectInfo?view=projectGantt",
+            slideWidth: $(window).width() - 200,
             behavior: {
                 onClick: function (data) {
                     var msg = "点击事件: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
@@ -46,7 +46,34 @@
 
         // $("#ganttChart").ganttView("setSlideWidth", 600);
     });
+
+
+
+    //搜索任务单
+    function ui_project_searchdata() {
+        $("#ui_produce_dg").datagrid('load', {
+            FBillNo: $('#FBillNo').val(),
+            FName: $('#FName').val(),
+            FStatus: $('#FStatus').val(),
+            ifchangepwd: $('#selIfChangepwd').val(),
+            FPlanCommitDate: $('#FPlanCommitDate').datetimebox('getValue'),
+            FPlanFinishDate: $('#FPlanFinishDate').datetimebox('getValue')
+        });
+        $("#ui_produce_dg").datagrid('clearSelections').datagrid('clearChecked');
+    }
+    //清除搜索条件
+    function ui_project_cleardata() {
+        $('#ui_user_search input').val('');
+        $('#ui_user_search select').val('select');
+        $('#txtAddBeginDate').datetimebox('setValue', '');
+        $('#txtAddEndDate').datetimebox('setValue', '');
+        $("#ui_user_dg").datagrid('load', {});
+
+        $("#ui_user_dg").datagrid('clearSelections').datagrid('clearChecked');
+    }
 </script>
+
+
 
 </head>
 
@@ -63,21 +90,21 @@
                             订单号：
                         </th>
                         <td>
-                            <input name="txtUserId" id="txtUserId" class="easyui-validatebox textbox" style="width:150px;height:22px;" />
+                            <input name="FBillNo" id="FBillNo" class="easyui-validatebox textbox" style="width:150px;height:22px;" />
                         </td>
 
                         <th>
-                            物料名称：
+                            物料代码：
                         </th>
                         <td>
-                            <input name="txtUserName" id="txtUserName" class="easyui-validatebox textbox" style="width:150px;height:22px;" />
+                            <input name="FItemID" id="FItemID" class="easyui-validatebox textbox" style="width:150px;height:22px;" />
                         </td>
 
                         <th>
                             订单状态：
                         </th>
                         <td>
-                            <select name="selUserIsable" id="selUserIsable">
+                            <select name="FStatus" id="FStatus">
                                 <option value="select">请选择</option>
                                 <option value="true">已完成</option>
                                 <option value="false">未完成</option>
@@ -99,7 +126,7 @@
                             计划开工时间：
                         </th>
                         <td>
-                            <input name="txtAddBeginDate" id="txtAddBeginDate" class="easyui-datetimebox"
+                            <input name="FPlanCommitDate" id="FPlanCommitDate" class="easyui-datetimebox"
                                    editable="false" style="width:150px;height:22px;" />
                         </td>
 
@@ -107,14 +134,14 @@
                             计划完工时间：
                         </th>
                         <td>
-                            <input name="txtAddEndDate" id="txtAddEndDate" class="easyui-datetimebox"
+                            <input name="FPlanFinishDate" id="FPlanFinishDate" class="easyui-datetimebox"
                                    editable="false" style="width:150px;height:22px;" />
                         </td>
                         <td colspan="4">
                             <a href="javascript:void(0);" class="easyui-linkbutton" iconcls="icon-search" plain="true"
-                               onclick="ui_user_searchdata();">搜索</a>
+                               onclick="ui_project_searchdata();">搜索</a>
                             <a href="javascript:void(0);" class="easyui-linkbutton" iconcls="icon-clear" plain="true"
-                               onclick="ui_user_cleardata();">清空条件</a>
+                               onclick="ui_project_cleardata();">清空条件</a>
                         </td>
                     </tr>
                 </table>

@@ -57,7 +57,11 @@
                         var toolbar = getToolBar(data);      //common.js
                         if (data.search) {     //判断是否有浏览权限
                             $("#ui_produce_dg").datagrid({
-                                url: "/Produce/GetAllProduceInfo",                                
+                                url: "/Project/GetPageProjectInfo",
+                                queryParams: {
+                                    view: 'Projectgrid',
+                                    subject: 'datagrid'
+                                },
                                 striped: true, rownumbers: true, pagination: true, pageSize: 20, singleSelect: true,
                                 fitColumns: false,
                                 idField: 'FBillNo',
@@ -95,7 +99,7 @@
                 options: {
                     fitColumns: false,
                     foreignField: 'FBillNo',
-                    url: "/Produce/GetAllProduceDetail",
+                    url: "/Project/GetProjectEntry",
                     striped: true, rownumbers: false, pagination: true, pageSize: 10, singleSelect: true,
                     idField: 'FBillNo',
                     //sortName: 'FBillNo',

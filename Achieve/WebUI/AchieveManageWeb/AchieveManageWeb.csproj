@@ -3693,6 +3693,7 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Project\ganttview.cshtml" />
     <Content Include="Views\Produce\IndexDetail.cshtml" />
+    <Content Include="Views\Project\Projectgrid.cshtml" />
     <None Include="Views\Project\Indexgantt.cshtml" />
     <Content Include="Views\Project\test.html" />
     <Content Include="Web.config">

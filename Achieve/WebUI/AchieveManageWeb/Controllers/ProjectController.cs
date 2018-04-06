@@ -59,27 +59,106 @@ namespace AchieveManageWeb.Controllers
             StringBuilder sb = new StringBuilder();
             sb.Append("[");
             for (int i = 0; i < dt.Rows.Count; i++)
-            {               
+            {
                 StringBuilder sb1 = new StringBuilder();
-                string plandateS=dt.Rows[i]["FPlanCommitDate"].ToString();
-                string plandateE=dt.Rows[i]["FPlanFinishDate"].ToString();
-                string realdateS=dt.Rows[i]["FStartDate"].ToString();
-                string realdateE=dt.Rows[i]["FFinishDate"].ToString();
+                string plandateS = dt.Rows[i]["FPlanCommitDate"].ToString();
+                string plandateE = dt.Rows[i]["FPlanFinishDate"].ToString();
+                string realdateS = dt.Rows[i]["FStartDate"].ToString();
+                string realdateE = dt.Rows[i]["FFinishDate"].ToString();
 
-                sb1.AppendFormat("{{\"id\":{0},\"name\":{1},",i, "\""+dt.Rows[i]["FBillNo"].ToString()+"\"");
-                sb1.AppendFormat("\"series\":[{{\"name\":\"计划日程\",\"start\":\"{0}\",\"end\":\"{1}\",\"color\":\"{2}\" }},",plandateS,plandateE,"#f0f0f0");
-                sb1.AppendFormat("{{\"name\":\"实际日程\",\"start\":\"{0}\",\"end\":\"{1}\",\"color\":\"{2}\" }}]}}",realdateS,realdateE,"#8C7853");
+                sb1.AppendFormat("{{\"id\":{0},\"name\":{1},", i, "\"" + dt.Rows[i]["FBillNo"].ToString() + "\"");
+                sb1.AppendFormat("\"series\":[{{\"name\":\"计划日程\",\"start\":\"{0}\",\"end\":\"{1}\",\"color\":\"{2}\" }},", plandateS, plandateE, "#f0f0f0");
+                sb1.AppendFormat("{{\"name\":\"实际日程\",\"start\":\"{0}\",\"end\":\"{1}\",\"color\":\"{2}\" }}]}}", realdateS, realdateE, "#8C7853");
                 if (i < dt.Rows.Count - 1)
-                    sb.Append(sb1.ToString()+",");
+                    sb.Append(sb1.ToString() + ",");
                 else
-                   sb.Append(sb1.ToString());
+                    sb.Append(sb1.ToString());
             }
             sb.Append("]");
             return sb.ToString();
         }
+        /// <summary>
+        /// 获取主订单的作业明细，即部件作业计划
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetProjectEntry()
+        {
+
+            string FBillNo = Request["FBillNo"];
+            string sort = "FBillNo desc";
+            int pageindex = Request["page"] == null ? 1 : Convert.ToInt32(Request["page"]);
+            int pagesize = Request["rows"] == null ? 8 : Convert.ToInt32(Request["rows"]);
+
+            //抽取主作业计划单,规则不包含-、_两种连接符
+            string strWhere = "FBillNo like '" + FBillNo + "_%'";
+            int totalCount;   //输出参数           
+            string strJson = new ProjectBLL().GetJsonPager("ICMO", "FBillNo,FStatus,FQty,FCommitQty,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FType,FWorkShop,FItemID", sort, pagesize, pageindex, strWhere, out totalCount);
+            return Content("{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}");
+        }
+        /// <summary>
+        /// 主作业计划通用分页查询,view=Projectgrid,
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetPageProjectInfo()
+        {
+            string strWhere = "1=1";
+            string sort = Request["sort"] == null ? "FPlanCommitDate" : Request["sort"];
+            string order = Request["order"] == null ? "desc" : Request["order"];
+            string view = Request["view"] == null ? "" : Request["view"];
+
+            //首先获取前台传递过来的参数
+            int pageindex = Request["page"] == null ? 1 : Convert.ToInt32(Request["page"]);
+            int pagesize = Request["rows"] == null ? 10 : Convert.ToInt32(Request["rows"]);
+            string FBillNo = Request["FBillNo"] == null ? "" : Request["FBillNo"];
+            string FItemID = Request["FItemID"] == null ? "" : Request["FItemID"];
+            string isable = Request["isable"] == null ? "" : Request["isable"];
+            string ifchangepwd = Request["ifchangepwd"] == null ? "" : Request["ifchangepwd"];
+            string userperson = Request["userperson"] == null ? "" : Request["userperson"];
+            string FPlanCommitDate = Request["FPlanCommitDate"] == null ? "" : Request["FPlanCommitDate"];
+            string FPlanFinishDate = Request["FPlanFinishDate"] == null ? "" : Request["FPlanFinishDate"];
+
+            if (FBillNo.Trim() != "" && !SqlInjection.GetString(FBillNo))   //防止sql注入
+                strWhere += string.Format(" and FBillNo like '%{0}%'", FBillNo.Trim());
+            //FName为非主表字段，暂不支持直接查询；
+            //后期解决思路，先根据FName在子表中查询对应的FItemID，可能有多个，则将这多个拼接成where条件；
+            //例如  FItemID = id1 and FItemID = id2  and FItemID = id3...
+            //if (FName.Trim() != "" && !SqlInjection.GetString(FName))
+            //    strWhere += string.Format(" and FName like '%{0}%'", FName.Trim());
+            if (FItemID.Trim() != "" && !SqlInjection.GetString(FItemID))
+                strWhere += string.Format(" and FItemID like '%{0}%'", FItemID.Trim());
+            if (isable.Trim() != "select" && isable.Trim() != "")
+                strWhere += " and IsAble = '" + isable.Trim() + "'";
+            if (ifchangepwd.Trim() != "select" && ifchangepwd.Trim() != "")
+                strWhere += " and IfChangePwd = '" + ifchangepwd.Trim() + "'";
+            if (FPlanCommitDate.Trim() != "")
+                strWhere += " and FPlanCommitDate > '" + FPlanCommitDate.Trim() + "'";
+            if (FPlanFinishDate.Trim() != "")
+                strWhere += " and FPlanFinishDate < '" + FPlanFinishDate.Trim() + "'";
+
+            //抽取主作业计划单,规则不包含-、_两种连接符
+            strWhere += "and Fbillno not like '%v_%'  ESCAPE   'v'  and  Fbillno not like '%v-%' ESCAPE   'v'";
+
+            string content = "";
+            if (view == "Projectgrid")
+            {
+                int totalCount;   //输出参数 
+                string strJson = new ProjectBLL().GetJsonPager("ICMO", "FBillNo,FStatus,FQty,FCommitQty,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FType,FWorkShop,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
+                content = "{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}";
+            }
+            if (view == "projectGantt")
+            {
+                 int totalCount;   //输出参数
+            DataTable dt = new ProjectBLL().GetDataTablePager("ICMO", "FBillNo,FStatus,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
+            content = ToGanttJson(dt);
+            }
+
+            return Content(content);
+        }
+
 
         public ActionResult GetGanttDemo()
         {
+            //for gantt edit, not used
             StringBuilder sb = new StringBuilder();
             sb.Append("{\"tasks\":    [");
             sb.Append("{\"id\": -1, \"name\": \"Gantt editor\", \"progress\": 0, \"progressByWorklog\": false, \"relevance\": 0, \"type\": \"\", \"typeId\": \"\", \"description\": \"\", \"code\": \"\", \"level\": 0, \"status\": \"STATUS_ACTIVE\", \"depends\": \"\", \"canWrite\": true, \"start\": 1396994400000, \"duration\": 20, \"end\": 1399586399999, \"startIsMilestone\": false, \"endIsMilestone\": false, \"collapsed\": false, \"assigs\": [], \"hasChild\": true},");
@@ -97,9 +176,9 @@ namespace AchieveManageWeb.Controllers
             sb.Append("{\"id\": \"tmp_1\", \"name\": \"Project Manager\"},");
             sb.Append("{\"id\": \"tmp_4\", \"name\": \"Customer\"}");
             sb.Append("], \"canWrite\":    true, \"canDelete\":true, \"canWriteOnParent\": true, \"canAdd\":true}");
-            return  Content(sb.ToString());
+            return Content(sb.ToString());
         }
-        
+
         //
         // GET: /Project/
 
@@ -107,7 +186,11 @@ namespace AchieveManageWeb.Controllers
         {
             return View();
         }
-
+       
+        public ActionResult Projectgrid()
+        {
+            return View();
+        }
         public ActionResult projectGantt()
         {
             return View();
