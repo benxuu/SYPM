@@ -7,7 +7,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>生产管理</title>
+    <title>生产任务报表</title>
     <link href="~/Scripts/jquery-easyui-1.4.4/themes/bootstrap/easyui.css" rel="stylesheet" />
     <script src="~/Scripts/jquery-easyui-1.4.4/jquery.min.js"></script>
     <script src="~/Scripts/jquery-easyui-1.4.4/jquery.easyui.min.js"></script>
@@ -17,7 +17,8 @@
     <link href="~/Content/themes/table.css" rel="stylesheet" />
 
     <script src="~/Scripts/jquery-easyui-1.4.4/Extension/jquery-easyui-datagridview/datagrid-detailview.js"></script>
-
+   <!-- <script src="~/Content/js/jquery.jqprint-0.3.js"></script>-->
+    <script src="~/Content/js/printDatagrid.js"></script>
     <script type="text/javascript">
         //表格列定义
         var myColums = [[
@@ -116,62 +117,63 @@
 
         //添加用户
         function AddProduce() {
-            $("<div/>").dialog({
-                id: "ui_user_add_dialog",
-                href: "/User/UserAdd",
-                title: "添加生产任务",
-                height: 370,
-                width: 610,
-                modal: true,
-                buttons: [{
-                    id: "ui_user_add_btn",
-                    text: '添 加',
-                    handler: function () {
-                        $("#UserAddForm").form("submit", {
-                            url: "/User/AddUser",
-                            onSubmit: function (param) {
-                                param.UserID = $("#txtUserIDAdd").val();
-                                param.UserName = $("#txtUserNameAdd").val();
-                                param.Isable = document.getElementById("selUserIsableAdd").checked;
-                                param.IfChangepwd = document.getElementById("selIfChangepwdAdd").checked;
-                                param.Description = $("#txtUserDescriptionAdd").val();
-                                param.MobilePhone = $("#txtMobilePhone").val();
-                                param.Email = $("#txtEmail").val();
-                                if ($(this).form('validate')) {
-                                    $('#ui_user_add_btn').linkbutton('disable');
-                                    return true;
-                                }
-                                else {
-                                    $('#ui_user_add_btn').linkbutton('enable');   //恢复按钮
-                                    return false;
-                                }
-                            },
-                            success: function (data) {
-                                var dataJson = eval('(' + data + ')');
-                                if (dataJson.success) {
-                                    $("#ui_user_add_dialog").dialog('destroy');
-                                    $.show_alert("提示", dataJson.msg);
-                                    $("#ui_user_dg").datagrid("reload").datagrid('clearSelections').datagrid('clearChecked');
-                                } else {
-                                    $('#ui_user_add_btn').linkbutton('enable');
-                                    $.show_alert("提示", dataJson.msg);
-                                }
-                            }
-                        });
-                    }
-                }, {
-                    text: '取 消',
-                    handler: function () {
-                        $("#ui_user_add_dialog").dialog('destroy');
-                    }
-                }],
-                onLoad: function () {
-                    $("#txtUserIDAdd").focus();
-                },
-                onClose: function () {
-                    $("#ui_user_add_dialog").dialog('destroy');  //销毁dialog对象
-                }
-            });
+            $("#print_produce_dg").jqprint();
+            //$("<div/>").dialog({
+            //    id: "ui_user_add_dialog",
+            //    href: "/User/UserAdd",
+            //    title: "添加生产任务",
+            //    height: 370,
+            //    width: 610,
+            //    modal: true,
+            //    buttons: [{
+            //        id: "ui_user_add_btn",
+            //        text: '添 加',
+            //        handler: function () {
+            //            $("#UserAddForm").form("submit", {
+            //                url: "/User/AddUser",
+            //                onSubmit: function (param) {
+            //                    param.UserID = $("#txtUserIDAdd").val();
+            //                    param.UserName = $("#txtUserNameAdd").val();
+            //                    param.Isable = document.getElementById("selUserIsableAdd").checked;
+            //                    param.IfChangepwd = document.getElementById("selIfChangepwdAdd").checked;
+            //                    param.Description = $("#txtUserDescriptionAdd").val();
+            //                    param.MobilePhone = $("#txtMobilePhone").val();
+            //                    param.Email = $("#txtEmail").val();
+            //                    if ($(this).form('validate')) {
+            //                        $('#ui_user_add_btn').linkbutton('disable');
+            //                        return true;
+            //                    }
+            //                    else {
+            //                        $('#ui_user_add_btn').linkbutton('enable');   //恢复按钮
+            //                        return false;
+            //                    }
+            //                },
+            //                success: function (data) {
+            //                    var dataJson = eval('(' + data + ')');
+            //                    if (dataJson.success) {
+            //                        $("#ui_user_add_dialog").dialog('destroy');
+            //                        $.show_alert("提示", dataJson.msg);
+            //                        $("#ui_user_dg").datagrid("reload").datagrid('clearSelections').datagrid('clearChecked');
+            //                    } else {
+            //                        $('#ui_user_add_btn').linkbutton('enable');
+            //                        $.show_alert("提示", dataJson.msg);
+            //                    }
+            //                }
+            //            });
+            //        }
+            //    }, {
+            //        text: '取 消',
+            //        handler: function () {
+            //            $("#ui_user_add_dialog").dialog('destroy');
+            //        }
+            //    }],
+            //    onLoad: function () {
+            //        $("#txtUserIDAdd").focus();
+            //    },
+            //    onClose: function () {
+            //        $("#ui_user_add_dialog").dialog('destroy');  //销毁dialog对象
+            //    }
+            //});
         }
 
         //修改计划
@@ -504,12 +506,13 @@
                                onclick="ui_project_searchdata();">搜索</a>
                             <a href="javascript:void(0);" class="easyui-linkbutton" iconcls="icon-clear" plain="true"
                                onclick="ui_project_cleardata();">清空条件</a>
+                            <a href="javascript:void(0);" onclick="CreateFormPage('打印测试', $('#ui_produce_dg'));">打印</a>
                         </td>
                     </tr>
                 </table>
             </div>
         </div>
-        <div data-options="region:'center',border:false">
+        <div id="print_produce_dg" data-options="region:'center',border:false" >
             <table id="ui_produce_dg" data-options="fit:true,border:false"></table>
         </div>
     </div>
