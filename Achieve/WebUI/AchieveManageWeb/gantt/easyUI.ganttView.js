@@ -53,6 +53,7 @@ behavior: {
             cellHeight: 31,
             slideWidth: 400,
             vHeaderWidth: 100,
+            afterload: function () { },
             behavior: {
                 clickable: true,
                 draggable: false,
@@ -78,15 +79,18 @@ behavior: {
 			   // var day1 = new Date(ms1);
 			    if (ms1.length == 0) { opts.data[i].series[j].start = new Date(); } else { opts.data[i].series[j].start = new Date(ms1.replace(reg, '')); }
 				var ms2=plan[j].end;			
-				if (ms2.length == 0) { opts.data[i].series[j].end = new Date(); } else { opts.data[i].series[j].end = new Date(ms2.replace(reg, '')); }
-
-			    //刷新分页栏；
-				$('#pp').pagination({
-				    total: data.total
-				});
+				if (ms2.length == 0) { opts.data[i].series[j].end = new Date(); } else { opts.data[i].series[j].end = new Date(ms2.replace(reg, '')); }			  
+			}			   
 			}
-}
-			build(); 
+                //刷新分页栏；
+			$('#pp').pagination({
+			    total: data.total
+			});
+               if (opts.afterload) {
+                   opts.afterload("一共多少页？" + data.total);
+               	}
+			
+	build(); 
 			});
         }
 
@@ -164,7 +168,7 @@ behavior: {
             }
             return dates;
         }
-
+//生成左边的标题栏
         function addVtHeader(div, data, cellHeight) {
             var headerDiv = jQuery("<div>", { "class": "ganttview-vtheader" });
             for (var i = 0; i < data.length; i++) {
@@ -183,7 +187,7 @@ behavior: {
             }
             div.append(headerDiv);
         }
-
+//生成顶部的标题栏
         function addHzHeader(div, dates, cellWidth) {
             var headerDiv = jQuery("<div>", { "class": "ganttview-hzheader" });
             var monthsDiv = jQuery("<div>", { "class": "ganttview-hzheader-months" });
@@ -208,7 +212,7 @@ behavior: {
             headerDiv.append(monthsDiv).append(daysDiv);
             div.append(headerDiv);
         }
-
+//生成甘特图网格
         function addGrid(div, data, dates, cellWidth, showWeekends) {
             var gridDiv = jQuery("<div>", { "class": "ganttview-grid" });
             var rowDiv = jQuery("<div>", { "class": "ganttview-grid-row" });
@@ -233,7 +237,7 @@ behavior: {
             }
             div.append(gridDiv);
         }
-
+//生成甘特图条块容器
         function addBlockContainers(div, data) {
             var blocksDiv = jQuery("<div>", { "class": "ganttview-blocks" });
             for (var i = 0; i < data.length; i++) {
@@ -243,7 +247,7 @@ behavior: {
             }
             div.append(blocksDiv);
         }
-
+//生成甘特图条块
         function addBlocks(div, data, cellWidth, start) {
             var rows = jQuery("div.ganttview-blocks div.ganttview-block-container", div);
             var rowIdx = 0;
@@ -270,7 +274,7 @@ behavior: {
                 }
             }
         }
-
+//生成甘特图条块数据，鼠标放置能显示
         function addBlockData(block, data, series) {
             // This allows custom attributes to be added to the series data objects
             // and makes them available to the 'data' argument of click, resize, and drag handlers
@@ -290,6 +294,7 @@ behavior: {
         };
     }
 
+	//定义行为函数
     var Behavior = function (div, opts) {
 
         function apply() {
@@ -306,7 +311,7 @@ behavior: {
                 bindBlockDrag(div, opts.cellWidth, opts.start, opts.behavior.onDrag);
             }
         }
-
+//绑定点击消息函数
         function bindBlockClick(div, callback) {
             //by Ben 升级兼容新版jQuery,on(events,[selector],[data],fn)
             // jQuery("div.ganttview-block", div).live("click", function () {
@@ -318,7 +323,7 @@ behavior: {
                 if (callback) { callback(jQuery(this).data("block-data")); }
             });
         }
-
+//绑定调整尺寸消息函数
         function bindBlockResize(div, cellWidth, startDate, callback) {
             //jQuery("div.ganttview-block", div).resizable({
 				$("div.ganttview-block").resizable({
@@ -331,7 +336,7 @@ behavior: {
                 }
             });
         }
-
+//绑定拖拽消息函数
         function bindBlockDrag(div, cellWidth, startDate, callback) {
             jQuery("div.ganttview-block", div).draggable({
                 axis: "x",

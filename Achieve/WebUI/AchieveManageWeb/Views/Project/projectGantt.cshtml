@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" type="text/css" href="~/gantt/jquery.ganttView.css" />
     <script type="text/javascript" src="~/gantt/lib/date.js"></script>  
-    <script src="~/gantt/easyUI.ganttView.js"></script>
+    <script charset="UTF-8" src="~/gantt/easyUI.ganttView.js"></script>
     <link href="~/Scripts/jquery-easyui-1.4.4/themes/bootstrap/easyui.css" rel="stylesheet" />
     
     <link href="~/Content/themes/table.css" rel="stylesheet" /> 
@@ -29,6 +29,7 @@
             dataUrl: "/Project/GetPageProjectInfo",
             paradata:{view:"ProjectGantt",rows:5},
             slideWidth: $(window).width() - 260,
+            //afterload: function (data) { alert("数据加载完毕！！"+data);},
             behavior: {
                 //onClick: function (data) {
                 //    var msg = "点击事件: { start: " + data.start.toString("M/d/yyyy") + ", end: " + data.end.toString("M/d/yyyy") + " }";
@@ -62,7 +63,7 @@
                     FPlanCommitDate: $('#FPlanCommitDate').datetimebox('getValue'),
                     FPlanFinishDate: $('#FPlanFinishDate').datetimebox('getValue')
                 },
-                slideWidth: $(window).width() - 260,
+                slideWidth: $(window).width() - 260,               
                 behavior: {}
             });
             $(this).pagination('loaded');
