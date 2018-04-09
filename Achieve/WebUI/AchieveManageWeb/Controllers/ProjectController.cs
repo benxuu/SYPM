@@ -15,44 +15,40 @@ namespace AchieveManageWeb.Controllers
     public class ProjectController : Controller
     {
 
-        public ActionResult getGantt2Demo()
-        {
-            string strWhere = "1=1";
-            string sort = Request["sort"] == null ? "FPlanCommitDate" : Request["sort"];
-            string order = Request["order"] == null ? "desc" : Request["order"];
-
-            //首先获取前台传递过来的参数
-            int pageindex = Request["page"] == null ? 1 : Convert.ToInt32(Request["page"]);
-            int pagesize = Request["rows"] == null ? 8 : Convert.ToInt32(Request["rows"]);
-            string userid = Request["accountid"] == null ? "" : Request["accountid"];
-            string username = Request["username"] == null ? "" : Request["username"];
-            string isable = Request["isable"] == null ? "" : Request["isable"];
-            string ifchangepwd = Request["ifchangepwd"] == null ? "" : Request["ifchangepwd"];
-            string userperson = Request["userperson"] == null ? "" : Request["userperson"];
-            string adddatestart = Request["adddatestart"] == null ? "" : Request["adddatestart"];
-            string adddateend = Request["adddateend"] == null ? "" : Request["adddateend"];
-
-            if (userid.Trim() != "" && !SqlInjection.GetString(userid))   //防止sql注入
-                strWhere += string.Format(" and AccountName like '%{0}%'", userid.Trim());
-            if (username.Trim() != "" && !SqlInjection.GetString(username))
-                strWhere += string.Format(" and RealName like '%{0}%'", username.Trim());
-            if (isable.Trim() != "select" && isable.Trim() != "")
-                strWhere += " and IsAble = '" + isable.Trim() + "'";
-            if (ifchangepwd.Trim() != "select" && ifchangepwd.Trim() != "")
-                strWhere += " and IfChangePwd = '" + ifchangepwd.Trim() + "'";
-            if (adddatestart.Trim() != "")
-                strWhere += " and CreateTime > '" + adddatestart.Trim() + "'";
-            if (adddateend.Trim() != "")
-                strWhere += " and CreateTime < '" + adddateend.Trim() + "'";
-
-            //抽取主作业计划单,规则不包含-、_两种连接符
-            strWhere += "and Fbillno not like '%v_%'  ESCAPE   'v'  and  Fbillno not like '%v-%' ESCAPE   'v'";
-
-            int totalCount;   //输出参数
-            DataTable dt = new ProjectBLL().GetDataTablePager("ICMO", "FBillNo,FStatus,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
-            string strJson = ToGanttJson(dt);
-            return Content(strJson);
-        }
+        //public ActionResult getGantt2Demo()
+        //{
+        //    string strWhere = "1=1";
+        //    string sort = Request["sort"] == null ? "FPlanCommitDate" : Request["sort"];
+        //    string order = Request["order"] == null ? "desc" : Request["order"];
+        //    //首先获取前台传递过来的参数
+        //    int pageindex = Request["page"] == null ? 1 : Convert.ToInt32(Request["page"]);
+        //    int pagesize = Request["rows"] == null ? 8 : Convert.ToInt32(Request["rows"]);
+        //    string userid = Request["accountid"] == null ? "" : Request["accountid"];
+        //    string username = Request["username"] == null ? "" : Request["username"];
+        //    string isable = Request["isable"] == null ? "" : Request["isable"];
+        //    string ifchangepwd = Request["ifchangepwd"] == null ? "" : Request["ifchangepwd"];
+        //    string userperson = Request["userperson"] == null ? "" : Request["userperson"];
+        //    string adddatestart = Request["adddatestart"] == null ? "" : Request["adddatestart"];
+        //    string adddateend = Request["adddateend"] == null ? "" : Request["adddateend"];
+        //    if (userid.Trim() != "" && !SqlInjection.GetString(userid))   //防止sql注入
+        //        strWhere += string.Format(" and AccountName like '%{0}%'", userid.Trim());
+        //    if (username.Trim() != "" && !SqlInjection.GetString(username))
+        //        strWhere += string.Format(" and RealName like '%{0}%'", username.Trim());
+        //    if (isable.Trim() != "select" && isable.Trim() != "")
+        //        strWhere += " and IsAble = '" + isable.Trim() + "'";
+        //    if (ifchangepwd.Trim() != "select" && ifchangepwd.Trim() != "")
+        //        strWhere += " and IfChangePwd = '" + ifchangepwd.Trim() + "'";
+        //    if (adddatestart.Trim() != "")
+        //        strWhere += " and CreateTime > '" + adddatestart.Trim() + "'";
+        //    if (adddateend.Trim() != "")
+        //        strWhere += " and CreateTime < '" + adddateend.Trim() + "'";
+        //    //抽取主作业计划单,规则不包含-、_两种连接符
+        //    strWhere += "and Fbillno not like '%v_%'  ESCAPE   'v'  and  Fbillno not like '%v-%' ESCAPE   'v'";
+        //    int totalCount;   //输出参数
+        //    DataTable dt = new ProjectBLL().GetDataTablePager("ICMO", "FBillNo,FStatus,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
+        //    string strJson = ToGanttJson(dt);
+        //    return Content(strJson);
+        //}
 
         public string ToGanttJson(DataTable dt)
         {
@@ -107,8 +103,8 @@ namespace AchieveManageWeb.Controllers
             string view = Request["view"] == null ? "" : Request["view"];
 
             //首先获取前台传递过来的参数
-            int pageindex = Request["page"] == null ? 1 : Convert.ToInt32(Request["page"]);
-            int pagesize = Request["rows"] == null ? 10 : Convert.ToInt32(Request["rows"]);
+            int pageindex = Request["page"] == null ? 1 : Convert.ToInt32(Request["page"]);//输出的数据页码
+            int pagesize = Request["rows"] == null ? 10 : Convert.ToInt32(Request["rows"]);//每页输出数量
             string FBillNo = Request["FBillNo"] == null ? "" : Request["FBillNo"];
             string FItemID = Request["FItemID"] == null ? "" : Request["FItemID"];
             string isable = Request["isable"] == null ? "" : Request["isable"];
@@ -139,17 +135,19 @@ namespace AchieveManageWeb.Controllers
             strWhere += "and Fbillno not like '%v_%'  ESCAPE   'v'  and  Fbillno not like '%v-%' ESCAPE   'v'";
 
             string content = "";
-            if (view == "Projectgrid")
+            if (view == "ProjectGrid")
             {
                 int totalCount;   //输出参数 
                 string strJson = new ProjectBLL().GetJsonPager("ICMO", "FBillNo,FStatus,FQty,FCommitQty,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FType,FWorkShop,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
                 content = "{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}";
             }
-            if (view == "projectGantt")
+            if (view == "ProjectGantt")
             {
                  int totalCount;   //输出参数
+                // pagesize = 5;//限制甘特图输出数据量
             DataTable dt = new ProjectBLL().GetDataTablePager("ICMO", "FBillNo,FStatus,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
-            content = ToGanttJson(dt);
+            string strJson = ToGanttJson(dt);
+            content = "{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}";
             }
 
             return Content(content);
@@ -187,11 +185,11 @@ namespace AchieveManageWeb.Controllers
             return View();
         }
        
-        public ActionResult Projectgrid()
+        public ActionResult ProjectGrid()
         {
             return View();
         }
-        public ActionResult projectGantt()
+        public ActionResult ProjectGantt()
         {
             return View();
         }

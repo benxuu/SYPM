@@ -1,0 +1,2784 @@
+
+ 
+记录时间：2018-04-09 10:59:33,096 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:Index
+            开始时间：2018/4/9 10:59:32
+            结束时间：2018/4/9 10:59:33
+            总 时 间：0.5241017秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:34,949 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:Index
+            开始时间：2018/4/9 10:59:33
+            结束时间：2018/4/9 10:59:34
+            总 时 间：1.8411053秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:35,742 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:CheckIsChangePwd
+            开始时间：2018/4/9 10:59:35
+            结束时间：2018/4/9 10:59:35
+            总 时 间：0.0330535秒
+            Form表单数据：action=getuser
+            URL参数：r=0.7034254486584788
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:35,742 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:CheckIsChangePwd
+            开始时间：2018/4/9 10:59:35
+            结束时间：2018/4/9 10:59:35
+            总 时 间：0秒
+            Form表单数据：action=getuser
+            URL参数：r=0.7034254486584788
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:35,889 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/4/9 10:59:35
+            结束时间：2018/4/9 10:59:35
+            总 时 间：0.1240619秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:35,890 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/4/9 10:59:35
+            结束时间：2018/4/9 10:59:35
+            总 时 间：0.001秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:36,797 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/4/9 10:59:36
+            结束时间：2018/4/9 10:59:36
+            总 时 间：0.6991138秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:36,797 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/4/9 10:59:36
+            结束时间：2018/4/9 10:59:36
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:36,918 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/4/9 10:59:36
+            结束时间：2018/4/9 10:59:36
+            总 时 间：0.4811207秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:36,918 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/4/9 10:59:36
+            结束时间：2018/4/9 10:59:36
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:37,071 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/4/9 10:59:36
+            结束时间：2018/4/9 10:59:37
+            总 时 间：0.1980295秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:37,072 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/4/9 10:59:37
+            结束时间：2018/4/9 10:59:37
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:37,290 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/4/9 10:59:36
+            结束时间：2018/4/9 10:59:37
+            总 时 间：0.297042秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:37,290 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/4/9 10:59:37
+            结束时间：2018/4/9 10:59:37
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:37,467 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/4/9 10:59:37
+            结束时间：2018/4/9 10:59:37
+            总 时 间：0.3070521秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:37,467 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/4/9 10:59:37
+            结束时间：2018/4/9 10:59:37
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:38,855 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 10:59:38
+            结束时间：2018/4/9 10:59:38
+            总 时 间：0.0160315秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:39,816 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 10:59:38
+            结束时间：2018/4/9 10:59:39
+            总 时 间：0.961055秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:55,216 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 10:59:55
+            结束时间：2018/4/9 10:59:55
+            总 时 间：0.0190673秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:55,218 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 10:59:55
+            结束时间：2018/4/9 10:59:55
+            总 时 间：0.0020001秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:56,318 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 10:59:56
+            结束时间：2018/4/9 10:59:56
+            总 时 间：0.0190303秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:56,321 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 10:59:56
+            结束时间：2018/4/9 10:59:56
+            总 时 间：0.0030002秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:58,027 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 10:59:57
+            结束时间：2018/4/9 10:59:58
+            总 时 间：0.0290281秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 10:59:58,029 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 10:59:58
+            结束时间：2018/4/9 10:59:58
+            总 时 间：0.0020001秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:00:21,495 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectgantt
+            开始时间：2018/4/9 11:00:21
+            结束时间：2018/4/9 11:00:21
+            总 时 间：0.0160704秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:00:21,499 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectgantt
+            开始时间：2018/4/9 11:00:21
+            结束时间：2018/4/9 11:00:21
+            总 时 间：0.0040002秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:01:45,351 
+线程ID:[15] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 11:01:45
+            结束时间：2018/4/9 11:01:45
+            总 时 间：0.0160667秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:01:45,355 
+线程ID:[15] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 11:01:45
+            结束时间：2018/4/9 11:01:45
+            总 时 间：0.0040002秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:01:47,263 
+线程ID:[13] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 11:01:46
+            结束时间：2018/4/9 11:01:47
+            总 时 间：0.6490761秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=4
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:01:47,263 
+线程ID:[13] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 11:01:47
+            结束时间：2018/4/9 11:01:47
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=4
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:02:38,752 
+线程ID:[12] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 11:02:38
+            结束时间：2018/4/9 11:02:38
+            总 时 间：0.0210211秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:02:38,754 
+线程ID:[12] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 11:02:38
+            结束时间：2018/4/9 11:02:38
+            总 时 间：0.0020001秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:04:27,483 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 11:02:39
+            结束时间：2018/4/9 11:04:27
+            总 时 间：107.9332401秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=4
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:04:27,483 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 11:04:27
+            结束时间：2018/4/9 11:04:27
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=4
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:04:58,344 
+线程ID:[22] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 11:04:58
+            结束时间：2018/4/9 11:04:58
+            总 时 间：0.0170053秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:05:00,348 
+线程ID:[22] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 11:04:58
+            结束时间：2018/4/9 11:05:00
+            总 时 间：2.0041146秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:05:01,093 
+线程ID:[20] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 11:05:00
+            结束时间：2018/4/9 11:05:01
+            总 时 间：0.2520625秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:05:01,093 
+线程ID:[20] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 11:05:01
+            结束时间：2018/4/9 11:05:01
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:08:21,538 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 11:08:21
+            结束时间：2018/4/9 11:08:21
+            总 时 间：0.0140273秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:08:23,304 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 11:08:21
+            结束时间：2018/4/9 11:08:23
+            总 时 间：1.766101秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:08:23,891 
+线程ID:[19] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 11:08:23
+            结束时间：2018/4/9 11:08:23
+            总 时 间：0.1630618秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:08:23,891 
+线程ID:[19] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 11:08:23
+            结束时间：2018/4/9 11:08:23
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:08:29,810 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 11:08:29
+            结束时间：2018/4/9 11:08:29
+            总 时 间：0.0961004秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5&FBillNo=SK2017212&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:08:29,810 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 11:08:29
+            结束时间：2018/4/9 11:08:29
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5&FBillNo=SK2017212&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:46:34,883 
+线程ID:[67] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 11:46:34
+            结束时间：2018/4/9 11:46:34
+            总 时 间：0.0280991秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:46:37,268 
+线程ID:[67] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 11:46:34
+            结束时间：2018/4/9 11:46:37
+            总 时 间：2.3851364秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:46:38,164 
+线程ID:[66] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 11:46:37
+            结束时间：2018/4/9 11:46:38
+            总 时 间：0.3760868秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:46:38,164 
+线程ID:[66] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 11:46:38
+            结束时间：2018/4/9 11:46:38
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:47:04,975 
+线程ID:[66] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 11:47:04
+            结束时间：2018/4/9 11:47:04
+            总 时 间：0.1930203秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=2017-06-01 11:46:53
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:47:04,975 
+线程ID:[66] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 11:47:04
+            结束时间：2018/4/9 11:47:04
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=2017-06-01 11:46:53
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:47:24,907 
+线程ID:[66] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 11:47:24
+            结束时间：2018/4/9 11:47:24
+            总 时 间：0.1000603秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5&FBillNo=JT2017084&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=2017-06-01 11:46:53
+                    
+ 
+
+ 
+记录时间：2018-04-09 11:47:24,907 
+线程ID:[66] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 11:47:24
+            结束时间：2018/4/9 11:47:24
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5&FBillNo=JT2017084&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=2017-06-01 11:46:53
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:30:23,966 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:Index
+            开始时间：2018/4/9 14:30:23
+            结束时间：2018/4/9 14:30:23
+            总 时 间：0.4740901秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:30:25,409 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:Index
+            开始时间：2018/4/9 14:30:23
+            结束时间：2018/4/9 14:30:25
+            总 时 间：1.4310819秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:30:26,108 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:CheckIsChangePwd
+            开始时间：2018/4/9 14:30:26
+            结束时间：2018/4/9 14:30:26
+            总 时 间：0.036013秒
+            Form表单数据：action=getuser
+            URL参数：r=0.5563188951089035
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:30:26,108 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:CheckIsChangePwd
+            开始时间：2018/4/9 14:30:26
+            结束时间：2018/4/9 14:30:26
+            总 时 间：0秒
+            Form表单数据：action=getuser
+            URL参数：r=0.5563188951089035
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:30:26,309 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/4/9 14:30:26
+            结束时间：2018/4/9 14:30:26
+            总 时 间：0.1770245秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:30:26,311 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/4/9 14:30:26
+            结束时间：2018/4/9 14:30:26
+            总 时 间：0.001秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:30:26,952 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/4/9 14:30:26
+            结束时间：2018/4/9 14:30:26
+            总 时 间：0.0970613秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:30:26,952 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/4/9 14:30:26
+            结束时间：2018/4/9 14:30:26
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:30:27,070 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/4/9 14:30:26
+            结束时间：2018/4/9 14:30:27
+            总 时 间：0.1760681秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:30:27,070 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/4/9 14:30:27
+            结束时间：2018/4/9 14:30:27
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:30:27,340 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/4/9 14:30:27
+            结束时间：2018/4/9 14:30:27
+            总 时 间：0.3240835秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:30:27,341 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/4/9 14:30:27
+            结束时间：2018/4/9 14:30:27
+            总 时 间：0.0010001秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:30:27,437 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/4/9 14:30:27
+            结束时间：2018/4/9 14:30:27
+            总 时 间：0.3640891秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:30:27,438 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/4/9 14:30:27
+            结束时间：2018/4/9 14:30:27
+            总 时 间：0.001秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:30:27,515 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/4/9 14:30:27
+            结束时间：2018/4/9 14:30:27
+            总 时 间：0.2830935秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:30:27,516 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/4/9 14:30:27
+            结束时间：2018/4/9 14:30:27
+            总 时 间：0.0010001秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:30:30,481 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 14:30:30
+            结束时间：2018/4/9 14:30:30
+            总 时 间：0.0250631秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:30:31,584 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 14:30:30
+            结束时间：2018/4/9 14:30:31
+            总 时 间：1.1030631秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:31:56,094 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 14:31:56
+            结束时间：2018/4/9 14:31:56
+            总 时 间：0.0180599秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:31:56,098 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 14:31:56
+            结束时间：2018/4/9 14:31:56
+            总 时 间：0.0040003秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:34:30,428 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 14:34:30
+            结束时间：2018/4/9 14:34:30
+            总 时 间：0.0170873秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:34:30,432 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 14:34:30
+            结束时间：2018/4/9 14:34:30
+            总 时 间：0.0030002秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:35:42,848 
+线程ID:[14] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 14:35:42
+            结束时间：2018/4/9 14:35:42
+            总 时 间：0.0310295秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:35:42,852 
+线程ID:[14] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 14:35:42
+            结束时间：2018/4/9 14:35:42
+            总 时 间：0.0040003秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:38:29,387 
+线程ID:[12] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 14:38:29
+            结束时间：2018/4/9 14:38:29
+            总 时 间：0.015055秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:38:29,391 
+线程ID:[12] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 14:38:29
+            结束时间：2018/4/9 14:38:29
+            总 时 间：0.0040002秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:48:13,121 
+线程ID:[27] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 14:48:13
+            结束时间：2018/4/9 14:48:13
+            总 时 间：0.0290427秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:48:15,039 
+线程ID:[27] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 14:48:13
+            结束时间：2018/4/9 14:48:15
+            总 时 间：1.9181097秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:48:16,598 
+线程ID:[20] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 14:48:16
+            结束时间：2018/4/9 14:48:16
+            总 时 间：0.1910415秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:48:16,599 
+线程ID:[20] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 14:48:16
+            结束时间：2018/4/9 14:48:16
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:48:58,063 
+线程ID:[27] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 14:48:57
+            结束时间：2018/4/9 14:48:58
+            总 时 间：0.1530132秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:48:58,063 
+线程ID:[27] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 14:48:58
+            结束时间：2018/4/9 14:48:58
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:52:08,230 
+线程ID:[30] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 14:52:08
+            结束时间：2018/4/9 14:52:08
+            总 时 间：0.0150901秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:52:10,059 
+线程ID:[30] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 14:52:08
+            结束时间：2018/4/9 14:52:10
+            总 时 间：1.8291046秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:52:11,545 
+线程ID:[30] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 14:52:11
+            结束时间：2018/4/9 14:52:11
+            总 时 间：0.1610797秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:52:11,545 
+线程ID:[30] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 14:52:11
+            结束时间：2018/4/9 14:52:11
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:52:38,240 
+线程ID:[30] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 14:52:38
+            结束时间：2018/4/9 14:52:38
+            总 时 间：0.1591066秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 14:52:38,240 
+线程ID:[30] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 14:52:38
+            结束时间：2018/4/9 14:52:38
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:03:11,736 
+线程ID:[14] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 15:03:11
+            结束时间：2018/4/9 15:03:11
+            总 时 间：0.0240405秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:03:13,714 
+线程ID:[14] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 15:03:11
+            结束时间：2018/4/9 15:03:13
+            总 时 间：1.9781131秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:03:14,405 
+线程ID:[17] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:03:14
+            结束时间：2018/4/9 15:03:14
+            总 时 间：0.2220932秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:03:14,406 
+线程ID:[17] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:03:14
+            结束时间：2018/4/9 15:03:14
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:03:57,688 
+线程ID:[17] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:03:57
+            结束时间：2018/4/9 15:03:57
+            总 时 间：0.1700688秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=2017-06-01 15:03:44&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:03:57,688 
+线程ID:[17] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:03:57
+            结束时间：2018/4/9 15:03:57
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=2017-06-01 15:03:44&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:08:31,948 
+线程ID:[13] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:08:31
+            结束时间：2018/4/9 15:08:31
+            总 时 间：0.1620556秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=2017-06-01 15:03:44&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:08:31,949 
+线程ID:[13] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:08:31
+            结束时间：2018/4/9 15:08:31
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：=&view=ProjectGantt&rows=5&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=2017-06-01 15:03:44&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:12:52,811 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 15:12:52
+            结束时间：2018/4/9 15:12:52
+            总 时 间：0.0280761秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:12:54,966 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 15:12:52
+            结束时间：2018/4/9 15:12:54
+            总 时 间：2.1551233秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:12:55,536 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:12:55
+            结束时间：2018/4/9 15:12:55
+            总 时 间：0.191032秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:12:55,536 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:12:55
+            结束时间：2018/4/9 15:12:55
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:16:44,422 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 15:16:44
+            结束时间：2018/4/9 15:16:44
+            总 时 间：0.0150235秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:16:46,966 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 15:16:44
+            结束时间：2018/4/9 15:16:46
+            总 时 间：2.5441455秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:16:49,044 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:16:48
+            结束时间：2018/4/9 15:16:49
+            总 时 间：0.7730879秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:16:49,044 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:16:49
+            结束时间：2018/4/9 15:16:49
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:16:58,140 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 15:16:58
+            结束时间：2018/4/9 15:16:58
+            总 时 间：0.0180081秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:16:58,142 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 15:16:58
+            结束时间：2018/4/9 15:16:58
+            总 时 间：0.0020001秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:16:58,913 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:16:58
+            结束时间：2018/4/9 15:16:58
+            总 时 间：0.1660523秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:16:58,913 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:16:58
+            结束时间：2018/4/9 15:16:58
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:12,196 
+线程ID:[10] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:12
+            结束时间：2018/4/9 15:17:12
+            总 时 间：0.1670121秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=2&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:12,196 
+线程ID:[10] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:12
+            结束时间：2018/4/9 15:17:12
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=2&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:18,470 
+线程ID:[10] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:18
+            结束时间：2018/4/9 15:17:18
+            总 时 间：0.1580709秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=3&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:18,470 
+线程ID:[10] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:18
+            结束时间：2018/4/9 15:17:18
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=3&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:20,215 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:20
+            结束时间：2018/4/9 15:17:20
+            总 时 间：0.1590707秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=4&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:20,215 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:20
+            结束时间：2018/4/9 15:17:20
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=4&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:21,732 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:21
+            结束时间：2018/4/9 15:17:21
+            总 时 间：0.1690575秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=5&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:21,732 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:21
+            结束时间：2018/4/9 15:17:21
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=5&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:24,421 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:24
+            结束时间：2018/4/9 15:17:24
+            总 时 间：0.1660113秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=6&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:24,421 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:24
+            结束时间：2018/4/9 15:17:24
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=6&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:27,141 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:26
+            结束时间：2018/4/9 15:17:27
+            总 时 间：0.1710669秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=7&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:27,141 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:27
+            结束时间：2018/4/9 15:17:27
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=7&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:29,778 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:29
+            结束时间：2018/4/9 15:17:29
+            总 时 间：0.1570177秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=8&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:29,778 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:29
+            结束时间：2018/4/9 15:17:29
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=8&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:33,898 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:33
+            结束时间：2018/4/9 15:17:33
+            总 时 间：0.1580534秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=9&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:33,898 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:33
+            结束时间：2018/4/9 15:17:33
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=9&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:40,493 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 15:17:40
+            结束时间：2018/4/9 15:17:40
+            总 时 间：0.0160306秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:40,495 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 15:17:40
+            结束时间：2018/4/9 15:17:40
+            总 时 间：0.0020001秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:40,954 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:40
+            结束时间：2018/4/9 15:17:40
+            总 时 间：0.185057秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:40,954 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:40
+            结束时间：2018/4/9 15:17:40
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:48,575 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:48
+            结束时间：2018/4/9 15:17:48
+            总 时 间：0.1010928秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=53&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:48,575 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:48
+            结束时间：2018/4/9 15:17:48
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=53&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:52,439 
+线程ID:[10] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:52
+            结束时间：2018/4/9 15:17:52
+            总 时 间：0.1520138秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=1&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:17:52,439 
+线程ID:[10] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:17:52
+            结束时间：2018/4/9 15:17:52
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=1&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:19:09,506 
+线程ID:[16] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 15:19:09
+            结束时间：2018/4/9 15:19:09
+            总 时 间：0.0180218秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:19:11,559 
+线程ID:[16] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 15:19:09
+            结束时间：2018/4/9 15:19:11
+            总 时 间：2.0531174秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:19:12,510 
+线程ID:[16] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:19:12
+            结束时间：2018/4/9 15:19:12
+            总 时 间：0.4340936秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:19:12,510 
+线程ID:[16] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:19:12
+            结束时间：2018/4/9 15:19:12
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:19:19,042 
+线程ID:[16] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:19:18
+            结束时间：2018/4/9 15:19:19
+            总 时 间：0.1630672秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=2&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:19:19,042 
+线程ID:[16] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:19:19
+            结束时间：2018/4/9 15:19:19
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=2&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:19:22,384 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:19:22
+            结束时间：2018/4/9 15:19:22
+            总 时 间：0.1550584秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=3&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:19:22,384 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:19:22
+            结束时间：2018/4/9 15:19:22
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=3&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:19:24,091 
+线程ID:[16] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:19:23
+            结束时间：2018/4/9 15:19:24
+            总 时 间：0.1780561秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=4&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:19:24,091 
+线程ID:[16] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:19:24
+            结束时间：2018/4/9 15:19:24
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=4&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:19:26,011 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:19:25
+            结束时间：2018/4/9 15:19:26
+            总 时 间：0.1870659秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=5&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:19:26,011 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:19:26
+            结束时间：2018/4/9 15:19:26
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5&page=5&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:19:31,252 
+线程ID:[16] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:19:31
+            结束时间：2018/4/9 15:19:31
+            总 时 间：0.2510656秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=10&page=5&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:19:31,252 
+线程ID:[16] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:19:31
+            结束时间：2018/4/9 15:19:31
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=10&page=5&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:19:37,720 
+线程ID:[16] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:19:37
+            结束时间：2018/4/9 15:19:37
+            总 时 间：0.2630356秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=10&page=6&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:19:37,720 
+线程ID:[16] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:19:37
+            结束时间：2018/4/9 15:19:37
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=10&page=6&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:19:48,999 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:19:48
+            结束时间：2018/4/9 15:19:48
+            总 时 间：0.2970807秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=10&page=6&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:19:48,999 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:19:48
+            结束时间：2018/4/9 15:19:48
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=10&page=6&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:20:24,435 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:projectGantt
+            开始时间：2018/4/9 15:20:24
+            结束时间：2018/4/9 15:20:24
+            总 时 间：0.0220075秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:20:24,438 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:projectGantt
+            开始时间：2018/4/9 15:20:24
+            结束时间：2018/4/9 15:20:24
+            总 时 间：0.0030002秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:20:24,933 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:20:24
+            结束时间：2018/4/9 15:20:24
+            总 时 间：0.167036秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:20:24,933 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:20:24
+            结束时间：2018/4/9 15:20:24
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=5
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:20:31,272 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:20:31
+            结束时间：2018/4/9 15:20:31
+            总 时 间：0.2390986秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=10&page=1&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:20:31,272 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:20:31
+            结束时间：2018/4/9 15:20:31
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=10&page=1&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:20:53,177 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:20:53
+            结束时间：2018/4/9 15:20:53
+            总 时 间：0.1060515秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=10&page=27&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:20:53,177 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:20:53
+            结束时间：2018/4/9 15:20:53
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=10&page=27&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:20:55,968 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:20:55
+            结束时间：2018/4/9 15:20:55
+            总 时 间：0.2401111秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=10&page=26&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:20:55,968 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:20:55
+            结束时间：2018/4/9 15:20:55
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：view=ProjectGantt&rows=10&page=26&FBillNo=&FStatus=select&ifchangepwd=select&FPlanCommitDate=&FPlanFinishDate=
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:22:18,777 
+线程ID:[22] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:Projectgrid
+            开始时间：2018/4/9 15:22:18
+            结束时间：2018/4/9 15:22:18
+            总 时 间：0.0160475秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:22:18,786 
+线程ID:[22] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:Projectgrid
+            开始时间：2018/4/9 15:22:18
+            结束时间：2018/4/9 15:22:18
+            总 时 间：0.0090005秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:22:19,516 
+线程ID:[22] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ButtonController
+            ActionName:GetUserAuthorizeButton
+            开始时间：2018/4/9 15:22:19
+            结束时间：2018/4/9 15:22:19
+            总 时 间：0.0410898秒
+            Form表单数据：KeyCode=produceOrder&KeyName=Produce
+            URL参数：r=0.4393063387122689
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:22:19,516 
+线程ID:[22] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ButtonController
+            ViewName:GetUserAuthorizeButton
+            开始时间：2018/4/9 15:22:19
+            结束时间：2018/4/9 15:22:19
+            总 时 间：0秒
+            Form表单数据：KeyCode=produceOrder&KeyName=Produce
+            URL参数：r=0.4393063387122689
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:22:19,905 
+线程ID:[22] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:22:19
+            结束时间：2018/4/9 15:22:19
+            总 时 间：0.082012秒
+            Form表单数据：page=1&rows=20&sort=FBillNo&order=desc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:22:19,906 
+线程ID:[22] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:22:19
+            结束时间：2018/4/9 15:22:19
+            总 时 间：0秒
+            Form表单数据：page=1&rows=20&sort=FBillNo&order=desc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:22:20,171 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPageProjectInfo
+            开始时间：2018/4/9 15:22:19
+            结束时间：2018/4/9 15:22:20
+            总 时 间：0.4931272秒
+            Form表单数据：view=ProjectGrid&subject=datagrid&page=1&rows=20&sort=FBillNo&order=desc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:22:20,171 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPageProjectInfo
+            开始时间：2018/4/9 15:22:20
+            结束时间：2018/4/9 15:22:20
+            总 时 间：0秒
+            Form表单数据：view=ProjectGrid&subject=datagrid&page=1&rows=20&sort=FBillNo&order=desc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:22:24,891 
+线程ID:[17] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetProjectEntry
+            开始时间：2018/4/9 15:22:24
+            结束时间：2018/4/9 15:22:24
+            总 时 间：0.0410972秒
+            Form表单数据：FBillNo=SK2017222&page=1&rows=10
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:22:24,891 
+线程ID:[17] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetProjectEntry
+            开始时间：2018/4/9 15:22:24
+            结束时间：2018/4/9 15:22:24
+            总 时 间：0秒
+            Form表单数据：FBillNo=SK2017222&page=1&rows=10
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:22:27,615 
+线程ID:[22] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetProjectEntry
+            开始时间：2018/4/9 15:22:27
+            结束时间：2018/4/9 15:22:27
+            总 时 间：0.200053秒
+            Form表单数据：FBillNo=SK2017221&page=1&rows=10
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-04-09 15:22:27,615 
+线程ID:[22] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetProjectEntry
+            开始时间：2018/4/9 15:22:27
+            结束时间：2018/4/9 15:22:27
+            总 时 间：0秒
+            Form表单数据：FBillNo=SK2017221&page=1&rows=10
+            URL参数：
+                    
+ 

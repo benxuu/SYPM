@@ -4,20 +4,27 @@ Copyright (c) 2010 JC Grubbs - jc.grubbs@devmynd.com
 MIT License Applies
 2018.4.1 by Ben
 传入json的时间参数为字符串或毫秒整形值，读入后转换为date类型
-
+html中元素
+<div data-options="region:'center',border:false">             
+            <div id="ganttChart" data-options="fit:true,border:false"></div> //gantt图           
+            <div id="pp" class="easyui-pagination" style="border:1px solid #ccc;"></div>//分页控制
+            <br />
+            <div id="eventMessage"></div>//消息
+        </div>
 */
 
 /*
 Options
 -----------------
 showWeekends: boolean
-data: object
+data: object //直接加载数据，格式见data.js
+paradata: ,//ajax附加参数:{ name: "John", time: "2pm" }
 cellWidth: number
 cellHeight: number
 slideWidth: number
 dataUrl: string
 behavior: {
-	clickable: boolean,
+	clickable: boolean,    
 	draggable: boolean,
 	resizable: boolean,
 	onClick: function,
@@ -29,9 +36,11 @@ behavior: {
 (function (jQuery) {
     jQuery.fn.ganttView = function () {
         var args = Array.prototype.slice.call(arguments);
+        //一个参数表示建立对象
         if (args.length == 1 && typeof (args[0]) == "object") {
             build.call(this, args[0]);
         }
+        //两个参数表示执行函数
         if (args.length == 2 && typeof (args[0]) == "string") {
             handleMethod.call(this, args[0], args[1]);        }
     };
@@ -55,8 +64,8 @@ behavior: {
         if (opts.data) {
             build();
         } else if (opts.dataUrl) {
-            jQuery.getJSON(opts.dataUrl, function (data) { 
-			opts.data = data; 
+            jQuery.getJSON(opts.dataUrl, opts.paradata, function (data) {
+                opts.data = data.rows;
 			 //json对象中日期字符串转换为日期对象,当前使用整形数字或时间字符串'2017-01-04',
 			for(var i=0;i<opts.data.length;i++){ 			
 			var plan=opts.data[i].series;
@@ -70,6 +79,11 @@ behavior: {
 			    if (ms1.length == 0) { opts.data[i].series[j].start = new Date(); } else { opts.data[i].series[j].start = new Date(ms1.replace(reg, '')); }
 				var ms2=plan[j].end;			
 				if (ms2.length == 0) { opts.data[i].series[j].end = new Date(); } else { opts.data[i].series[j].end = new Date(ms2.replace(reg, '')); }
+
+			    //刷新分页栏；
+				$('#pp').pagination({
+				    total: data.total
+				});
 			}
 }
 			build(); 
@@ -108,6 +122,7 @@ behavior: {
                 $("div.ganttview-slide-container", this).width(value);
             });
         }
+        if (method == "destroy") { $("div.ganttview", this).empty(); }
     }
 
     var Chart = function (div, opts) {
