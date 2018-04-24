@@ -32,9 +32,16 @@
 </head>
 <body>
     <script type="text/javascript">
-        document.write(window.dialogArguments);
-        alert(window.dialogArguments);
+        //document.write(window.dialogArguments);
+      //  alert(window.dialogArguments);
         //window.print();
+        var a = opener.document.getElementById("printdiv").innerHTML;
+        //alert(a);
+      
+       // var afterUrl = window.location.search.substring(1); //(问号以后的字符串)
+       // var afterEqual = afterUrl.substring(afterUrl.indexof('=') + 1).toUpperCase(); //(等号以后的字符串，及你所要的参数)
+        document.write(a);
+        window.print();
     </script>
 </body>
 </html>

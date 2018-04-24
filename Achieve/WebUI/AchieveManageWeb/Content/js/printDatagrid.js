@@ -61,15 +61,26 @@ function CreateFormPage(strPrintName, printDatagrid) {
             if (e + 2 == nl[j].f.length) {
                 tableString += rows[i][nl[j].f.substring(0, e)];
             }
-            else
+            //else if (nl[j].fm != 'undefined')
+            //{
+            //    tableString += nl[j].fm(rows[i][nl[j].f]);
+                //}
+            else if (nl[j].f == 'FPlanCommitDate' || nl[j].f == 'FPlanFinishDate' || nl[j].f == 'FStartDate' || nl[j].f == 'FFinishDate')
+                {
+                tableString += rows[i][nl[j].f].substring(0, rows[i][nl[j].f].indexOf(' '));
+                }
+            else {
                 tableString += rows[i][nl[j].f];
+            }
+               
             tableString += '</td>';
         });
         tableString += '\n</tr>';
     }
     tableString += '\n</table>';
-    alert(tableString);
+    //alert(tableString);
    // window.showModalDialog("../Content/js/print.htm", tableString,"location:No;status:No;help:No;dialogWidth:800px;dialogHeight:600px;scroll:auto;");
-    window.open("../Content/js/print.htm", tableString, "location:No;status:No;help:No;dialogWidth:800px;dialogHeight:600px;scroll:auto;");
+    $("#printdiv").html(tableString);
+    window.open("../Content/js/print.htm", strPrintName, "modal=yes,location:No,status:No,help:No,dialogWidth:800px,dialogHeight:600px,scroll:auto");
 
 }

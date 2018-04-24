@@ -110,6 +110,22 @@
                     showHeader:false,
                     onResize: function () { },
                     onLoadSuccess: function () { }
+                },
+                subgird: {
+                    options: {
+                        fitColumns: false,
+                        foreignField: 'FBillNo',
+                        url: "/Project/GetProjectEntry",
+                        striped: true, rownumbers: false, pagination: true, pageSize: 10, singleSelect: true,
+                        idField: 'FBillNo',
+                        //sortName: 'FBillNo',
+                        //sortOrder: 'desc',
+                        pageList: [5, 8, 10, 15, 20],
+                        columns: myColums,
+                        showHeader: false,
+                        onResize: function () { },
+                        onLoadSuccess: function () { }
+                    }
                 }
             }
         };
@@ -364,7 +380,7 @@
                 FStatus: $('#FStatus').val(),
                 ifchangepwd: $('#selIfChangepwd').val(),
                 FPlanCommitDate: $('#FPlanCommitDate').datetimebox('getValue'),
-                FPlanFinishDate: $('#FPlanFinishDate').datetimebox('getValue')
+               // FPlanFinishDate: $('#FPlanFinishDate').datetimebox('getValue')
             });
             $("#ui_produce_dg").datagrid('clearSelections').datagrid('clearChecked');
         }
@@ -457,13 +473,18 @@
                             <input name="FBillNo" id="FBillNo" class="easyui-validatebox textbox" style="width:150px;height:22px;" />
                         </td>
 
-                        <th>
+                        @*<th>
                             物料代码：
                         </th>
                         <td>
                             <input name="FItemID" id="FItemID" class="easyui-validatebox textbox" style="width:150px;height:22px;" />
-                        </td>
-
+                        </td>*@
+                        <th>
+            物料名称：
+        </th>
+        <td>
+            <input name="FItem" id="FItem" class="easyui-validatebox textbox" style="width:150px;height:22px;" />
+        </td>
                         <th>
                             订单状态：
                         </th>
@@ -494,13 +515,13 @@
                                    editable="false" style="width:150px;height:22px;" />
                         </td>
 
-                        <th>
+                        @*<th>
                             计划完工时间：
                         </th>
                         <td>
                             <input name="FPlanFinishDate" id="FPlanFinishDate" class="easyui-datetimebox"
                                    editable="false" style="width:150px;height:22px;" />
-                        </td>
+                        </td>*@
                         <td colspan="4">
                             <a href="javascript:void(0);" class="easyui-linkbutton" iconcls="icon-search" plain="true"
                                onclick="ui_project_searchdata();">搜索</a>

@@ -152,8 +152,67 @@ namespace AchieveManageWeb.Controllers
 
             return Content(content);
         }
+        /// <summary>
+        /// 获取工序计划表，输入FBillNo，根据FBillNo查询ICMO表中的FInterID字段，ICMO.FInterID==shworkbill.FICMOInterID，
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetPageProcessInfo()
+        {
+            string strWhere = "1=1";
+            string sort = Request["sort"] == null ? "FPlanCommitDate" : Request["sort"];
+            string order = Request["order"] == null ? "desc" : Request["order"];
+            string view = Request["view"] == null ? "" : Request["view"];
 
+            //首先获取前台传递过来的参数
+            int pageindex = Request["page"] == null ? 1 : Convert.ToInt32(Request["page"]);//输出的数据页码
+            int pagesize = Request["rows"] == null ? 10 : Convert.ToInt32(Request["rows"]);//每页输出数量
+            string FBillNo = Request["FBillNo"] == null ? "" : Request["FBillNo"];
+            string FItemID = Request["FItemID"] == null ? "" : Request["FItemID"];
+            string isable = Request["isable"] == null ? "" : Request["isable"];
+            string ifchangepwd = Request["ifchangepwd"] == null ? "" : Request["ifchangepwd"];
+            string userperson = Request["userperson"] == null ? "" : Request["userperson"];
+            string FPlanCommitDate = Request["FPlanCommitDate"] == null ? "" : Request["FPlanCommitDate"];
+            string FPlanFinishDate = Request["FPlanFinishDate"] == null ? "" : Request["FPlanFinishDate"];
 
+            if (FBillNo.Trim() != "" && !SqlInjection.GetString(FBillNo))   //防止sql注入
+                strWhere += string.Format(" and FBillNo like '%{0}%'", FBillNo.Trim());
+            //FName为非主表字段，暂不支持直接查询；
+            //后期解决思路，先根据FName在子表中查询对应的FItemID，可能有多个，则将这多个拼接成where条件；
+            //例如  FItemID = id1 and FItemID = id2  and FItemID = id3...
+            //if (FName.Trim() != "" && !SqlInjection.GetString(FName))
+            //    strWhere += string.Format(" and FName like '%{0}%'", FName.Trim());
+            if (FItemID.Trim() != "" && !SqlInjection.GetString(FItemID))
+                strWhere += string.Format(" and FItemID like '%{0}%'", FItemID.Trim());
+            if (isable.Trim() != "select" && isable.Trim() != "")
+                strWhere += " and IsAble = '" + isable.Trim() + "'";
+            if (ifchangepwd.Trim() != "select" && ifchangepwd.Trim() != "")
+                strWhere += " and IfChangePwd = '" + ifchangepwd.Trim() + "'";
+            if (FPlanCommitDate.Trim() != "")
+                strWhere += " and FPlanCommitDate > '" + FPlanCommitDate.Trim() + "'";
+            if (FPlanFinishDate.Trim() != "")
+                strWhere += " and FPlanFinishDate < '" + FPlanFinishDate.Trim() + "'";
+
+            //抽取主作业计划单,规则不包含-、_两种连接符
+            strWhere += "and Fbillno not like '%v_%'  ESCAPE   'v'  and  Fbillno not like '%v-%' ESCAPE   'v'";
+
+            string content = "";
+            if (view == "ProjectGrid")
+            {
+                int totalCount;   //输出参数 
+                string strJson = new ProjectBLL().GetJsonPager("ICMO", "FBillNo,FStatus,FQty,FCommitQty,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FType,FWorkShop,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
+                content = "{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}";
+            }
+            if (view == "ProjectGantt")
+            {
+                int totalCount;   //输出参数
+                // pagesize = 5;//限制甘特图输出数据量
+                DataTable dt = new ProjectBLL().GetDataTablePager("ICMO", "FBillNo,FStatus,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
+                string strJson = ToGanttJson(dt);
+                content = "{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}";
+            }
+
+            return Content(content);
+        }
         public ActionResult GetGanttDemo()
         {
             //for gantt edit, not used
@@ -190,6 +249,10 @@ namespace AchieveManageWeb.Controllers
             return View();
         }
         public ActionResult ProjectGantt()
+        {
+            return View();
+        }
+        public ActionResult rpt()
         {
             return View();
         }

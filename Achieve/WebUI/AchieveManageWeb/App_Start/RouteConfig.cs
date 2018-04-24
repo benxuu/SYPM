@@ -12,7 +12,9 @@ namespace AchieveManageWeb
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+            routes.IgnoreRoute("views/project/rpt.aspx"); 
+            routes.IgnoreRoute("WebForms/{weform}");
+            routes.IgnoreRoute("*/*/*.aspx");
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

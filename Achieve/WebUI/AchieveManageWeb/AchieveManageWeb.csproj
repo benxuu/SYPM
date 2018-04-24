@@ -52,6 +52,7 @@
       <HintPath>Library\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="NPOI, Version=2.0.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Library\NPOI.dll</HintPath>
@@ -3698,6 +3699,7 @@
     <Content Include="Views\Produce\IndexDetail.cshtml" />
     <Content Include="Views\Project\ProjectGrid.cshtml" />
     <None Include="Views\Project\Indexgantt.cshtml" />
+    <Content Include="Views\Project\rpt.aspx" />
     <Content Include="Views\Project\test.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -3778,6 +3780,7 @@
     <Content Include="Views\Produce\Index.cshtml" />
     <Content Include="Views\Project\test.cshtml" />
     <Content Include="Views\Project\ProjectGantt.cshtml" />
+    <Content Include="Views\Project\ProcessGrid.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -3804,6 +3807,9 @@
       <Project>{645e4991-17cb-4c86-8b76-44f7f717bd05}</Project>
       <Name>AchieveEntity</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Project\Report1.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
