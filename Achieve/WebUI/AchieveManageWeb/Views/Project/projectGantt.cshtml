@@ -60,8 +60,7 @@
                     FName: $('#FName').val(),
                     FStatus: $('#FStatus').val(),
                     ifchangepwd: $('#selIfChangepwd').val(),
-                    FPlanCommitDate: $('#FPlanCommitDate').datetimebox('getValue'),
-                    FPlanFinishDate: $('#FPlanFinishDate').datetimebox('getValue')
+                    FPlanCommitDate: $('#FPlanCommitDate').datetimebox('getValue')                   
                 },
                 slideWidth: $(window).width() - 260,               
                 behavior: {}
@@ -74,8 +73,6 @@
         // $("#ganttChart").ganttView("setSlideWidth", 600);
     });
 
-
-
     //搜索任务单
     function ui_project_searchdata() {
         $("#ganttChart").ganttView("destroy",0);
@@ -86,8 +83,7 @@
                 FName: $('#FName').val(),
                 FStatus: $('#FStatus').val(),
                 ifchangepwd: $('#selIfChangepwd').val(),
-                FPlanCommitDate: $('#FPlanCommitDate').datetimebox('getValue'),
-                FPlanFinishDate: $('#FPlanFinishDate').datetimebox('getValue')
+                FPlanCommitDate: $('#FPlanCommitDate').datetimebox('getValue')
             },
             slideWidth: $(window).width() - 260,
             behavior: {  }
@@ -129,10 +125,10 @@
                         </td>
 
                         <th>
-                            物料代码：
+                            物料名称：
                         </th>
                         <td>
-                            <input name="FItemID" id="FItemID" class="easyui-validatebox textbox" style="width:150px;height:22px;" />
+                            <input name="FName" id="FName" class="easyui-validatebox textbox" style="width:150px;height:22px;" />
                         </td>
 
                         <th>
@@ -165,13 +161,7 @@
                                    editable="false" style="width:150px;height:22px;" />
                         </td>
 
-                        <th>
-                            计划完工时间：
-                        </th>
-                        <td>
-                            <input name="FPlanFinishDate" id="FPlanFinishDate" class="easyui-datetimebox"
-                                   editable="false" style="width:150px;height:22px;" />
-                        </td>
+                      
                         <td colspan="4">
                             <a href="javascript:void(0);" class="easyui-linkbutton" iconcls="icon-search" plain="true"
                                onclick="ui_project_searchdata();">搜索</a>

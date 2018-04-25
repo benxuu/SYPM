@@ -371,3 +371,5 @@ D:\github\SYPM\Achieve\WebUI\AchieveManageWeb\obj\Debug\AchieveManageWeb.dll
 D:\github\SYPM\Achieve\WebUI\AchieveManageWeb\obj\Debug\AchieveManageWeb.pdb
 E:\github\SYPM\Achieve\WebUI\AchieveManageWeb\obj\Debug\RdlCompile.cache
 E:\github\SYPM\Achieve\WebUI\AchieveManageWeb\obj\Debug\RdlCompile.compiled
+D:\github\SYPM\Achieve\WebUI\AchieveManageWeb\obj\Debug\RdlCompile.cache
+D:\github\SYPM\Achieve\WebUI\AchieveManageWeb\obj\Debug\RdlCompile.compiled

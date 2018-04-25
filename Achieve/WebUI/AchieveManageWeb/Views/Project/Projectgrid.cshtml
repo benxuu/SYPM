@@ -45,6 +45,32 @@
                                     { width: 100, title: '是否领料', field: '', hidden: true },
                                     { width: 100, title: '物料代码', field: 'FItemID' }
         ]];
+		
+		 var conf = {
+            options:{
+                //the master grid options
+            },
+            subgrid: {
+                options: {
+                    fitColumns: false,
+                    foreignField: 'FBillNo',
+                    url: "/Project/GetProjectEntry",
+                    striped: true, rownumbers: false, pagination: true, pageSize: 10, singleSelect: true,
+                    idField: 'FBillNo',
+                    //sortName: 'FBillNo',
+                    //sortOrder: 'desc',
+                    pageList: [5, 8, 10, 15, 20],
+                    columns: myColums,
+                    showHeader:false,
+                    onResize: function () { },
+                    onLoadSuccess: function () { },
+                    onDblClickRow: function (rowIndex, rowData) {
+                        $('#w').window('open');
+                        loadwork(rowIndex, rowData);
+                    }
+                }
+            }
+        };
 
         $(function () {
             $.ajax({     //请求当前用户可以操作的按钮
@@ -91,28 +117,61 @@
                 }
             })
         });
+		
+	
+	    function loadwork(rowIndex, rowData) {
+	        //动态加载标题和数据，显示项目对应的工序计划；
+	        //alert(rowIndex);
+	        //alert(rowData['FBillNo']);
+	        $("#pworktable").datagrid({
+	            class: "easyui-datagrid"   
+	        });
+	        $.ajax({
+	            url: "/Project/GetPageProcessInfo?FBillNo=" + rowData['FBillNo'],// + "&FName=" + rowData['FName'],
+                type: "post",
+                dataType: "text",
+                success: function (result) {
+                    map = $.parseJSON(result);
+                    //alert(result);
+                   // alert(result.title);
+                    //alert(map.total);
+                   // alert("maprows" + map.rows[0].FBillNo);
+                    //alert("maptitlw" + map.titleds[0].toString()); 
+                   // $("#pworktable").datagrid({
+                     //   columns: [map.title]    //动态取标题
+                   // });
+                  //  $("#pworktable").datagrid("loadData", result.rows);  //动态取数据
+                    if (map.rows) {
+                       //   $("#pworktable").datagrid({
+                         //     columns: [map.titleds]    //动态取标题
+                           // });
+                        for (var k in map.rows) {
+                            map.rows[k]['FName'] = rowData['FName'];
+                        }
+                        $('#pworktable').datagrid('loadData', map.rows); //将返回的数据绑定到datagrid  
+                        //var col =  $('#pworktable').datagrid('getColumnOption', 'fitemid');
+                        //col.value = rowData['FName']
 
-        var conf = {
-            options:{
-                //the master grid options
-            },
-            subgrid: {
-                options: {
-                    fitColumns: false,
-                    foreignField: 'FBillNo',
-                    url: "/Project/GetProjectEntry",
-                    striped: true, rownumbers: false, pagination: true, pageSize: 10, singleSelect: true,
-                    idField: 'FBillNo',
-                    //sortName: 'FBillNo',
-                    //sortOrder: 'desc',
-                    pageList: [5, 8, 10, 15, 20],
-                    columns: myColums,
-                    showHeader:false,
-                    onResize: function () { },
-                    onLoadSuccess: function () { }
+                    } else {
+                        $.messager.alert('Info', "没有找到记录！", 'info');
+                    }  
+  
                 }
-            }
-        };
+            });
+        }
+
+//主表绑定双击事件；
+        $(function () {
+            $('#ui_produce_dg').datagrid({
+                onDblClickRow: function (rowIndex, rowData) {
+                    $('#w').window('open');
+                    loadwork(rowIndex, rowData);
+                }
+            });
+        });
+   
+
+       
      
 
         //添加用户
@@ -360,11 +419,10 @@
         function ui_project_searchdata() {
             $("#ui_produce_dg").datagrid('load', {
                 FBillNo: $('#FBillNo').val(),
+                view: 'ProjectGrid',
                 FName: $('#FName').val(),
                 FStatus: $('#FStatus').val(),
-                ifchangepwd: $('#selIfChangepwd').val(),
-                FPlanCommitDate: $('#FPlanCommitDate').datetimebox('getValue'),
-                FPlanFinishDate: $('#FPlanFinishDate').datetimebox('getValue')
+                FPlanCommitDate: $('#FPlanCommitDate').datetimebox('getValue')
             });
             $("#ui_produce_dg").datagrid('clearSelections').datagrid('clearChecked');
         }
@@ -458,10 +516,10 @@
                         </td>
 
                         <th>
-                            物料代码：
+                            物料名称：
                         </th>
                         <td>
-                            <input name="FItemID" id="FItemID" class="easyui-validatebox textbox" style="width:150px;height:22px;" />
+                            <input name="FName" id="FName" class="easyui-validatebox textbox" style="width:150px;height:22px;" />
                         </td>
 
                         <th>
@@ -494,19 +552,13 @@
                                    editable="false" style="width:150px;height:22px;" />
                         </td>
 
-                        <th>
-                            计划完工时间：
-                        </th>
-                        <td>
-                            <input name="FPlanFinishDate" id="FPlanFinishDate" class="easyui-datetimebox"
-                                   editable="false" style="width:150px;height:22px;" />
-                        </td>
+                    
                         <td colspan="4">
                             <a href="javascript:void(0);" class="easyui-linkbutton" iconcls="icon-search" plain="true"
                                onclick="ui_project_searchdata();">搜索</a>
                             <a href="javascript:void(0);" class="easyui-linkbutton" iconcls="icon-clear" plain="true"
                                onclick="ui_project_cleardata();">清空条件</a>
-                            <a href="javascript:void(0);" onclick="CreateFormPage('打印测试', $('#ui_produce_dg'));">打印</a>
+                            @*<a href="javascript:void(0);" onclick="CreateFormPage('打印测试', $('#ui_produce_dg'));">打印</a>*@
                         </td>
                     </tr>
                 </table>
@@ -517,5 +569,24 @@
         </div>
         <div id="printdiv" hidden="hidden">blank </div>
         </div>
+		<div id="w" class="easyui-window" title="工序计划表" closed="true" data-options="iconCls:'icon-save',minimizable:false,tools:'#tt'" style="width:990px;height:400px;padding:10px;">
+		<table id="pworktable" data-options="rownumbers:true, singleSelect:true, autoRowHeight:false, pagination:false, resizeHandle:'right'">
+ <thead> 
+		<tr>
+            <th data-options="field:'ficmono',width:90">编号</th>
+            <th data-options="field:'FName',width:80">产品名称</th>
+            <th data-options="field:'FQTYPLAN',width:50">数量</th>
+            <th data-options="field:'FPLANSTARTDATE',width:80,align:'center',formatter: function (value, row, index) { return value.substring(0, value.indexOf(' ')) }">计划开工日期</th>
+            <th data-options="field:'FPLANENDDATE',width:80,align:'center',formatter: function (value, row, index) { return value.substring(0, value.indexOf(' ')) }">计划完工日期</th>
+            <th data-options="field:'FStartWorkDate',width:80,align:'center', formatter: function (value, row, index) { return value.substring(0, value.indexOf(' ')) }">实际开工日期</th>
+            <th data-options="field:'FEndWorkDate',width:80,align:'center',formatter: function (value, row, index) { return value.substring(0, value.indexOf(' ')) }">实际完工日期</th>
+            <th data-options="field:'fcheckdate',width:70,align:'right',formatter: function (value, row, index) { return value.substring(0, value.indexOf(' ')) }">审核日期</th>
+            <th data-options="field:'fopernote',width:70,align:'right'">工序名称</th>
+            <th data-options="field:'fstatus',width:70,align:'right'">单据状态</th>				
+            <th data-options="field:'FWorkCenterID',width:80,formatter:function (value, row, index) { if(value==15293){return '制造部'};if(value==16015){return '委外'};return value }">工作中心名称</th>				
+            <th data-options="field:'ffinishtime',width:80,align:'center'">运行时间</th>
+         </tr>
+ </thead>  </table>
+	</div>
 </body>
 </html>

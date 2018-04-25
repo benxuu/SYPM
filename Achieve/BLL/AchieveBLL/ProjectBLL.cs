@@ -59,6 +59,11 @@ namespace AchieveBLL
             DataTable dt = GetDataTablePager(tableName, columns, order, pageSize, pageIndex, where, out totalCount);
             return AchieveCommon.JsonHelper.ToJson(dt);
          }
+        public string GetJsonFromSqlK3(string sql)
+        {
+          DataTable dt = AchieveCommon.SqlHelper.GetDataTable(SqlHelper.connStrK3, CommandType.Text, sql);
+            return AchieveCommon.JsonHelper.ToJson(dt);
+        }
 
         public  DataTable GetFNameByFItemID(int FItemID)
         {
@@ -66,6 +71,14 @@ namespace AchieveBLL
             sb.Append("select FModel,FName from t_icitemcore");
             sb.Append(" where FItemID=@Id");
             return SqlHelper.GetDataTable(SqlHelper.connStrK3, CommandType.Text, sb.ToString(), new SqlParameter("@Id", FItemID));
+        }
+
+        public DataTable GetFItemIDByFName(string FName)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("select FItemID from t_icitemcore");
+            sb.Append(" where FName like '%"+FName+"%'");
+            return SqlHelper.GetDataTable(SqlHelper.connStrK3, CommandType.Text, sb.ToString(), null);
         }
 
       

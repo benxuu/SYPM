@@ -11,7 +11,7 @@ CREATE proc [dbo].[sp_Pager]
 @order varchar(256),    --排序方式
 @pageSize int,  --每页大小
 @pageIndex int,  --当前页
-@where varchar(1024) = '1=1',  --查询条件
+@where varchar(8000) = '1=1',  --查询条件
 @totalCount int output  --总记录数
 as
 declare @beginIndex int,@endIndex int,@sqlresult nvarchar(2000),@sqlGetCount nvarchar(2000)
