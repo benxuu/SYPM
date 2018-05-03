@@ -50,6 +50,7 @@
     <Compile Include="MenuEntity.cs" />
     <Compile Include="DataTypeEntity.cs" />
     <Compile Include="HtmlTypeEntity.cs" />
+    <Compile Include="OperEntity.cs" />
     <Compile Include="Productivetask.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,4 +1,4 @@
-USE AIS20160715075257
+USE SYAIS
 GO
 /****** Object:  StoredProcedure [dbo].[sp_Pager]    Script Date: 2016/6/28 16:08:40 ******/
 SET ANSI_NULLS ON

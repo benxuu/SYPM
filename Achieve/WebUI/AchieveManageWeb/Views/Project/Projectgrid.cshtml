@@ -84,15 +84,15 @@
                         var toolbar = getToolBar(data);      //common.js
                         if (data.search) {     //判断是否有浏览权限
                             $("#ui_produce_dg").datagrid({
-                                url: "/Project/GetPageProjectInfo",
+                                url: "/Project/GetPageProjectInfo?view=ProjectGrid",
                                 queryParams: {
-                                    view: 'ProjectGrid',
+                                    //view: 'ProjectGrid',
                                     subject: 'datagrid'
                                 },
                                 striped: true, rownumbers: true, pagination: true, pageSize: 20, singleSelect: true,
                                 fitColumns: false,
                                 idField: 'FBillNo',
-                                sortName: 'FBillNo',
+                                sortName: 'FPlanCommitDate',
                                 sortOrder: 'desc',
                                 pageList: [20, 40, 60, 80, 100],
                                 frozenColumns: [],
@@ -132,16 +132,7 @@
                 dataType: "text",
                 success: function (result) {
                     map = $.parseJSON(result);
-                    //alert(result);
-                   // alert(result.title);
-                    //alert(map.total);
-                   // alert("maprows" + map.rows[0].FBillNo);
-                    //alert("maptitlw" + map.titleds[0].toString()); 
-                   // $("#pworktable").datagrid({
-                     //   columns: [map.title]    //动态取标题
-                   // });
-                  //  $("#pworktable").datagrid("loadData", result.rows);  //动态取数据
-                    if (map.rows) {
+                       if (map.rows) {
                        //   $("#pworktable").datagrid({
                          //     columns: [map.titleds]    //动态取标题
                            // });

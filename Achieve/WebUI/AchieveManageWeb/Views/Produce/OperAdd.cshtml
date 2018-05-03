@@ -1,0 +1,74 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>添加工序</title>
+</head>
+<body>
+    <div style="padding: 15px; overflow: hidden">
+        <form id="ButtonAddForm" method="post" action="">
+            <table class="tableForm" width="100%">
+                <tr>
+                    <th>
+                        工序名称：
+                    </th>
+                    <td>
+                        <input type="text" name="OperNote" id="txtName" class="easyui-validatebox textbox"
+                               data-options="required:true,validType:'length[2,20]'" style="width:220px;height:22px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        工艺编码：
+                    </th>
+                    <td>
+                        <input type="text" name="OperID" id="txtCode" class="easyui-validatebox textbox"
+                               data-options="required:false,validType:'length[2,40]'" style="width:220px;height:22px;" />
+                    </td>
+                </tr>
+             
+                <tr>
+                    <th>
+                       日产能：
+                    </th>
+                    <td>
+                        <input type="text" name="DayTime" id="txtCode" class="easyui-validatebox textbox"
+                               data-options="required:false,validType:'length[2,40]'" style="width:220px;height:22px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        周产能：
+                    </th>
+                    <td>
+                        <input type="text" name="WeekTime" id="txtCode" class="easyui-validatebox textbox"
+                               data-options="required:false,validType:'length[2,40]'" style="width:220px;height:22px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        月产能：
+                    </th>
+                    <td>
+                        <input type="text" name="MonthTime" id="txtCode" class="easyui-validatebox textbox"
+                               data-options="required:false,validType:'length[2,40]'" style="width:220px;height:22px;" />
+                    </td>
+                </tr>             
+                <tr>
+                    <th>
+                        描述：
+                    </th>
+                    <td>
+                        <textarea rows="3" cols="30" name="txtDescription" id="txtDescription" class="easyui-validatebox textbox" data-options="multiline:true,required:false,validType:'length[1,30]'"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

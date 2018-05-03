@@ -138,9 +138,7 @@ namespace AchieveManageWeb.Controllers
                     }
                    
                 }
-            }
-              
-           
+            }           
 
             if (isable.Trim() != "select" && isable.Trim() != "")
                 strWhere += " and IsAble = '" + isable.Trim() + "'";

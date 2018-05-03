@@ -22,6 +22,6 @@ namespace AchieveDAL
             
             return SqlHelper.GetDataTable(SqlHelper.connStrK3, CommandType.Text, strSql.ToString(), null);
         }
-          
+       
     }
 }

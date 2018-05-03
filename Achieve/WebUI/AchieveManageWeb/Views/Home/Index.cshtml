@@ -49,8 +49,64 @@
                     {iconCls : 'icon-arrow_refresh',text:'刷新',handler:refreshTab},
                     {iconCls : 'icon-delete3',text:'关闭全部',handler:closeTab}
                     ]">
-            <div id="home" title="我的主页" data-options="iconCls:'icon-house',closable:false" style="padding:10px">
-                企业管理过程可视化仪表盘：
+            <div id="home" title="管理驾驶舱" data-options="iconCls:'icon-house',closable:false" style="padding:10px">
+                一月工序能力负荷：
+                <table class="easyui-datagrid" style="width:500px;height:250px"
+                       data-options="url:'datagrid_data.json',fitColumns:true,singleSelect:true">
+                    <thead>
+                        <tr>
+                            <th data-options="field:'oper'" width=" 100">工序名称</th>
+                            <th data-options="field:'code'" width=" 100">第1周</th>
+                            <th data-options="field:'name'" width=" 100">第2周</th>
+                            <th data-options="field:'price'" width=" 100">第3周</th>
+                            <th data-options="field:'price'" width=" 100">第4周</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>车</td>
+                            <td>70</td>
+                            <td>70</td>
+                            <td>65</td>
+                            <td>66</td>
+                        </tr>
+                        <tr>
+                            <td>刨</td>
+                            <td>70</td>
+                            <td>70</td>
+                            <td>65</td>
+                            <td>66</td>
+                        </tr>
+                        <tr>
+                            <td>钻</td>
+                            <td>70</td>
+                            <td>70</td>
+                            <td>65</td>
+                            <td>66</td>
+                        </tr>
+                        <tr>
+                            <td>铣</td>
+                            <td>70</td>
+                            <td>70</td>
+                            <td>65</td>
+                            <td>66</td>
+                        </tr>
+                        <tr>
+                            <td>车</td>
+                            <td>70</td>
+                            <td>70</td>
+                            <td>65</td>
+                            <td>66</td>
+                        </tr>
+                        <tr>
+                            <td>磨</td>
+                            <td>70</td>
+                            <td>70</td>
+                            <td>65</td>
+                            <td>66</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

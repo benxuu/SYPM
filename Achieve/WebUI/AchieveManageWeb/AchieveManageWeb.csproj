@@ -3698,6 +3698,8 @@
     <Content Include="Views\Project\ganttview.cshtml" />
     <Content Include="Views\Produce\IndexDetail.cshtml" />
     <Content Include="Views\Project\ProjectGrid.cshtml" />
+    <Content Include="Views\Produce\OperAdd.cshtml" />
+    <Content Include="Views\Produce\OperEdit.cshtml" />
     <None Include="Views\Project\Indexgantt.cshtml" />
     <Content Include="Views\Project\rpt.aspx" />
     <Content Include="Views\Project\test.html" />
@@ -3781,6 +3783,7 @@
     <Content Include="Views\Project\test.cshtml" />
     <Content Include="Views\Project\ProjectGantt.cshtml" />
     <Content Include="Views\Project\ProcessGrid.cshtml" />
+    <Content Include="Views\Produce\OperMgr.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
