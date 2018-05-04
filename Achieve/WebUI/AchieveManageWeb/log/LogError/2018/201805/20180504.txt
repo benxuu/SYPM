@@ -1,0 +1,115 @@
+
+ 
+记录时间：2018-05-04 09:23:01,174 
+线程ID:[28] 
+日志级别：  ERROR 
+错误描述：在执行 controller[UserController] 的 action[Index] 时产生异常
+ 
+System.Exception: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+   在 AchieveCommon.SqlHelper.PrepareCommand(SqlCommand cmd, SqlConnection conn, SqlTransaction trans, CommandType commandType, String commandText, SqlParameter[] paras) 位置 d:\github\SYPM\Achieve\Common\AchieveCommon\SqlHelper.cs:行号 278
+   在 AchieveCommon.SqlHelper.GetDataTable(String connectionString, CommandType commandType, String commandText, SqlParameter[] paras) 位置 d:\github\SYPM\Achieve\Common\AchieveCommon\SqlHelper.cs:行号 187
+   在 AchieveDAL.UserDAL.GetUserById(String id) 位置 d:\github\SYPM\Achieve\DAL\AchieveDAL\UserDAL.cs:行号 43
+   在 AchieveBLL.UserBLL.GetUserById(String id) 位置 d:\github\SYPM\Achieve\BLL\AchieveBLL\UserBLL.cs:行号 32
+   在 AchieveManageWeb.App_Start.JudgmentLoginAttribute.OnActionExecuting(ActionExecutingContext filterContext) 位置 d:\github\SYPM\Achieve\WebUI\AchieveManageWeb\App_Start\JudgmentLoginAttribute.cs:行号 28
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.InvokeActionMethodFilterAsynchronously(IActionFilter filter, ActionExecutingContext preContext, Func`1 nextInChain)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<>c__DisplayClass3b.<BeginInvokeActionMethodWithFilters>b__35()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.InvokeActionMethodFilterAsynchronously(IActionFilter filter, ActionExecutingContext preContext, Func`1 nextInChain)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<>c__DisplayClass3b.<BeginInvokeActionMethodWithFilters>b__35()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.InvokeActionMethodFilterAsynchronously(IActionFilter filter, ActionExecutingContext preContext, Func`1 nextInChain)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<>c__DisplayClass3b.<BeginInvokeActionMethodWithFilters>b__35()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__31(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__1e(AsyncCallback asyncCallback, Object asyncState)
+
+ 
+记录时间：2018-05-04 09:23:01,578 
+线程ID:[29] 
+日志级别：  ERROR 
+错误描述：在执行 controller[MenuController] 的 action[Index] 时产生异常
+ 
+System.Exception: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+   在 AchieveCommon.SqlHelper.PrepareCommand(SqlCommand cmd, SqlConnection conn, SqlTransaction trans, CommandType commandType, String commandText, SqlParameter[] paras) 位置 d:\github\SYPM\Achieve\Common\AchieveCommon\SqlHelper.cs:行号 278
+   在 AchieveCommon.SqlHelper.GetDataTable(String connectionString, CommandType commandType, String commandText, SqlParameter[] paras) 位置 d:\github\SYPM\Achieve\Common\AchieveCommon\SqlHelper.cs:行号 187
+   在 AchieveDAL.UserDAL.GetUserById(String id) 位置 d:\github\SYPM\Achieve\DAL\AchieveDAL\UserDAL.cs:行号 43
+   在 AchieveBLL.UserBLL.GetUserById(String id) 位置 d:\github\SYPM\Achieve\BLL\AchieveBLL\UserBLL.cs:行号 32
+   在 AchieveManageWeb.App_Start.JudgmentLoginAttribute.OnActionExecuting(ActionExecutingContext filterContext) 位置 d:\github\SYPM\Achieve\WebUI\AchieveManageWeb\App_Start\JudgmentLoginAttribute.cs:行号 28
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.InvokeActionMethodFilterAsynchronously(IActionFilter filter, ActionExecutingContext preContext, Func`1 nextInChain)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<>c__DisplayClass3b.<BeginInvokeActionMethodWithFilters>b__35()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.InvokeActionMethodFilterAsynchronously(IActionFilter filter, ActionExecutingContext preContext, Func`1 nextInChain)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<>c__DisplayClass3b.<BeginInvokeActionMethodWithFilters>b__35()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.InvokeActionMethodFilterAsynchronously(IActionFilter filter, ActionExecutingContext preContext, Func`1 nextInChain)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<>c__DisplayClass3b.<BeginInvokeActionMethodWithFilters>b__35()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__31(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__1e(AsyncCallback asyncCallback, Object asyncState)
+
+ 
+记录时间：2018-05-04 09:23:01,629 
+线程ID:[31] 
+日志级别：  ERROR 
+错误描述：在执行 controller[HomeController] 的 action[Index] 时产生异常
+ 
+System.Exception: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+   在 AchieveCommon.SqlHelper.PrepareCommand(SqlCommand cmd, SqlConnection conn, SqlTransaction trans, CommandType commandType, String commandText, SqlParameter[] paras) 位置 d:\github\SYPM\Achieve\Common\AchieveCommon\SqlHelper.cs:行号 278
+   在 AchieveCommon.SqlHelper.GetDataTable(String connectionString, CommandType commandType, String commandText, SqlParameter[] paras) 位置 d:\github\SYPM\Achieve\Common\AchieveCommon\SqlHelper.cs:行号 187
+   在 AchieveDAL.UserDAL.GetUserById(String id) 位置 d:\github\SYPM\Achieve\DAL\AchieveDAL\UserDAL.cs:行号 43
+   在 AchieveBLL.UserBLL.GetUserById(String id) 位置 d:\github\SYPM\Achieve\BLL\AchieveBLL\UserBLL.cs:行号 32
+   在 AchieveManageWeb.App_Start.JudgmentLoginAttribute.OnActionExecuting(ActionExecutingContext filterContext) 位置 d:\github\SYPM\Achieve\WebUI\AchieveManageWeb\App_Start\JudgmentLoginAttribute.cs:行号 28
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.InvokeActionMethodFilterAsynchronously(IActionFilter filter, ActionExecutingContext preContext, Func`1 nextInChain)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<>c__DisplayClass3b.<BeginInvokeActionMethodWithFilters>b__35()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.InvokeActionMethodFilterAsynchronously(IActionFilter filter, ActionExecutingContext preContext, Func`1 nextInChain)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<>c__DisplayClass3b.<BeginInvokeActionMethodWithFilters>b__35()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.InvokeActionMethodFilterAsynchronously(IActionFilter filter, ActionExecutingContext preContext, Func`1 nextInChain)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<>c__DisplayClass3b.<BeginInvokeActionMethodWithFilters>b__35()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__31(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__1e(AsyncCallback asyncCallback, Object asyncState)
+
+ 
+记录时间：2018-05-04 09:23:01,676 
+线程ID:[27] 
+日志级别：  ERROR 
+错误描述：在执行 controller[UserController] 的 action[Index] 时产生异常
+ 
+System.Exception: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+   在 AchieveCommon.SqlHelper.PrepareCommand(SqlCommand cmd, SqlConnection conn, SqlTransaction trans, CommandType commandType, String commandText, SqlParameter[] paras) 位置 d:\github\SYPM\Achieve\Common\AchieveCommon\SqlHelper.cs:行号 278
+   在 AchieveCommon.SqlHelper.GetDataTable(String connectionString, CommandType commandType, String commandText, SqlParameter[] paras) 位置 d:\github\SYPM\Achieve\Common\AchieveCommon\SqlHelper.cs:行号 187
+   在 AchieveDAL.UserDAL.GetUserById(String id) 位置 d:\github\SYPM\Achieve\DAL\AchieveDAL\UserDAL.cs:行号 43
+   在 AchieveBLL.UserBLL.GetUserById(String id) 位置 d:\github\SYPM\Achieve\BLL\AchieveBLL\UserBLL.cs:行号 32
+   在 AchieveManageWeb.App_Start.JudgmentLoginAttribute.OnActionExecuting(ActionExecutingContext filterContext) 位置 d:\github\SYPM\Achieve\WebUI\AchieveManageWeb\App_Start\JudgmentLoginAttribute.cs:行号 28
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.InvokeActionMethodFilterAsynchronously(IActionFilter filter, ActionExecutingContext preContext, Func`1 nextInChain)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<>c__DisplayClass3b.<BeginInvokeActionMethodWithFilters>b__35()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.InvokeActionMethodFilterAsynchronously(IActionFilter filter, ActionExecutingContext preContext, Func`1 nextInChain)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<>c__DisplayClass3b.<BeginInvokeActionMethodWithFilters>b__35()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.InvokeActionMethodFilterAsynchronously(IActionFilter filter, ActionExecutingContext preContext, Func`1 nextInChain)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<>c__DisplayClass3b.<BeginInvokeActionMethodWithFilters>b__35()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__31(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__1e(AsyncCallback asyncCallback, Object asyncState)
+
+ 
+记录时间：2018-05-04 09:23:01,701 
+线程ID:[13] 
+日志级别：  ERROR 
+错误描述：在执行 controller[HomeController] 的 action[Index] 时产生异常
+ 
+System.Exception: 在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
+   在 AchieveCommon.SqlHelper.PrepareCommand(SqlCommand cmd, SqlConnection conn, SqlTransaction trans, CommandType commandType, String commandText, SqlParameter[] paras) 位置 d:\github\SYPM\Achieve\Common\AchieveCommon\SqlHelper.cs:行号 278
+   在 AchieveCommon.SqlHelper.GetDataTable(String connectionString, CommandType commandType, String commandText, SqlParameter[] paras) 位置 d:\github\SYPM\Achieve\Common\AchieveCommon\SqlHelper.cs:行号 187
+   在 AchieveDAL.UserDAL.GetUserById(String id) 位置 d:\github\SYPM\Achieve\DAL\AchieveDAL\UserDAL.cs:行号 43
+   在 AchieveBLL.UserBLL.GetUserById(String id) 位置 d:\github\SYPM\Achieve\BLL\AchieveBLL\UserBLL.cs:行号 32
+   在 AchieveManageWeb.App_Start.JudgmentLoginAttribute.OnActionExecuting(ActionExecutingContext filterContext) 位置 d:\github\SYPM\Achieve\WebUI\AchieveManageWeb\App_Start\JudgmentLoginAttribute.cs:行号 28
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.InvokeActionMethodFilterAsynchronously(IActionFilter filter, ActionExecutingContext preContext, Func`1 nextInChain)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<>c__DisplayClass3b.<BeginInvokeActionMethodWithFilters>b__35()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.InvokeActionMethodFilterAsynchronously(IActionFilter filter, ActionExecutingContext preContext, Func`1 nextInChain)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<>c__DisplayClass3b.<BeginInvokeActionMethodWithFilters>b__35()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.InvokeActionMethodFilterAsynchronously(IActionFilter filter, ActionExecutingContext preContext, Func`1 nextInChain)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<>c__DisplayClass3b.<BeginInvokeActionMethodWithFilters>b__35()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__31(AsyncCallback asyncCallback, Object asyncState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.Begin(AsyncCallback callback, Object state, Int32 timeout)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.BeginInvokeActionMethodWithFilters(ControllerContext controllerContext, IList`1 filters, ActionDescriptor actionDescriptor, IDictionary`2 parameters, AsyncCallback callback, Object state)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__1e(AsyncCallback asyncCallback, Object asyncState)

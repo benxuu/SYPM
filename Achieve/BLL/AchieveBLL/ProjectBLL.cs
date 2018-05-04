@@ -44,6 +44,34 @@ namespace AchieveBLL
             }
             return dt;
         }
+        public DataTable GetProjectDataTablePager(int startPage, int endPage, string where, out int totalCount, string order = "order by FPlanCommitDate desc")
+        { 
+            StringBuilder sbsql=new StringBuilder();
+            sbsql.Append("select FBillNo,FStatus,FName,FModel,FQty,FCommitQty,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FType,FWorkShop,FItemID from (");
+            sbsql.AppendFormat(" select row_number() over({0})",order);
+            sbsql.Append(" as Rownum,FBillNo,FStatus,FQty,FCommitQty,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FType,FWorkShop,ICMO.FItemID as FItemID,FName,FModel ");
+            sbsql.Append(" from ICMO left join t_ICITEMCORE on ICMO.FItemID=t_ICITEMCORE.FItemID where ");
+            sbsql.Append(where);
+            sbsql.AppendFormat(") as T where T.Rownum between  {0}  and  {1}" ,startPage,endPage);
+            DataTable dt = AchieveCommon.SqlHelper.GetDataTable(SqlHelper.connStrK3,CommandType.Text,sbsql.ToString(),null);
+           StringBuilder sbtotalsql=new StringBuilder();
+            sbtotalsql.AppendFormat(" select  count(*) from ICMO left join t_ICITEMCORE on ICMO.FItemID=t_ICITEMCORE.FItemID where {0}",where);
+           DataTable dttotal= AchieveCommon.SqlHelper.GetDataTable(SqlHelper.connStrK3,CommandType.Text,sbtotalsql.ToString(),null);
+           totalCount = Convert.ToInt32(dttotal.Rows[0][0]);
+           dt.Columns.Add(new DataColumn("FStockQty"));
+           for (int i = 0; i < dt.Rows.Count; i++)
+           {
+               DataTable dticitemcore = GetFQTYByFItemID(Convert.ToInt32(dt.Rows[i]["FItemID"]));
+              // dt.Rows[i]["FStockQty"] = AchieveCommon.JsonHelper.ColumnToJson(dticitemcore, 0) ;
+               dt.Rows[i]["FStockQty"] = dticitemcore.Rows[0][0].GetType() ==typeof( DBNull) ? 0 : Convert.ToSingle(dticitemcore.Rows[0][0]);
+           }
+            return dt;
+        }
+        public string GetJsonPager(int startPage, int endPage, string where, out int totalCount, string order = "order by FPlanCommitDate desc")
+        {
+            DataTable dt =GetProjectDataTablePager( startPage,  endPage,  where, out  totalCount,  order );
+            return AchieveCommon.JsonHelper.ToJson(dt);
+        }
         /// <summary>
         /// 获取分页数据
         /// </summary>
@@ -64,11 +92,27 @@ namespace AchieveBLL
           DataTable dt = AchieveCommon.SqlHelper.GetDataTable(SqlHelper.connStrK3, CommandType.Text, sql);
             return AchieveCommon.JsonHelper.ToJson(dt);
         }
-
+        /// <summary>
+        /// 根据物料ID查找物料名称、规格型号等信息
+        /// </summary>
+        /// <param name="FItemID"></param>
+        /// <returns></returns>
         public  DataTable GetFNameByFItemID(int FItemID)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("select FModel,FName from t_icitemcore");
+            sb.Append(" where FItemID=@Id");
+            return SqlHelper.GetDataTable(SqlHelper.connStrK3, CommandType.Text, sb.ToString(), new SqlParameter("@Id", FItemID));
+        }
+        /// <summary>
+        /// 根据物料ID查询物料库存数量
+        /// </summary>
+        /// <param name="FItemID"></param>
+        /// <returns></returns>
+        public DataTable GetFQTYByFItemID(int FItemID)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("select sum(FQty) from ICINVENTORy ");
             sb.Append(" where FItemID=@Id");
             return SqlHelper.GetDataTable(SqlHelper.connStrK3, CommandType.Text, sb.ToString(), new SqlParameter("@Id", FItemID));
         }

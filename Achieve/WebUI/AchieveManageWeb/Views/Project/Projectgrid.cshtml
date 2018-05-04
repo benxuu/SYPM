@@ -32,18 +32,18 @@
                                  }
                              },
                               { width: 100, title: '物料名称', field: 'FName' },
-                        { width: 100, title: '规格型号', field: 'FModel' },
+                        { width: 120, title: '规格型号', field: 'FModel' },
                                 { width: 75, title: '计划数量', field: 'FQty' },
                                  { width: 75, title: '实际数量', field: 'FCommitQty' },
-                                  { width: 75, title: '入库数量', field: '', hidden: true },
+                                  { width: 75, title: '库存数量', field: 'FStockQty', hidden: false },
                                    { width: 90, title: '计划开工日期', field: 'FPlanCommitDate', formatter: function (value, row, index) { return value.substring(0, value.indexOf(' ')) } },
                                     { width: 90, title: '计划完工日期', field: 'FPlanFinishDate', formatter: function (value, row, index) {return value.substring(0, value.indexOf(' '))} },
                                     { width: 90, title: '单据下达日期', field: '', formatter: function (value, row, index) {return value.substring(0, value.indexOf(' '))}, hidden: true },
                                     { width: 100, title: '实际开工日期', field: 'FStartDate', formatter: function (value, row, index) {return value.substring(0, value.indexOf(' '))} },
                                     { width: 100, title: '实际完工日期', field: 'FFinishDate', formatter: function (value, row, index) { return value.substring(0, value.indexOf(' ')) } },
-                                    { width: 100, title: '表单类型', field: 'FType' },
+                                    { width: 100, title: '表单类型', field: 'FType', hidden: true },
                                     { width: 100, title: '是否领料', field: '', hidden: true },
-                                    { width: 100, title: '物料代码', field: 'FItemID' }
+                                    { width: 100, title: '物料代码', field: 'FItemID', hidden: false }
         ]];
 		
 		 var conf = {
@@ -121,8 +121,6 @@
 	
 	    function loadwork(rowIndex, rowData) {
 	        //动态加载标题和数据，显示项目对应的工序计划；
-	        //alert(rowIndex);
-	        //alert(rowData['FBillNo']);
 	        $("#pworktable").datagrid({
 	            class: "easyui-datagrid"   
 	        });
@@ -168,62 +166,7 @@
         //添加用户
         function AddProduce() {
             $("#print_produce_dg").jqprint();
-            //$("<div/>").dialog({
-            //    id: "ui_user_add_dialog",
-            //    href: "/User/UserAdd",
-            //    title: "添加生产任务",
-            //    height: 370,
-            //    width: 610,
-            //    modal: true,
-            //    buttons: [{
-            //        id: "ui_user_add_btn",
-            //        text: '添 加',
-            //        handler: function () {
-            //            $("#UserAddForm").form("submit", {
-            //                url: "/User/AddUser",
-            //                onSubmit: function (param) {
-            //                    param.UserID = $("#txtUserIDAdd").val();
-            //                    param.UserName = $("#txtUserNameAdd").val();
-            //                    param.Isable = document.getElementById("selUserIsableAdd").checked;
-            //                    param.IfChangepwd = document.getElementById("selIfChangepwdAdd").checked;
-            //                    param.Description = $("#txtUserDescriptionAdd").val();
-            //                    param.MobilePhone = $("#txtMobilePhone").val();
-            //                    param.Email = $("#txtEmail").val();
-            //                    if ($(this).form('validate')) {
-            //                        $('#ui_user_add_btn').linkbutton('disable');
-            //                        return true;
-            //                    }
-            //                    else {
-            //                        $('#ui_user_add_btn').linkbutton('enable');   //恢复按钮
-            //                        return false;
-            //                    }
-            //                },
-            //                success: function (data) {
-            //                    var dataJson = eval('(' + data + ')');
-            //                    if (dataJson.success) {
-            //                        $("#ui_user_add_dialog").dialog('destroy');
-            //                        $.show_alert("提示", dataJson.msg);
-            //                        $("#ui_user_dg").datagrid("reload").datagrid('clearSelections').datagrid('clearChecked');
-            //                    } else {
-            //                        $('#ui_user_add_btn').linkbutton('enable');
-            //                        $.show_alert("提示", dataJson.msg);
-            //                    }
-            //                }
-            //            });
-            //        }
-            //    }, {
-            //        text: '取 消',
-            //        handler: function () {
-            //            $("#ui_user_add_dialog").dialog('destroy');
-            //        }
-            //    }],
-            //    onLoad: function () {
-            //        $("#txtUserIDAdd").focus();
-            //    },
-            //    onClose: function () {
-            //        $("#ui_user_add_dialog").dialog('destroy');  //销毁dialog对象
-            //    }
-            //});
+         
         }
 
         //修改计划
@@ -413,6 +356,7 @@
                 view: 'ProjectGrid',
                 FName: $('#FName').val(),
                 FStatus: $('#FStatus').val(),
+                FModel: $('#FModel').val(),
                 FPlanCommitDate: $('#FPlanCommitDate').datetimebox('getValue')
             });
             $("#ui_produce_dg").datagrid('clearSelections').datagrid('clearChecked');
@@ -522,17 +466,7 @@
                                 <option value="true">已完成</option>
                                 <option value="false">未完成</option>
                             </select>
-                        </td>
-                        <th>
-                            是否领料：
-                        </th>
-                        <td>
-                            <select name="selIfChangepwd" id="selIfChangepwd">
-                                <option value="select">请选择</option>
-                                <option value="true">已领料</option>
-                                <option value="false">未领料</option>
-                            </select>
-                        </td>
+                        </td>                       
                     </tr>
                     <tr>
                         <th>
@@ -542,7 +476,12 @@
                             <input name="FPlanCommitDate" id="FPlanCommitDate" class="easyui-datetimebox"
                                    editable="false" style="width:150px;height:22px;" />
                         </td>
-
+                        <th>
+                            规格型号：
+                        </th>
+                        <td>
+                            <input name="FModel" id="FModel" class="easyui-validatebox textbox" style="width:150px;height:22px;" />
+                        </td>
                     
                         <td colspan="4">
                             <a href="javascript:void(0);" class="easyui-linkbutton" iconcls="icon-search" plain="true"
