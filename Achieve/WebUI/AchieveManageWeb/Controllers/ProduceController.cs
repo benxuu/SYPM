@@ -172,7 +172,35 @@ namespace AchieveManageWeb.Controllers
                 return Content("{\"msg\":\"删除失败," + ex.Message + "\",\"success\":false}");
             }
         }
-
+        /// <summary>
+        /// 获取所有工艺组
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetAllOperGroupInfo()
+        {
+            string sort = "OperGroupID desc";
+            int pageindex = Request["page"] == null ? 1 : Convert.ToInt32(Request["page"]);
+            int pagesize = Request["rows"] == null ? 8 : Convert.ToInt32(Request["rows"]);
+            string strWhere = "1=1"; 
+            int totalCount;   //输出参数           
+            string strJson = new ProduceBLL().GetJsonPager("tbOperGroup", "OperGroupID,OperGroupName,DayTime,WeekTime,MonthTime,AlertValue,UpdateTime,UpdateBy,Remark", sort, pagesize, pageindex, strWhere, out totalCount);
+            return Content("{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}");   
+        }
+        /// <summary>
+        /// 根据工艺组ID查询所属成员
+        /// </summary>
+        /// <returns></returns>
+           public ActionResult GetOperByGroupID()
+        {
+            string sort = "OperID desc";
+            int pageindex = Request["page"] == null ? 1 : Convert.ToInt32(Request["page"]);
+            int pagesize = Request["rows"] == null ? 8 : Convert.ToInt32(Request["rows"]);
+            int OperGroupID = Request["OperGroupID"] == null ? 1 : Convert.ToInt32(Request["OperGroupID"]);
+            string strWhere = "OperGroupID=" + OperGroupID; 
+            int totalCount;   //输出参数           
+            string strJson = new ProduceBLL().GetJsonPager("tbOper", "OperID,OperName,Remark", sort, pagesize, pageindex, strWhere, out totalCount);
+            return Content("{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}");   
+        }
 
         /// <summary>
         /// 获取所有工艺能力设置

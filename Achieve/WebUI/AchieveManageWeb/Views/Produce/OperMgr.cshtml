@@ -27,21 +27,23 @@
                     if (data.success) {
                         var toolbar = getToolBar(data);      //common.js
                         if (data.search) {     //判断是否有浏览权限
+                            var oldSelectOperGroupId;   //上次点选的opergroupid
                             $("#ui_oper_dg").datagrid({       //初始化datagrid
-                                url: "/Produce/GetAllOperInfo",
+                                url: "/Produce/GetAllOperGroupInfo",
                                 striped: true, rownumbers: true, pagination: true, pageSize: 20, singleSelect: true,
-                                idField: 'OperID',
-                                sortName: 'OperID',
+                                idField: 'OperGroupID',
+                                sortName: 'OperGroupID',
                                 sortOrder: 'asc',
                                 pageList: [20, 40, 60, 80, 100],
                                 frozenColumns: [[
-                                                 { field: 'OperID', title: '工艺编码', width: 100 }
+                                                 { field: 'OperGroupID', title: '工艺组编码', width: 100 }
                                 ]],
                                 columns: [[
-                                           { field: 'OperNote', title: '工艺名称', width: 120 },
+                                           { field: 'OperGroupName', title: '工艺组名称', width: 120 },
                                            { field: 'DayTime', title: '日产能', width: 80 },
-                                           { field: 'WeekTime', title: '周产能', sortable: false, width: 80 },
-                                           { field: 'MonthTime', title: '月产能', sortable: false, width: 80 },
+                                           { field: 'WeekTime', title: '周产能', sortable: false, hidden:true,width: 80 },
+                                           { field: 'MonthTime', title: '月产能', sortable: false, hidden: true, width: 80 },
+                                            { field: 'AlertValue', title: '预警阈值(%)', width: 80 },
                                            { field: 'UpdateTime', title: '更新时间', width: 150 },
                                            { field: 'UpdateBy', title: '更新人', width: 60 },
                                            {
@@ -51,7 +53,39 @@
                                                }
                                            }
                                 ]],
-                                toolbar: toolbar.length == 0 ? null : toolbar
+                                toolbar: toolbar.length == 0 ? null : toolbar,
+                                onSelect: function (rowIndex, rowData) {
+                                    if (oldSelectOperGroupId == rowData.OperGroupID) {
+                                        return;
+                                    }
+                                    oldSelectOperGroupId = rowData.OperGroupID;
+                            var $ui_oper_layout = $("#ui_oper_layout");
+                            var eastOperMember = $ui_oper_layout.layout("panel", "east");
+                            if (eastOperMember.panel("options").collapsed) {   //判断是否展开
+                                $ui_oper_layout.layout("expand", "east");
+                            }
+                            eastOperMember.panel("setTitle", rowData.OperGroupName + "成员");
+                            if ($("#ui_oper_member_dg").data("datagrid")) {
+                                $("#ui_oper_member_dg").datagrid({       //请求数据
+                                    url: "/Produce/GetOperByGroupID?OperGroupID=" + rowData.OperGroupID
+                                });
+                            }
+                            else {
+                                $("#ui_oper_member_dg").datagrid({       //初始化datagrid
+                                    url: "/Produce/GetOperByGroupID?OperGroupID=" + rowData.OperGroupID,
+                                    striped: true, rownumbers: true, pagination: true, pageSize: 20, singleSelect: true,
+                                    idField: 'ID',
+                                    sortName: 'OperID',
+                                    sortOrder: 'asc',
+                                    pageList: [20, 40, 60, 80, 100],
+                                    columns: [[
+                                          { field: 'OperID', title: '工艺编码', sortable: true, width: 80 },
+                                          { field: 'OperName', title: '工艺名称', sortable: true, width: 120 },
+                                          { field: 'Remark', title: '说明', sortable: false, width: 150 }]]
+                                });
+                            }
+                        }
+                            
                             });
                         }
                         else {
@@ -261,11 +295,11 @@
             <div id="ui_oper_search">
                 <table class="tableForm" style="height:28px;background:#f5f5f5;">
                     <tr>
-                        <th>
+                        <th height="20px">
                             工序名称：
                         </th>
                         <td>
-                            <input name="txtSearchButtonName" id="txtSearchButtonName" class="easyui-validatebox textbox" style="width:170px;height:22px;" />
+                            <input name="txtSearchOperName" id="txtSearchOperName" class="easyui-validatebox textbox" style="width:170px;height:22px;" />
                         </td>
                         <td>
                             <a href="javascript:void(0);" class="easyui-linkbutton" iconcls="icon-search" plain="true"
@@ -274,6 +308,14 @@
                     </tr>
                 </table>
             </div>
+        </div>
+        @*<div data-options="region:'center',border:false">
+            <table id="ui_oper_dg" data-options="fit:true,border:false"></table>
+        </div>*@
+
+        <div data-options="region:'east',split:true,border:true,collapsed:true" title="工艺组成员"
+             style="width: 480px;">
+            <table id="ui_oper_member_dg" data-options="fit:true,border:false"></table>
         </div>
         <div data-options="region:'center',border:false">
             <table id="ui_oper_dg" data-options="fit:true,border:false"></table>

@@ -25,8 +25,7 @@
                        { width: 100, title: '订单号', field: 'FBillNo', sortable: true },
                             { width: 100, title: '制单日期', field: '', hidden: true },
                             { width: 60, title: '订单状态', field: 'FStatus' },
-                             {
-                                 width: 25, title: '关闭标志', field: '', hidden: true,
+                             { width: 25, title: '关闭标志', field: '', hidden: true,
                                  formatter: function (value, row, index) {
                                      return value ? '<img src="../../Content/themes/icon/chk_checked.gif" alt="已关闭" title="用户已关闭" />' : '<img src="../../Content/themes/icon/chk_unchecked.gif" alt="未关闭" title="用户未关闭" />';
                                  }
