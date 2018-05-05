@@ -50,63 +50,61 @@
                     {iconCls : 'icon-delete3',text:'关闭全部',handler:closeTab}
                     ]">
             <div id="home" title="管理驾驶舱" data-options="iconCls:'icon-house',closable:false" style="padding:10px">
-                一月工序能力负荷：
-                <table class="easyui-datagrid" style="width:500px;height:250px"
-                       data-options="url:'datagrid_data.json',fitColumns:true,singleSelect:true">
-                    <thead>
-                        <tr>
-                            <th data-options="field:'oper'" width=" 100">工序名称</th>
-                            <th data-options="field:'code'" width=" 100">第1周</th>
-                            <th data-options="field:'name'" width=" 100">第2周</th>
-                            <th data-options="field:'price'" width=" 100">第3周</th>
-                            <th data-options="field:'price'" width=" 100">第4周</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>车</td>
-                            <td>70</td>
-                            <td>70</td>
-                            <td>65</td>
-                            <td>66</td>
-                        </tr>
-                        <tr>
-                            <td>刨</td>
-                            <td>70</td>
-                            <td>70</td>
-                            <td>65</td>
-                            <td>66</td>
-                        </tr>
-                        <tr>
-                            <td>钻</td>
-                            <td>70</td>
-                            <td>70</td>
-                            <td>65</td>
-                            <td>66</td>
-                        </tr>
-                        <tr>
-                            <td>铣</td>
-                            <td>70</td>
-                            <td>70</td>
-                            <td>65</td>
-                            <td>66</td>
-                        </tr>
-                        <tr>
-                            <td>车</td>
-                            <td>70</td>
-                            <td>70</td>
-                            <td>65</td>
-                            <td>66</td>
-                        </tr>
-                        <tr>
-                            <td>磨</td>
-                            <td>70</td>
-                            <td>70</td>
-                            <td>65</td>
-                            <td>66</td>
-                        </tr>
-                    </tbody>
-                </table>
+                            
+                <div class="easyui-layout" data-options="fit:true">
+
+                    <!-- 上部第一行布局，产能预警 -->
+                    <div data-options="region:'north',title:''" style="height:310px">
+                        <div style="height: 300px;display:inline;float:left;margin-left: 5px;width: 260px;">
+                            <div class="easyui-panel" title="周产能预警"
+                                 data-options="
+                                 iconCls:'icon-ok',
+                                 tools:[
+				{
+					iconCls:'icon-add',
+					handler:function(){alert('add')}
+				},{
+					iconCls:'icon-edit',
+					handler:function(){alert('edit')}
+				}]
+                                 ">
+                                <table id="daytime_dg" class="easyui-datagrid" data-options="
+                                       url:'datagrid_data.json',
+                                       fitColumns:true,singleSelect:true
+                                       ">
+                                    <thead>
+                                        <tr>
+                                            <th data-options="field:'opergroupname',width:100">工艺</th>
+                                            <th data-options="field:'week1',width:100">第1周</th>
+                                            <th data-options="field:'week2',width:100">第2周</th>
+                                            <th data-options="field:'week3',width:100">第3周</th>
+                                            <th data-options="field:'week4',width:100">第4周</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                        <div style="height: 300px;display:inline;float:left;margin-left: 5px;width: 260px;">
+                            <div class="easyui-panel" title="月产能预警"
+                                 data-options="
+                                 href:'content_url.php',
+                                 onload:function(){
+                                 alert('loaded successfully');
+                                 }
+                                 "
+                                 >
+                                <table id=" weektime_dg" data-options="fit:true,border:false">
+                                </table>
+                            </div>
+                        </div>                    
+                      
+                    </div>
+                    
+                    <!-- 中间布局，占位 -->
+                    <div data-options="region:'center'">                        
+                    </div>
+                </div>  
+                
             </div>
         </div>
     </div>
