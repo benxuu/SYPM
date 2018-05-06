@@ -15,8 +15,11 @@
     <script src="~/Scripts/jquery-easyui-1.4.4/locale/easyui-lang-zh_CN.js"></script>
     <script src="~/Content/js/common.js"></script>
     <script src="~/Content/js/init.js" type="text/javascript"></script>
+    <!--处理仪表盘-->
+    <script src="~/Content/js/cockpit.js"></script>
     <link href="~/Content/themes/table.css" rel="stylesheet" />
     <link href="~/Content/themes/icon.css" rel="stylesheet" />
+  
 </head>
 <body class="easyui-layout">
     <div data-options="region:'north',border:false" style="height: 60px; background-color: #F5F5F5; padding: 10px; font-size: x-large;">
@@ -55,46 +58,14 @@
 
                     <!-- 上部第一行布局，产能预警 -->
                     <div data-options="region:'north',title:''" style="height:310px">
-                        <div style="height: 300px;display:inline;float:left;margin-left: 5px;width: 260px;">
-                            <div class="easyui-panel" title="周产能预警"
-                                 data-options="
-                                 iconCls:'icon-ok',
-                                 tools:[
-				{
-					iconCls:'icon-add',
-					handler:function(){alert('add')}
-				},{
-					iconCls:'icon-edit',
-					handler:function(){alert('edit')}
-				}]
-                                 ">
-                                <table id="daytime_dg" class="easyui-datagrid" data-options="
-                                       url:'datagrid_data.json',
-                                       fitColumns:true,singleSelect:true
-                                       ">
-                                    <thead>
-                                        <tr>
-                                            <th data-options="field:'opergroupname',width:100">工艺</th>
-                                            <th data-options="field:'week1',width:100">第1周</th>
-                                            <th data-options="field:'week2',width:100">第2周</th>
-                                            <th data-options="field:'week3',width:100">第3周</th>
-                                            <th data-options="field:'week4',width:100">第4周</th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                        <div style="height: 300px;display:inline;float:left;margin-left: 5px;width: 560px;">
+                            <div class="easyui-panel" title="周产能预警" style="height:310px;width: 500px;" data-options="href:''">
+                                <table id="weektime_dg" data-options="fit:true,border:false"></table>
                             </div>
                         </div>
-                        <div style="height: 300px;display:inline;float:left;margin-left: 5px;width: 260px;">
-                            <div class="easyui-panel" title="月产能预警"
-                                 data-options="
-                                 href:'content_url.php',
-                                 onload:function(){
-                                 alert('loaded successfully');
-                                 }
-                                 "
-                                 >
-                                <table id=" weektime_dg" data-options="fit:true,border:false">
-                                </table>
+                        <div style="height: 300px;display:inline;float:left;margin-left: 5px;width: 500px;">
+                            <div class="easyui-panel" title="月产能预警"  >
+                                
                             </div>
                         </div>                    
                       
@@ -111,6 +82,3 @@
 </body>
 </html>
 
-<script type="text/javascript">
-
-</script>

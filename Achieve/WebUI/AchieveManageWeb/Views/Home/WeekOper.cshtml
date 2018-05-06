@@ -1,0 +1,88 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>周工艺能力预警</title>
+    <link href="~/Scripts/jquery-easyui-1.4.4/themes/bootstrap/easyui.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-easyui-1.4.4/jquery.min.js"></script>
+    <script src="~/Scripts/jquery-easyui-1.4.4/jquery.easyui.min.js"></script>
+    <script src="~/Scripts/jquery-easyui-1.4.4/locale/easyui-lang-zh_CN.js"></script>
+    <link href="~/Content/themes/icon.css" rel="stylesheet" />
+    <script src="~/Content/js/common.js"></script>
+    <link href="~/Content/themes/table.css" rel="stylesheet" />
+    
+    <script type="text/javascript">
+        $(function () {          
+            $('#weektime_dg').datagrid({
+                url: "/Home/GetOperWeekAlert",
+                singleSelect: true,
+                columns: [[
+                    { field: 'OperGroupID', title: 'Code', width: 100, hidden:true },
+                    { field: 'OperGroupName', title: '工艺', width: 100 },
+                     { field: 'AlertValue', title: '预警%', width: 100 },
+                      {
+                          field: 'DayTime', title: '周能力', width: 60,
+                          formatter: function (value, row, index) { return value*6;  }  
+                      },
+                          {
+                              field: '4', title: '上3周', width: 100,
+                              styler: function (value, row, index) {
+                                  if (value > row.AlertValue * row.DayTime * 6 / 100) {
+                                      return 'background-color:red;color:black;';
+                                  } else {
+                                      return 'background-color:green';
+                                  }
+                              }
+                          },
+                  
+                      
+                       {
+                           field: '3', title: '上上周', width: 100,
+                           styler: function (value, row, index) {
+                               if (value > row.AlertValue * row.DayTime * 6 / 100) {
+                                   return 'background-color:red;color:black;';
+                               } else {
+                                   return 'background-color:green';
+                               }
+                           }
+                       }, {
+                           field: '2', title: '上周', width: 100,
+                           styler: function (value, row, index) {
+                               if (value > row.AlertValue * row.DayTime * 6 / 100) {
+                                   return 'background-color:red;color:black;';
+                                   // the function can return predefined css class and inline style
+                                   // return {class:'c1',style:'color:red'}
+                               } else {
+                                   return 'background-color:green';
+                               }
+                           }
+                       },
+                     {
+                            field: '1', title: '本周', width: 100, align: 'right',
+                            styler: function (value, row, index) {
+                                if (value > row.AlertValue * row.DayTime * 6 / 100) {
+                                    return 'background-color:red;color:black;';
+                                } else {
+                                    return 'background-color:green';
+                                }
+                            }
+                        }
+                ]]
+            });
+         
+        })
+    
+
+    </script>
+    </head>
+    <body>
+        <table id="weektime_dg"></table>
+            
+
+    </body>
+    </html>

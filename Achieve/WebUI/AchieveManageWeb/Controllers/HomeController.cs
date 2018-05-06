@@ -33,6 +33,7 @@ namespace AchieveManageWeb.Controllers
             return View();
         }
 
+
         public ActionResult IndexNew()
         {
             UserEntity uInfo = ViewData["Account"] as UserEntity;
@@ -45,7 +46,10 @@ namespace AchieveManageWeb.Controllers
             ViewBag.DayDate = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetDayName(DateTime.Now.DayOfWeek);
             return View();
         }
-
+        public ActionResult WeekOper()
+        {           
+            return View();
+        }
         /// <summary>
         /// 查询出数据显示在菜单栏目中
         /// </summary>
@@ -56,6 +60,15 @@ namespace AchieveManageWeb.Controllers
             string menuJson = new MenuBLL().GetUserMenu(uInfo.ID);
             return Content(menuJson);
         }
+
+        public ActionResult GetOperWeekAlert()
+        {
+            //UserEntity uInfo = ViewData["Account"] as UserEntity;
+            int totalCount = DateHelper.GetWeekIndex(DateTime.Now);
+            string strJson = new CockpitBLL().getJsonOperAlert(totalCount);
+            return Content("{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}");
+            
+        } 
 
         /// <summary>
         /// 判断是否修改密码

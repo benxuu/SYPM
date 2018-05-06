@@ -37,6 +37,20 @@ namespace AchieveCommon
                 return val;
             }
         }
+        /// <summary>
+        /// 执行增删改【常用】
+        /// </summary>
+        public static int ExecuteNonQuerySql(string connectionString,  string commandText)
+        {
+            SqlCommand cmd = new SqlCommand();
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                PrepareCommand(cmd, conn, null, CommandType.Text, commandText);
+                int val = cmd.ExecuteNonQuery();
+                //cmd.Parameters.Clear();          //清空参数
+                return val;
+            }
+        }
 
         /// <summary>
         /// 执行增删改（对现有的数据库连接）【不常用】
@@ -185,6 +199,23 @@ namespace AchieveCommon
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 PrepareCommand(cmd, conn, null, commandType, commandText, paras);
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
+                }
+            }
+        }
+        /// <summary>
+        /// 返回DataTable
+        /// </summary>
+        public static DataTable GetDataTable(string connectionString,   string commandText )
+        {
+            SqlCommand cmd = new SqlCommand();
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                PrepareCommand(cmd, conn, null, CommandType.Text, commandText);
                 using (SqlDataAdapter da = new SqlDataAdapter(cmd))
                 {
                     DataTable dt = new DataTable();

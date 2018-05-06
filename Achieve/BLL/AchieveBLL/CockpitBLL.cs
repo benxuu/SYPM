@@ -14,18 +14,83 @@ namespace AchieveBLL
 {
     public class CockpitBLL
     {
+        int weekindex;
+        DateHelper d=new DateHelper();
+        public float operValue(int operGroupID,int year,int weekindex)
+        {
+            float opervalue=0;
+            DateTime start, end;
+            //获取本周的起止时间
+            DateHelper.GetWeek(year, weekindex, out start,out  end);
+            //查询本周有关的工艺编码；
+            string sql = "select operid from tbOper where OperGroupID="+operGroupID;
+            DataTable dtoperid = SqlHelper.GetDataTable(SqlHelper.connStr,sql);
+            string where = " 1=1";
+            //工艺选择
+            foreach (DataRow item in dtoperid.Rows)
+            {
+                where += " and foperid=" + item[0].ToString();
+            }
+            //运行时间选择
+            where += " and ffinishtime > 0 ";
+
+            //时间范围选择
+            where += " and fstartworkdate <'" + end.ToString("yyyy-MM-dd HH:mm:ss")+"'";
+            where += " and fendworkdate >'" + start.ToString("yyyy-MM-dd HH:mm:ss")+"'";
+           
+
+            //在k3数据库中查询工序计划表
+            string sqloper = "select fstartworkdate,fendworkdate,ffinishtime from SHworkbillENTRY where  "+where;
+            DataTable dtoper = SqlHelper.GetDataTable(SqlHelper.connStrK3, sqloper);
+            foreach (DataRow item in dtoper.Rows)
+            {
+                int swi,ewi;
+                swi = DateHelper.GetWeekIndex(Convert.ToDateTime(item["fstartworkdate"]));
+                ewi = DateHelper.GetWeekIndex(Convert.ToDateTime(item["fendworkdate"]));
+                //跨周的工作量平均分配
+                if (ewi>=swi)
+                {
+                    opervalue += Convert.ToSingle(item["ffinishtime"]) /(ewi - swi + 1);
+                }
+                else//跨年的
+                {
+                    opervalue += Convert.ToSingle(item["ffinishtime"]) / (ewi - swi + 54);
+                }
+               
+            }
+            return opervalue;
+        }
+
+        public string getJsonOperAlert(int weekindex){
+            string sql = " select OperGroupName,OperGroupID,DayTime,AlertValue from tbopergroup where ischeck=1";
+            DataTable dtgroup = SqlHelper.GetDataTable(SqlHelper.connStr, sql);
+            int year = DateTime.Now.Year;
+
+            for (int i = weekindex; i >0 && i>(weekindex-4); i--)
+			{
+                string cname=(weekindex-i+1).ToString();
+                dtgroup.Columns.Add(cname);
+                foreach (DataRow item in dtgroup.Rows)
+                {
+                    item[cname] = operValue(Convert.ToInt32(item["OperGroupID"]),year,i);
+                }
+
+			}
+            return AchieveCommon.JsonHelper.ToJson(dtgroup);            
         
+        }
+       
     }
     class alertTime
     {
-        public DateTime week1start { get; set; }
-        public DateTime week1end { get; set; }
-        public DateTime week1start { get; set; }
-        public DateTime week1end { get; set; }
-        public DateTime week1start { get; set; }
-        public DateTime week1end { get; set; }
-        public DateTime week1start { get; set; }
-        public DateTime week1end { get; set; }
+        //public DateTime week1start { get; set; }
+        //public DateTime week1end { get; set; }
+        //public DateTime week1start { get; set; }
+        //public DateTime week1end { get; set; }
+        //public DateTime week1start { get; set; }
+        //public DateTime week1end { get; set; }
+        //public DateTime week1start { get; set; }
+        //public DateTime week1end { get; set; }
 
 //        DateTime dt = DateTime.Now;  //当前时间
 //DateTime startWeek = dt.AddDays(1 - Convert.ToInt32(dt.DayOfWeek.ToString("d")));  //本周周一

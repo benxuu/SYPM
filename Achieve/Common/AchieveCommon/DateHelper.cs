@@ -6,7 +6,7 @@ using System.Text;
 namespace AchieveCommon
 {
     
-        public class Date
+        public class DateHelper
         {
              /// <summary>
             /// 确定某时间属于一年的第几周，如果12月31号与下一年的1月1好在同一个星期则算下一年的第一周 
@@ -95,20 +95,20 @@ namespace AchieveCommon
             /// <summary>  
             /// 求当前日期是一年的中第几周  
             /// </summary>  
-            public static int WeekOfYear(DateTime todayTime)
-            {
-                var firstdayofweek = Convert.ToInt32(Convert.ToDateTime(todayTime.Year.ToString(CultureInfo.InvariantCulture) + "- " + "1-1 ").DayOfWeek);
-                var days = todayTime.DayOfYear;
-                var daysOutOneWeek = days - (7 - firstdayofweek);
-                if (daysOutOneWeek <= 0)
-                {
-                    return 1;
-                }
-                var weeks = daysOutOneWeek / 7;
-                if (daysOutOneWeek % 7 != 0)
-                    weeks++;
-                return weeks + 1;
-            }
+            //public static int WeekOfYear(DateTime todayTime)
+            //{
+            //    var firstdayofweek = Convert.ToInt32(Convert.ToDateTime(todayTime.Year.ToString(CultureInfo.InvariantCulture) + "- " + "1-1 ").DayOfWeek);
+            //    var days = todayTime.DayOfYear;
+            //    var daysOutOneWeek = days - (7 - firstdayofweek);
+            //    if (daysOutOneWeek <= 0)
+            //    {
+            //        return 1;
+            //    }
+            //    var weeks = daysOutOneWeek / 7;
+            //    if (daysOutOneWeek % 7 != 0)
+            //        weeks++;
+            //    return weeks + 1;
+            //}
 
             /// <summary>  
             /// 当前月有多少天  
@@ -131,9 +131,28 @@ namespace AchieveCommon
                 DateTime dt2 = Convert.ToDateTime(next_year + "-" + next_month + "-1");
                 TimeSpan diff = dt2 - dt1;
                 return diff.Days;
-            }  
+            }
 
+            public static string GetDateTimeString(DateTime dt) {
+                //CultureInfo cultureInfo = CultureInfo.CreateSpecificCulture("en-US");
+                //string format = "ddd MMM d HH:mm:ss zz00 yyyy";
+                return dt.ToString("yyyy-MM-dd HH:mm:ss"); // 得到日期字符串
+            }
+            public static DateTime GetDatetime(string strDate)
+            {
+                try
+                {
+                    //需要判断的时间  
+                    DateTime dTime = Convert.ToDateTime(strDate);
+                    return dTime;
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
 
+            }
+           
 
         }  
     }

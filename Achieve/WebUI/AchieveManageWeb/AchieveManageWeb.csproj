@@ -213,6 +213,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\images\PermitLogo.jpg" />
+    <Content Include="Content\js\cockpit.js" />
     <Content Include="Content\js\print.htm" />
     <Content Include="Content\js\jquery.jqprint-0.3.js" />
     <Content Include="Content\js\printDatagrid.js" />
@@ -3700,6 +3701,7 @@
     <Content Include="Views\Project\ProjectGrid.cshtml" />
     <Content Include="Views\Produce\OperAdd.cshtml" />
     <Content Include="Views\Produce\OperEdit.cshtml" />
+    <Content Include="Views\Home\WeekOper.cshtml" />
     <None Include="Views\Project\Indexgantt.cshtml" />
     <Content Include="Views\Project\rpt.aspx" />
     <Content Include="Views\Project\test.html" />
