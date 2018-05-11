@@ -11,6 +11,7 @@ using System.Threading;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
+using System.Text;
 
 namespace AchieveManageWeb.Controllers
 {
@@ -64,9 +65,30 @@ namespace AchieveManageWeb.Controllers
         public ActionResult GetOperWeekAlert()
         {
             //UserEntity uInfo = ViewData["Account"] as UserEntity;
-            int totalCount = DateHelper.GetWeekIndex(DateTime.Now);
-            string strJson = new CockpitBLL().getJsonOperAlert(totalCount);
-            return Content("{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}");
+            int thisweek = DateHelper.GetWeekIndex(DateTime.Now);
+            string key = Request["key"];//调整前后周，往后调整为负值
+            int weekadjust = Request["weekadjust"]==null?0: Convert.ToInt32(Request["weekadjust"]);//调整前后周，往后调整为负值
+            if (key=="columns")
+            {
+                string columns = "[{ \"width\": 100, \"title\": \"工艺\", \"field\":\"OperGroupName\", \"sortable\": \"false\" }";
+                columns += ",{ \"width\": 60, \"title\": \"标准周能力\", \"field\":\"DayTime\", \"sortable\": \"false\" }";
+                columns += ",{ \"width\": 60, \"title\": \"预警%\", \"field\":\"AlertValue\", \"sortable\": \"false\" }";
+                for (int i = (thisweek + weekadjust - 4) > 0 ? thisweek + weekadjust - 4 : 0; i <= thisweek + weekadjust; i++)
+                {
+                    string cname = i.ToString();
+                    if (i == thisweek)
+                    {
+                        cname = "本周";
+                    }
+                    else { cname = "第"+i+"周"; }
+                    columns += ",{ \"width\": 60, \"title\": \"" + cname + "\", \"field\":\"" + i + "\", \"sortable\": \"false\" }";
+                }
+                columns += "]";
+                return Content("{\"thisweek\": " + thisweek.ToString() + ",\"success\":true" + ",\"columns\":" + columns + "}"); 
+            }
+            string strJson = new CockpitBLL().getJsonOperAlert(thisweek+weekadjust);
+
+            return Content("{\"total\": " + thisweek.ToString() +  ",\"rows\":" + strJson + "}");
             
         } 
 

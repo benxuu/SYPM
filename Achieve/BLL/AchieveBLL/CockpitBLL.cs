@@ -60,15 +60,19 @@ namespace AchieveBLL
             }
             return opervalue;
         }
-
+        /// <summary>
+        /// 输入weekindex为当前周，返回前5周的数据，索引为周号；
+        /// </summary>
+        /// <param name="weekindex"></param>
+        /// <returns></returns>
         public string getJsonOperAlert(int weekindex){
             string sql = " select OperGroupName,OperGroupID,DayTime,AlertValue from tbopergroup where ischeck=1";
             DataTable dtgroup = SqlHelper.GetDataTable(SqlHelper.connStr, sql);
             int year = DateTime.Now.Year;
 
-            for (int i = weekindex; i >0 && i>(weekindex-4); i--)
+            for (int i = weekindex; i >0 && i>(weekindex-5); i--)
 			{
-                string cname=(weekindex-i+1).ToString();
+                string cname=i.ToString();
                 dtgroup.Columns.Add(cname);
                 foreach (DataRow item in dtgroup.Rows)
                 {
