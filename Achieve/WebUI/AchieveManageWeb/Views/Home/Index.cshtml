@@ -18,8 +18,21 @@
     <link href="~/Content/themes/table.css" rel="stylesheet" />
     <link href="~/Content/themes/icon.css" rel="stylesheet" />
     <!--处理仪表盘-->
-    <script src="~/Content/js/cockpit.js"></script>
-  
+    <script src="~/Content/js/cockpit.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    function formatProgress(value) {
+        if (value) {
+            var s = '<div style="width:100%;border:1px solid #ccc">' +
+                    '<div style="width:' + value + '%;background:#cc0000;color:#fff">' + value + '%' + '</div>'
+            '</div>';
+            return s;
+        } else {
+            return '';
+        }
+    }
+
+    </script>
+
 </head>
 <body class="easyui-layout">
     <div data-options="region:'north',border:false" style="height: 60px; background-color: #F5F5F5; padding: 10px; font-size: x-large;">
@@ -61,12 +74,10 @@
                         <div style="height: 300px;display:inline;float:left;margin-left: 5px;width: 560px;">
                             <div class="easyui-panel" title="周产能预警" style="height:310px;width: 500px;" data-options="href:''">
                                 <table id="weektime_dg" data-options="fit:true,border:false"></table>
-                               
                             </div>
                         </div>
                         <div style="height: 300px;display:inline;float:left;margin-left: 5px;width: 500px;">
-                            <div class="easyui-panel" title="月产能预警"  >
-                                
+                            <div class="easyui-panel" title="月产能预警">
                             </div>
                         </div>                    
                       

@@ -205,6 +205,14 @@ namespace AchieveManageWeb.Controllers
         {
             return View();
         }
+        public ActionResult ProjectBill()
+        {
+            return View();
+        }
+        public ActionResult ProjectRpt()
+        {
+            return View();
+        }
        
         public ActionResult ProjectGrid()
         {

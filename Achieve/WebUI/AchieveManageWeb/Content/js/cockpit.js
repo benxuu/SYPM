@@ -1,9 +1,9 @@
 ﻿var myColums = [
          { field: 'OperGroupID', title: 'Code', width: 80, hidden: true },
-           { field: 'OperGroupName', title: '工艺', width: 80 },
-            { field: 'AlertValue', title: '预警%', width: 60 },
+           { field: 'OperGroupName', title: '工艺', width: 60 },
+            { field: 'AlertValue', title: '预警%', width: 50 },
              {
-                 field: 'DayTime', title: '周能力', width: 60,
+                 field: 'DayTime', title: '周能力', width: 50,
                  formatter: function (value, row, index) { return value * 6; }
              },
                  {
@@ -119,8 +119,8 @@ function weekdatagrid(weekadjust) {
                 },
                 striped: true, rownumbers: true, pagination: false, pageSize: 20, singleSelect: true,
                 fitColumns: false,
-                //idField: 'FBillNo',
-                //sortName: 'FBillNo',
+                //idField: '',
+                //sortName: '',
                 //sortOrder: 'desc',
                 pageList: [20, 40, 60, 80, 100],
                 //frozenColumns: [],

@@ -1,0 +1,9 @@
+﻿.divcss5{ padding:10px;} 
+.divcss5_left{ float:left;padding:10px;height:20px} 
+.divcss5_right{ float:right;width:150px;border:1px solid #00F;height:50px}
+.label {float:left;padding:3px;height:20px; margin: 3px;text-align: right;width:100px;padding-right:5px
+}
+.value {float:left;padding:3px;height:20px; margin: 3px;text-align: left;
+}
+.clear{ clear:both} 
+

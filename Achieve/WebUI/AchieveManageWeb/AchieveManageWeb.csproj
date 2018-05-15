@@ -217,6 +217,7 @@
     <Content Include="Content\js\print.htm" />
     <Content Include="Content\js\jquery.jqprint-0.3.js" />
     <Content Include="Content\js\printDatagrid.js" />
+    <Content Include="Content\formstyles.css" />
     <Content Include="Content\themes\table.css" />
     <Content Include="Content\images\bar.gif" />
     <Content Include="Content\images\favicon.ico" />
@@ -3786,6 +3787,9 @@
     <Content Include="Views\Project\ProjectGantt.cshtml" />
     <Content Include="Views\Project\ProcessGrid.cshtml" />
     <Content Include="Views\Produce\OperMgr.cshtml" />
+    <Content Include="Views\Project\ProjectBill.cshtml" />
+    <Content Include="Views\Project\ProjectRpt.cshtml" />
+    <Content Include="Views\Project\ProjectBill - 单据布局参考.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

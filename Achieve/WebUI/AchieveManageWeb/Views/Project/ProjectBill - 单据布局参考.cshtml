@@ -1,0 +1,180 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>项目管理</title>
+    <link href="~/Scripts/jquery-easyui-1.4.4/themes/bootstrap/easyui.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-easyui-1.4.4/jquery.min.js"></script>
+    <script src="~/Scripts/jquery-easyui-1.4.4/jquery.easyui.min.js"></script>
+    <script src="~/Scripts/jquery-easyui-1.4.4/locale/easyui-lang-zh_CN.js"></script>
+    <link href="~/Content/themes/icon.css" rel="stylesheet" />
+    <script src="~/Content/js/common.js"></script>
+    <link href="~/Content/themes/table.css" rel="stylesheet" />
+    <link href="~/Content/formstyles.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-easyui-1.4.4/Extension/jquery-easyui-datagridview/datagrid-detailview.js"></script>
+      <link href="~/Content/formstyles.css" rel="stylesheet" />
+      <style type="text/css">
+    </style>
+
+    <script type="text/javascript">       
+     
+        $(function () {
+            $.ajax({     //请求当前用户可以操作的按钮
+                url: "/Button/GetUserAuthorizeButton?r=" + Math.random(),
+                type: "post",
+                data: { "KeyCode": "ProjectBill", "KeyName": "ProjectBill" },
+                dataType: "json",
+                timeout: 5000,
+                success: function (data) {
+                    if (data.success) {
+                        var toolbar = getToolBarDiv(data);      //common.js
+                       $("#toolbar").append(toolbar);//生成按钮栏
+                      
+                    } else {
+                      
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    if (textStatus == "timeout") {
+                        $.show_alert("提示", "请求超时，请刷新当前页重试！");
+                    }
+                    else {
+                        $.show_alert("错误", textStatus + "：" + errorThrown);
+                    }
+                }
+            })
+        });
+        EditProjectBill = function () {
+            alert("EditProjectBill");
+        };
+        AddProjectBill = function () {
+            alert("AddProjectBill");
+        };
+</script>
+
+</head>
+<body>
+    <div id="toolbar" class="easyui-panel" style="padding:5px;"> </div>
+    <div id="toolbar2" class="easyui-panel" style="padding:5px;">     </div>
+    <div class="easyui-panel" style="padding:5px;"  >
+        <a href="#" class="easyui-linkbutton" title="1添加" data-options="iconCls:'icon-add',plain:true" onclick="javascript:AddProjectBill();">1添加</a>  <a href="#" class="easyui-linkbutton" title="修改" data-options="iconCls:'icon-edit',plain:true" onclick="javascript:EditProjectBill();">修改</a>
+
+        <a href="#" plain="true" class="easyui-linkbutton" icon="icon-save" title="保存"  >保存</a>
+        <a href="#" plain="true" class="easyui-linkbutton" icon="icon-undo" title="撤消"  >撤消</a>
+        <a href="#" plain="true" class="easyui-linkbutton" icon="icon-user-accept" title="审核" >审核</a>
+
+        <span class="datagrid-btn-separator" style="vertical-align: middle;display:inline-block;float:none"></span>
+        <a href="#" plain="true" class="easyui-linkbutton" icon="icon-printer" title="打印"  >打印</a>
+        <span class="datagrid-btn-separator" style="vertical-align: middle;display:inline-block;float:none"></span>
+        <a href="#" class="easyui-splitbutton" data-options="menu:'#divother',iconCls:'icon-application_go'" title="其他">其他</a>
+        <span class="datagrid-btn-separator" style="vertical-align: middle;display:inline-block;float:none"></span>
+        <a href="#" plain="true" class="easyui-linkbutton" icon="icon-resultset_first" title="第一条"></a>
+        <a href="#" plain="true" class="easyui-linkbutton" icon="icon-resultset_previous" title="上一条"></a>
+        <a href="#" plain="true" class="easyui-linkbutton" icon="icon-resultset_next" title="下一条"></a>
+        <a href="#" plain="true" class="easyui-linkbutton" icon="icon-resultset_last" title="最后一条"></a>
+    </div>
+    <div id="divother" style="width:100px; display:none;">
+        <div data-options="iconCls:'icon-add'">新增</div>
+        <div data-options="iconCls:'icon-cross'">删除</div>
+        <div data-options="iconCls:'icon-arrow_refresh'">刷新</div>
+    </div>
+   
+    <form id="ff" method="post">
+       
+            <div class="label">单据编号</div>
+            <div class="value"><input type="text" class="z-txt readonly" /></div>
+            <div class="label">单据日期</div>
+        <div class="value"><input type="text" class="z-txt easyui-datebox" /></div>
+        <div class="label">经办人</div>
+        <div class="value "><input type="text" class="z-txt easyui-validatebox" /></div>
+
+            <div class="clear"></div>
+
+        <div class="label">项目名称</div>
+        <div class="value"><input type="text" required="true" class="z-txt easyui-lookup"  /></div>
+        <div class="label">项目管理员</div>
+        <div class="value"><input type="text" class="z-txt easyui-combobox" required="true" /></div>
+        <div class="label">业务员</div>
+        <div class="value"><input type="text" class="easyui-datebox z-txt" required="true" /></div>
+
+            <div class="clear"></div>
+
+        <div class="label">项目商务 </div>
+        <div class="value"><input type="text" class="easyui-combobox z-txt" required="true" /></div>
+        <div class="clear"></div>
+        <div class="label">技术方案</div>
+        <div class="value"><input type="text" class="z-txt easyui-combobox" required="true" /></div>
+        <div class="clear"></div>
+        <div class="label">设计时间 </div>
+        <div class="value"><input type="text" class="z-txt" /></div>
+
+            <div class="clear"></div>
+
+        <div class="label">生产</div>
+        <div class="value"><input type="text" class="z-txt" /></div>
+        <div class="clear"></div>
+        <div class="label">施工管理</div>
+        <div class="value"><input type="text" id=" " name=" "    /></div>
+        <div class="label">备注</div>
+        <div class="value"><input type="text" id="Remark" name="Remark" class="z-txt" /></div>
+
+            <div class="clear"></div>
+     
+    </form>
+        <div id="tt" class="easyui-tabs">
+            <div title="材料明细">
+                <table id="list" data-bind="datagrid:grid">
+                    <thead>
+                        <tr>
+                            <th field="BillNo" hidden="true"></th>
+                            <th field="RowId" hidden="true"></th>
+                            <th field="MaterialCode" sortable="true" align="left" width="80">材料编码   </th>
+                            <th field="MaterialName" sortable="true" align="left" width="100">材料名称   </th>
+                            <th field="Model" sortable="true" align="left" width="100">规格型号   </th>
+                            <th field="Material" sortable="true" align="left" width="80">材质       </th>
+                            <th field="Unit" sortable="true" align="left" width="100" editor="{type: 'combobox', options:{data:data.dataSource.measureUnit}}">单位</th>
+                            <th field="CheckNum" sortable="true" align="right" width="70" editor="{type: 'numberbox',options:{min: 0}}">验收数量</th>
+                            <th field="Num" sortable="true" align="right" width="70" editor="{type: 'numberbox',options:{min: 0,validType:'checkNum'}}">入库数量</th>
+                            <th field="UnitPrice" sortable="true" align="right" width="70" editor="{type: 'numberbox',options:{min: 0, precision: 2}}" formatter="com.formatMoney">入库单价</th>
+                            <th field="Money" sortable="true" align="right" width="70" editor="{type: 'numberbox',options:{min: 0, precision: 2}}" formatter="com.formatMoney">金额</th>
+                            <th field="Remark" sortable="true" align="left" width="200" editor="text">备注</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div title="表单信息" class="hide" style="padding-top:2px;">
+                <div class="container_12" id="BillDetail" data-bind="inputwidth:0.9,autoheight:181">
+                    <div class="clear"></div>
+
+                    <div class="grid_1 lbl">审批状态</div>
+                    <div class="grid_3 val"><input type="text" data-bind="value:form.ApproveState,readOnly:true" class="z-txt readonly" /></div>
+                    <div class="grid_1 lbl">审批意见</div>
+                    <div class="grid_3 val"><input type="text" data-bind="value:form.ApproveRemark,readOnly:true" class="z-txt readonly" /></div>
+                    <div class="grid_1 lbl">审批人 </div>
+                    <div class="grid_3 val"><input type="text" data-bind="value:form.ApprovePerson,readOnly:true" class="z-txt readonly" /></div>
+
+                    <div class="clear"></div>
+
+                    <div class="grid_1 lbl">审批日期</div>
+                    <div class="grid_3 val"><input type="text" data-bind="dateboxValue:form.ApproveDate,dateboxReadOnly:true" class="z-txt easyui-datebox readonly" /></div>
+                    <div class="grid_1 lbl">编制日期</div>
+                    <div class="grid_3 val"><input type="text" data-bind="dateboxValue:form.CreateDate,dateboxReadOnly:true" class="z-txt easyui-datebox readonly" /></div>
+                    <div class="grid_1 lbl">编制人</div>
+                    <div class="grid_3 val "><input type="text" data-bind="value:form.CreatePerson,readOnly:true" class="z-txt readonly" /></div>
+
+                    <div class="clear"></div>
+
+                    <div class="grid_1 lbl">修改日期</div>
+                    <div class="grid_3 val"><input type="text" data-bind="dateboxValue:form.UpdateDate,dateboxReadOnly:true" class="z-txt easyui-datebox readonly" /></div>
+                    <div class="grid_1 lbl">修改人</div>
+                    <div class="grid_3 val "><input type="text" data-bind="value:form.UpdatePerson,readOnly:true" class="z-txt readonly" /></div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

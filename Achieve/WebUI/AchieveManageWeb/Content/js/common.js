@@ -189,7 +189,7 @@ stringToList = function (value) {
     }
 };
 
-//生成单据统一按钮
+//生成datagrid单据统一按钮
 getToolBar = function (data) {
     if (data.toolbar != undefined && data.toolbar != '') {
         var toolbar = [];
@@ -201,6 +201,19 @@ getToolBar = function (data) {
         return toolbar;
     } else {
         return [];
+    }
+};
+//生成div单据统一按钮
+getToolBarDiv = function (data) {
+if (data.toolbar != undefined && data.toolbar != '') {
+        var toolbar = "";
+        $.each(data.toolbar, function (index, row) {
+           // ' <a href="#" class="easyui-linkbutton" title="'+row.text+'" data-options="iconCls:\''+row.iconCls+'\',plain:true" onClick="javascript:'+row.handler+'">'+row.text+'</a> '
+            toolbar += '<a href="#" class="easyui-linkbutton l-btn l-btn-small l-btn-plain" title="' + row.text + '" data-options="iconCls:\'' + row.iconCls + '\', plain:true" onclick="javascript:' + row.handler + ';" ><span class="l-btn-left l-btn-icon-left"><span class="l-btn-text">' + row.text + '</span><span class="l-btn-icon ' + row.iconCls + '">&nbsp;</span></span></a>';
+        });
+        return toolbar;
+    } else {
+        return "";
     }
 };
 
