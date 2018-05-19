@@ -1,0 +1,416 @@
+
+ 
+记录时间：2018-05-20 00:07:37,062 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:Index
+            开始时间：2018/5/20 星期日 0:07:36
+            结束时间：2018/5/20 星期日 0:07:37
+            总 时 间：0.4382442秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:39,217 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:Index
+            开始时间：2018/5/20 星期日 0:07:37
+            结束时间：2018/5/20 星期日 0:07:39
+            总 时 间：2.1406943秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:40,174 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:CheckIsChangePwd
+            开始时间：2018/5/20 星期日 0:07:40
+            结束时间：2018/5/20 星期日 0:07:40
+            总 时 间：0.0497296秒
+            Form表单数据：action=getuser
+            URL参数：r=0.01662205484493473
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:40,174 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:CheckIsChangePwd
+            开始时间：2018/5/20 星期日 0:07:40
+            结束时间：2018/5/20 星期日 0:07:40
+            总 时 间：0秒
+            Form表单数据：action=getuser
+            URL参数：r=0.01662205484493473
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:40,180 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/20 星期日 0:07:40
+            结束时间：2018/5/20 星期日 0:07:40
+            总 时 间：0.0196446秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.5743978341127289
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:40,180 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/20 星期日 0:07:40
+            结束时间：2018/5/20 星期日 0:07:40
+            总 时 间：0秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.5743978341127289
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:40,319 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/20 星期日 0:07:40
+            结束时间：2018/5/20 星期日 0:07:40
+            总 时 间：0.1279119秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:40,319 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/20 星期日 0:07:40
+            结束时间：2018/5/20 星期日 0:07:40
+            总 时 间：0.000503秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:40,630 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/20 星期日 0:07:40
+            结束时间：2018/5/20 星期日 0:07:40
+            总 时 间：0.098347秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:40,631 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/20 星期日 0:07:40
+            结束时间：2018/5/20 星期日 0:07:40
+            总 时 间：0.0004973秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:40,825 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/20 星期日 0:07:40
+            结束时间：2018/5/20 星期日 0:07:40
+            总 时 间：0.1394602秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:40,825 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/20 星期日 0:07:40
+            结束时间：2018/5/20 星期日 0:07:40
+            总 时 间：0.0005015秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:40,995 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/20 星期日 0:07:40
+            结束时间：2018/5/20 星期日 0:07:40
+            总 时 间：0.1369126秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:41,008 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/20 星期日 0:07:40
+            结束时间：2018/5/20 星期日 0:07:41
+            总 时 间：0.0130338秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:41,232 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/20 星期日 0:07:41
+            结束时间：2018/5/20 星期日 0:07:41
+            总 时 间：0.144443秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:41,232 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/20 星期日 0:07:41
+            结束时间：2018/5/20 星期日 0:07:41
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:41,886 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/20 星期日 0:07:41
+            结束时间：2018/5/20 星期日 0:07:41
+            总 时 间：0.2201824秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:41,886 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/20 星期日 0:07:41
+            结束时间：2018/5/20 星期日 0:07:41
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:41,907 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/20 星期日 0:07:40
+            结束时间：2018/5/20 星期日 0:07:41
+            总 时 间：1.5291372秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:41,907 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/20 星期日 0:07:41
+            结束时间：2018/5/20 星期日 0:07:41
+            总 时 间：0秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:44,371 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:AddNewProject
+            开始时间：2018/5/20 星期日 0:07:44
+            结束时间：2018/5/20 星期日 0:07:44
+            总 时 间：0.0697124秒
+            Form表单数据：KeyCode=CreatePMBill&KeyName=CreatePMBill&ProjectCode=111232&ProjectName=12ad打撒所多&ProjectManager=阿达&ProjectClerk=阿达&Remark=阿达的
+            URL参数：r=0.41714678465696253
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:07:44,371 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:AddNewProject
+            开始时间：2018/5/20 星期日 0:07:44
+            结束时间：2018/5/20 星期日 0:07:44
+            总 时 间：0秒
+            Form表单数据：KeyCode=CreatePMBill&KeyName=CreatePMBill&ProjectCode=111232&ProjectName=12ad打撒所多&ProjectManager=阿达&ProjectClerk=阿达&Remark=阿达的
+            URL参数：r=0.41714678465696253
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:08:10,639 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:AddNewProject
+            开始时间：2018/5/20 星期日 0:08:10
+            结束时间：2018/5/20 星期日 0:08:10
+            总 时 间：0.0532226秒
+            Form表单数据：KeyCode=CreatePMBill&KeyName=CreatePMBill&ProjectCode=pm-002&ProjectName=年度计划项目&ProjectManager=张三&ProjectClerk=李四&Remark=阿达的
+            URL参数：r=0.06265562398281799
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:08:10,639 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:AddNewProject
+            开始时间：2018/5/20 星期日 0:08:10
+            结束时间：2018/5/20 星期日 0:08:10
+            总 时 间：0秒
+            Form表单数据：KeyCode=CreatePMBill&KeyName=CreatePMBill&ProjectCode=pm-002&ProjectName=年度计划项目&ProjectManager=张三&ProjectClerk=李四&Remark=阿达的
+            URL参数：r=0.06265562398281799
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:08:28,575 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:AddNewProject
+            开始时间：2018/5/20 星期日 0:08:28
+            结束时间：2018/5/20 星期日 0:08:28
+            总 时 间：0.0441602秒
+            Form表单数据：KeyCode=CreatePMBill&KeyName=CreatePMBill&ProjectCode=pm-003&ProjectName=年度计划项目&ProjectManager=张三1&ProjectClerk=李四2&Remark=备注信息，这是测试
+            URL参数：r=0.5419760884967642
+                    
+ 
+
+ 
+记录时间：2018-05-20 00:08:28,575 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:AddNewProject
+            开始时间：2018/5/20 星期日 0:08:28
+            结束时间：2018/5/20 星期日 0:08:28
+            总 时 间：0秒
+            Form表单数据：KeyCode=CreatePMBill&KeyName=CreatePMBill&ProjectCode=pm-003&ProjectName=年度计划项目&ProjectManager=张三1&ProjectClerk=李四2&Remark=备注信息，这是测试
+            URL参数：r=0.5419760884967642
+                    
+ 

@@ -22,6 +22,70 @@ namespace AchieveCommon
 
         //Hashtable to store cached parameters
         private static Hashtable parmCache = Hashtable.Synchronized(new Hashtable());
+        /// <summary>
+        /// 自动生成数据表的序列号,string类型，8位日期码+4位流水码，
+        /// </summary>
+        /// <param name="tableName">目标数据表名</param>
+        ///  <param name="serialColumn">目标数据表列名，默认为id</param>
+        /// <returns></returns>
+        public static string GetSerialNumber(string tableName, string serialColumn="id")
+        {           
+            string sql="select max("+serialColumn+") as maxSerialNumber from "+tableName ;
+            string serialNumber = Convert.ToString( ExecuteScalar(connStr, CommandType.Text, sql, null));
+            if (serialNumber.Length==12)
+            {
+                string headDate = serialNumber.Substring(0, 8);
+                int lastNumber = int.Parse(serialNumber.Substring(8));
+                //如果数据库最大值流水号中日期和生成日期在同一天，则顺序号加1
+                if (headDate == DateTime.Now.ToString("yyyyMMdd"))
+                {
+                    lastNumber++;
+                    return headDate + lastNumber.ToString("0000");
+                }
+            }
+            return DateTime.Now.ToString("yyyyMMdd") + "0001";
+        }
+
+    
+
+   /// <summary>
+        /// 生成消费单号，按日期生成单号，默认是年月日+四位数字，如：200906010001；后四位数字可以自动增长位数。
+   /// </summary>
+        /// <param name="LastNumStr">目前数据库中最后的单号</param>
+   /// <returns></returns>     
+   public static String Assignment(String LastNumStr)
+       {
+           string number0 = "";
+           DateTime date = System.DateTime.Now;
+           string year = date.Year.ToString();
+           string month = date.Month.ToString();
+           string day = date.Day.ToString();
+           if (month.Length < 2)
+               month = '0' + month;
+           if (day.Length < 2)
+               day = '0' + day;
+           string ymd = year + month + day;
+if (LastNumStr.Length < 8 || LastNumStr.Substring(0, 8) != ymd)
+           {
+               return ymd + "0001";
+           }
+           else
+           {
+               Int32 clientnumber = Convert.ToInt32(LastNumStr.Substring(8, LastNumStr.Length - 8)) + 1;
+               if (clientnumber.ToString().Length > LastNumStr.Length - 8)
+               {
+                   return ymd + clientnumber.ToString();
+               }
+               else
+               {
+                   for (int i = 0; i < LastNumStr.Length - 8 - clientnumber.ToString().Length; i++)
+                   {
+                       number0 += "0";
+                   }
+                   return ymd + number0 + clientnumber.ToString();
+               }
+           }
+       }
 
         /// <summary>
         /// 执行增删改【常用】
@@ -40,7 +104,7 @@ namespace AchieveCommon
         /// <summary>
         /// 执行增删改【常用】
         /// </summary>
-        public static int ExecuteNonQuerySql(string connectionString,  string commandText)
+        public static int ExecuteNonQuerySql(string connectionString, string commandText)
         {
             SqlCommand cmd = new SqlCommand();
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -176,7 +240,20 @@ namespace AchieveCommon
                 return val;
             }
         }
-
+        /// <summary>
+        /// 返回第一行第一列信息（可能是字符串 所以返回类型是object）【常用简洁】
+        /// </summary>
+        public static object ExecuteScalar(string connectionString,  string commandText )
+        {
+            SqlCommand cmd = new SqlCommand();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                PrepareCommand(cmd, connection, null, CommandType.Text, commandText, null);
+                object val = cmd.ExecuteScalar();
+                cmd.Parameters.Clear();
+                return val;
+            }
+        }
         /// <summary>
         /// 返回第一行第一列信息（针对现有的数据库连接）【不常用】
         /// </summary>

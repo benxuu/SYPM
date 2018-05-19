@@ -1,0 +1,258 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>项目管理</title>
+    <link href="~/Scripts/jquery-easyui-1.4.4/themes/bootstrap/easyui.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-easyui-1.4.4/jquery.min.js"></script>
+    <script src="~/Scripts/jquery-easyui-1.4.4/jquery.easyui.min.js"></script>
+    <script src="~/Scripts/jquery-easyui-1.4.4/locale/easyui-lang-zh_CN.js"></script>
+    <link href="~/Content/themes/icon.css" rel="stylesheet" />
+    <script src="~/Content/js/common.js"></script>
+    <link href="~/Content/themes/table.css" rel="stylesheet" />
+    <link href="~/Content/formstyles.css" rel="stylesheet" />
+        <link href="~/Content/formstyles.css" rel="stylesheet" />
+      <style type="text/css">
+    </style>
+
+    <script type="text/javascript">       
+     
+        $(function () {
+            $.ajax({     //请求当前用户可以操作的按钮
+                url: "/Button/GetUserAuthorizeButton?r=" + Math.random(),
+                type: "post",
+                data: { "KeyCode": "CreatePMBill", "KeyName": "CreatePMBill" },
+                dataType: "json",
+                timeout: 5000,
+                success: function (data) {
+                    if (data.success) {
+                        var toolbar = getToolBarDiv(data);      //common.js
+                       $("#toolbar").append(toolbar);//生成按钮栏
+                      
+                    } else {
+                      
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    if (textStatus == "timeout") {
+                        $.show_alert("提示", "请求超时，请刷新当前页重试！");
+                    }
+                    else {
+                        $.show_alert("错误", textStatus + "：" + errorThrown);
+                    }
+                }
+            })
+        });
+
+        SaveCreatePMBill = function () {
+
+            $.ajax({     //提交数据保存
+                url: "/Project/AddNewProject?r=" + Math.random(),
+                type: "post",
+                data: {
+                    "KeyCode": "CreatePMBill",
+                    "KeyName": "CreatePMBill",
+                    "ProjectCode": $("#ProjectCode").val(),
+                    "ProjectName": $("#ProjectName").val(),
+                    "ProjectManager": $("#ProjectManager").val(),
+                    "ProjectClerk": $("#ProjectClerk").val(),
+                    "Remark": $("#Remark").val()
+                    
+                    //"bsPSTime": $("#bsPSTime").val(),//商务
+                    //"bsPETime": $("#bsPETime").val(),
+                    //"bsRSTime": $("#bsRSTime").val(),
+                    //"bsRETime": $("#bsRETime").val(),
+                    //"tyPSTime": $("#tyPSTime").val(),//技术方案
+                    //"tyPETime": $("#tyPETime").val(),
+                    //"tyRSTime": $("#tyRSTime").val(),
+                    //"tyRETime": $("#tyRETime").val(),
+                    //"dnPSTime": $("#dnPSTime").val(),//设计方案
+                    //"dnPETime": $("#dnPETime").val(),
+                    //"dnRSTime": $("#dnRSTime").val(),
+                    //"dnRETime": $("#dnRETime").val(),
+                    //"mePSTime": $("#mePSTime").val(),//制造投产
+                    //"mePETime": $("#mePETime").val(),
+                    //"meRSTime": $("#meRSTime").val(),
+                    //"meRETime": $("#meRETime").val(),
+                    //"cnPSTime": $("#cnPSTime").val(),//施工方案
+                    //"cnPETime": $("#cnPETime").val(),
+                    //"cnRSTime": $("#cnRSTime").val(),
+                    //"cnRETime": $("#cnRETime").val()
+                },
+                dataType: "json",
+                timeout: 5000,
+                success: function (data) {
+                    if (data.success) {                       
+                        $.show_alert("成功", "保存成功！");
+                      
+                    } else {
+                        $.show_alert("提示", data.msg);
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    if (textStatus == "timeout") {
+                        $.show_alert("提示", "请求超时，请刷新当前页重试！");
+                    }
+                    else {
+                        $.show_alert("错误", textStatus + "：" + errorThrown);
+                    }
+                }
+            })
+
+        };
+        EditCreatePMBill = function () {
+            $.show_alert("EditCreatePMBill");
+        };
+
+        AddCreatePMBill = function () {
+            $.show_alert("AddCreatePMBill");
+        };
+        DelCreatePMBill = function () {
+            alert("DelCreatePMBill");
+        };
+</script>
+
+</head>
+<body>
+    <div id="toolbar" class="easyui-panel" style="padding:5px;"> </div>
+    <div class="label">项目编码</div>    
+    <div class="value "><input id="ProjectCode" class="easyui-validatebox" data-options="required:true,validType:'minLength[5]'"></div>
+    <div class="label">项目名称</div>
+    <div class="value "><input id="ProjectName" class="easyui-validatebox" data-options="required:true,validType:'minLength[4]'">
+    </div>
+    <div class="clear"></div>
+    <div class="label">项目管理员</div>
+    <div class="value "><input id="ProjectManager" class="easyui-validatebox" data-options="required:true">
+    </div>
+    <div class="label">业务员</div>
+    <div class="value "><input id="ProjectClerk" class="easyui-validatebox" data-options="required:true">
+    </div>
+    <div class="clear"></div>
+    
+    <div class="label">备注</div>
+
+    <div style="float:left;padding:3px; width:400px; height:50px; ">
+        <input id="Remark"  class="easyui-textbox" data-options="multiline:true" value="" style="width:480px;height:45px">       
+    </div>
+    <div class="clear"></div>  
+    
+    <div class="label">更新人</div>
+    <div class="value "><input type="text" id="UpdateBy" class="easyui-textbox" data-options="readonly:true, editable:false"></div>
+    <div class="label">更新时间</div>
+    <div class="value"><input type="text" id="UpdateTime" class="easyui-textbox" data-options="readonly:true, editable:false" ></div>
+    <div class="clear"></div>
+
+        <div id="tt" class="easyui-tabs">
+            <div id="div_business" title="项目商务">
+                <div class="label">时间进度</div>
+                <div class="clear"></div>
+                <div class="label">计划开始日期</div>
+                <div class="value"><input type="text" id="bsPSTime" class="z-txt easyui-datebox" /></div>
+                <div class="label">计划完成日期</div>
+                <div class="value"><input type="text" id="bsPETime" class="z-txt easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">实际开始日期</div>
+                <div class="value"><input type="text" id="bsRSTime" class="z-txt easyui-datebox" /></div>
+                <div class="label">实际完成日期</div>
+                <div class="value"><input type="text" id="bsRETime" class="z-txt easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">附件管理</div>
+                <div style="float:left;padding:10px;height:100px;width: 280px; background-color: white;">
+                    <div id="appenddatalist"></div>
+                    <input class="easyui-filebox" name="file1" data-options="prompt:'Choose a file...'" style="width:100%">
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-add" title="上传">上传</a></div>
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-cross" title="删除">删除</a> </div>
+                </div>
+            </div>
+                   
+            <div id="div_technology" title="技术方案">
+                <div class="label">时间进度</div>
+                <div class="clear"></div>
+                <div class="label">计划开始日期</div>
+                <div class="value"><input type="text" id="tyPSTime" class="z-txt easyui-datebox" /></div>
+                <div class="label">计划完成日期</div>
+                <div class="value"><input type="text" id="tyPETime" class="z-txt easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">实际开始日期</div>
+                <div class="value"><input type="text" id="tyRSTime" class="z-txt easyui-datebox" /></div>
+                <div class="label">实际完成日期</div>
+                <div class="value"><input type="text" id="tyRETime" class="z-txt easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">附件管理</div>
+                <div style="float:left;padding:10px;height:100px;width: 280px; background-color: white;">
+                    <div id="appenddatalist"></div>
+                    <input class="easyui-filebox" name="file1" data-options="prompt:'Choose a file...'" style="width:100%">
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-add" title="上传">上传</a></div>
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-cross" title="删除">删除</a> </div>
+                </div>
+            </div>
+            <div id="div_design" title="设计时间">
+                <div class="label">时间进度</div>
+                <div class="clear"></div>
+                <div class="label">计划开始日期</div>
+                <div class="value"><input type="text" id="dnPSTime" class="z-txt easyui-datebox" /></div>
+                <div class="label">计划完成日期</div>
+                <div class="value"><input type="text" id="dnPETime" class="z-txt easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">实际开始日期</div>
+                <div class="value"><input type="text" id="dnRSTime" class="z-txt easyui-datebox" /></div>
+                <div class="label">实际完成日期</div>
+                <div class="value"><input type="text" id="dnRETime" class="z-txt easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">附件管理</div>
+                <div style="float:left;padding:10px;height:100px;width: 280px; background-color: white;">
+                    <div id="appenddatalist"></div>
+                    <input class="easyui-filebox" name="file1" data-options="prompt:'Choose a file...'" style="width:100%">
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-add" title="上传">上传</a></div>
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-cross" title="删除">删除</a> </div>
+                </div>
+            </div>
+            <div id="div_manufacture" title="投产">
+                <div class="label">时间进度</div>
+                <div class="clear"></div>
+                <div class="label">计划开始日期</div>
+                <div class="value"><input type="text" id="mePSTime" class="z-txt easyui-datebox" /></div>
+                <div class="label">计划完成日期</div>
+                <div class="value"><input type="text" id="mePETime" class="z-txt easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">实际开始日期</div>
+                <div class="value"><input type="text" id="meRSTime" class="z-txt easyui-datebox" /></div>
+                <div class="label">实际完成日期</div>
+                <div class="value"><input type="text" id="meRETime" class="z-txt easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">附件管理</div>
+                <div style="float:left;padding:10px;height:100px;width: 280px; background-color: white;">
+                    <div id="appenddatalist"></div>
+                    <input class="easyui-filebox" name="file1" data-options="prompt:'Choose a file...'" style="width:100%">
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-add" title="上传">上传</a></div>
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-cross" title="删除">删除</a> </div>
+                </div>
+            </div>
+            <div id="div_construction" title="施工管理">
+                <div class="label">时间进度</div>
+                <div class="clear"></div>
+                <div class="label">计划开始日期</div>
+                <div class="value"><input type="text" id="cnPSTime" class="z-txt easyui-datebox" /></div>
+                <div class="label">计划完成日期</div>
+                <div class="value"><input type="text" id="cnPETime" class="z-txt easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">实际开始日期</div>
+                <div class="value"><input type="text" id="cnRSTime" class="z-txt easyui-datebox" /></div>
+                <div class="label">实际完成日期</div>
+                <div class="value"><input type="text" id="cnRETime" class="z-txt easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">附件管理</div>
+                <div style="float:left;padding:10px;height:100px;width: 280px; background-color: white;">
+                    <div id="appenddatalist"></div>
+                    <input class="easyui-filebox" name="file1" data-options="prompt:'Choose a file...'" style="width:100%">
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-add" title="上传">上传</a></div>
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-cross" title="删除">删除</a> </div>
+                </div>
+            </div>
+
+                </div>
+</body>
+</html>

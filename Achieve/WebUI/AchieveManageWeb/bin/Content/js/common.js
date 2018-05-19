@@ -42,7 +42,7 @@ $.extend($.fn.validatebox.defaults.rules, {
         validator: function (value, param) {
             return value.length >= param[0];
         },
-        message: '请输入至少（2）个字符.'
+        message: '请输入至少 {0} 个字符.'
     },
     length: {
         validator: function (value, param) {
@@ -217,7 +217,7 @@ if (data.toolbar != undefined && data.toolbar != '') {
     }
 };
 
-//表格内容的格式控制
+//表格内容的格式控制,返回日期；
 getDate = function (value, row, index) {
     return value.substring(0, value.indexOf(' '))
 };

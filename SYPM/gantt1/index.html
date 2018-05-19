@@ -15,14 +15,14 @@
         }
 
         .contain {
-            width: 800px;
+            width: 1800px;
             margin: 0 auto;
         }
 
     </style>
 </head>
 <body>
-    <div class="gantt_ot" style="width:800px; margin:100px auto;">
+    <div class="gantt_ot" style="width:1400px; margin:10px auto;">
         <div class="gantt"></div>
     </div>
 
@@ -46,7 +46,7 @@
 
                 {
                     name: "task  1",
-                    desc: "",
+                    desc: "这是描述1",
                     values: [{
                         from: "/Date(1320192000000)/",
                           to: "/Date(1320592000000)/",
@@ -54,8 +54,8 @@
                         customClass: "ganttRed"
                     }]
                 }, {
-                    name: "task  2",
-                    desc: "这是描述",
+                    name: "",
+                    desc: "这是描述2",
                     values: [{
                         from: "/Date(1322611200000)/",
                         to: "/Date(1323302400000)/",
@@ -129,7 +129,8 @@
                         customClass: "ganttBlue"
                     },
                     {
-                        from: "/Date(1323802400000)/",
+                       // from: "/Date(1323802400000)/",
+						 from: "/Date(1323202400000)/",
                         to: "/Date(1325685200000)/",
                         label: "",
                         customClass: "ganttOrange"

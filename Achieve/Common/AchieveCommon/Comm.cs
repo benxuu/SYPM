@@ -24,6 +24,9 @@ namespace AchieveCommon
             {
                 switch (dt.Rows[i]["Code"].ToString())
                 {
+                    case "save":
+                        sb.Append("{\"text\": \"" + dt.Rows[i]["Name"] + "\",\"iconCls\":\"" + dt.Rows[i]["Icon"] + "\",\"handler\":\"Save" + pageName + "();\"},");
+                        break;
                     case "add":
                         sb.Append("{\"text\": \"" + dt.Rows[i]["Name"] + "\",\"iconCls\":\"" + dt.Rows[i]["Icon"] + "\",\"handler\":\"Add" + pageName + "();\"},");
                         break;
@@ -332,6 +335,9 @@ namespace AchieveCommon
             cols = cols.TrimEnd(',');
             return cols;
         }
+
+
+
     }
 
 }

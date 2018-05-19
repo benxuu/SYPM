@@ -8,13 +8,14 @@ using System.Web;
 using System.Web.Mvc;
 using System.Text;
 using System.Data;
+using System.Data.Sql;
+using System.Data.SqlClient;
 
 namespace AchieveManageWeb.Controllers
 {
     [AchieveManageWeb.App_Start.JudgmentLogin]
     public class ProjectController : Controller
     {
-
              public string ToGanttJson(DataTable dt)
         {
             StringBuilder sb = new StringBuilder();
@@ -78,8 +79,7 @@ namespace AchieveManageWeb.Controllers
             //string isable = Request["isable"] == null ? "" : Request["isable"];
             string FModel = Request["FModel"] == null ? "" : Request["FModel"];
             string FStatus = Request["FStatus"] == null ? "" : Request["FStatus"];
-            string FPlanCommitDate = Request["FPlanCommitDate"] == null ? "" : Request["FPlanCommitDate"];
-            //string FPlanFinishDate = Request["FPlanFinishDate"] == null ? "" : Request["FPlanFinishDate"];
+            string FPlanCommitDate = Request["FPlanCommitDate"] == null ? "" : Request["FPlanCommitDate"]; 
 
             if (FBillNo.Trim() != "" && !SqlInjection.GetString(FBillNo))   //防止sql注入
                 strWhere += string.Format(" and FBillNo like '%{0}%'", FBillNo.Trim());
@@ -98,32 +98,7 @@ namespace AchieveManageWeb.Controllers
             {
                 strWhere += string.Format(" and FStatus < 3 ");
             }
-            
-
-
-            //FName为非主表字段，暂不支持直接查询；
-            //后期解决思路，先根据FName在子表中查询对应的FItemID，可能有多个，则将这多个拼接成where条件；
-            //例如  FItemID = id1 or FItemID = id2  or FItemID = id3...
-          //        if (FName.Trim() != "" && !SqlInjection.GetString(FName))
-          //  {
-          //      //获取fitemid表
-          //      DataTable dtfitemid = new ProjectBLL().GetFItemIDByFName(FName);
-          //      strWhere += " and (";
-          //for (int i = 0; i < dtfitemid.Rows.Count; i++)
-          //      {
-          //          strWhere += string.Format("FItemID = {0}", dtfitemid.Rows[i]["FItemID"]);
-          //          if (i< dtfitemid.Rows.Count-1)
-          //          {
-          //              strWhere += " or ";
-          //          }
-          //          else
-          //          {
-          //              strWhere += ")";
-          //          }
-                   
-          //      }
-          //  }           
-
+  
            
             if (FPlanCommitDate.Trim() != "")
                 strWhere += " and FPlanCommitDate > '" + FPlanCommitDate.Trim() + "'";
@@ -205,11 +180,75 @@ namespace AchieveManageWeb.Controllers
         {
             return View();
         }
-        public ActionResult ProjectBill()
+        /// <summary>
+        /// 创建项目单据
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult CreatePMBill()
         {
             return View();
         }
-        public ActionResult ProjectRpt()
+        /// <summary>
+        /// 新增项目单据--保存
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult AddNewProject()
+        {
+            try
+            {
+                string ProjectID = SqlHelper.GetSerialNumber("tbProject", "ProjectID");
+                string ProjectNo = Request["ProjectCode"] == null ? "PM" + ProjectID : Request["ProjectCode"];
+                string ProjectName = Request["ProjectName"] == null ? "" : Request["ProjectName"];
+                string ProjectManager = Request["ProjectManager"] == null ? "" : Request["ProjectManager"];
+                string ProjectClerk = Request["ProjectClerk"] == null ? "" : Request["ProjectClerk"];
+                string Remark = Request["Remark"] == null ? "" : Request["Remark"];
+                //string bsPSTime = Request["bsPSTime"] == null ? "" : Request["ProjectClerk"];
+                string AppendListID = Request["AppendListID"] == null ? "" : Request["AppendListID"];
+                string AppendID = Request["AppendID"] == null ? "" : Request["AppendID"];
+               
+                UserEntity uInfo = ViewData["Account"] as UserEntity;
+                StringBuilder strSql = new StringBuilder();
+                strSql.Append("insert into tbProject(");
+                strSql.Append("ProjectID,AppendListID,CreateBy,CreateTime,ProjectNo,ProjectName,ProjectManager,ProjectClerk,Remark,UpdateTime,UpdateBy,AppendID");
+                strSql.Append(") values (");
+                strSql.Append("@ProjectID,@AppendListID,@CreateBy,@CreateTime,@ProjectNo,@ProjectName,@ProjectManager,@ProjectClerk,@Remark,@UpdateTime,@UpdateBy,@AppendID");
+                strSql.Append(") ");
+
+                SqlParameter[] parameters = {
+			            new SqlParameter("@ProjectID", ProjectID) ,            
+                        new SqlParameter("@AppendListID", AppendListID) ,            
+                        new SqlParameter("@CreateBy",uInfo.AccountName) , 
+                         new SqlParameter("@CreateTime", DateTime.Now) ,  
+                        new SqlParameter("@ProjectNo", ProjectNo) ,            
+                        new SqlParameter("@ProjectName",ProjectName) ,            
+                        new SqlParameter("@ProjectManager",ProjectManager) ,            
+                        new SqlParameter("@ProjectClerk", ProjectClerk) ,            
+                        new SqlParameter("@Remark", Remark) ,            
+                        new SqlParameter("@UpdateTime", DateTime.Now) ,            
+                        new SqlParameter("@UpdateBy", uInfo.AccountName) ,            
+                        new SqlParameter("@AppendID", AppendID) 
+            };
+              int id = SqlHelper.ExecuteNonQuery(SqlHelper.connStr,CommandType.Text,strSql.ToString(),parameters);
+              if (id > 0)
+              {
+                  return Content("{\"msg\":\"添加成功！\",\"success\":true}");
+              }
+              else
+              {
+                  return Content("{\"msg\":\"添加失败！\",\"success\":false}");
+              }
+            }
+            catch (Exception ex)
+            {
+                return Content("{\"msg\":\"添加失败," + ex.Message.Trim().Replace("\r", "").Replace("\n", "") + "\",\"success\":false}");
+            }
+                      
+        }
+        /// <summary>
+        /// 项目管理甘特图
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult PMGantt()
         {
             return View();
         }
