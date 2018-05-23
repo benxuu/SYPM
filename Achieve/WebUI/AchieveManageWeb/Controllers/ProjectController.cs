@@ -252,7 +252,184 @@ namespace AchieveManageWeb.Controllers
         {
             return View();
         }
-       
+        /// <summary>
+        /// 项目清单的查询处理
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult GetAllPMInfo()
+        {
+            string strWhere = "1=1";
+            string sort = Request["sort"] == null ? "ProjectID" : Request["sort"];
+            string order = Request["order"] == null ? "desc" : Request["order"];
+            string view = Request["view"] == null ? "PMMaintain" : Request["view"];
+
+            //首先获取前台传递过来的参数
+            int pageindex = Request["page"] == null ? 1 : Convert.ToInt32(Request["page"]);//输出的数据页码
+            int pagesize = Request["rows"] == null ? 10 : Convert.ToInt32(Request["rows"]);//每页输出数量
+
+            string ProjectID = Request["ProjectID"] == null ? "" : Request["ProjectID"];
+            string ProjectNo = Request["ProjectNo"] == null ? "" : Request["ProjectNo"];
+            string ProjectName = Request["ProjectName"] == null ? "" : Request["ProjectName"];
+
+            string CreateTimeS = Request["CreateTime"] == null ? "" : Request["CreateTime"];
+            string CreateTimeE = Request["CreateTime"] == null ? "" : Request["CreateTime"];
+
+            if (ProjectID.Trim() != "" && !SqlInjection.GetString(ProjectID))   //防止sql注入
+                strWhere += string.Format(" and ProjectID = '{0}'", ProjectID.Trim());
+            if (ProjectNo.Trim() != "" && !SqlInjection.GetString(ProjectNo))
+                strWhere += string.Format(" and ProjectNo like '%{0}%'", ProjectNo.Trim());
+            if (ProjectName.Trim() != "" && !SqlInjection.GetString(ProjectName))
+                strWhere += string.Format(" and ProjectName like '%{0}%'", ProjectName.Trim());
+
+            if (CreateTimeS.Trim() != "")
+                strWhere += " and CreateTime > '" + CreateTimeS.Trim() + "'";
+            if (CreateTimeE.Trim() != "")
+                strWhere += " and CreateTime < '" + CreateTimeE.Trim() + "'";
+
+            string content = "";
+            if (view == "PMMaintain")
+            {
+                int totalCount;   //输出参数 
+                DataTable dt = AchieveCommon.SqlPagerHelper.GetPager("tbProject", "ProjectID,ProjectNo,ProjectName,ProjectManager,ProjectClerk,CreateBy,CreateTime,UpdateTime,UpdateBy,Remark", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
+                //string strJson = new ProjectBLL().GetJsonPager("ICMO", "FBillNo,FStatus,FQty,FCommitQty,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FType,FWorkShop,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
+                string strJson = AchieveCommon.JsonHelper.ToJson(dt);
+                content = "{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}";
+            }
+            if (view == "PMGantt")
+            {
+                int totalCount;   //输出参数
+                // pagesize = 5;//限制甘特图输出数据量
+                //DataTable dt = new ProjectBLL().GetDataTablePager("ICMO", "FBillNo,FStatus,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
+                //string strJson = ToGanttJson(dt);
+                //content = "{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}";
+            }
+
+            return Content(content);
+        }
+       /// <summary>
+       /// 获取项目的节点详情
+       /// </summary>
+       /// <returns></returns>
+        public ActionResult GetPMNodeInfo()
+        {
+            //首先获取前台传递过来的参数
+            string strWhere = "1=1";           
+            string view = Request["view"] == null ? "PMMaintain" : Request["view"];
+            string ProjectID = Request["ProjectID"] == null ? "" : Request["ProjectID"];
+            string ProjectNo = Request["ProjectNo"] == null ? "" : Request["ProjectNo"];
+            string ProjectName = Request["ProjectName"] == null ? "" : Request["ProjectName"];
+            if (ProjectID.Trim() != "" && !SqlInjection.GetString(ProjectID))   //防止sql注入
+                strWhere += string.Format(" and ProjectID = '{0}'", ProjectID.Trim()); 
+            string content = "";           
+            try
+            {
+                string sqlstr =string.Format( "select * from tbMgrNodeInfo where ProjectID='{0}'" , ProjectID);
+                DataTable dt = AchieveCommon.SqlHelper.GetDataTable(SqlHelper.connStr,sqlstr);
+                string strJson = AchieveCommon.JsonHelper.ToJson(dt);
+                content = "{\"success\": true ,\"rows\":" + strJson + "}";  
+            }
+            catch (Exception ex)
+            {
+                return Content("{\"msg\":\"获取数据失败," + ex.Message.Trim().Replace("\r", "").Replace("\n", "") + "\",\"success\":false}");
+            }           
+
+            return Content(content);
+        }
+        /// <summary>
+        /// 项目管理--更新项目进度视图
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult PMEdit()
+        {
+            return View();
+        }
+        /// <summary>
+        /// 项目管理--更新项目进度，数据更新操作
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult EditPM()
+        {
+            try
+            {
+                string ProjectID =Request["ProjectID"];
+                string PSTime =Request["bsPSTime"];
+                string PETime=Request["bsPETime"];
+                string RSTime =Request["bsRSTime"];
+                string RETime=Request["bsRETime"];
+                saveNode("2", "项目商务", ProjectID, PSTime, PETime, RSTime, RETime);
+                 PSTime = Request["tyPSTime"];
+                 PETime = Request["tyPETime"];
+                 RSTime = Request["tyRSTime"];
+                 RETime = Request["tyRETime"];
+                 saveNode("3", "技术方案", ProjectID, PSTime, PETime, RSTime, RETime);
+
+                 PSTime = Request["dnPSTime"];
+                 PETime = Request["dnPETime"];
+                 RSTime = Request["dnRSTime"];
+                 RETime = Request["dnRETime"];
+                 saveNode("4", "设计管理", ProjectID, PSTime, PETime, RSTime, RETime);
+
+                 PSTime = Request["mePSTime"];
+                 PETime = Request["mePETime"];
+                 RSTime = Request["meRSTime"];
+                 RETime = Request["meRETime"];
+                 saveNode("5", "生产管理", ProjectID, PSTime, PETime, RSTime, RETime);
+
+                 PSTime = Request["cnPSTime"];
+                 PETime = Request["cnPETime"];
+                 RSTime = Request["cnRSTime"];
+                 RETime = Request["cnRETime"];
+                 saveNode("6", "施工管理", ProjectID, PSTime, PETime, RSTime, RETime);
+              
+                    return Content("{\"msg\":\"修改成功！\",\"success\":true}");         
+
+            }
+            catch (Exception ex)
+            {
+                return Content("{\"msg\":\"修改失败," + ex.Message + "\",\"success\":false}");
+            }
+        }
+       /// <summary>
+       /// 保持项目节点信息
+       /// </summary>
+       /// <param name="nodeid"></param>
+       /// <param name="projectID"></param>
+       /// <param name="ps">计划开始时间</param>
+       /// <param name="pe"></param>
+       /// <param name="rs"></param>
+       /// <param name="re">实际结束时间</param>
+       /// <returns></returns>
+        public static bool saveNode(string nodeid,string nodename,string projectID,string ps,string pe,string rs,string re){
+            string strsql= string.Format("select count(*) from tbMgrNodeInfo where ProjectID='{0}' and nodeID='{1}'",projectID,nodeid);
+            int n =Convert.ToInt32( AchieveCommon.SqlHelper.ExecuteScalar(SqlHelper.connStr, strsql));
+            int x;
+            if (n==0)
+            {
+                string InfoID = AchieveCommon.SqlHelper.GetSerialNumber("tbMgrNodeInfo", "InfoID");
+                strsql = string.Format("insert into tbMgrNodeInfo(InfoID,pstime,petime,rstime,retime,projectID,nodeid,nodename) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}') ", InfoID, ps, pe, rs, re, projectID, nodeid,nodename);
+                  x = AchieveCommon.SqlHelper.ExecuteNonQuerySql(SqlHelper.connStr, strsql);
+            }
+            else
+            {  strsql = string.Format("update tbMgrNodeInfo(pstime,petime,rstime,retime) values('{0}','{1}','{2}','{3}') where ProjectID='{4}' and nodeID='{5}'", ps,pe,rs,re,projectID, nodeid);
+              x= AchieveCommon.SqlHelper.ExecuteNonQuerySql(SqlHelper.connStr,strsql);
+            }
+            if (x > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        /// <summary>
+        /// 项目管理
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult PMMaintain()
+        {
+            return View();
+        }
         public ActionResult ProjectGrid()
         {
             return View();

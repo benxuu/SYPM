@@ -3,9 +3,9 @@ function valuedisplay(value, row, index) {
     a = parseFloat(value).toFixed(1);
     p = value * 100 / (row.DayTime * 6) > 100 ? 100 : value * 100 / (row.DayTime * 6);
     if (value > row.AlertValue * row.DayTime * 6 / 100) {
-        return '<div style="width:'+p+'%;height:20px; position:relative;background:red; "> <span style="text-align:center; width:80; position: absolute; ">'+a+'</span></div>';
+        return '<div style="width:'+p+'%;height:20px; position:relative;background:red; "> <span style="text-align:right; width:80; position:absolute; ">'+a+'</span></div>';
     } else {
-        return '<div style="width:' + p + '%;height:20px; position:relative;background:green; "> <span style="text-align:center; width:80; position: absolute; ">' + a + '</span></div>';
+        return '<div style="width:' + p + '%;height:20px; position:relative;background:green; "> <span style="text-align:center; width:80; position:absolute; ">' + a + '</span></div>';
     }
 }
 

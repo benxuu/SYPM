@@ -1,0 +1,164 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>更新项目</title>
+</head>
+<body>
+    <form id="PMEditForm" method="post" action="">
+        <div class="label">项目编码</div>
+        <div class="value "><input type="hidden" name="ProjectID" id="ProjectID" />
+            <input type="text" class="easyui-textbox" id="ProjectNo" name="ProjectNo" data-options="readonly:true, editable:false" /></div>
+        
+         <div class="label">项目名称</div>
+        <div class="value ">
+            <input type="text" class="easyui-textbox" name="ProjectName" id="ProjectName" data-options="readonly:true, editable:false" />
+             
+        </div>
+        <div class="label">项目管理员</div>
+        <div class="value ">
+            <input type="text" id="ProjectManager" class="easyui-textbox" data-options="readonly:true, editable:false" />
+        </div>
+        <div class="label">业务员</div>
+        <div class="value ">
+            <input type="text" id="ProjectClerk" class="easyui-textbox" data-options="readonly:true, editable:false" />
+        </div>
+
+
+        <div class="clear"></div>
+        <div class="label">更新人</div>
+        <div class="value "><input type="text" id="UpdateBy" class="easyui-textbox" data-options="readonly:true, editable:false" /></div>
+        <div class="label">更新时间</div>
+        <div class="value"><input type="text" id="UpdateTime" class="easyui-textbox" data-options="readonly:true, editable:false" /></div>
+        <div class="label">创建人</div>
+        <div class="value "><input type="text" id="CreateBy" class="easyui-textbox" data-options="readonly:true, editable:false" /></div>
+        <div class="label">创建时间</div>
+        <div class="value"><input type="text" id="CreateTime" class="easyui-textbox" data-options="readonly:true, editable:false"></div>
+        <div class="clear"></div>
+
+        <div class="label">备注</div>
+
+        <div style="float:left;padding:3px; width:400px; height:50px; ">
+            <input id="Remark" class="easyui-textbox" data-options="multiline:true,readonly:true" style="width:480px;height:45px">
+        </div>
+        <div class="clear"></div>
+
+
+
+        <div id="tt" class="easyui-tabs">
+            <div id="div_business" title="项目商务">
+                <div class="label">时间进度</div>
+                <div class="clear"></div>
+                <div class="label">计划开始日期</div>
+                <div class="value"><input type="text" id="bsPSTime" class="easyui-datebox" /></div>
+                <div class="label">计划完成日期</div>
+                <div class="value"><input type="text" id="bsPETime" class="easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">实际开始日期</div>
+                <div class="value"><input type="text" id="bsRSTime" class="easyui-datebox" /></div>
+                <div class="label">实际完成日期</div>
+                <div class="value"><input type="text" id="bsRETime" class="easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">附件管理</div>
+                <div style="float:left;padding:10px;height:100px;width: 280px; background-color: white;">
+                    <div id="appenddatalist"></div>
+                    <input class="easyui-filebox" name="file1" data-options="prompt:'Choose a file...'" style="width:100%">
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-add" title="上传">上传</a></div>
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-cross" title="删除">删除</a> </div>
+                </div>
+            </div>
+
+            <div id="div_technology" title="技术方案">
+                <div class="label">时间进度</div>
+                <div class="clear"></div>
+                <div class="label">计划开始日期</div>
+                <div class="value"><input type="text" id="tyPSTime" class="easyui-datebox" /></div>
+                <div class="label">计划完成日期</div>
+                <div class="value"><input type="text" id="tyPETime" class="easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">实际开始日期</div>
+                <div class="value"><input type="text" id="tyRSTime" class="easyui-datebox" /></div>
+                <div class="label">实际完成日期</div>
+                <div class="value"><input type="text" id="tyRETime" class="easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">附件管理</div>
+                <div style="float:left;padding:10px;height:100px;width: 280px; background-color: white;">
+                    <div id="appenddatalist"></div>
+                    <input class="easyui-filebox" name="file1" data-options="prompt:'Choose a file...'" style="width:100%">
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-add" title="上传">上传</a></div>
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-cross" title="删除">删除</a> </div>
+                </div>
+            </div>
+            <div id="div_design" title="设计时间">
+                <div class="label">时间进度</div>
+                <div class="clear"></div>
+                <div class="label">计划开始日期</div>
+                <div class="value"><input type="text" id="dnPSTime" class="easyui-datebox" /></div>
+                <div class="label">计划完成日期</div>
+                <div class="value"><input type="text" id="dnPETime" class="easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">实际开始日期</div>
+                <div class="value"><input type="text" id="dnRSTime" class="easyui-datebox" /></div>
+                <div class="label">实际完成日期</div>
+                <div class="value"><input type="text" id="dnRETime" class="easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">附件管理</div>
+                <div style="float:left;padding:10px;height:100px;width: 280px; background-color: white;">
+                    <div id="appenddatalist"></div>
+                    <input class="easyui-filebox" name="file1" data-options="prompt:'Choose a file...'" style="width:100%">
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-add" title="上传">上传</a></div>
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-cross" title="删除">删除</a> </div>
+                </div>
+            </div>
+            <div id="div_manufacture" title="投产">
+                <div class="label">时间进度</div>
+                <div class="clear"></div>
+                <div class="label">计划开始日期</div>
+                <div class="value"><input type="text" id="mePSTime" class="easyui-datebox" /></div>
+                <div class="label">计划完成日期</div>
+                <div class="value"><input type="text" id="mePETime" class="easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">实际开始日期</div>
+                <div class="value"><input type="text" id="meRSTime" class="easyui-datebox" /></div>
+                <div class="label">实际完成日期</div>
+                <div class="value"><input type="text" id="meRETime" class="easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">附件管理</div>
+                <div style="float:left;padding:10px;height:100px;width: 280px; background-color: white;">
+                    <div id="appenddatalist"></div>
+                    <input class="easyui-filebox" name="file1" data-options="prompt:'Choose a file...'" style="width:100%">
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-add" title="上传">上传</a></div>
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-cross" title="删除">删除</a> </div>
+                </div>
+            </div>
+            <div id="div_construction" title="施工管理">
+                <div class="label">时间进度</div>
+                <div class="clear"></div>
+                <div class="label">计划开始日期</div>
+                <div class="value"><input type="text" id="cnPSTime" class="easyui-datebox" /></div>
+                <div class="label">计划完成日期</div>
+                <div class="value"><input type="text" id="cnPETime" class="easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">实际开始日期</div>
+                <div class="value"><input type="text" id="cnRSTime" class="easyui-datebox" /></div>
+                <div class="label">实际完成日期</div>
+                <div class="value"><input type="text" id="cnRETime" class="easyui-datebox" /></div>
+                <div class="clear"></div>
+                <div class="label">附件管理</div>
+                <div style="float:left;padding:10px;height:100px;width: 280px; background-color: white;">
+                    <div id="appenddatalist"></div>
+                    <input class="easyui-filebox" name="file1" data-options="prompt:'Choose a file...'" style="width:100%">
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-add" title="上传">上传</a></div>
+                    <div style="float:left;padding:10px;"><a href="#" plain="false" class="easyui-linkbutton" icon="icon-cross" title="删除">删除</a> </div>
+                </div>
+            </div>
+
+        </div>
+        </form>
+</body>
+</html>
