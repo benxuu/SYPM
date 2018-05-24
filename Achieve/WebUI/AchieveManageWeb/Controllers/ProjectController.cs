@@ -351,35 +351,37 @@ namespace AchieveManageWeb.Controllers
         {
             try
             {
+                UserEntity uInfo = ViewData["Account"] as UserEntity;
+                string updateby = uInfo.RealName;
                 string ProjectID =Request["ProjectID"];
                 string PSTime =Request["bsPSTime"];
                 string PETime=Request["bsPETime"];
                 string RSTime =Request["bsRSTime"];
                 string RETime=Request["bsRETime"];
-                saveNode("2", "项目商务", ProjectID, PSTime, PETime, RSTime, RETime);
+                saveNode("2", "项目商务", ProjectID, PSTime, PETime, RSTime, RETime, uInfo.AccountName);
                  PSTime = Request["tyPSTime"];
                  PETime = Request["tyPETime"];
                  RSTime = Request["tyRSTime"];
                  RETime = Request["tyRETime"];
-                 saveNode("3", "技术方案", ProjectID, PSTime, PETime, RSTime, RETime);
+                 saveNode("3", "技术方案", ProjectID, PSTime, PETime, RSTime, RETime, uInfo.AccountName);
 
                  PSTime = Request["dnPSTime"];
                  PETime = Request["dnPETime"];
                  RSTime = Request["dnRSTime"];
                  RETime = Request["dnRETime"];
-                 saveNode("4", "设计管理", ProjectID, PSTime, PETime, RSTime, RETime);
+                 saveNode("4", "设计管理", ProjectID, PSTime, PETime, RSTime, RETime, uInfo.AccountName);
 
                  PSTime = Request["mePSTime"];
                  PETime = Request["mePETime"];
                  RSTime = Request["meRSTime"];
                  RETime = Request["meRETime"];
-                 saveNode("5", "生产管理", ProjectID, PSTime, PETime, RSTime, RETime);
+                 saveNode("5", "生产管理", ProjectID, PSTime, PETime, RSTime, RETime, uInfo.AccountName);
 
                  PSTime = Request["cnPSTime"];
                  PETime = Request["cnPETime"];
                  RSTime = Request["cnRSTime"];
                  RETime = Request["cnRETime"];
-                 saveNode("6", "施工管理", ProjectID, PSTime, PETime, RSTime, RETime);
+                 saveNode("6", "施工管理", ProjectID, PSTime, PETime, RSTime, RETime, uInfo.AccountName);
               
                     return Content("{\"msg\":\"修改成功！\",\"success\":true}");         
 
@@ -399,19 +401,51 @@ namespace AchieveManageWeb.Controllers
        /// <param name="rs"></param>
        /// <param name="re">实际结束时间</param>
        /// <returns></returns>
-        public static bool saveNode(string nodeid,string nodename,string projectID,string ps,string pe,string rs,string re){
+        public static bool saveNode(string nodeid,string nodename,string projectID,string ps,string pe,string rs,string re,string AccountName){            
             string strsql= string.Format("select count(*) from tbMgrNodeInfo where ProjectID='{0}' and nodeID='{1}'",projectID,nodeid);
             int n =Convert.ToInt32( AchieveCommon.SqlHelper.ExecuteScalar(SqlHelper.connStr, strsql));
             int x;
             if (n==0)
             {
                 string InfoID = AchieveCommon.SqlHelper.GetSerialNumber("tbMgrNodeInfo", "InfoID");
-                strsql = string.Format("insert into tbMgrNodeInfo(InfoID,pstime,petime,rstime,retime,projectID,nodeid,nodename) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}') ", InfoID, ps, pe, rs, re, projectID, nodeid,nodename);
-                  x = AchieveCommon.SqlHelper.ExecuteNonQuerySql(SqlHelper.connStr, strsql);
+                StringBuilder strSql = new StringBuilder();
+                strSql.Append("insert into tbMgrNodeInfo(");
+                strSql.Append("InfoID,pstime,petime,rstime,retime,projectID,nodeid,nodename,UpdateBy");//,UpdateTime");
+                strSql.Append(") values (");
+                strSql.Append("@InfoID,@pstime,@petime,@rstime,@retime,@projectID,@nodeid,@nodename,@UpdateBy");//@UpdateTime,
+                strSql.Append(") ");
+                SqlParameter[] parameters = {
+			            new SqlParameter("@InfoID", InfoID) ,            
+                        new SqlParameter("@pstime", ps) ,            
+                        new SqlParameter("@petime",pe) , 
+                         new SqlParameter("@rstime", rs) ,  
+                        new SqlParameter("@retime", re) ,            
+                        new SqlParameter("@projectID",projectID) ,            
+                        new SqlParameter("@nodeid",nodeid) ,                                          
+                        new SqlParameter("@nodename", nodename) ,            
+                    //   new SqlParameter("@UpdateTime", DateTime.Now.ToString()) ,            
+                        new SqlParameter("@UpdateBy", AccountName) 
+            };
+               x= SqlHelper.ExecuteNonQuery(SqlHelper.connStr, CommandType.Text, strSql.ToString(), parameters);              
             }
-            else
-            {  strsql = string.Format("update tbMgrNodeInfo(pstime,petime,rstime,retime) values('{0}','{1}','{2}','{3}') where ProjectID='{4}' and nodeID='{5}'", ps,pe,rs,re,projectID, nodeid);
-              x= AchieveCommon.SqlHelper.ExecuteNonQuerySql(SqlHelper.connStr,strsql);
+            else                
+            {
+                StringBuilder strSql = new StringBuilder();
+                strSql.Append("update tbMgrNodeInfo set ");
+                strSql.Append("pstime=@pstime,petime=@petime,rstime=@rstime,retime=@retime,UpdateTime=@UpdateTime,UpdateBy=@UpdateBy where projectID=@projectID and nodeid=@nodeid");
+              
+                SqlParameter[] parameters = {		                   
+                        new SqlParameter("@pstime", ps) ,            
+                        new SqlParameter("@petime",pe) , 
+                         new SqlParameter("@rstime", rs) ,  
+                        new SqlParameter("@retime", re) ,            
+                        new SqlParameter("@projectID",projectID) ,            
+                        new SqlParameter("@nodeid",nodeid) ,        
+                        new SqlParameter("@UpdateTime", DateTime.Now) ,            
+                        new SqlParameter("@UpdateBy", AccountName) 
+            };
+                x = SqlHelper.ExecuteNonQuery(SqlHelper.connStr, CommandType.Text, strSql.ToString(), parameters);   
+       
             }
             if (x > 0)
             {

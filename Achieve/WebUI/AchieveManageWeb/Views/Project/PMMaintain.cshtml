@@ -120,40 +120,40 @@
                     text:'保存',
                     iconCls: 'icon-save',
                     handler: function () {
-
                         $("#PMEditForm").form("submit", {
                                 url: "/Project/EditPM",
                                 onSubmit: function (param) {
-                                    param.ProjectID = $("#ProjectID").val();                                  
-                                    param.PSTime = $("#bsPSTime").val();
-                                    param.PETime = $("#bsPETime").val();
-                                    param.RSTime = $("#bsRSTime").val();
-                                    param.RETime = $("#bsRETime").val();
+                                    // param.ProjectID = $("#ProjectID").val();服务器端request会和上次传送的ProjectID拼接起来？不知道什么原因
+                                  //  alert(param.ProjectID);
+                                    param.PSTime = $("#bsPSTime").datebox('getValue');
+                                    param.PETime = $("#bsPETime").datebox('getValue');
+                                    param.RSTime = $("#bsRSTime").datebox('getValue');
+                                    param.RETime = $("#bsRETime").datebox('getValue');
 
-                                    param.bsPSTime = $("#bsPSTime").val();
-                                    param.bsPETime = $("#bsPETime").val();
-                                    param.bsRSTime = $("#bsRSTime").val();
-                                    param.bsRETime = $("#bsRETime").val();
+                                    param.bsPSTime = $("#bsPSTime").datebox('getValue');
+                                    param.bsPETime = $("#bsPETime").datebox('getValue');
+                                    param.bsRSTime = $("#bsRSTime").datebox('getValue');
+                                    param.bsRETime = $("#bsRETime").datebox('getValue');
                                     //
-                                    param.dnPSTime = $("#dnPSTime").val();
-                                    param.dnPETime = $("#dnPETime").val();
-                                    param.dnRSTime = $("#dnRSTime").val();
-                                    param.dnRETime = $("#dnRETime").val();  
+                                    param.dnPSTime = $("#dnPSTime").datebox('getValue');
+                                    param.dnPETime = $("#dnPETime").datebox('getValue');
+                                    param.dnRSTime = $("#dnRSTime").datebox('getValue');
+                                    param.dnRETime = $("#dnRETime").datebox('getValue');  
 
-                                    param.mePSTime = $("#mePSTime").val();
-                                    param.mePETime = $("#mePETime").val();
-                                    param.meRSTime = $("#meRSTime").val();
-                                    param.meRETime = $("#meRETime").val();
+                                    param.mePSTime = $("#mePSTime").datebox('getValue');
+                                    param.mePETime = $("#mePETime").datebox('getValue');
+                                    param.meRSTime = $("#meRSTime").datebox('getValue');
+                                    param.meRETime = $("#meRETime").datebox('getValue');
                                    
-                                    param.cnPSTime = $("#cnPSTime").val();
-                                    param.cnPETime = $("#cnPETime").val();
-                                    param.cnRSTime = $("#cnRSTime").val();
-                                    param.cnRETime = $("#cnRETime").val();
+                                    param.cnPSTime = $("#cnPSTime").datebox('getValue');
+                                    param.cnPETime = $("#cnPETime").datebox('getValue');
+                                    param.cnRSTime = $("#cnRSTime").datebox('getValue');
+                                    param.cnRETime = $("#cnRETime").datebox('getValue');
                                    
-                                    param.tyPSTime = $("#tyPSTime").val();
-                                    param.tyPETime = $("#tyPETime").val();
-                                    param.tyRSTime = $("#tyRSTime").val();
-                                    param.tyRETime = $("#tyRETime").val();
+                                    param.tyPSTime = $("#tyPSTime").datebox('getValue');
+                                    param.tyPETime = $("#tyPETime").datebox('getValue');
+                                    param.tyRSTime = $("#tyRSTime").datebox('getValue');
+                                    param.tyRETime = $("#tyRETime").datebox('getValue');
                                    
                                 },
                                 success: function (data) {
@@ -199,39 +199,39 @@
                                 for (var i = 0; i < data.rows.length; i++) {
                                     //项目商务bs
                                     if (data.rows[i].NodeID == "2") {
-                                        $("#bsPSTime").datebox('setValue', data.rows[i].PSTime); 
-                                        $("#bsPETime").datebox('setValue', data.rows[i].PETime);
-                                        $("#bsRSTime").datebox('setValue', data.rows[i].RSTime);
-                                        $("#bsRETime").datebox('setValue', data.rows[i].RETime);
+                                        $("#bsPSTime").datebox('setValue', data.rows[i].PSTime.replace(/\//g, '-')); 
+                                        $("#bsPETime").datebox('setValue', data.rows[i].PETime.replace(/\//g, '-'));
+                                        $("#bsRSTime").datebox('setValue', data.rows[i].RSTime.replace(/\//g, '-'));
+                                        $("#bsRETime").datebox('setValue', data.rows[i].RETime.replace(/\//g, '-'));
                                         
                                     }
                                         //技术方案ty
                                     else if(data.rows[i].NodeID == "3") {
-                                        $("#tyPSTime").datebox('setValue', data.rows[i].PSTime);
-                                        $("#tyPETime").datebox('setValue', data.rows[i].PETime);
-                                        $("#tyRSTime").datebox('setValue', data.rows[i].RSTime);
-                                        $("#tyRETime").datebox('setValue', data.rows[i].RETime);
+                                        $("#tyPSTime").datebox('setValue', data.rows[i].PSTime.replace(/\//g, '-'));
+                                        $("#tyPETime").datebox('setValue', data.rows[i].PETime.replace(/\//g, '-'));
+                                        $("#tyRSTime").datebox('setValue', data.rows[i].RSTime.replace(/\//g, '-'));
+                                        $("#tyRETime").datebox('setValue', data.rows[i].RETime.replace(/\//g, '-'));
                                     }
                                         //设计时间dn
                                     else if (data.rows[i].NodeID == "4") {
-                                        $("#dnPSTime").datebox('setValue', data.rows[i].PSTime);
-                                        $("#dnPETime").datebox('setValue', data.rows[i].PETime);
-                                        $("#dnRSTime").datebox('setValue', data.rows[i].RSTime);
-                                        $("#dnRETime").datebox('setValue', data.rows[i].RETime);
+                                        $("#dnPSTime").datebox('setValue', data.rows[i].PSTime.replace(/\//g, '-'));
+                                        $("#dnPETime").datebox('setValue', data.rows[i].PETime.replace(/\//g, '-'));
+                                        $("#dnRSTime").datebox('setValue', data.rows[i].RSTime.replace(/\//g, '-'));
+                                        $("#dnRETime").datebox('setValue', data.rows[i].RETime.replace(/\//g, '-'));
                                     }
                                         //生产管理me
                                     else if (data.rows[i].NodeID == "5") {
-                                        $("#mePSTime").datebox('setValue', data.rows[i].PSTime);
-                                        $("#mePETime").datebox('setValue', data.rows[i].PETime);
-                                        $("#meRSTime").datebox('setValue', data.rows[i].RSTime);
-                                        $("#meRETime").datebox('setValue', data.rows[i].RETime);
+                                        $("#mePSTime").datebox('setValue', data.rows[i].PSTime.replace(/\//g, '-'));
+                                        $("#mePETime").datebox('setValue', data.rows[i].PETime.replace(/\//g, '-'));
+                                        $("#meRSTime").datebox('setValue', data.rows[i].RSTime.replace(/\//g, '-'));
+                                        $("#meRETime").datebox('setValue', data.rows[i].RETime.replace(/\//g, '-'));
                                     }
                                         //施工管理cn
                                     else if (data.rows[i].NodeID == "6") {
-                                        $("#cnPSTime").datebox('setValue', data.rows[i].PSTime);
-                                        $("#cnPETime").datebox('setValue', data.rows[i].PETime);
-                                        $("#cnRSTime").datebox('setValue', data.rows[i].RSTime);
-                                        $("#cnRETime").datebox('setValue', data.rows[i].RETime);
+                                        $("#cnPSTime").datebox('setValue', data.rows[i].PSTime.replace(/\//g, '-'));
+                                        $("#cnPETime").datebox('setValue', data.rows[i].PETime.replace(/\//g, '-'));
+                                        $("#cnRSTime").datebox('setValue', data.rows[i].RSTime.replace(/\//g, '-'));
+                                        $("#cnRETime").datebox('setValue', data.rows[i].RETime.replace(/\//g, '-'));
                                     }
                                 }
 
