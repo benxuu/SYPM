@@ -245,6 +245,63 @@ namespace AchieveManageWeb.Controllers
                       
         }
         /// <summary>
+        /// 编辑项目单据
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult EditBasicProject()
+        {
+            try
+            {                
+                string ProjectID;
+                if (Request["ProjectID"] == null)	{
+		throw new Exception("没有获取到ProjectID");
+	}
+                    
+                 ProjectID =Request["ProjectID"];
+                 string ProjectNo = Request["ProjectNo"] == null ? "PM" + ProjectID : Request["ProjectNo"];
+                string ProjectName = Request["ProjectName"] == null ? "" : Request["ProjectName"];
+                string ProjectManager = Request["ProjectManager"] == null ? "" : Request["ProjectManager"];
+                string ProjectClerk = Request["ProjectClerk"] == null ? "" : Request["ProjectClerk"];
+                string Remark = Request["Remark"] == null ? "" : Request["Remark"];
+                //string bsPSTime = Request["bsPSTime"] == null ? "" : Request["ProjectClerk"];
+                //string AppendListID = Request["AppendListID"] == null ? "" : Request["AppendListID"];
+                //string AppendID = Request["AppendID"] == null ? "" : Request["AppendID"];
+
+                UserEntity uInfo = ViewData["Account"] as UserEntity;
+                StringBuilder strSql = new StringBuilder();
+                strSql.Append("update tbProject set ");
+                strSql.Append("ProjectNo =@ProjectNo,ProjectName=@ProjectName,ProjectManager=@ProjectManager,ProjectClerk=@ProjectClerk,Remark=@Remark,UpdateTime=@UpdateTime,UpdateBy=@UpdateBy");
+                
+                strSql.Append(" where ProjectID=@ProjectID ");
+
+                SqlParameter[] parameters = {
+			            new SqlParameter("@ProjectID", ProjectID) , 
+                        new SqlParameter("@ProjectNo", ProjectNo) ,            
+                        new SqlParameter("@ProjectName",ProjectName) ,            
+                        new SqlParameter("@ProjectManager",ProjectManager) ,            
+                        new SqlParameter("@ProjectClerk", ProjectClerk) ,            
+                        new SqlParameter("@Remark", Remark) ,            
+                        new SqlParameter("@UpdateTime", DateTime.Now) ,            
+                        new SqlParameter("@UpdateBy", uInfo.AccountName) ,            
+                      
+            };
+                int id = SqlHelper.ExecuteNonQuery(SqlHelper.connStr, CommandType.Text, strSql.ToString(), parameters);
+                if (id > 0)
+                {
+                    return Content("{\"msg\":\"更新成功！\",\"success\":true}");
+                }
+                else
+                {
+                    return Content("{\"msg\":\"更新失败！\",\"success\":false}");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Content("{\"msg\":\"更新失败," + ex.Message.Trim().Replace("\r", "").Replace("\n", "") + "\",\"success\":false}");
+            }
+
+        }
+        /// <summary>
         /// 项目管理甘特图
         /// </summary>
         /// <returns></returns>
@@ -464,6 +521,15 @@ namespace AchieveManageWeb.Controllers
         {
             return View();
         }
+       /// <summary>
+       /// 项目基本信息维护界面
+       /// </summary>
+       /// <returns></returns>
+        public ActionResult PMBasicMaintain()
+        {
+            return View();
+        }
+        
         public ActionResult ProjectGrid()
         {
             return View();
