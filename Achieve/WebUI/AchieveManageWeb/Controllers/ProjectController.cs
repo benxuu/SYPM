@@ -197,7 +197,7 @@ namespace AchieveManageWeb.Controllers
             try
             {
                 string ProjectID = SqlHelper.GetSerialNumber("tbProject", "ProjectID");
-                string ProjectNo = Request["ProjectCode"] == null ? "PM" + ProjectID : Request["ProjectCode"];
+                string ProjectNo = Request["ProjectNo"] == null ? "PM" + ProjectID : Request["ProjectNo"];
                 string ProjectName = Request["ProjectName"] == null ? "" : Request["ProjectName"];
                 string ProjectManager = Request["ProjectManager"] == null ? "" : Request["ProjectManager"];
                 string ProjectClerk = Request["ProjectClerk"] == null ? "" : Request["ProjectClerk"];
@@ -308,6 +308,27 @@ namespace AchieveManageWeb.Controllers
         public ActionResult PMGantt()
         {
             return View();
+        }
+        /// <summary>
+        /// 项目管理甘特图的json数据
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult PMGanttJson()
+        {
+            return View();
+            //查找所有项目
+            string sql = "select ProjectID,ProjectNo,ProjectName from tbProject where 1=1";
+            DataTable projectdt= AchieveCommon.SqlHelper.GetDataTable(SqlHelper.connStr, sql);
+            StringBuilder jsonResult=new StringBuilder();
+            jsonResult.Append("[{\"name\":");
+            foreach (DataRow dr in projectdt.Rows)
+            {
+                string drs="{\"name\":";
+                drs+=string.Format("\"{0} {1}\",",dr["ProjectNo"].ToString(),dr["ProjectName"].ToString());
+               //查询子表，获取项目节点信息
+                dr["ProjectNo"]
+            }
+
         }
         /// <summary>
         /// 项目清单的查询处理

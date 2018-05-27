@@ -64,14 +64,30 @@ namespace AchieveCommon
             /// <summary>  
             /// 用年份和第几周来获得一周开始和结束的时间,这里用星期一做开始。  
             /// </summary>  
-            public static void GetWeek(int year, int weekNum, out DateTime weekStart, out DateTime weekeEnd)
+            public static void GetWeek(int year, int weekNum, out DateTime weekStart, out DateTime weekEnd)
             {
                 var dateTime = new DateTime(year, 1, 1);
                 dateTime = dateTime.AddDays(7 * weekNum);
                 weekStart = dateTime.AddDays(-(int)dateTime.DayOfWeek + (int)DayOfWeek.Monday);
-                weekeEnd = dateTime.AddDays((int)DayOfWeek.Saturday - (int)dateTime.DayOfWeek + 1);
+                weekEnd = dateTime.AddDays((int)DayOfWeek.Saturday - (int)dateTime.DayOfWeek + 1);
             }
+            /// <summary>
+            /// 用年份和第几周来获得一周开始和结束的月份,这里用星期一做开始。  
+            /// </summary>
+            /// <param name="year"></param>
+            /// <param name="weekNum"></param>
+            /// <param name="startmonth"></param>
+            /// <param name="endmonth"></param>
+            public static void GetMonthofWeek(int year, int weekNum, out int startmonth, out int endmonth) 
+            {
+                var dateTime = new DateTime(year, 1, 1);
+                dateTime = dateTime.AddDays(7 * weekNum);
+                DateTime weekStart = dateTime.AddDays(-(int)dateTime.DayOfWeek + (int)DayOfWeek.Monday);
+                startmonth = weekStart.Month;
+                DateTime weekEnd = dateTime.AddDays((int)DayOfWeek.Saturday - (int)dateTime.DayOfWeek + 1);
+                endmonth = weekEnd.Month;
 
+            }
             /// <summary> 求某年有多少周  
             /// </summary>  
             public static int GetYearWeekCount(int year)

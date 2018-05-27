@@ -49,7 +49,7 @@
                                                      }
                                                  },
                                                  {
-                                                     width: '100',
+                                                     width: '120',
                                                      title: '项目名称',
                                                      field: 'ProjectName',
                                                      formatter: function (value, row, index) {
@@ -59,14 +59,13 @@
 
                                 ]],
                                 columns: [[
-                                     { field: 'ProjectClerk', title: '业务员', sortable: true, width: 130 },
-
-                                           { field: 'UpdateTime', title: '最后更新时间', sortable: true, width: 130 },
-                                           { field: 'UpdateBy', title: '最后更新人', width: 130 },
-                                             { field: 'CreateBy', title: '创建时间', sortable: true, width: 130 },
-                                { field: 'CreateTime', title: '创建人', width: 130 },
-                                           {
-                                               field: 'Remark', title: '项目说明', width: 300,
+                                  { field: 'ProjectClerk', title: '业务员', sortable: false, width: 80 },                                     
+                                { field: 'ProjectManager', title: '管理员', sortable: false, width: 80 },
+                                 { field: 'UpdateBy', title: '最后更新人', width: 80 },
+                                  { field: 'UpdateTime', title: '最后更新时间', sortable: true, width: 135 },                                          
+                                    { field: 'CreateBy', title: '创建人',  width: 80 },
+                                { field: 'CreateTime', title: '创建时间', sortable: true, width: 135 },
+                                           {  field: 'Remark', title: '项目说明', width: 200,
                                                formatter: function (value, row, index) {
                                                    return value.length > 20 ? '<span title="' + value + '">' + value + '</span>' : value;
                                                }
@@ -96,9 +95,75 @@
         });
 
         //新增项目
-        function AddPMBasicMaintain() {
+        function AddPMBasicMaintain() {          
+            $("<div/>").dialog({
+                id: "ui_pm_edit_dialog",
+                href: "/Project/PMEdit",
+                title: "新增项目",
+                height: $(window).height(),
+                width: $(window).width(),
+                modal: true,
+                toolbar: [{
+                    text: '保存',
+                    iconCls: 'icon-save',
+                    handler: function () {
+                        $.ajax({     //提交数据保存
+                            url: "/Project/AddNewProject?r=" + Math.random(),
+                            type: "post",
+                            data: {
+                                "KeyCode": "CreatePMBill",
+                                //"KeyName": "CreatePMBill",
+                                "ProjectID": $("#ProjectID").val(),
+                                "ProjectNo": $("#ProjectNo").val(),
+                                "ProjectName": $("#ProjectName").val(),
+                                "ProjectManager": $("#ProjectManager").val(),
+                                "ProjectClerk": $("#ProjectClerk").val(),
+                                "Remark": $("#Remark").val()
+                            },
+                            dataType: "json",
+                            timeout: 5000,
+                            success: function (data) {
+                                if (data.success) {
+                                    $.show_alert("成功", "保存成功！");
+                                    $("#ui_pm_edit_dialog").dialog('destroy');
+                                    $("#ui_pm_dg").datagrid("reload");//.datagrid('clearSelections').datagrid('clearChecked');
+                                } else {
+                                    $.show_alert("提示", data.msg);
+                                }
+                            },
+                            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                                if (textStatus == "timeout") {
+                                    $.show_alert("提示", "请求超时，请刷新当前页重试！");
+                                }
+                                else {
+                                    $.show_alert("错误", textStatus + "：" + errorThrown);
+                                }
+                            }
+                        })
+                    }
+                }, {
+                    text: '关闭',
+                    iconCls: 'icon-cross',
+                    handler: function () { $("#ui_pm_edit_dialog").dialog('destroy'); }
+                }],
+                onLoad: function () {                   
+                    $("#ProjectNo").textbox('enable');
+                    $("#ProjectName").textbox('enable');
+                    $("#ProjectManager").textbox('enable');
+                    $("#ProjectClerk").textbox('enable');
+                    $("#Remark").textbox('enable');
 
-            $.show_alert("提示", "add new");
+                    $("#CreateBy").attr('hidden', 'hidden');
+                    $("#CreateTime").attr('hidden', 'hidden');
+                    $("#UpdateTime").attr('hidden', 'hidden');
+                    $("#UpdateBy").attr('hidden', 'hidden');
+                    $("#tt").attr('hidden', 'hidden');//隐藏节点管理
+
+                },
+                onClose: function () {
+                    $("#ui_pm_edit_dialog").dialog('destroy');  //销毁dialog对象
+                }
+            });
         }
 
         //修改项目
@@ -128,8 +193,8 @@
                             url: "/Project/EditBasicProject?r=" + Math.random(),
                             type: "post",
                             data: {
-                                "KeyCode": "CreatePMBill",
-                                "KeyName": "CreatePMBill",
+                                "KeyCode": "EditPMBill",
+                                //"KeyName": "CreatePMBill",
                                 "ProjectID": $("#ProjectID").val(),
                                 "ProjectNo": $("#ProjectNo").val(),
                                 "ProjectName": $("#ProjectName").val(),
@@ -142,7 +207,8 @@
                             success: function (data) {
                                 if (data.success) {
                                     $.show_alert("成功", "保存成功！");
-
+                                    $("#ui_pm_edit_dialog").dialog('destroy');
+                                    $("#ui_pm_dg").datagrid("reload");//.datagrid('clearSelections').datagrid('clearChecked');
                                 } else {
                                     $.show_alert("提示", data.msg);
                                 }

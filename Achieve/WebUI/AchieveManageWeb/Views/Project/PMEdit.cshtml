@@ -10,16 +10,16 @@
     <title>更新项目</title>
 </head>
 <body>
-    <form id="PMEditForm" method="post" action="">
+ 
         <div class="label">项目编码</div>
         <div class="value "><input type="hidden" name="ProjectID" id="ProjectID" />
             <input type="text" class="easyui-textbox" id="ProjectNo" name="ProjectNo" data-options="disabled:true" /></div>
         
          <div class="label">项目名称</div>
         <div class="value ">
-            <input type="text" class="easyui-textbox" name="ProjectName" id="ProjectName" data-options="disabled:true" />
-             
+            <input type="text" class="easyui-textbox" name="ProjectName" id="ProjectName" data-options="disabled:true" />             
         </div>
+    <div class="clear"></div>
         <div class="label">项目管理员</div>
         <div class="value ">
             <input type="text" id="ProjectManager" class="easyui-textbox" data-options="disabled:true" />
@@ -28,13 +28,14 @@
         <div class="value ">
             <input type="text" id="ProjectClerk" class="easyui-textbox" data-options="disabled:true" />
         </div>
-
-
         <div class="clear"></div>
+
         <div class="label">更新人</div>
         <div class="value "><input type="text" id="UpdateBy" class="easyui-textbox" data-options="disabled:true" /></div>
         <div class="label">更新时间</div>
         <div class="value"><input type="text" id="UpdateTime" class="easyui-textbox" data-options="disabled:true" /></div>
+    <div class="clear"></div>
+
         <div class="label">创建人</div>
         <div class="value "><input type="text" id="CreateBy" class="easyui-textbox" data-options="disabled:true" /></div>
         <div class="label">创建时间</div>
@@ -44,7 +45,7 @@
         <div class="label">备注</div>
 
         <div style="float:left;padding:3px; width:400px; height:50px; ">
-            <input id="Remark" class="easyui-textbox" data-options="multiline:true,readonly:true" style="width:480px;height:45px">
+            <input id="Remark" class="easyui-textbox" data-options="multiline:true,disabled:true" style="width:480px;height:45px">
         </div>
         <div class="clear"></div>
 
@@ -159,6 +160,6 @@
             </div>
 
         </div>
-        </form>
+    
 </body>
 </html>

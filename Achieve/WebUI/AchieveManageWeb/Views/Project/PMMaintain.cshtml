@@ -36,7 +36,7 @@
                                 pageList: [20, 40, 60, 80, 100],
                                 frozenColumns: [[
                                                {
-                                                   hidden:true,
+                                                   hidden: true,
                                                    title: 'ID',
                                                    field: 'ProjectID'
                                                },
@@ -49,7 +49,7 @@
                                                      }
                                                  },
                                                  {
-                                                     width: '100',
+                                                     width: '120',
                                                      title: '项目名称',
                                                      field: 'ProjectName',
                                                      formatter: function (value, row, index) {
@@ -59,14 +59,14 @@
 
                                 ]],
                                 columns: [[
-                                     { field: 'ProjectClerk', title: '业务员', sortable: true, width: 130 },
-
-                                           { field: 'UpdateTime', title: '最后更新时间', sortable: true, width: 130 },
-                                           { field: 'UpdateBy', title: '最后更新人', width: 130 },
-                                             { field: 'CreateBy', title: '创建时间', sortable: true, width: 130 },
-                                { field: 'CreateTime', title: '创建人', width: 130 },
+                                  { field: 'ProjectClerk', title: '业务员', sortable: false, width: 80 },
+                                { field: 'ProjectManager', title: '管理员', sortable: false, width: 80 },
+                                 { field: 'UpdateBy', title: '最后更新人', width: 80 },
+                                  { field: 'UpdateTime', title: '最后更新时间', sortable: true, width: 135 },
+                                    { field: 'CreateBy', title: '创建人', width: 80 },
+                                { field: 'CreateTime', title: '创建时间', sortable: true, width: 135 },
                                            {
-                                               field: 'Remark', title: '项目说明', width: 300,
+                                               field: 'Remark', title: '项目说明', width: 200,
                                                formatter: function (value, row, index) {
                                                    return value.length > 20 ? '<span title="' + value + '">' + value + '</span>' : value;
                                                }
@@ -120,57 +120,65 @@
                     text:'保存',
                     iconCls: 'icon-save',
                     handler: function () {
-                        $("#PMEditForm").form("submit", {
-                                url: "/Project/EditPM",
-                                onSubmit: function (param) {
-                                    // param.ProjectID = $("#ProjectID").val();服务器端request会和上次传送的ProjectID拼接起来？不知道什么原因
-                                  //  alert(param.ProjectID);
-                                    param.PSTime = $("#bsPSTime").datebox('getValue');
-                                    param.PETime = $("#bsPETime").datebox('getValue');
-                                    param.RSTime = $("#bsRSTime").datebox('getValue');
-                                    param.RETime = $("#bsRETime").datebox('getValue');
+                        $.ajax({     //提交数据保存
+                            url: "/Project/EditPM?r=" + Math.random(),
+                            type: "post",
+                            data: {
+                                "KeyCode": "CreatePMBill",
+                                "ProjectID": $("#ProjectID").val(),
+                                "bsPSTime": $("#bsPSTime").datebox('getValue'),
+                                "bsPETime":$("#bsPETime").datebox('getValue'),
+                                "bsRSTime": $("#bsRSTime").datebox('getValue'),
+                                "bsRETime": $("#bsRETime").datebox('getValue'),
 
-                                    param.bsPSTime = $("#bsPSTime").datebox('getValue');
-                                    param.bsPETime = $("#bsPETime").datebox('getValue');
-                                    param.bsRSTime = $("#bsRSTime").datebox('getValue');
-                                    param.bsRETime = $("#bsRETime").datebox('getValue');
-                                    //
-                                    param.dnPSTime = $("#dnPSTime").datebox('getValue');
-                                    param.dnPETime = $("#dnPETime").datebox('getValue');
-                                    param.dnRSTime = $("#dnRSTime").datebox('getValue');
-                                    param.dnRETime = $("#dnRETime").datebox('getValue');  
+                                "dnPSTime": $("#dnPSTime").datebox('getValue'),
+                                "dnPETime":$("#dnPETime").datebox('getValue'),
+                                "dnRSTime": $("#dnRSTime").datebox('getValue'),
+                                "dnRETime": $("#dnRETime").datebox('getValue'),
 
-                                    param.mePSTime = $("#mePSTime").datebox('getValue');
-                                    param.mePETime = $("#mePETime").datebox('getValue');
-                                    param.meRSTime = $("#meRSTime").datebox('getValue');
-                                    param.meRETime = $("#meRETime").datebox('getValue');
-                                   
-                                    param.cnPSTime = $("#cnPSTime").datebox('getValue');
-                                    param.cnPETime = $("#cnPETime").datebox('getValue');
-                                    param.cnRSTime = $("#cnRSTime").datebox('getValue');
-                                    param.cnRETime = $("#cnRETime").datebox('getValue');
-                                   
-                                    param.tyPSTime = $("#tyPSTime").datebox('getValue');
-                                    param.tyPETime = $("#tyPETime").datebox('getValue');
-                                    param.tyRSTime = $("#tyRSTime").datebox('getValue');
-                                    param.tyRETime = $("#tyRETime").datebox('getValue');
-                                   
-                                },
-                                success: function (data) {
-                                    var dataJson = eval('(' + data + ')');
-                                    if (dataJson.success) {
-                                        $("#ui_pm_edit_dialog").dialog('destroy');
-                                        $.show_alert("提示", dataJson.msg);
-                                        $("#ui_pm_dg").datagrid("reload").datagrid('clearSelections').datagrid('clearChecked');
-                                    } else {
-                                        $('#ui_pm_edit_btn').linkbutton('enable');
-                                        $.show_alert("提示", dataJson.msg);
-                                    }
-                                }
-                            });
+                                "mePSTime": $("#mePSTime").datebox('getValue'),
+                                "mePETime":$("#mePETime").datebox('getValue'),
+                                "meRSTime": $("#meRSTime").datebox('getValue'),
+                                "meRETime": $("#meRETime").datebox('getValue'),
+
+                                "cnPSTime": $("#cnPSTime").datebox('getValue'),
+                                "cnPETime":$("#cnPETime").datebox('getValue'),
+                                "cnRSTime": $("#cnRSTime").datebox('getValue'),
+                                "cnRETime": $("#cnRETime").datebox('getValue'),
+
+                                "tyPSTime": $("#tyPSTime").datebox('getValue'),
+                                "tyPETime":$("#tyPETime").datebox('getValue'),
+                                "tyRSTime": $("#tyRSTime").datebox('getValue'),
+                                "tyRETime": $("#tyRETime").datebox('getValue'),
+                            },
+                            dataType: "json",
+                            timeout: 5000,
+
+                    success: function (data) {
+                        if (data.success) {
+                            $.show_alert("成功", "保存成功！");
+                            $("#ui_pm_edit_dialog").dialog('destroy');
+                            $("#ui_pm_dg").datagrid("reload");//.datagrid('clearSelections').datagrid('clearChecked');
+                        } else {
+                            $.show_alert("提示", data.msg);
                         }
-              
-                },{
+                    },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    if (textStatus == "timeout") {
+                        $.show_alert("提示", "请求超时，请刷新当前页重试！");
+                    }
+                    else {
+                        $.show_alert("错误", textStatus + "：" + errorThrown);
+                    }
+                }
+            })
+            }
+            },
+
+
+
+
+                {
                     text:'关闭',
                     iconCls: 'icon-cross',
                     handler: function () { $("#ui_pm_edit_dialog").dialog('destroy'); }

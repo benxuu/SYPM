@@ -3,9 +3,9 @@ function valuedisplay(value, row, index) {
     a = parseFloat(value).toFixed(1);
     p = value * 100 / (row.DayTime * 6) > 100 ? 100 : value * 100 / (row.DayTime * 6);
     if (value > row.AlertValue * row.DayTime * 6 / 100) {
-        return '<div style="width:'+p+'%;height:20px; position:relative;background:red; "> <span style="text-align:right; width:80; position:absolute; ">'+a+'</span></div>';
+        return '<div style="width:'+p+'%;height:20px;  line-height: 20px;  position:relative;background:red; "> <span style="text-align:right; width:80; position:absolute; ">'+a+'</span></div>';
     } else {
-        return '<div style="width:' + p + '%;height:20px; position:relative;background:green; "> <span style="text-align:center; width:80; position:absolute; ">' + a + '</span></div>';
+        return '<div style="width:' + p + '%;height:20px; line-height: 20px; position:relative;background:green; "> <span style="text-align:right; width:80; position:absolute; ">' + a + '</span></div>';
     }
 }
 
@@ -47,13 +47,13 @@ var myColums = [
                   } 
               },
             {
-                field: '4', title: '4', width: 80, align: 'left',
+                field: '4', title: '4', width: 80, 
                 formatter: function (value, row, index) {
                     return valuedisplay(value, row, index);
                 } 
             },
             {
-                field: '5', title: '5', width: 80, align: 'left',
+                field: '5', title: '5', width: 80, 
                 formatter: function (value, row, index) {
                     return valuedisplay(value, row, index);
                 } 
@@ -103,13 +103,17 @@ function weekdatagrid(weekadjust) {
                 pageList: [20, 40, 60, 80, 100],
                 //frozenColumns: [],
                 columns: [myColums],
+                //禁止行选中
+                onClickRow: function () {
+                    $('#weektime_dg').datagrid('clearSelections');
+                },
                 toolbar: [{
-                    text: '<前一周',
-                    
+                    text: '上一周',
+                    iconCls: 'icon-arrow_left',
                     handler: function () { lastweek() }
                 }, {
-                    text: '>后一周',
-                    
+                    text: '下一周',
+                    iconCls: 'icon-arrow_right',                    
                     handler: function () { nextweek() }
                 }]
             });

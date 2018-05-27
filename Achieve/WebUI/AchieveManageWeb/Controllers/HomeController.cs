@@ -76,11 +76,17 @@ namespace AchieveManageWeb.Controllers
                 for (int i = (thisweek + weekadjust - 4) > 0 ? thisweek + weekadjust - 4 : 0; i <= thisweek + weekadjust; i++)
                 {
                     string cname = i.ToString();
+                    //int startmonth, endmonth;
+                    //DateHelper.GetMonthofWeek(DateTime.Now.Year, i, out startmonth,out endmonth);
+                    DateTime dts, dte;
+                    DateHelper.GetWeek(DateTime.Now.Year, i, out dts, out dte);
+                    string daterange = "<br/>" + dts.ToString("MM/dd") + "-" + dte.ToString("MM/dd");
+
                     if (i == thisweek)
                     {
-                        cname = "本周";
+                        cname = "本周"+daterange;
                     }
-                    else { cname = "第"+i+"周"; }
+                    else { cname = "第" + i + "周"+daterange; }
                     columns += ",{ \"width\": 60, \"title\": \"" + cname + "\", \"field\":\"" + i + "\", \"sortable\": \"false\" }";
                 }
                 columns += "]";
