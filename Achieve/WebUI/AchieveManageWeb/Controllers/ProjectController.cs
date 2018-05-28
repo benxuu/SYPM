@@ -16,7 +16,7 @@ namespace AchieveManageWeb.Controllers
     [AchieveManageWeb.App_Start.JudgmentLogin]
     public class ProjectController : Controller
     {
-             public string ToGanttJson(DataTable dt)
+        public string ToGanttJson(DataTable dt)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("[");
@@ -56,8 +56,8 @@ namespace AchieveManageWeb.Controllers
             int totalCount;   //输出参数
             //string strJson = new ProjectBLL().GetJsonPager("ICMO", "FBillNo,FStatus,FQty,FCommitQty,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FType,FWorkShop,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
             string strJson = new ProjectBLL().GetJsonPager((pageindex - 1) * pagesize + 1, pageindex * pagesize, strWhere, out totalCount);
-           // content = "{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}";
-           // string strJson = new ProjectBLL().GetJsonPager("ICMO", "FBillNo,FStatus,FQty,FCommitQty,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FType,FWorkShop,FItemID", sort, pagesize, pageindex, strWhere, out totalCount);
+            // content = "{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}";
+            // string strJson = new ProjectBLL().GetJsonPager("ICMO", "FBillNo,FStatus,FQty,FCommitQty,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FType,FWorkShop,FItemID", sort, pagesize, pageindex, strWhere, out totalCount);
             return Content("{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}");
         }
         /// <summary>
@@ -79,27 +79,27 @@ namespace AchieveManageWeb.Controllers
             //string isable = Request["isable"] == null ? "" : Request["isable"];
             string FModel = Request["FModel"] == null ? "" : Request["FModel"];
             string FStatus = Request["FStatus"] == null ? "" : Request["FStatus"];
-            string FPlanCommitDate = Request["FPlanCommitDate"] == null ? "" : Request["FPlanCommitDate"]; 
+            string FPlanCommitDate = Request["FPlanCommitDate"] == null ? "" : Request["FPlanCommitDate"];
 
             if (FBillNo.Trim() != "" && !SqlInjection.GetString(FBillNo))   //防止sql注入
                 strWhere += string.Format(" and FBillNo like '%{0}%'", FBillNo.Trim());
 
             if (FName.Trim() != "" && !SqlInjection.GetString(FName))   //防止sql注入
                 strWhere += string.Format(" and FName like '%{0}%'", FName.Trim());
-            
+
             if (FModel.Trim() != "" && !SqlInjection.GetString(FModel))   //防止sql注入
                 strWhere += string.Format(" and FModel like '%{0}%'", FModel.Trim());
-            
-            if (FStatus=="true")
+
+            if (FStatus == "true")
             {
                 strWhere += string.Format(" and FStatus > 2 ");
             }
-            else 
+            else
             {
                 strWhere += string.Format(" and FStatus < 3 ");
             }
-  
-           
+
+
             if (FPlanCommitDate.Trim() != "")
                 strWhere += " and FPlanCommitDate > '" + FPlanCommitDate.Trim() + "'";
 
@@ -116,11 +116,11 @@ namespace AchieveManageWeb.Controllers
             }
             if (view == "ProjectGantt")
             {
-                 int totalCount;   //输出参数
+                int totalCount;   //输出参数
                 // pagesize = 5;//限制甘特图输出数据量
-            DataTable dt = new ProjectBLL().GetDataTablePager("ICMO", "FBillNo,FStatus,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
-            string strJson = ToGanttJson(dt);
-            content = "{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}";
+                DataTable dt = new ProjectBLL().GetDataTablePager("ICMO", "FBillNo,FStatus,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
+                string strJson = ToGanttJson(dt);
+                content = "{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}";
             }
 
             return Content(content);
@@ -130,23 +130,23 @@ namespace AchieveManageWeb.Controllers
         /// </summary>
         /// <returns></returns>
         public ActionResult GetPageProcessInfo()
-        {                     
+        {
             //首先获取前台传递过来的参数          
             string FBillNo = Request["FBillNo"] == null ? "" : Request["FBillNo"];
 
-            StringBuilder sqlsb=new StringBuilder();
+            StringBuilder sqlsb = new StringBuilder();
             sqlsb.Append("select a.ficmono,a.fitemid,b.FQTYPLAN,b.FPLANSTARTDATE,b.FPLANENDDATE,b.FStartWorkDate,");
             sqlsb.Append("b.FEndWorkDate,b.fcheckdate,b.fopernote,b.fstatus,b.FWorkCenterID,b.ffinishtime ");
-            sqlsb.Append("from SHWORKBILL as a left join shworkbillentry as b  on a.FInterID=b.FInterID where a.ficmono='"+FBillNo+"'");
-           
+            sqlsb.Append("from SHWORKBILL as a left join shworkbillentry as b  on a.FInterID=b.FInterID where a.ficmono='" + FBillNo + "'");
+
             string content = "";
             if (true)//view == "ProjectGrid")
             {
                 string strJson = new ProjectBLL().GetJsonFromSqlK3(sqlsb.ToString());
                 int totalCount = 100;
-               // string strJson = new ProjectBLL().GetJsonPager("ICMO", "FBillNo,FStatus,FQty,FCommitQty,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FType,FWorkShop,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
+                // string strJson = new ProjectBLL().GetJsonPager("ICMO", "FBillNo,FStatus,FQty,FCommitQty,FPlanCommitDate,FPlanFinishDate,FStartDate,FFinishDate,FType,FWorkShop,FItemID", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
                 content = "{\"total\": " + totalCount.ToString() + ",\"rows\":" + strJson + "}";
-            }          
+            }
 
             return Content(content);
         }
@@ -205,7 +205,7 @@ namespace AchieveManageWeb.Controllers
                 //string bsPSTime = Request["bsPSTime"] == null ? "" : Request["ProjectClerk"];
                 string AppendListID = Request["AppendListID"] == null ? "" : Request["AppendListID"];
                 string AppendID = Request["AppendID"] == null ? "" : Request["AppendID"];
-               
+
                 UserEntity uInfo = ViewData["Account"] as UserEntity;
                 StringBuilder strSql = new StringBuilder();
                 strSql.Append("insert into tbProject(");
@@ -228,21 +228,21 @@ namespace AchieveManageWeb.Controllers
                         new SqlParameter("@UpdateBy", uInfo.AccountName) ,            
                         new SqlParameter("@AppendID", AppendID) 
             };
-              int id = SqlHelper.ExecuteNonQuery(SqlHelper.connStr,CommandType.Text,strSql.ToString(),parameters);
-              if (id > 0)
-              {
-                  return Content("{\"msg\":\"添加成功！\",\"success\":true}");
-              }
-              else
-              {
-                  return Content("{\"msg\":\"添加失败！\",\"success\":false}");
-              }
+                int id = SqlHelper.ExecuteNonQuery(SqlHelper.connStr, CommandType.Text, strSql.ToString(), parameters);
+                if (id > 0)
+                {
+                    return Content("{\"msg\":\"添加成功！\",\"success\":true}");
+                }
+                else
+                {
+                    return Content("{\"msg\":\"添加失败！\",\"success\":false}");
+                }
             }
             catch (Exception ex)
             {
                 return Content("{\"msg\":\"添加失败," + ex.Message.Trim().Replace("\r", "").Replace("\n", "") + "\",\"success\":false}");
             }
-                      
+
         }
         /// <summary>
         /// 编辑项目单据
@@ -251,14 +251,15 @@ namespace AchieveManageWeb.Controllers
         public ActionResult EditBasicProject()
         {
             try
-            {                
+            {
                 string ProjectID;
-                if (Request["ProjectID"] == null)	{
-		throw new Exception("没有获取到ProjectID");
-	}
-                    
-                 ProjectID =Request["ProjectID"];
-                 string ProjectNo = Request["ProjectNo"] == null ? "PM" + ProjectID : Request["ProjectNo"];
+                if (Request["ProjectID"] == null)
+                {
+                    throw new Exception("没有获取到ProjectID");
+                }
+
+                ProjectID = Request["ProjectID"];
+                string ProjectNo = Request["ProjectNo"] == null ? "PM" + ProjectID : Request["ProjectNo"];
                 string ProjectName = Request["ProjectName"] == null ? "" : Request["ProjectName"];
                 string ProjectManager = Request["ProjectManager"] == null ? "" : Request["ProjectManager"];
                 string ProjectClerk = Request["ProjectClerk"] == null ? "" : Request["ProjectClerk"];
@@ -271,7 +272,7 @@ namespace AchieveManageWeb.Controllers
                 StringBuilder strSql = new StringBuilder();
                 strSql.Append("update tbProject set ");
                 strSql.Append("ProjectNo =@ProjectNo,ProjectName=@ProjectName,ProjectManager=@ProjectManager,ProjectClerk=@ProjectClerk,Remark=@Remark,UpdateTime=@UpdateTime,UpdateBy=@UpdateBy");
-                
+
                 strSql.Append(" where ProjectID=@ProjectID ");
 
                 SqlParameter[] parameters = {
@@ -313,22 +314,154 @@ namespace AchieveManageWeb.Controllers
         /// 项目管理甘特图的json数据
         /// </summary>
         /// <returns></returns>
-        public ActionResult PMGanttJson()
-        {
-            return View();
+        public ActionResult PMGanttJson()        {
+    
             //查找所有项目
             string sql = "select ProjectID,ProjectNo,ProjectName from tbProject where 1=1";
-            DataTable projectdt= AchieveCommon.SqlHelper.GetDataTable(SqlHelper.connStr, sql);
-            StringBuilder jsonResult=new StringBuilder();
-            jsonResult.Append("[{\"name\":");
-            foreach (DataRow dr in projectdt.Rows)
-            {
-                string drs="{\"name\":";
-                drs+=string.Format("\"{0} {1}\",",dr["ProjectNo"].ToString(),dr["ProjectName"].ToString());
-               //查询子表，获取项目节点信息
-                dr["ProjectNo"]
-            }
+            DataTable projectdt = AchieveCommon.SqlHelper.GetDataTable(SqlHelper.connStr, sql);
+            StringBuilder jsonResult = new StringBuilder();
+            jsonResult.Append("[");
+           
+           // foreach (DataRow dr in projectdt.Rows)
+                for (int i = 0; i < projectdt.Rows.Count; i++)
+                {                          
+                projectInfo pi = new projectInfo();
+                pi.ProjectID = projectdt.Rows[i]["ProjectID"].ToString();
+                pi.ProjectNo = projectdt.Rows[i]["ProjectNo"].ToString();
+                pi.ProjectName = projectdt.Rows[i]["ProjectName"].ToString();
+                //查询子表，获取项目节点信息
+                string sql2 = string.Format("select NodeID,NodeName,PSTime,PETime,RSTime,RETime from tbMgrNodeInfo where ProjectID='{0}'", projectdt.Rows[i]["ProjectID"]);
+                DataTable dtnode = AchieveCommon.SqlHelper.GetDataTable(SqlHelper.connStr, sql2);
+                foreach (DataRow rownode in dtnode.Rows)
+                {
+                    if (rownode["NodeID"].ToString() == "2")
+                    {
+                        pi.business.NodeName = rownode["NodeName"].ToString();
+                        pi.business.PSTime = rownode["PSTime"] is DBNull?DateTime.Now:Convert.ToDateTime(rownode["PSTime"]);
+                        pi.business.PETime = rownode["PETime"]  is DBNull ? DateTime.Now : Convert.ToDateTime(rownode["PETime"]);
+                        pi.business.RSTime = rownode["RSTime"]  is DBNull ? DateTime.Now : Convert.ToDateTime(rownode["RSTime"]);
+                        pi.business.RETime = rownode["RETime"]  is DBNull ? DateTime.Now : Convert.ToDateTime(rownode["RETime"]);                    
+                    }
+                    else if (rownode["NodeID"].ToString() == "3")
+                    {
+                        pi.technology.NodeName = rownode["NodeName"].ToString();
+                        pi.technology.PSTime = rownode["PSTime"]  is DBNull ? DateTime.Now : Convert.ToDateTime(rownode["PSTime"]);
+                        pi.technology.PETime = rownode["PETime"]  is DBNull ? DateTime.Now : Convert.ToDateTime(rownode["PETime"]);
+                        pi.technology.RSTime = rownode["RSTime"]  is DBNull ? DateTime.Now : Convert.ToDateTime(rownode["RSTime"]);
+                        pi.technology.RETime = rownode["RETime"]  is DBNull ? DateTime.Now : Convert.ToDateTime(rownode["RETime"]);             
+                    }
+                    else if (rownode["NodeID"].ToString() == "4")
+                    {
+                        pi.design.NodeName = rownode["NodeName"].ToString();
+                        pi.design.PSTime = rownode["PSTime"]  is DBNull ? DateTime.Now : Convert.ToDateTime(rownode["PSTime"]);
+                        pi.design.PETime = rownode["PETime"]  is DBNull ? DateTime.Now : Convert.ToDateTime(rownode["PETime"]);
+                        pi.design.RSTime = rownode["RSTime"]  is DBNull ? DateTime.Now : Convert.ToDateTime(rownode["RSTime"]);
+                        pi.design.RETime = rownode["RETime"]  is DBNull ? DateTime.Now : Convert.ToDateTime(rownode["RETime"]);             
+                    }
+                    else if (rownode["NodeID"].ToString() == "5")
+                    {
+                        pi.manufacture.NodeName = rownode["NodeName"].ToString();
+                        pi.manufacture.PSTime = rownode["PSTime"]  is DBNull ? DateTime.Now : Convert.ToDateTime(rownode["PSTime"]);
+                        pi.manufacture.PETime = rownode["PETime"]  is DBNull ? DateTime.Now : Convert.ToDateTime(rownode["PETime"]);
+                        pi.manufacture.RSTime = rownode["RSTime"]  is DBNull ? DateTime.Now : Convert.ToDateTime(rownode["RSTime"]);
+                        pi.manufacture.RETime = rownode["RETime"]  is DBNull ? DateTime.Now : Convert.ToDateTime(rownode["RETime"]);             
 
+                    }
+                    else if (rownode["NodeID"].ToString() == "6")
+                    {
+                        pi.construction.NodeName = rownode["NodeName"].ToString();
+                        pi.construction.PSTime = rownode["PSTime"]  is DBNull ? DateTime.Now : Convert.ToDateTime(rownode["PSTime"]);
+                        pi.construction.PETime = rownode["PETime"]  is DBNull ? DateTime.Now : Convert.ToDateTime(rownode["PETime"]);
+                        pi.construction.RSTime = rownode["RSTime"]  is DBNull ? DateTime.Now : Convert.ToDateTime(rownode["RSTime"]);
+                        pi.construction.RETime = rownode["RETime"]  is DBNull ? DateTime.Now : Convert.ToDateTime(rownode["RETime"]);             
+                    }
+                }
+                //根据项目对象拼接字符串
+
+                 jsonResult.Append("{\"name\":");
+                jsonResult.AppendFormat("\"{0} {1}\",", pi.ProjectNo, pi.ProjectName);
+                jsonResult.AppendFormat("\"desc\": \"{0}\",","计划时间");
+                jsonResult.AppendFormat("\"values\":[");
+               
+                    //商务计划时间
+                jsonResult.AppendFormat("{{\"from\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.business.PSTime).ToString());
+                jsonResult.AppendFormat("\"to\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.business.PETime).ToString());
+                jsonResult.Append("\"label\":\"商务\",\"desc\":\"商务计划\",\"customClass\": \"ganttGreen\"},");
+                //技术方案计划时间
+                jsonResult.AppendFormat("{{\"from\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.technology.PSTime).ToString());
+                jsonResult.AppendFormat("\"to\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.technology.PETime).ToString());
+                jsonResult.Append("\"label\":\"技术\",\"desc\":\"技术方案计划\",\"customClass\": \"ganttGreen\"},");
+                //设计计划时间
+                jsonResult.AppendFormat("{{\"from\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.design.PSTime).ToString());
+                jsonResult.AppendFormat("\"to\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.design.PETime).ToString());
+                jsonResult.Append("\"label\":\"设计\",\"desc\":\"设计计划\",\"customClass\": \"ganttGreen\"},");
+                //生产管理计划时间
+                jsonResult.AppendFormat("{{\"from\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.manufacture.PSTime).ToString());
+                jsonResult.AppendFormat("\"to\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.manufacture.PETime).ToString());
+                jsonResult.Append("\"label\":\"生产\",\"desc\":\"生产计划\",\"customClass\": \"ganttGreen\"},");
+                //施工计划时间
+                jsonResult.AppendFormat("{{\"from\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.construction.PSTime).ToString());
+                jsonResult.AppendFormat("\"to\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.construction.PETime).ToString());
+                jsonResult.Append("\"label\":\"施工\",\"desc\":\"施工计划\",\"customClass\": \"ganttGreen\"}");
+                jsonResult.Append("]},");
+                    //实际时间
+                jsonResult.Append("{\"name\":");
+                jsonResult.AppendFormat("\"{0} {1}\",","", "");
+                jsonResult.AppendFormat("\"desc\": \"{0}\",", "实际时间");
+                jsonResult.AppendFormat("\"values\":[");
+                //商务实际时间
+                jsonResult.AppendFormat("{{\"from\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.business.RSTime).ToString());
+                jsonResult.AppendFormat("\"to\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.business.RETime).ToString());
+                jsonResult.Append("\"label\":\"商务\",\"desc\":\"商务实际\",\"customClass\": \"ganttRed\"},");
+                //技术方案实际时间
+                jsonResult.AppendFormat("{{\"from\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.technology.RSTime).ToString());
+                jsonResult.AppendFormat("\"to\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.technology.RETime).ToString());
+                jsonResult.Append("\"label\":\"技术\",\"desc\":\"技术方案实际\",\"customClass\": \"ganttRed\"},");
+                //设计实际时间
+                jsonResult.AppendFormat("{{\"from\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.design.RSTime).ToString());
+                jsonResult.AppendFormat("\"to\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.design.RETime).ToString());
+                jsonResult.Append("\"label\":\"设计\",\"desc\":\"设计实际\",\"customClass\": \"ganttRed\"},");
+                //生产管理实际时间
+                jsonResult.AppendFormat("{{\"from\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.manufacture.RSTime).ToString());
+                jsonResult.AppendFormat("\"to\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.manufacture.RETime).ToString());
+                jsonResult.Append("\"label\":\"生产\",\"desc\":\"生产实际\",\"customClass\": \"ganttRed\"},");
+                //施工实际时间
+                jsonResult.AppendFormat("{{\"from\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.construction.RSTime).ToString());
+                jsonResult.AppendFormat("\"to\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.construction.RETime).ToString());
+                jsonResult.Append("\"label\":\"施工\",\"desc\":\"施工实际\",\"customClass\": \"ganttRed\"}");
+               
+                if (i<projectdt.Rows.Count-1)//判断是否最后行
+                { jsonResult.Append("]},");                   
+                }
+                else
+                {
+                    jsonResult.Append("]}]");
+                }
+
+
+            }
+                return Content( "{\"total\": " + projectdt.Rows.Count.ToString() + ",\"rows\":" + jsonResult.ToString() + "}");
+                   }
+        public class projectNode
+        {
+            public int NodeID;
+            public string NodeName;
+            public DateTime PSTime;
+            public DateTime PETime;
+            public DateTime RSTime;
+            public DateTime RETime;
+
+        }
+        public class projectInfo
+        {
+            public string ProjectID;
+            public string ProjectNo;
+            public string ProjectName;
+            public projectNode business=new projectNode();
+            public projectNode technology = new projectNode();
+            public projectNode design = new projectNode();
+            public projectNode manufacture = new projectNode();
+            public projectNode construction = new projectNode();
         }
         /// <summary>
         /// 项目清单的查询处理
@@ -384,32 +517,32 @@ namespace AchieveManageWeb.Controllers
 
             return Content(content);
         }
-       /// <summary>
-       /// 获取项目的节点详情
-       /// </summary>
-       /// <returns></returns>
+        /// <summary>
+        /// 获取项目的节点详情
+        /// </summary>
+        /// <returns></returns>
         public ActionResult GetPMNodeInfo()
         {
             //首先获取前台传递过来的参数
-            string strWhere = "1=1";           
+            string strWhere = "1=1";
             string view = Request["view"] == null ? "PMMaintain" : Request["view"];
             string ProjectID = Request["ProjectID"] == null ? "" : Request["ProjectID"];
             string ProjectNo = Request["ProjectNo"] == null ? "" : Request["ProjectNo"];
             string ProjectName = Request["ProjectName"] == null ? "" : Request["ProjectName"];
             if (ProjectID.Trim() != "" && !SqlInjection.GetString(ProjectID))   //防止sql注入
-                strWhere += string.Format(" and ProjectID = '{0}'", ProjectID.Trim()); 
-            string content = "";           
+                strWhere += string.Format(" and ProjectID = '{0}'", ProjectID.Trim());
+            string content = "";
             try
             {
-                string sqlstr =string.Format( "select * from tbMgrNodeInfo where ProjectID='{0}'" , ProjectID);
-                DataTable dt = AchieveCommon.SqlHelper.GetDataTable(SqlHelper.connStr,sqlstr);
+                string sqlstr = string.Format("select * from tbMgrNodeInfo where ProjectID='{0}'", ProjectID);
+                DataTable dt = AchieveCommon.SqlHelper.GetDataTable(SqlHelper.connStr, sqlstr);
                 string strJson = AchieveCommon.JsonHelper.ToJson(dt);
-                content = "{\"success\": true ,\"rows\":" + strJson + "}";  
+                content = "{\"success\": true ,\"rows\":" + strJson + "}";
             }
             catch (Exception ex)
             {
                 return Content("{\"msg\":\"获取数据失败," + ex.Message.Trim().Replace("\r", "").Replace("\n", "") + "\",\"success\":false}");
-            }           
+            }
 
             return Content(content);
         }
@@ -431,37 +564,37 @@ namespace AchieveManageWeb.Controllers
             {
                 UserEntity uInfo = ViewData["Account"] as UserEntity;
                 string updateby = uInfo.RealName;
-                string ProjectID =Request["ProjectID"];
-                string PSTime =Request["bsPSTime"];
-                string PETime=Request["bsPETime"];
-                string RSTime =Request["bsRSTime"];
-                string RETime=Request["bsRETime"];
+                string ProjectID = Request["ProjectID"];
+                string PSTime = Request["bsPSTime"];
+                string PETime = Request["bsPETime"];
+                string RSTime = Request["bsRSTime"];
+                string RETime = Request["bsRETime"];
                 saveNode("2", "项目商务", ProjectID, PSTime, PETime, RSTime, RETime, uInfo.AccountName);
-                 PSTime = Request["tyPSTime"];
-                 PETime = Request["tyPETime"];
-                 RSTime = Request["tyRSTime"];
-                 RETime = Request["tyRETime"];
-                 saveNode("3", "技术方案", ProjectID, PSTime, PETime, RSTime, RETime, uInfo.AccountName);
+                PSTime = Request["tyPSTime"];
+                PETime = Request["tyPETime"];
+                RSTime = Request["tyRSTime"];
+                RETime = Request["tyRETime"];
+                saveNode("3", "技术方案", ProjectID, PSTime, PETime, RSTime, RETime, uInfo.AccountName);
 
-                 PSTime = Request["dnPSTime"];
-                 PETime = Request["dnPETime"];
-                 RSTime = Request["dnRSTime"];
-                 RETime = Request["dnRETime"];
-                 saveNode("4", "设计管理", ProjectID, PSTime, PETime, RSTime, RETime, uInfo.AccountName);
+                PSTime = Request["dnPSTime"];
+                PETime = Request["dnPETime"];
+                RSTime = Request["dnRSTime"];
+                RETime = Request["dnRETime"];
+                saveNode("4", "设计管理", ProjectID, PSTime, PETime, RSTime, RETime, uInfo.AccountName);
 
-                 PSTime = Request["mePSTime"];
-                 PETime = Request["mePETime"];
-                 RSTime = Request["meRSTime"];
-                 RETime = Request["meRETime"];
-                 saveNode("5", "生产管理", ProjectID, PSTime, PETime, RSTime, RETime, uInfo.AccountName);
+                PSTime = Request["mePSTime"];
+                PETime = Request["mePETime"];
+                RSTime = Request["meRSTime"];
+                RETime = Request["meRETime"];
+                saveNode("5", "生产管理", ProjectID, PSTime, PETime, RSTime, RETime, uInfo.AccountName);
 
-                 PSTime = Request["cnPSTime"];
-                 PETime = Request["cnPETime"];
-                 RSTime = Request["cnRSTime"];
-                 RETime = Request["cnRETime"];
-                 saveNode("6", "施工管理", ProjectID, PSTime, PETime, RSTime, RETime, uInfo.AccountName);
-              
-                    return Content("{\"msg\":\"修改成功！\",\"success\":true}");         
+                PSTime = Request["cnPSTime"];
+                PETime = Request["cnPETime"];
+                RSTime = Request["cnRSTime"];
+                RETime = Request["cnRETime"];
+                saveNode("6", "施工管理", ProjectID, PSTime, PETime, RSTime, RETime, uInfo.AccountName);
+
+                return Content("{\"msg\":\"修改成功！\",\"success\":true}");
 
             }
             catch (Exception ex)
@@ -469,21 +602,22 @@ namespace AchieveManageWeb.Controllers
                 return Content("{\"msg\":\"修改失败," + ex.Message + "\",\"success\":false}");
             }
         }
-       /// <summary>
-       /// 保持项目节点信息
-       /// </summary>
-       /// <param name="nodeid"></param>
-       /// <param name="projectID"></param>
-       /// <param name="ps">计划开始时间</param>
-       /// <param name="pe"></param>
-       /// <param name="rs"></param>
-       /// <param name="re">实际结束时间</param>
-       /// <returns></returns>
-        public static bool saveNode(string nodeid,string nodename,string projectID,string ps,string pe,string rs,string re,string AccountName){            
-            string strsql= string.Format("select count(*) from tbMgrNodeInfo where ProjectID='{0}' and nodeID='{1}'",projectID,nodeid);
-            int n =Convert.ToInt32( AchieveCommon.SqlHelper.ExecuteScalar(SqlHelper.connStr, strsql));
+        /// <summary>
+        /// 保持项目节点信息
+        /// </summary>
+        /// <param name="nodeid"></param>
+        /// <param name="projectID"></param>
+        /// <param name="ps">计划开始时间</param>
+        /// <param name="pe"></param>
+        /// <param name="rs"></param>
+        /// <param name="re">实际结束时间</param>
+        /// <returns></returns>
+        public static bool saveNode(string nodeid, string nodename, string projectID, string ps, string pe, string rs, string re, string AccountName)
+        {
+            string strsql = string.Format("select count(*) from tbMgrNodeInfo where ProjectID='{0}' and nodeID='{1}'", projectID, nodeid);
+            int n = Convert.ToInt32(AchieveCommon.SqlHelper.ExecuteScalar(SqlHelper.connStr, strsql));
             int x;
-            if (n==0)
+            if (n == 0)
             {
                 string InfoID = AchieveCommon.SqlHelper.GetSerialNumber("tbMgrNodeInfo", "InfoID");
                 StringBuilder strSql = new StringBuilder();
@@ -504,14 +638,14 @@ namespace AchieveManageWeb.Controllers
                     //   new SqlParameter("@UpdateTime", DateTime.Now.ToString()) ,            
                         new SqlParameter("@UpdateBy", AccountName) 
             };
-               x= SqlHelper.ExecuteNonQuery(SqlHelper.connStr, CommandType.Text, strSql.ToString(), parameters);              
+                x = SqlHelper.ExecuteNonQuery(SqlHelper.connStr, CommandType.Text, strSql.ToString(), parameters);
             }
-            else                
+            else
             {
                 StringBuilder strSql = new StringBuilder();
                 strSql.Append("update tbMgrNodeInfo set ");
                 strSql.Append("pstime=@pstime,petime=@petime,rstime=@rstime,retime=@retime,UpdateTime=@UpdateTime,UpdateBy=@UpdateBy where projectID=@projectID and nodeid=@nodeid");
-              
+
                 SqlParameter[] parameters = {		                   
                         new SqlParameter("@pstime", ps) ,            
                         new SqlParameter("@petime",pe) , 
@@ -522,8 +656,8 @@ namespace AchieveManageWeb.Controllers
                         new SqlParameter("@UpdateTime", DateTime.Now) ,            
                         new SqlParameter("@UpdateBy", AccountName) 
             };
-                x = SqlHelper.ExecuteNonQuery(SqlHelper.connStr, CommandType.Text, strSql.ToString(), parameters);   
-       
+                x = SqlHelper.ExecuteNonQuery(SqlHelper.connStr, CommandType.Text, strSql.ToString(), parameters);
+
             }
             if (x > 0)
             {
@@ -542,15 +676,15 @@ namespace AchieveManageWeb.Controllers
         {
             return View();
         }
-       /// <summary>
-       /// 项目基本信息维护界面
-       /// </summary>
-       /// <returns></returns>
+        /// <summary>
+        /// 项目基本信息维护界面
+        /// </summary>
+        /// <returns></returns>
         public ActionResult PMBasicMaintain()
         {
             return View();
         }
-        
+
         public ActionResult ProjectGrid()
         {
             return View();

@@ -41,7 +41,7 @@
     </head>
     <body>
         <div id="ui_user_layout" class="easyui-layout" data-options="fit:true,border:false">
-            <div hidden="hidden" data-options="region:'north',split:true,border:true,collapsed:false" title="搜索条件" style="height:104px;">
+            <div display="none" hidden="hidden" data-options="region:'north',split:true,border:true,collapsed:false" title="搜索条件" style="height:104px;">
                 <div id="ui_user_search">
                     <table class="tableForm" style="width: 99%; height: 100%; background: #F5F5F5;">
                         <tr>
@@ -114,7 +114,7 @@
 
         //初始化gantt
         $(".gantt").gantt({
-            source: "ajax/data.json",
+            source: "PMGanttJson?r=" + Math.random(),
             //source: [
 
             //    {

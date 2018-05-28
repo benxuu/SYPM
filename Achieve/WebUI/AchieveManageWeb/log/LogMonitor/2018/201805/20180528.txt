@@ -1,0 +1,5760 @@
+
+ 
+记录时间：2018-05-28 12:08:15,414 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:Index
+            开始时间：2018/5/28 星期一 12:08:14
+            结束时间：2018/5/28 星期一 12:08:15
+            总 时 间：0.5439922秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:17,490 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:Index
+            开始时间：2018/5/28 星期一 12:08:15
+            结束时间：2018/5/28 星期一 12:08:17
+            总 时 间：2.0624805秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:18,294 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 12:08:18
+            结束时间：2018/5/28 星期一 12:08:18
+            总 时 间：0.0892659秒
+            Form表单数据：action=getuser
+            URL参数：r=0.07235303380597236
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:18,294 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 12:08:18
+            结束时间：2018/5/28 星期一 12:08:18
+            总 时 间：0秒
+            Form表单数据：action=getuser
+            URL参数：r=0.07235303380597236
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:18,313 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 12:08:18
+            结束时间：2018/5/28 星期一 12:08:18
+            总 时 间：0.0366185秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.45965833034371073
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:18,313 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 12:08:18
+            结束时间：2018/5/28 星期一 12:08:18
+            总 时 间：0秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.45965833034371073
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:18,647 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:08:18
+            结束时间：2018/5/28 星期一 12:08:18
+            总 时 间：0.2617018秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:18,647 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:08:18
+            结束时间：2018/5/28 星期一 12:08:18
+            总 时 间：0.0005018秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:19,030 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:08:18
+            结束时间：2018/5/28 星期一 12:08:19
+            总 时 间：0.1955212秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:19,030 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:08:19
+            结束时间：2018/5/28 星期一 12:08:19
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:19,258 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:08:19
+            结束时间：2018/5/28 星期一 12:08:19
+            总 时 间：0.2447288秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:19,259 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:08:19
+            结束时间：2018/5/28 星期一 12:08:19
+            总 时 间：0.000503秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:19,476 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:08:19
+            结束时间：2018/5/28 星期一 12:08:19
+            总 时 间：0.3294069秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:19,476 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:08:19
+            结束时间：2018/5/28 星期一 12:08:19
+            总 时 间：0.0005026秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:19,643 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:08:19
+            结束时间：2018/5/28 星期一 12:08:19
+            总 时 间：0.4021507秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:19,643 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:08:19
+            结束时间：2018/5/28 星期一 12:08:19
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:19,864 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:08:19
+            结束时间：2018/5/28 星期一 12:08:19
+            总 时 间：0.3199396秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:19,864 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:08:19
+            结束时间：2018/5/28 星期一 12:08:19
+            总 时 间：0.0005003秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:20,580 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 12:08:18
+            结束时间：2018/5/28 星期一 12:08:20
+            总 时 间：2.0790434秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:20,580 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 12:08:20
+            结束时间：2018/5/28 星期一 12:08:20
+            总 时 间：0秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:27,840 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMBasicMaintain
+            开始时间：2018/5/28 星期一 12:08:27
+            结束时间：2018/5/28 星期一 12:08:27
+            总 时 间：0.0165752秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:29,363 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMBasicMaintain
+            开始时间：2018/5/28 星期一 12:08:27
+            结束时间：2018/5/28 星期一 12:08:29
+            总 时 间：1.5225484秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:29,679 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ButtonController
+            ActionName:GetUserAuthorizeButton
+            开始时间：2018/5/28 星期一 12:08:29
+            结束时间：2018/5/28 星期一 12:08:29
+            总 时 间：0.06127秒
+            Form表单数据：KeyCode=PMBasicMaintain&KeyName=PMBasicMaintain
+            URL参数：r=0.7901557030166149
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:29,679 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ButtonController
+            ViewName:GetUserAuthorizeButton
+            开始时间：2018/5/28 星期一 12:08:29
+            结束时间：2018/5/28 星期一 12:08:29
+            总 时 间：0秒
+            Form表单数据：KeyCode=PMBasicMaintain&KeyName=PMBasicMaintain
+            URL参数：r=0.7901557030166149
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:29,909 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetAllPMInfo
+            开始时间：2018/5/28 星期一 12:08:29
+            结束时间：2018/5/28 星期一 12:08:29
+            总 时 间：0.0877724秒
+            Form表单数据：page=1&rows=20&sort=UpdateTime&order=asc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:29,909 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetAllPMInfo
+            开始时间：2018/5/28 星期一 12:08:29
+            结束时间：2018/5/28 星期一 12:08:29
+            总 时 间：0秒
+            Form表单数据：page=1&rows=20&sort=UpdateTime&order=asc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:31,204 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMGantt
+            开始时间：2018/5/28 星期一 12:08:31
+            结束时间：2018/5/28 星期一 12:08:31
+            总 时 间：0.0156201秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:08:31,214 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMGantt
+            开始时间：2018/5/28 星期一 12:08:31
+            结束时间：2018/5/28 星期一 12:08:31
+            总 时 间：0.0100282秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:09:09,682 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：projectController
+            ActionName:pmgantt
+            开始时间：2018/5/28 星期一 12:09:09
+            结束时间：2018/5/28 星期一 12:09:09
+            总 时 间：0.0522102秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:09:09,684 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：projectController
+            ViewName:pmgantt
+            开始时间：2018/5/28 星期一 12:09:09
+            结束时间：2018/5/28 星期一 12:09:09
+            总 时 间：0.0020057秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:11:08,436 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：projectController
+            ActionName:pmgantt
+            开始时间：2018/5/28 星期一 12:11:08
+            结束时间：2018/5/28 星期一 12:11:08
+            总 时 间：0.0216283秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:11:12,454 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：projectController
+            ViewName:pmgantt
+            开始时间：2018/5/28 星期一 12:11:08
+            结束时间：2018/5/28 星期一 12:11:12
+            总 时 间：4.0176998秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:41,830 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:Index
+            开始时间：2018/5/28 星期一 12:32:41
+            结束时间：2018/5/28 星期一 12:32:41
+            总 时 间：0.4417561秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:43,819 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:Index
+            开始时间：2018/5/28 星期一 12:32:41
+            结束时间：2018/5/28 星期一 12:32:43
+            总 时 间：1.9788294秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:44,771 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 12:32:44
+            结束时间：2018/5/28 星期一 12:32:44
+            总 时 间：0.0320921秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.5305158287096208
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:44,771 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 12:32:44
+            结束时间：2018/5/28 星期一 12:32:44
+            总 时 间：0秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.5305158287096208
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:44,811 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 12:32:44
+            结束时间：2018/5/28 星期一 12:32:44
+            总 时 间：0.0646984秒
+            Form表单数据：action=getuser
+            URL参数：r=0.9386074277149488
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:44,811 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 12:32:44
+            结束时间：2018/5/28 星期一 12:32:44
+            总 时 间：0秒
+            Form表单数据：action=getuser
+            URL参数：r=0.9386074277149488
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:45,048 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:32:44
+            结束时间：2018/5/28 星期一 12:32:45
+            总 时 间：0.2171254秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:45,050 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:32:45
+            结束时间：2018/5/28 星期一 12:32:45
+            总 时 间：0.0015073秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:45,476 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:32:45
+            结束时间：2018/5/28 星期一 12:32:45
+            总 时 间：0.2050668秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:45,477 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:32:45
+            结束时间：2018/5/28 星期一 12:32:45
+            总 时 间：0.0005007秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:45,683 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:32:45
+            结束时间：2018/5/28 星期一 12:32:45
+            总 时 间：0.2567151秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:45,692 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:32:45
+            结束时间：2018/5/28 星期一 12:32:45
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:45,830 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:32:45
+            结束时间：2018/5/28 星期一 12:32:45
+            总 时 间：0.2417052秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:45,877 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:32:45
+            结束时间：2018/5/28 星期一 12:32:45
+            总 时 间：0.046627秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:46,079 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:32:45
+            结束时间：2018/5/28 星期一 12:32:46
+            总 时 间：0.3454671秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:46,097 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:32:46
+            结束时间：2018/5/28 星期一 12:32:46
+            总 时 间：0.0175461秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:46,304 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:32:45
+            结束时间：2018/5/28 星期一 12:32:46
+            总 时 间：0.3609637秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:46,304 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:32:46
+            结束时间：2018/5/28 星期一 12:32:46
+            总 时 间：0.000503秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:47,025 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 12:32:45
+            结束时间：2018/5/28 星期一 12:32:47
+            总 时 间：1.9903811秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:47,025 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 12:32:47
+            结束时间：2018/5/28 星期一 12:32:47
+            总 时 间：0秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:54,801 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMGantt
+            开始时间：2018/5/28 星期一 12:32:54
+            结束时间：2018/5/28 星期一 12:32:54
+            总 时 间：0.0190937秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:32:56,186 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMGantt
+            开始时间：2018/5/28 星期一 12:32:54
+            结束时间：2018/5/28 星期一 12:32:56
+            总 时 间：1.3846775秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:36:14,070 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMGanttJson
+            开始时间：2018/5/28 星期一 12:32:56
+            结束时间：2018/5/28 星期一 12:36:14
+            总 时 间：197.6240004秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:36:42,930 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：projectController
+            ActionName:pmgantt
+            开始时间：2018/5/28 星期一 12:36:42
+            结束时间：2018/5/28 星期一 12:36:42
+            总 时 间：0.0240849秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:36:42,932 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：projectController
+            ViewName:pmgantt
+            开始时间：2018/5/28 星期一 12:36:42
+            结束时间：2018/5/28 星期一 12:36:42
+            总 时 间：0.0020057秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:13,962 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:Index
+            开始时间：2018/5/28 星期一 12:42:13
+            结束时间：2018/5/28 星期一 12:42:13
+            总 时 间：0.4367599秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:15,715 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:Index
+            开始时间：2018/5/28 星期一 12:42:13
+            结束时间：2018/5/28 星期一 12:42:15
+            总 时 间：1.7406321秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:16,412 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 12:42:16
+            结束时间：2018/5/28 星期一 12:42:16
+            总 时 间：0.0832805秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.8659950356765671
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:16,412 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 12:42:16
+            结束时间：2018/5/28 星期一 12:42:16
+            总 时 间：0秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.8659950356765671
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:16,493 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 12:42:16
+            结束时间：2018/5/28 星期一 12:42:16
+            总 时 间：0.072204秒
+            Form表单数据：action=getuser
+            URL参数：r=0.7760690023011978
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:16,493 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 12:42:16
+            结束时间：2018/5/28 星期一 12:42:16
+            总 时 间：0秒
+            Form表单数据：action=getuser
+            URL参数：r=0.7760690023011978
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:16,755 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:42:16
+            结束时间：2018/5/28 星期一 12:42:16
+            总 时 间：0.2531933秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:16,757 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:42:16
+            结束时间：2018/5/28 星期一 12:42:16
+            总 时 间：0.000501秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:17,084 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:42:16
+            结束时间：2018/5/28 星期一 12:42:17
+            总 时 间：0.1579677秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:17,084 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:42:17
+            结束时间：2018/5/28 星期一 12:42:17
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:17,301 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:42:17
+            结束时间：2018/5/28 星期一 12:42:17
+            总 时 间：0.2126441秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:17,302 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:42:17
+            结束时间：2018/5/28 星期一 12:42:17
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:17,651 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:42:17
+            结束时间：2018/5/28 星期一 12:42:17
+            总 时 间：0.4607725秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:17,651 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:42:17
+            结束时间：2018/5/28 星期一 12:42:17
+            总 时 间：0.0005022秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:17,713 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:42:17
+            结束时间：2018/5/28 星期一 12:42:17
+            总 时 间：0.3469381秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:17,713 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:42:17
+            结束时间：2018/5/28 星期一 12:42:17
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:17,930 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:42:17
+            结束时间：2018/5/28 星期一 12:42:17
+            总 时 间：0.3334149秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:17,941 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:42:17
+            结束时间：2018/5/28 星期一 12:42:17
+            总 时 间：0.0110284秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:18,464 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 12:42:16
+            结束时间：2018/5/28 星期一 12:42:18
+            总 时 间：1.9156337秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:18,464 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 12:42:18
+            结束时间：2018/5/28 星期一 12:42:18
+            总 时 间：0秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:21,250 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMGantt
+            开始时间：2018/5/28 星期一 12:42:21
+            结束时间：2018/5/28 星期一 12:42:21
+            总 时 间：0.0166391秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:42:22,732 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMGantt
+            开始时间：2018/5/28 星期一 12:42:21
+            结束时间：2018/5/28 星期一 12:42:22
+            总 时 间：1.4829394秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:43:12,384 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMGanttJson
+            开始时间：2018/5/28 星期一 12:42:23
+            结束时间：2018/5/28 星期一 12:43:04
+            总 时 间：41.5530165秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:47:22,290 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:Index
+            开始时间：2018/5/28 星期一 12:47:21
+            结束时间：2018/5/28 星期一 12:47:22
+            总 时 间：0.3720454秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:47:22,684 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMGantt
+            开始时间：2018/5/28 星期一 12:47:22
+            结束时间：2018/5/28 星期一 12:47:22
+            总 时 间：0.029605秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:47:25,208 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMGantt
+            开始时间：2018/5/28 星期一 12:47:22
+            结束时间：2018/5/28 星期一 12:47:25
+            总 时 间：2.5227043秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:47:25,447 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:Index
+            开始时间：2018/5/28 星期一 12:47:22
+            结束时间：2018/5/28 星期一 12:47:25
+            总 时 间：3.1468652秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:47:30,988 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 12:47:29
+            结束时间：2018/5/28 星期一 12:47:30
+            总 时 间：1.5120736秒
+            Form表单数据：action=getuser
+            URL参数：r=0.9337805675262534
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:47:30,988 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 12:47:30
+            结束时间：2018/5/28 星期一 12:47:30
+            总 时 间：0秒
+            Form表单数据：action=getuser
+            URL参数：r=0.9337805675262534
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:47:41,285 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 12:47:39
+            结束时间：2018/5/28 星期一 12:47:41
+            总 时 间：2.1703421秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.33413582919880436
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:47:41,285 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 12:47:41
+            结束时间：2018/5/28 星期一 12:47:41
+            总 时 间：0秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.33413582919880436
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:47:56,010 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:47:36
+            结束时间：2018/5/28 星期一 12:47:56
+            总 时 间：19.2356276秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:47:56,012 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:47:56
+            结束时间：2018/5/28 星期一 12:47:56
+            总 时 间：0.0015054秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:48:20,770 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:48:15
+            结束时间：2018/5/28 星期一 12:48:20
+            总 时 间：5.0359608秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:48:20,770 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:48:20
+            结束时间：2018/5/28 星期一 12:48:20
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:49:05,757 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:48:20
+            结束时间：2018/5/28 星期一 12:49:05
+            总 时 间：45.0516488秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:49:05,758 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:49:05
+            结束时间：2018/5/28 星期一 12:49:05
+            总 时 间：0.0005007秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:49:10,238 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:48:44
+            结束时间：2018/5/28 星期一 12:49:10
+            总 时 间：26.1113568秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:49:10,238 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:49:10
+            结束时间：2018/5/28 星期一 12:49:10
+            总 时 间：0.0005022秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:49:11,345 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:48:15
+            结束时间：2018/5/28 星期一 12:49:11
+            总 时 间：55.5280036秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:49:11,395 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:49:11
+            结束时间：2018/5/28 星期一 12:49:11
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:49:13,704 
+线程ID:[10] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:48:20
+            结束时间：2018/5/28 星期一 12:49:13
+            总 时 间：52.9390706秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:49:13,705 
+线程ID:[10] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:49:13
+            结束时间：2018/5/28 星期一 12:49:13
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:54,299 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:Index
+            开始时间：2018/5/28 星期一 12:58:53
+            结束时间：2018/5/28 星期一 12:58:54
+            总 时 间：0.6141726秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:55,991 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:Index
+            开始时间：2018/5/28 星期一 12:58:54
+            结束时间：2018/5/28 星期一 12:58:55
+            总 时 间：1.6839758秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:56,673 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 12:58:56
+            结束时间：2018/5/28 星期一 12:58:56
+            总 时 间：0.046699秒
+            Form表单数据：action=getuser
+            URL参数：r=0.6233680036074676
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:56,673 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 12:58:56
+            结束时间：2018/5/28 星期一 12:58:56
+            总 时 间：0秒
+            Form表单数据：action=getuser
+            URL参数：r=0.6233680036074676
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:56,709 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 12:58:56
+            结束时间：2018/5/28 星期一 12:58:56
+            总 时 间：0.0491945秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.6926636578017233
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:56,709 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 12:58:56
+            结束时间：2018/5/28 星期一 12:58:56
+            总 时 间：0秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.6926636578017233
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:56,836 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:58:56
+            结束时间：2018/5/28 星期一 12:58:56
+            总 时 间：0.139431秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:56,837 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:58:56
+            结束时间：2018/5/28 星期一 12:58:56
+            总 时 间：0.0010013秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:57,421 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:58:57
+            结束时间：2018/5/28 星期一 12:58:57
+            总 时 间：0.1363852秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:57,421 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:58:57
+            结束时间：2018/5/28 星期一 12:58:57
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:57,604 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:58:57
+            结束时间：2018/5/28 星期一 12:58:57
+            总 时 间：0.1509764秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:57,605 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:58:57
+            结束时间：2018/5/28 星期一 12:58:57
+            总 时 间：0.0010006秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:57,815 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:58:57
+            结束时间：2018/5/28 星期一 12:58:57
+            总 时 间：0.1564312秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:57,815 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:58:57
+            结束时间：2018/5/28 星期一 12:58:57
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:58,043 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMGantt
+            开始时间：2018/5/28 星期一 12:58:57
+            结束时间：2018/5/28 星期一 12:58:58
+            总 时 间：0.0572413秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:58,344 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:58:58
+            结束时间：2018/5/28 星期一 12:58:58
+            总 时 间：0.231138秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:58,344 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:58:58
+            结束时间：2018/5/28 星期一 12:58:58
+            总 时 间：0.0005014秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:58,782 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:58:58
+            结束时间：2018/5/28 星期一 12:58:58
+            总 时 间：0.3625027秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:58,783 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 12:58:58
+            结束时间：2018/5/28 星期一 12:58:58
+            总 时 间：0.0005007秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:58,874 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 12:58:57
+            结束时间：2018/5/28 星期一 12:58:58
+            总 时 间：1.8424472秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:58:58,875 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 12:58:58
+            结束时间：2018/5/28 星期一 12:58:58
+            总 时 间：0秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 12:59:00,112 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMGantt
+            开始时间：2018/5/28 星期一 12:58:58
+            结束时间：2018/5/28 星期一 12:59:00
+            总 时 间：2.0689934秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:49,464 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:Index
+            开始时间：2018/5/28 星期一 13:05:49
+            结束时间：2018/5/28 星期一 13:05:49
+            总 时 间：0.4391684秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:51,761 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:Index
+            开始时间：2018/5/28 星期一 13:05:49
+            结束时间：2018/5/28 星期一 13:05:51
+            总 时 间：2.2870782秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:52,539 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 13:05:52
+            结束时间：2018/5/28 星期一 13:05:52
+            总 时 间：0.079261秒
+            Form表单数据：action=getuser
+            URL参数：r=0.761714868125041
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:52,539 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 13:05:52
+            结束时间：2018/5/28 星期一 13:05:52
+            总 时 间：0秒
+            Form表单数据：action=getuser
+            URL参数：r=0.761714868125041
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:52,627 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:05:52
+            结束时间：2018/5/28 星期一 13:05:52
+            总 时 间：0.1323915秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.38147419328156396
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:52,627 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:05:52
+            结束时间：2018/5/28 星期一 13:05:52
+            总 时 间：0秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.38147419328156396
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:52,707 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:05:52
+            结束时间：2018/5/28 星期一 13:05:52
+            总 时 间：0.1966047秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:52,708 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:05:52
+            结束时间：2018/5/28 星期一 13:05:52
+            总 时 间：0.0010017秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:53,206 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:05:53
+            结束时间：2018/5/28 星期一 13:05:53
+            总 时 间：0.1319304秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:53,206 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:05:53
+            结束时间：2018/5/28 星期一 13:05:53
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:53,428 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:05:53
+            结束时间：2018/5/28 星期一 13:05:53
+            总 时 间：0.2005206秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:53,428 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:05:53
+            结束时间：2018/5/28 星期一 13:05:53
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:53,654 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:05:53
+            结束时间：2018/5/28 星期一 13:05:53
+            总 时 间：0.1725197秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:53,658 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:05:53
+            结束时间：2018/5/28 星期一 13:05:53
+            总 时 间：0.0030078秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:53,837 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:05:53
+            结束时间：2018/5/28 星期一 13:05:53
+            总 时 间：0.1595079秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:53,838 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:05:53
+            结束时间：2018/5/28 星期一 13:05:53
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:54,333 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:05:54
+            结束时间：2018/5/28 星期一 13:05:54
+            总 时 间：0.2818269秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:54,334 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:05:54
+            结束时间：2018/5/28 星期一 13:05:54
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:54,496 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:05:52
+            结束时间：2018/5/28 星期一 13:05:54
+            总 时 间：1.6674586秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:54,496 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:05:54
+            结束时间：2018/5/28 星期一 13:05:54
+            总 时 间：0秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:55,198 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMGantt
+            开始时间：2018/5/28 星期一 13:05:55
+            结束时间：2018/5/28 星期一 13:05:55
+            总 时 间：0.019127秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:05:56,765 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMGantt
+            开始时间：2018/5/28 星期一 13:05:55
+            结束时间：2018/5/28 星期一 13:05:56
+            总 时 间：1.5666622秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:37,071 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:Index
+            开始时间：2018/5/28 星期一 13:09:36
+            结束时间：2018/5/28 星期一 13:09:37
+            总 时 间：0.4512325秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:38,675 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:Index
+            开始时间：2018/5/28 星期一 13:09:37
+            结束时间：2018/5/28 星期一 13:09:38
+            总 时 间：1.5947383秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:39,341 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 13:09:39
+            结束时间：2018/5/28 星期一 13:09:39
+            总 时 间：0.0842796秒
+            Form表单数据：action=getuser
+            URL参数：r=0.9503759137128616
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:39,341 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 13:09:39
+            结束时间：2018/5/28 星期一 13:09:39
+            总 时 间：0秒
+            Form表单数据：action=getuser
+            URL参数：r=0.9503759137128616
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:39,438 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:09:39
+            结束时间：2018/5/28 星期一 13:09:39
+            总 时 间：0.0381361秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.21045324829689593
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:39,438 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:09:39
+            结束时间：2018/5/28 星期一 13:09:39
+            总 时 间：0秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.21045324829689593
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:39,596 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:09:39
+            结束时间：2018/5/28 星期一 13:09:39
+            总 时 间：0.1569582秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:39,597 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:09:39
+            结束时间：2018/5/28 星期一 13:09:39
+            总 时 间：0.0010028秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:40,168 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:09:39
+            结束时间：2018/5/28 星期一 13:09:40
+            总 时 间：0.2682798秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:40,169 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:09:40
+            结束时间：2018/5/28 星期一 13:09:40
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:40,332 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:09:40
+            结束时间：2018/5/28 星期一 13:09:40
+            总 时 间：0.2131139秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:40,333 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:09:40
+            结束时间：2018/5/28 星期一 13:09:40
+            总 时 间：0.0005022秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:40,677 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:09:40
+            结束时间：2018/5/28 星期一 13:09:40
+            总 时 间：0.4663278秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:40,744 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:09:40
+            结束时间：2018/5/28 星期一 13:09:40
+            总 时 间：0.0345913秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:40,834 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:09:40
+            结束时间：2018/5/28 星期一 13:09:40
+            总 时 间：0.391046秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:40,834 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:09:40
+            结束时间：2018/5/28 星期一 13:09:40
+            总 时 间：0.0005018秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:41,033 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:09:40
+            结束时间：2018/5/28 星期一 13:09:41
+            总 时 间：0.4587812秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:41,066 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:09:41
+            结束时间：2018/5/28 星期一 13:09:41
+            总 时 间：0.033582秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:41,680 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:09:39
+            结束时间：2018/5/28 星期一 13:09:41
+            总 时 间：2.1067024秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:41,681 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:09:41
+            结束时间：2018/5/28 星期一 13:09:41
+            总 时 间：0.0005082秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:43,746 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMGantt
+            开始时间：2018/5/28 星期一 13:09:43
+            结束时间：2018/5/28 星期一 13:09:43
+            总 时 间：0.0186465秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:09:45,163 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMGantt
+            开始时间：2018/5/28 星期一 13:09:43
+            结束时间：2018/5/28 星期一 13:09:45
+            总 时 间：1.4167212秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:06,807 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:Index
+            开始时间：2018/5/28 星期一 13:18:06
+            结束时间：2018/5/28 星期一 13:18:06
+            总 时 间：0.6292659秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:08,387 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:Index
+            开始时间：2018/5/28 星期一 13:18:06
+            结束时间：2018/5/28 星期一 13:18:08
+            总 时 间：1.5721821秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:09,073 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 13:18:09
+            结束时间：2018/5/28 星期一 13:18:09
+            总 时 间：0.0401989秒
+            Form表单数据：action=getuser
+            URL参数：r=0.502791126447534
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:09,073 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 13:18:09
+            结束时间：2018/5/28 星期一 13:18:09
+            总 时 间：0秒
+            Form表单数据：action=getuser
+            URL参数：r=0.502791126447534
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:09,095 
+线程ID:[12] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:18:09
+            结束时间：2018/5/28 星期一 13:18:09
+            总 时 间：0.0441586秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.2654613188266599
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:09,095 
+线程ID:[12] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:18:09
+            结束时间：2018/5/28 星期一 13:18:09
+            总 时 间：0秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.2654613188266599
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:09,234 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:18:09
+            结束时间：2018/5/28 星期一 13:18:09
+            总 时 间：0.1334271秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:09,235 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:18:09
+            结束时间：2018/5/28 星期一 13:18:09
+            总 时 间：0.0005014秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:09,850 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:18:09
+            结束时间：2018/5/28 星期一 13:18:09
+            总 时 间：0.1800705秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:09,850 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:18:09
+            结束时间：2018/5/28 星期一 13:18:09
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:10,099 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:18:09
+            结束时间：2018/5/28 星期一 13:18:10
+            总 时 间：0.190026秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:10,099 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:18:10
+            结束时间：2018/5/28 星期一 13:18:10
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:10,370 
+线程ID:[13] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:18:10
+            结束时间：2018/5/28 星期一 13:18:10
+            总 时 间：0.2176462秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:10,371 
+线程ID:[13] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:18:10
+            结束时间：2018/5/28 星期一 13:18:10
+            总 时 间：0.0005014秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:10,607 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:18:10
+            结束时间：2018/5/28 星期一 13:18:10
+            总 时 间：0.1835773秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:10,608 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:18:10
+            结束时间：2018/5/28 星期一 13:18:10
+            总 时 间：0.0005014秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:11,220 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:18:10
+            结束时间：2018/5/28 星期一 13:18:11
+            总 时 间：0.5821054秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:11,220 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:18:11
+            结束时间：2018/5/28 星期一 13:18:11
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:11,436 
+线程ID:[12] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:18:09
+            结束时间：2018/5/28 星期一 13:18:11
+            总 时 间：2.0805796秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:11,436 
+线程ID:[12] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:18:11
+            结束时间：2018/5/28 星期一 13:18:11
+            总 时 间：0秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:15,825 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMGantt
+            开始时间：2018/5/28 星期一 13:18:15
+            结束时间：2018/5/28 星期一 13:18:15
+            总 时 间：0.019044秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:18:17,293 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMGantt
+            开始时间：2018/5/28 星期一 13:18:15
+            结束时间：2018/5/28 星期一 13:18:17
+            总 时 间：1.468904秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:50,838 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:Index
+            开始时间：2018/5/28 星期一 13:22:50
+            结束时间：2018/5/28 星期一 13:22:50
+            总 时 间：0.3409643秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:52,205 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:Index
+            开始时间：2018/5/28 星期一 13:22:50
+            结束时间：2018/5/28 星期一 13:22:52
+            总 时 间：1.3586097秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:52,741 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:22:52
+            结束时间：2018/5/28 星期一 13:22:52
+            总 时 间：0.0787387秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.6673186138404275
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:52,742 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:22:52
+            结束时间：2018/5/28 星期一 13:22:52
+            总 时 间：0秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.6673186138404275
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:52,876 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 13:22:52
+            结束时间：2018/5/28 星期一 13:22:52
+            总 时 间：0.1840373秒
+            Form表单数据：action=getuser
+            URL参数：r=0.4571639768756255
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:52,876 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 13:22:52
+            结束时间：2018/5/28 星期一 13:22:52
+            总 时 间：0秒
+            Form表单数据：action=getuser
+            URL参数：r=0.4571639768756255
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:53,114 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:22:52
+            结束时间：2018/5/28 星期一 13:22:53
+            总 时 间：0.3198814秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:53,133 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:22:53
+            结束时间：2018/5/28 星期一 13:22:53
+            总 时 间：0.0185498秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:53,484 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:22:53
+            结束时间：2018/5/28 星期一 13:22:53
+            总 时 间：0.1780632秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:53,484 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:22:53
+            结束时间：2018/5/28 星期一 13:22:53
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:53,561 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:22:53
+            结束时间：2018/5/28 星期一 13:22:53
+            总 时 间：0.1328696秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:53,562 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:22:53
+            结束时间：2018/5/28 星期一 13:22:53
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:53,846 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:22:53
+            结束时间：2018/5/28 星期一 13:22:53
+            总 时 间：0.2828303秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:53,847 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:22:53
+            结束时间：2018/5/28 星期一 13:22:53
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:54,099 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:22:53
+            结束时间：2018/5/28 星期一 13:22:54
+            总 时 间：0.3484983秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:54,110 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:22:54
+            结束时间：2018/5/28 星期一 13:22:54
+            总 时 间：0.0005018秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:54,139 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:22:53
+            结束时间：2018/5/28 星期一 13:22:54
+            总 时 间：0.2738092秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:54,139 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:22:54
+            结束时间：2018/5/28 星期一 13:22:54
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:54,692 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:22:52
+            结束时间：2018/5/28 星期一 13:22:54
+            总 时 间：1.7983725秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:54,692 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:22:54
+            结束时间：2018/5/28 星期一 13:22:54
+            总 时 间：0秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:56,995 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMGantt
+            开始时间：2018/5/28 星期一 13:22:56
+            结束时间：2018/5/28 星期一 13:22:56
+            总 时 间：0.0176254秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:58,490 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMGantt
+            开始时间：2018/5/28 星期一 13:22:56
+            结束时间：2018/5/28 星期一 13:22:58
+            总 时 间：1.4954716秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:58,915 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMGanttJson
+            开始时间：2018/5/28 星期一 13:22:58
+            结束时间：2018/5/28 星期一 13:22:58
+            总 时 间：0.1745274秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:22:58,916 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMGanttJson
+            开始时间：2018/5/28 星期一 13:22:58
+            结束时间：2018/5/28 星期一 13:22:58
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:23:10,593 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：projectController
+            ActionName:pmgantt
+            开始时间：2018/5/28 星期一 13:23:10
+            结束时间：2018/5/28 星期一 13:23:10
+            总 时 间：0.0175669秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:23:10,596 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：projectController
+            ViewName:pmgantt
+            开始时间：2018/5/28 星期一 13:23:10
+            结束时间：2018/5/28 星期一 13:23:10
+            总 时 间：0.0024988秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:23:11,314 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：projectController
+            ActionName:PMGanttJson
+            开始时间：2018/5/28 星期一 13:23:11
+            结束时间：2018/5/28 星期一 13:23:11
+            总 时 间：0.1699802秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:23:11,314 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：projectController
+            ViewName:PMGanttJson
+            开始时间：2018/5/28 星期一 13:23:11
+            结束时间：2018/5/28 星期一 13:23:11
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:23,418 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:Index
+            开始时间：2018/5/28 星期一 13:29:23
+            结束时间：2018/5/28 星期一 13:29:23
+            总 时 间：0.3875469秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:25,423 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:Index
+            开始时间：2018/5/28 星期一 13:29:23
+            结束时间：2018/5/28 星期一 13:29:25
+            总 时 间：1.9948063秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:26,220 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 13:29:26
+            结束时间：2018/5/28 星期一 13:29:26
+            总 时 间：0.0241311秒
+            Form表单数据：action=getuser
+            URL参数：r=0.21359844231306524
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:26,220 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 13:29:26
+            结束时间：2018/5/28 星期一 13:29:26
+            总 时 间：0.000501秒
+            Form表单数据：action=getuser
+            URL参数：r=0.21359844231306524
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:26,251 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:29:26
+            结束时间：2018/5/28 星期一 13:29:26
+            总 时 间：0.0426161秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.4703495344857511
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:26,251 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:29:26
+            结束时间：2018/5/28 星期一 13:29:26
+            总 时 间：0秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.4703495344857511
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:26,398 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:29:26
+            结束时间：2018/5/28 星期一 13:29:26
+            总 时 间：0.1334065秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:26,399 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:29:26
+            结束时间：2018/5/28 星期一 13:29:26
+            总 时 间：0.0010025秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:27,075 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:29:26
+            结束时间：2018/5/28 星期一 13:29:27
+            总 时 间：0.149406秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:27,086 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:29:27
+            结束时间：2018/5/28 星期一 13:29:27
+            总 时 间：0.0105277秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:27,210 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:29:27
+            结束时间：2018/5/28 星期一 13:29:27
+            总 时 间：0.1469637秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:27,210 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:29:27
+            结束时间：2018/5/28 星期一 13:29:27
+            总 时 间：0.0005033秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:27,441 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:29:27
+            结束时间：2018/5/28 星期一 13:29:27
+            总 时 间：0.1830789秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:27,442 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:29:27
+            结束时间：2018/5/28 星期一 13:29:27
+            总 时 间：0.0010077秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:27,776 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:29:27
+            结束时间：2018/5/28 星期一 13:29:27
+            总 时 间：0.2196735秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:27,776 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:29:27
+            结束时间：2018/5/28 星期一 13:29:27
+            总 时 间：0.0005007秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:28,091 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:29:27
+            结束时间：2018/5/28 星期一 13:29:28
+            总 时 间：0.2347076秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:28,091 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 13:29:28
+            结束时间：2018/5/28 星期一 13:29:28
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:28,274 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:29:26
+            结束时间：2018/5/28 星期一 13:29:28
+            总 时 间：1.706593秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:28,274 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 13:29:28
+            结束时间：2018/5/28 星期一 13:29:28
+            总 时 间：0秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:34,256 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：projectController
+            ActionName:pmgantt
+            开始时间：2018/5/28 星期一 13:29:34
+            结束时间：2018/5/28 星期一 13:29:34
+            总 时 间：0.0401253秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:35,879 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：projectController
+            ViewName:pmgantt
+            开始时间：2018/5/28 星期一 13:29:34
+            结束时间：2018/5/28 星期一 13:29:35
+            总 时 间：1.6238144秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:36,693 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：projectController
+            ActionName:PMGanttJson
+            开始时间：2018/5/28 星期一 13:29:36
+            结束时间：2018/5/28 星期一 13:29:36
+            总 时 间：0.3134023秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:29:36,693 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：projectController
+            ViewName:PMGanttJson
+            开始时间：2018/5/28 星期一 13:29:36
+            结束时间：2018/5/28 星期一 13:29:36
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:31:40,533 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMBasicMaintain
+            开始时间：2018/5/28 星期一 13:31:40
+            结束时间：2018/5/28 星期一 13:31:40
+            总 时 间：0.0221434秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:31:40,543 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMBasicMaintain
+            开始时间：2018/5/28 星期一 13:31:40
+            结束时间：2018/5/28 星期一 13:31:40
+            总 时 间：0.0100455秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:31:40,919 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ButtonController
+            ActionName:GetUserAuthorizeButton
+            开始时间：2018/5/28 星期一 13:31:40
+            结束时间：2018/5/28 星期一 13:31:40
+            总 时 间：0.0777705秒
+            Form表单数据：KeyCode=PMBasicMaintain&KeyName=PMBasicMaintain
+            URL参数：r=0.7440011022309307
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:31:40,919 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ButtonController
+            ViewName:GetUserAuthorizeButton
+            开始时间：2018/5/28 星期一 13:31:40
+            结束时间：2018/5/28 星期一 13:31:40
+            总 时 间：0秒
+            Form表单数据：KeyCode=PMBasicMaintain&KeyName=PMBasicMaintain
+            URL参数：r=0.7440011022309307
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:31:41,121 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetAllPMInfo
+            开始时间：2018/5/28 星期一 13:31:41
+            结束时间：2018/5/28 星期一 13:31:41
+            总 时 间：0.0492113秒
+            Form表单数据：page=1&rows=20&sort=UpdateTime&order=asc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:31:41,122 
+线程ID:[5] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetAllPMInfo
+            开始时间：2018/5/28 星期一 13:31:41
+            结束时间：2018/5/28 星期一 13:31:41
+            总 时 间：0秒
+            Form表单数据：page=1&rows=20&sort=UpdateTime&order=asc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:31:59,231 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMMaintain
+            开始时间：2018/5/28 星期一 13:31:59
+            结束时间：2018/5/28 星期一 13:31:59
+            总 时 间：0.0251392秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:31:59,235 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMMaintain
+            开始时间：2018/5/28 星期一 13:31:59
+            结束时间：2018/5/28 星期一 13:31:59
+            总 时 间：0.003999秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:31:59,501 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ButtonController
+            ActionName:GetUserAuthorizeButton
+            开始时间：2018/5/28 星期一 13:31:59
+            结束时间：2018/5/28 星期一 13:31:59
+            总 时 间：0.0406457秒
+            Form表单数据：KeyCode=PMMaintain&KeyName=PMMaintain
+            URL参数：r=0.8239906574250391
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:31:59,501 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ButtonController
+            ViewName:GetUserAuthorizeButton
+            开始时间：2018/5/28 星期一 13:31:59
+            结束时间：2018/5/28 星期一 13:31:59
+            总 时 间：0秒
+            Form表单数据：KeyCode=PMMaintain&KeyName=PMMaintain
+            URL参数：r=0.8239906574250391
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:31:59,669 
+线程ID:[13] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetAllPMInfo
+            开始时间：2018/5/28 星期一 13:31:59
+            结束时间：2018/5/28 星期一 13:31:59
+            总 时 间：0.0701912秒
+            Form表单数据：page=1&rows=20&sort=UpdateTime&order=asc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:31:59,669 
+线程ID:[13] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetAllPMInfo
+            开始时间：2018/5/28 星期一 13:31:59
+            结束时间：2018/5/28 星期一 13:31:59
+            总 时 间：0秒
+            Form表单数据：page=1&rows=20&sort=UpdateTime&order=asc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:02,417 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMEdit
+            开始时间：2018/5/28 星期一 13:32:02
+            结束时间：2018/5/28 星期一 13:32:02
+            总 时 间：0.0170755秒
+            Form表单数据：
+            URL参数：_=1527485519283
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:02,431 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMEdit
+            开始时间：2018/5/28 星期一 13:32:02
+            结束时间：2018/5/28 星期一 13:32:02
+            总 时 间：0.0135333秒
+            Form表单数据：
+            URL参数：_=1527485519283
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:03,029 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:32:02
+            结束时间：2018/5/28 星期一 13:32:03
+            总 时 间：0.0492148秒
+            Form表单数据：ProjectID=201805200003&KeyName=PMMaintain
+            URL参数：r=0.8096494388490261
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:03,029 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:32:03
+            结束时间：2018/5/28 星期一 13:32:03
+            总 时 间：0秒
+            Form表单数据：ProjectID=201805200003&KeyName=PMMaintain
+            URL参数：r=0.8096494388490261
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:11,267 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMEdit
+            开始时间：2018/5/28 星期一 13:32:11
+            结束时间：2018/5/28 星期一 13:32:11
+            总 时 间：0.0151361秒
+            Form表单数据：
+            URL参数：_=1527485519285
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:11,270 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMEdit
+            开始时间：2018/5/28 星期一 13:32:11
+            结束时间：2018/5/28 星期一 13:32:11
+            总 时 间：0.0030045秒
+            Form表单数据：
+            URL参数：_=1527485519285
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:11,842 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:32:11
+            结束时间：2018/5/28 星期一 13:32:11
+            总 时 间：0.0757633秒
+            Form表单数据：ProjectID=201805250002&KeyName=PMMaintain
+            URL参数：r=0.14686549210211508
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:11,842 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:32:11
+            结束时间：2018/5/28 星期一 13:32:11
+            总 时 间：0秒
+            Form表单数据：ProjectID=201805250002&KeyName=PMMaintain
+            URL参数：r=0.14686549210211508
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:21,365 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMEdit
+            开始时间：2018/5/28 星期一 13:32:21
+            结束时间：2018/5/28 星期一 13:32:21
+            总 时 间：0.0135524秒
+            Form表单数据：
+            URL参数：_=1527485519287
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:21,368 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMEdit
+            开始时间：2018/5/28 星期一 13:32:21
+            结束时间：2018/5/28 星期一 13:32:21
+            总 时 间：0.0020064秒
+            Form表单数据：
+            URL参数：_=1527485519287
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:21,871 
+线程ID:[13] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:32:21
+            结束时间：2018/5/28 星期一 13:32:21
+            总 时 间：0.0305962秒
+            Form表单数据：ProjectID=201805200001&KeyName=PMMaintain
+            URL参数：r=0.497930983656935
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:21,871 
+线程ID:[13] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:32:21
+            结束时间：2018/5/28 星期一 13:32:21
+            总 时 间：0秒
+            Form表单数据：ProjectID=201805200001&KeyName=PMMaintain
+            URL参数：r=0.497930983656935
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:34,930 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:EditPM
+            开始时间：2018/5/28 星期一 13:32:34
+            结束时间：2018/5/28 星期一 13:32:34
+            总 时 间：0.1602854秒
+            Form表单数据：KeyCode=CreatePMBill&ProjectID=201805200001&bsPSTime=2018-05-22&bsPETime=2018-06-05&bsRSTime=2018-05-28&bsRETime=2018-05-30&dnPSTime=2018-05-28&dnPETime=2018-05-28&dnRSTime=2018-05-28&dnRETime=2018-05-28&mePSTime=2018-05-25&mePETime=1900-01-01&meRSTime=2018-05-25&meRETime=1900-01-01&cnPSTime=2018-05-28&cnPETime=2018-05-21&cnRSTime=2018-05-24&cnRETime=2018-05-22&tyPSTime=2018-01-24&tyPETime=2018-11-21&tyRSTime=2018-03-24&tyRETime=2018-04-24
+            URL参数：r=0.07870557692098301
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:34,930 
+线程ID:[7] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:EditPM
+            开始时间：2018/5/28 星期一 13:32:34
+            结束时间：2018/5/28 星期一 13:32:34
+            总 时 间：0秒
+            Form表单数据：KeyCode=CreatePMBill&ProjectID=201805200001&bsPSTime=2018-05-22&bsPETime=2018-06-05&bsRSTime=2018-05-28&bsRETime=2018-05-30&dnPSTime=2018-05-28&dnPETime=2018-05-28&dnRSTime=2018-05-28&dnRETime=2018-05-28&mePSTime=2018-05-25&mePETime=1900-01-01&meRSTime=2018-05-25&meRETime=1900-01-01&cnPSTime=2018-05-28&cnPETime=2018-05-21&cnRSTime=2018-05-24&cnRETime=2018-05-22&tyPSTime=2018-01-24&tyPETime=2018-11-21&tyRSTime=2018-03-24&tyRETime=2018-04-24
+            URL参数：r=0.07870557692098301
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:35,033 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetAllPMInfo
+            开始时间：2018/5/28 星期一 13:32:34
+            结束时间：2018/5/28 星期一 13:32:35
+            总 时 间：0.0496579秒
+            Form表单数据：page=1&rows=20&sort=UpdateTime&order=asc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:35,034 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetAllPMInfo
+            开始时间：2018/5/28 星期一 13:32:35
+            结束时间：2018/5/28 星期一 13:32:35
+            总 时 间：0.0005022秒
+            Form表单数据：page=1&rows=20&sort=UpdateTime&order=asc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:38,733 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMEdit
+            开始时间：2018/5/28 星期一 13:32:38
+            结束时间：2018/5/28 星期一 13:32:38
+            总 时 间：0.0156274秒
+            Form表单数据：
+            URL参数：_=1527485519289
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:38,736 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMEdit
+            开始时间：2018/5/28 星期一 13:32:38
+            结束时间：2018/5/28 星期一 13:32:38
+            总 时 间：0.0025094秒
+            Form表单数据：
+            URL参数：_=1527485519289
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:39,313 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:32:39
+            结束时间：2018/5/28 星期一 13:32:39
+            总 时 间：0.0471688秒
+            Form表单数据：ProjectID=201805200001&KeyName=PMMaintain
+            URL参数：r=0.6510547889022267
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:39,313 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:32:39
+            结束时间：2018/5/28 星期一 13:32:39
+            总 时 间：0秒
+            Form表单数据：ProjectID=201805200001&KeyName=PMMaintain
+            URL参数：r=0.6510547889022267
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:45,823 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMEdit
+            开始时间：2018/5/28 星期一 13:32:45
+            结束时间：2018/5/28 星期一 13:32:45
+            总 时 间：0.0135937秒
+            Form表单数据：
+            URL参数：_=1527485519291
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:45,826 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMEdit
+            开始时间：2018/5/28 星期一 13:32:45
+            结束时间：2018/5/28 星期一 13:32:45
+            总 时 间：0.0019966秒
+            Form表单数据：
+            URL参数：_=1527485519291
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:46,385 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:32:46
+            结束时间：2018/5/28 星期一 13:32:46
+            总 时 间：0.0713125秒
+            Form表单数据：ProjectID=201805250001&KeyName=PMMaintain
+            URL参数：r=0.23539114610962764
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:46,386 
+线程ID:[11] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:32:46
+            结束时间：2018/5/28 星期一 13:32:46
+            总 时 间：0秒
+            Form表单数据：ProjectID=201805250001&KeyName=PMMaintain
+            URL参数：r=0.23539114610962764
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:52,850 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMEdit
+            开始时间：2018/5/28 星期一 13:32:52
+            结束时间：2018/5/28 星期一 13:32:52
+            总 时 间：0.0180768秒
+            Form表单数据：
+            URL参数：_=1527485519293
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:52,853 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMEdit
+            开始时间：2018/5/28 星期一 13:32:52
+            结束时间：2018/5/28 星期一 13:32:52
+            总 时 间：0.0030063秒
+            Form表单数据：
+            URL参数：_=1527485519293
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:53,425 
+线程ID:[13] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:32:53
+            结束时间：2018/5/28 星期一 13:32:53
+            总 时 间：0.0813059秒
+            Form表单数据：ProjectID=201805270001&KeyName=PMMaintain
+            URL参数：r=0.3375078864950358
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:32:53,425 
+线程ID:[13] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:32:53
+            结束时间：2018/5/28 星期一 13:32:53
+            总 时 间：0秒
+            Form表单数据：ProjectID=201805270001&KeyName=PMMaintain
+            URL参数：r=0.3375078864950358
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:33:05,042 
+线程ID:[17] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMEdit
+            开始时间：2018/5/28 星期一 13:33:05
+            结束时间：2018/5/28 星期一 13:33:05
+            总 时 间：0.0190931秒
+            Form表单数据：
+            URL参数：_=1527485519295
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:33:05,047 
+线程ID:[17] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMEdit
+            开始时间：2018/5/28 星期一 13:33:05
+            结束时间：2018/5/28 星期一 13:33:05
+            总 时 间：0.0050135秒
+            Form表单数据：
+            URL参数：_=1527485519295
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:33:05,579 
+线程ID:[16] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:33:05
+            结束时间：2018/5/28 星期一 13:33:05
+            总 时 间：0.0361216秒
+            Form表单数据：ProjectID=201805200002&KeyName=PMMaintain
+            URL参数：r=0.5547935272242759
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:33:05,579 
+线程ID:[16] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:33:05
+            结束时间：2018/5/28 星期一 13:33:05
+            总 时 间：0秒
+            Form表单数据：ProjectID=201805200002&KeyName=PMMaintain
+            URL参数：r=0.5547935272242759
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:33:20,320 
+线程ID:[16] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:EditPM
+            开始时间：2018/5/28 星期一 13:33:20
+            结束时间：2018/5/28 星期一 13:33:20
+            总 时 间：0.1475342秒
+            Form表单数据：KeyCode=CreatePMBill&ProjectID=201805200002&bsPSTime=2018-05-07&bsPETime=2018-05-22&bsRSTime=2018-05-15&bsRETime=2018-05-17&dnPSTime=2018-05-01&dnPETime=2018-05-27&dnRSTime=2018-05-03&dnRETime=2018-05-29&mePSTime=2018-05-28&mePETime=2018-05-28&meRSTime=2018-05-28&meRETime=2018-05-28&cnPSTime=2018-05-25&cnPETime=2018-05-07&cnRSTime=2018-05-15&cnRETime=2018-05-03&tyPSTime=2018-05-25&tyPETime=2018-05-25&tyRSTime=2018-05-25&tyRETime=2018-05-25
+            URL参数：r=0.1058245543872407
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:33:20,320 
+线程ID:[16] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:EditPM
+            开始时间：2018/5/28 星期一 13:33:20
+            结束时间：2018/5/28 星期一 13:33:20
+            总 时 间：0秒
+            Form表单数据：KeyCode=CreatePMBill&ProjectID=201805200002&bsPSTime=2018-05-07&bsPETime=2018-05-22&bsRSTime=2018-05-15&bsRETime=2018-05-17&dnPSTime=2018-05-01&dnPETime=2018-05-27&dnRSTime=2018-05-03&dnRETime=2018-05-29&mePSTime=2018-05-28&mePETime=2018-05-28&meRSTime=2018-05-28&meRETime=2018-05-28&cnPSTime=2018-05-25&cnPETime=2018-05-07&cnRSTime=2018-05-15&cnRETime=2018-05-03&tyPSTime=2018-05-25&tyPETime=2018-05-25&tyRSTime=2018-05-25&tyRETime=2018-05-25
+            URL参数：r=0.1058245543872407
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:33:20,424 
+线程ID:[14] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetAllPMInfo
+            开始时间：2018/5/28 星期一 13:33:20
+            结束时间：2018/5/28 星期一 13:33:20
+            总 时 间：0.0366886秒
+            Form表单数据：page=1&rows=20&sort=UpdateTime&order=asc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:33:20,424 
+线程ID:[14] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetAllPMInfo
+            开始时间：2018/5/28 星期一 13:33:20
+            结束时间：2018/5/28 星期一 13:33:20
+            总 时 间：0秒
+            Form表单数据：page=1&rows=20&sort=UpdateTime&order=asc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:33:27,912 
+线程ID:[13] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMGantt
+            开始时间：2018/5/28 星期一 13:33:27
+            结束时间：2018/5/28 星期一 13:33:27
+            总 时 间：0.0180805秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:33:27,913 
+线程ID:[13] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMGantt
+            开始时间：2018/5/28 星期一 13:33:27
+            结束时间：2018/5/28 星期一 13:33:27
+            总 时 间：0.0015035秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:33:28,319 
+线程ID:[14] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMGanttJson
+            开始时间：2018/5/28 星期一 13:33:28
+            结束时间：2018/5/28 星期一 13:33:28
+            总 时 间：0.156465秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:33:28,319 
+线程ID:[14] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMGanttJson
+            开始时间：2018/5/28 星期一 13:33:28
+            结束时间：2018/5/28 星期一 13:33:28
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:33:37,927 
+线程ID:[13] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：projectController
+            ActionName:pmgantt
+            开始时间：2018/5/28 星期一 13:33:37
+            结束时间：2018/5/28 星期一 13:33:37
+            总 时 间：0.0281376秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:33:37,929 
+线程ID:[13] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：projectController
+            ViewName:pmgantt
+            开始时间：2018/5/28 星期一 13:33:37
+            结束时间：2018/5/28 星期一 13:33:37
+            总 时 间：0.0025067秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:33:38,763 
+线程ID:[15] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：projectController
+            ActionName:PMGanttJson
+            开始时间：2018/5/28 星期一 13:33:38
+            结束时间：2018/5/28 星期一 13:33:38
+            总 时 间：0.1845669秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:33:38,763 
+线程ID:[15] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：projectController
+            ViewName:PMGanttJson
+            开始时间：2018/5/28 星期一 13:33:38
+            结束时间：2018/5/28 星期一 13:33:38
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:34:52,913 
+线程ID:[14] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：projectController
+            ActionName:pmgantt
+            开始时间：2018/5/28 星期一 13:34:52
+            结束时间：2018/5/28 星期一 13:34:52
+            总 时 间：0.0266493秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:34:57,338 
+线程ID:[14] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：projectController
+            ViewName:pmgantt
+            开始时间：2018/5/28 星期一 13:34:52
+            结束时间：2018/5/28 星期一 13:34:57
+            总 时 间：4.4242588秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:34:58,191 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：projectController
+            ActionName:PMGanttJson
+            开始时间：2018/5/28 星期一 13:34:57
+            结束时间：2018/5/28 星期一 13:34:58
+            总 时 间：0.2461773秒
+            Form表单数据：
+            URL参数：r=0.46419958268853656
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:34:58,191 
+线程ID:[18] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：projectController
+            ViewName:PMGanttJson
+            开始时间：2018/5/28 星期一 13:34:58
+            结束时间：2018/5/28 星期一 13:34:58
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：r=0.46419958268853656
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:45:34,357 
+线程ID:[35] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMMaintain
+            开始时间：2018/5/28 星期一 13:45:34
+            结束时间：2018/5/28 星期一 13:45:34
+            总 时 间：0.0381244秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:45:34,362 
+线程ID:[35] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMMaintain
+            开始时间：2018/5/28 星期一 13:45:34
+            结束时间：2018/5/28 星期一 13:45:34
+            总 时 间：0.0050128秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:45:34,683 
+线程ID:[37] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ButtonController
+            ActionName:GetUserAuthorizeButton
+            开始时间：2018/5/28 星期一 13:45:34
+            结束时间：2018/5/28 星期一 13:45:34
+            总 时 间：0.0411881秒
+            Form表单数据：KeyCode=PMMaintain&KeyName=PMMaintain
+            URL参数：r=0.39658077297696503
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:45:34,683 
+线程ID:[37] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ButtonController
+            ViewName:GetUserAuthorizeButton
+            开始时间：2018/5/28 星期一 13:45:34
+            结束时间：2018/5/28 星期一 13:45:34
+            总 时 间：0秒
+            Form表单数据：KeyCode=PMMaintain&KeyName=PMMaintain
+            URL参数：r=0.39658077297696503
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:45:34,877 
+线程ID:[35] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetAllPMInfo
+            开始时间：2018/5/28 星期一 13:45:34
+            结束时间：2018/5/28 星期一 13:45:34
+            总 时 间：0.0472054秒
+            Form表单数据：page=1&rows=20&sort=UpdateTime&order=asc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:45:34,877 
+线程ID:[35] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetAllPMInfo
+            开始时间：2018/5/28 星期一 13:45:34
+            结束时间：2018/5/28 星期一 13:45:34
+            总 时 间：0秒
+            Form表单数据：page=1&rows=20&sort=UpdateTime&order=asc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:45:43,319 
+线程ID:[33] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMEdit
+            开始时间：2018/5/28 星期一 13:45:43
+            结束时间：2018/5/28 星期一 13:45:43
+            总 时 间：0.0150431秒
+            Form表单数据：
+            URL参数：_=1527486334426
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:45:43,337 
+线程ID:[33] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMEdit
+            开始时间：2018/5/28 星期一 13:45:43
+            结束时间：2018/5/28 星期一 13:45:43
+            总 时 间：0.0180491秒
+            Form表单数据：
+            URL参数：_=1527486334426
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:45:43,901 
+线程ID:[33] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:45:43
+            结束时间：2018/5/28 星期一 13:45:43
+            总 时 间：0.0551905秒
+            Form表单数据：ProjectID=201805200001&KeyName=PMMaintain
+            URL参数：r=0.1764612427336818
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:45:43,901 
+线程ID:[33] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:45:43
+            结束时间：2018/5/28 星期一 13:45:43
+            总 时 间：0秒
+            Form表单数据：ProjectID=201805200001&KeyName=PMMaintain
+            URL参数：r=0.1764612427336818
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:46:38,624 
+线程ID:[33] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:EditPM
+            开始时间：2018/5/28 星期一 13:46:38
+            结束时间：2018/5/28 星期一 13:46:38
+            总 时 间：0.1394115秒
+            Form表单数据：KeyCode=CreatePMBill&ProjectID=201805200001&bsPSTime=2018-05-22&bsPETime=2018-06-05&bsRSTime=2018-05-28&bsRETime=2018-05-30&dnPSTime=2018-05-28&dnPETime=2018-05-28&dnRSTime=2018-05-28&dnRETime=2018-05-28&mePSTime=2018-05-25&mePETime=2018-05-28&meRSTime=2018-05-25&meRETime=2018-05-28&cnPSTime=2018-05-28&cnPETime=2018-05-21&cnRSTime=2018-05-24&cnRETime=2018-05-22&tyPSTime=2018-01-24&tyPETime=2018-11-21&tyRSTime=2018-03-24&tyRETime=2018-04-24
+            URL参数：r=0.14237946616572894
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:46:38,624 
+线程ID:[33] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:EditPM
+            开始时间：2018/5/28 星期一 13:46:38
+            结束时间：2018/5/28 星期一 13:46:38
+            总 时 间：0秒
+            Form表单数据：KeyCode=CreatePMBill&ProjectID=201805200001&bsPSTime=2018-05-22&bsPETime=2018-06-05&bsRSTime=2018-05-28&bsRETime=2018-05-30&dnPSTime=2018-05-28&dnPETime=2018-05-28&dnRSTime=2018-05-28&dnRETime=2018-05-28&mePSTime=2018-05-25&mePETime=2018-05-28&meRSTime=2018-05-25&meRETime=2018-05-28&cnPSTime=2018-05-28&cnPETime=2018-05-21&cnRSTime=2018-05-24&cnRETime=2018-05-22&tyPSTime=2018-01-24&tyPETime=2018-11-21&tyRSTime=2018-03-24&tyRETime=2018-04-24
+            URL参数：r=0.14237946616572894
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:46:38,725 
+线程ID:[36] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetAllPMInfo
+            开始时间：2018/5/28 星期一 13:46:38
+            结束时间：2018/5/28 星期一 13:46:38
+            总 时 间：0.0391833秒
+            Form表单数据：page=1&rows=20&sort=UpdateTime&order=asc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:46:38,726 
+线程ID:[36] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetAllPMInfo
+            开始时间：2018/5/28 星期一 13:46:38
+            结束时间：2018/5/28 星期一 13:46:38
+            总 时 间：0秒
+            Form表单数据：page=1&rows=20&sort=UpdateTime&order=asc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:46:42,701 
+线程ID:[33] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMEdit
+            开始时间：2018/5/28 星期一 13:46:42
+            结束时间：2018/5/28 星期一 13:46:42
+            总 时 间：0.015059秒
+            Form表单数据：
+            URL参数：_=1527486334428
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:46:42,704 
+线程ID:[33] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMEdit
+            开始时间：2018/5/28 星期一 13:46:42
+            结束时间：2018/5/28 星期一 13:46:42
+            总 时 间：0.0020046秒
+            Form表单数据：
+            URL参数：_=1527486334428
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:46:43,197 
+线程ID:[39] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:46:43
+            结束时间：2018/5/28 星期一 13:46:43
+            总 时 间：0.0451662秒
+            Form表单数据：ProjectID=201805200001&KeyName=PMMaintain
+            URL参数：r=0.10947462592495905
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:46:43,197 
+线程ID:[39] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:46:43
+            结束时间：2018/5/28 星期一 13:46:43
+            总 时 间：0秒
+            Form表单数据：ProjectID=201805200001&KeyName=PMMaintain
+            URL参数：r=0.10947462592495905
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:46:49,602 
+线程ID:[33] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMMaintain
+            开始时间：2018/5/28 星期一 13:46:49
+            结束时间：2018/5/28 星期一 13:46:49
+            总 时 间：0.016148秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:46:49,606 
+线程ID:[33] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMMaintain
+            开始时间：2018/5/28 星期一 13:46:49
+            结束时间：2018/5/28 星期一 13:46:49
+            总 时 间：0.0040099秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:46:49,898 
+线程ID:[38] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ButtonController
+            ActionName:GetUserAuthorizeButton
+            开始时间：2018/5/28 星期一 13:46:49
+            结束时间：2018/5/28 星期一 13:46:49
+            总 时 间：0.0431768秒
+            Form表单数据：KeyCode=PMMaintain&KeyName=PMMaintain
+            URL参数：r=0.7317386181220789
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:46:49,898 
+线程ID:[38] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ButtonController
+            ViewName:GetUserAuthorizeButton
+            开始时间：2018/5/28 星期一 13:46:49
+            结束时间：2018/5/28 星期一 13:46:49
+            总 时 间：0秒
+            Form表单数据：KeyCode=PMMaintain&KeyName=PMMaintain
+            URL参数：r=0.7317386181220789
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:46:50,069 
+线程ID:[33] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetAllPMInfo
+            开始时间：2018/5/28 星期一 13:46:49
+            结束时间：2018/5/28 星期一 13:46:50
+            总 时 间：0.0702287秒
+            Form表单数据：page=1&rows=20&sort=UpdateTime&order=asc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:46:50,069 
+线程ID:[33] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetAllPMInfo
+            开始时间：2018/5/28 星期一 13:46:50
+            结束时间：2018/5/28 星期一 13:46:50
+            总 时 间：0秒
+            Form表单数据：page=1&rows=20&sort=UpdateTime&order=asc
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:46:55,848 
+线程ID:[33] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMEdit
+            开始时间：2018/5/28 星期一 13:46:55
+            结束时间：2018/5/28 星期一 13:46:55
+            总 时 间：0.016132秒
+            Form表单数据：
+            URL参数：_=1527486409669
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:46:55,850 
+线程ID:[33] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMEdit
+            开始时间：2018/5/28 星期一 13:46:55
+            结束时间：2018/5/28 星期一 13:46:55
+            总 时 间：0.0020034秒
+            Form表单数据：
+            URL参数：_=1527486409669
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:46:56,380 
+线程ID:[39] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:46:56
+            结束时间：2018/5/28 星期一 13:46:56
+            总 时 间：0.0441484秒
+            Form表单数据：ProjectID=201805200001&KeyName=PMMaintain
+            URL参数：r=0.7993850006079888
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:46:56,380 
+线程ID:[39] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:46:56
+            结束时间：2018/5/28 星期一 13:46:56
+            总 时 间：0秒
+            Form表单数据：ProjectID=201805200001&KeyName=PMMaintain
+            URL参数：r=0.7993850006079888
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:48:58,096 
+线程ID:[39] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMEdit
+            开始时间：2018/5/28 星期一 13:48:58
+            结束时间：2018/5/28 星期一 13:48:58
+            总 时 间：0.0160509秒
+            Form表单数据：
+            URL参数：_=1527486409671
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:48:58,101 
+线程ID:[39] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMEdit
+            开始时间：2018/5/28 星期一 13:48:58
+            结束时间：2018/5/28 星期一 13:48:58
+            总 时 间：0.0050124秒
+            Form表单数据：
+            URL参数：_=1527486409671
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:48:58,675 
+线程ID:[40] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:48:58
+            结束时间：2018/5/28 星期一 13:48:58
+            总 时 间：0.0641909秒
+            Form表单数据：ProjectID=201805200002&KeyName=PMMaintain
+            URL参数：r=0.5359886422089524
+                    
+ 
+
+ 
+记录时间：2018-05-28 13:48:58,676 
+线程ID:[40] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:GetPMNodeInfo
+            开始时间：2018/5/28 星期一 13:48:58
+            结束时间：2018/5/28 星期一 13:48:58
+            总 时 间：0秒
+            Form表单数据：ProjectID=201805200002&KeyName=PMMaintain
+            URL参数：r=0.5359886422089524
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:19,732 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:Index
+            开始时间：2018/5/28 星期一 14:00:19
+            结束时间：2018/5/28 星期一 14:00:19
+            总 时 间：0.3259359秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:21,031 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:Index
+            开始时间：2018/5/28 星期一 14:00:19
+            结束时间：2018/5/28 星期一 14:00:21
+            总 时 间：1.2924316秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:21,502 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 14:00:21
+            结束时间：2018/5/28 星期一 14:00:21
+            总 时 间：0.0551533秒
+            Form表单数据：action=getuser
+            URL参数：r=0.7353243980178295
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:21,502 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:CheckIsChangePwd
+            开始时间：2018/5/28 星期一 14:00:21
+            结束时间：2018/5/28 星期一 14:00:21
+            总 时 间：0秒
+            Form表单数据：action=getuser
+            URL参数：r=0.7353243980178295
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:21,558 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 14:00:21
+            结束时间：2018/5/28 星期一 14:00:21
+            总 时 间：0.0963037秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.9836197889716194
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:21,558 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 14:00:21
+            结束时间：2018/5/28 星期一 14:00:21
+            总 时 间：0秒
+            Form表单数据：key=columns&weekadjust=0
+            URL参数：r=0.9836197889716194
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:21,804 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 14:00:21
+            结束时间：2018/5/28 星期一 14:00:21
+            总 时 间：0.2166528秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:21,805 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 14:00:21
+            结束时间：2018/5/28 星期一 14:00:21
+            总 时 间：0.0010033秒
+            Form表单数据：id=0
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:22,097 
+线程ID:[10] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 14:00:21
+            结束时间：2018/5/28 星期一 14:00:22
+            总 时 间：0.1524451秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:22,097 
+线程ID:[10] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 14:00:22
+            结束时间：2018/5/28 星期一 14:00:22
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1039
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:22,340 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 14:00:22
+            结束时间：2018/5/28 星期一 14:00:22
+            总 时 间：0.2426937秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:22,340 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 14:00:22
+            结束时间：2018/5/28 星期一 14:00:22
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1044
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:22,609 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 14:00:22
+            结束时间：2018/5/28 星期一 14:00:22
+            总 时 间：0.3871075秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:22,640 
+线程ID:[8] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 14:00:22
+            结束时间：2018/5/28 星期一 14:00:22
+            总 时 间：0.0310821秒
+            Form表单数据：
+            URL参数：id=14
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:22,740 
+线程ID:[10] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 14:00:22
+            结束时间：2018/5/28 星期一 14:00:22
+            总 时 间：0.3620536秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:22,749 
+线程ID:[10] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 14:00:22
+            结束时间：2018/5/28 星期一 14:00:22
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1030
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:22,870 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 14:00:22
+            结束时间：2018/5/28 星期一 14:00:22
+            总 时 间：0.2196019秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:22,870 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetTreeByEasyui
+            开始时间：2018/5/28 星期一 14:00:22
+            结束时间：2018/5/28 星期一 14:00:22
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：id=1
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:23,480 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：HomeController
+            ActionName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 14:00:21
+            结束时间：2018/5/28 星期一 14:00:23
+            总 时 间：1.7808224秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:23,480 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：HomeController
+            ViewName:GetOperWeekAlert
+            开始时间：2018/5/28 星期一 14:00:23
+            结束时间：2018/5/28 星期一 14:00:23
+            总 时 间：0秒
+            Form表单数据：key=datarows&weekadjust=0
+            URL参数：key=datarows
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:25,944 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMGantt
+            开始时间：2018/5/28 星期一 14:00:25
+            结束时间：2018/5/28 星期一 14:00:25
+            总 时 间：0.0160687秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:27,402 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMGantt
+            开始时间：2018/5/28 星期一 14:00:25
+            结束时间：2018/5/28 星期一 14:00:27
+            总 时 间：1.4578602秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:27,880 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：ProjectController
+            ActionName:PMGanttJson
+            开始时间：2018/5/28 星期一 14:00:27
+            结束时间：2018/5/28 星期一 14:00:27
+            总 时 间：0.200617秒
+            Form表单数据：
+            URL参数：r=0.742967768840795
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:27,880 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：ProjectController
+            ViewName:PMGanttJson
+            开始时间：2018/5/28 星期一 14:00:27
+            结束时间：2018/5/28 星期一 14:00:27
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：r=0.742967768840795
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:45,181 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：projectController
+            ActionName:pmgantt
+            开始时间：2018/5/28 星期一 14:00:45
+            结束时间：2018/5/28 星期一 14:00:45
+            总 时 间：0.0211113秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:45,186 
+线程ID:[6] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：projectController
+            ViewName:pmgantt
+            开始时间：2018/5/28 星期一 14:00:45
+            结束时间：2018/5/28 星期一 14:00:45
+            总 时 间：0.0050128秒
+            Form表单数据：
+            URL参数：
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:45,899 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            Action执行时间监控：
+            ControllerName：projectController
+            ActionName:PMGanttJson
+            开始时间：2018/5/28 星期一 14:00:45
+            结束时间：2018/5/28 星期一 14:00:45
+            总 时 间：0.2497194秒
+            Form表单数据：
+            URL参数：r=0.16038555694284073
+                    
+ 
+
+ 
+记录时间：2018-05-28 14:00:45,899 
+线程ID:[9] 
+日志级别：  INFO  
+跟踪描述：
+            View视图生成时间监控：
+            ControllerName：projectController
+            ViewName:PMGanttJson
+            开始时间：2018/5/28 星期一 14:00:45
+            结束时间：2018/5/28 星期一 14:00:45
+            总 时 间：0秒
+            Form表单数据：
+            URL参数：r=0.16038555694284073
+                    
+ 
