@@ -8,26 +8,24 @@
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>项目管理</title>
-
-    <link href="~/Content/themes/icon.css" rel="stylesheet" />
-    <!--
-
-        -->
+    <link href="~/Scripts/jquery-easyui-1.4.4/themes/bootstrap/easyui.css" rel="stylesheet" />
     <script src="~/Scripts/jquery-easyui-1.4.4/jquery.min.js"></script>
+    <script src="~/jQuery.Gantt/gantt1/js/jquery-2.1.4.min.js"></script>
     <script src="~/Scripts/jquery-easyui-1.4.4/jquery.easyui.min.js"></script>
     <script src="~/Scripts/jquery-easyui-1.4.4/locale/easyui-lang-zh_CN.js"></script>
-
-    <link href="~/Scripts/jquery-easyui-1.4.4/themes/bootstrap/easyui.css" rel="stylesheet" />
-
+    <script src="~/jQuery.Gantt/gantt1/js/bootstrap.min.js"></script>
+    <script src="~/jQuery.Gantt/gantt1/js/jquery.fn.gantt.js" charset="GB2312"></script>
+    <script src="~/jQuery.Gantt/gantt1/js/prettify.min.js"></script>
+    <link href="~/Content/themes/icon.css" rel="stylesheet" />
+    <!--
+        -->
     <link href="~/Content/themes/table.css" rel="stylesheet" />
-
-
         <link href="~/jQuery.Gantt/gantt1/css/style.css" rel="stylesheet" />
         <style type="text/css">
             body {
                 font-family: Helvetica, Arial, sans-serif;
                 font-size: 13px;
-                padding: 0 0 50px 0;
+                padding: 0 0 10px 0;
             }
 
             .contain {
@@ -38,204 +36,92 @@
         <link href="~/jQuery.Gantt/gantt1/css/bootstrap.min.css" rel="stylesheet" />
         <link href="~/jQuery.Gantt/gantt1/css/prettify.min.css" rel="stylesheet" />
 
-    </head>
-    <body>
-        <div id="ui_user_layout" class="easyui-layout" data-options="fit:true,border:false">
-            <div display="none" hidden="hidden" data-options="region:'north',split:true,border:true,collapsed:false" title="搜索条件" style="height:104px;">
-                <div id="ui_user_search">
-                    <table class="tableForm" style="width: 99%; height: 100%; background: #F5F5F5;">
-                        <tr>
-                            <th>
-                                项目编号：
-                            </th>
-                            <td>
-                                <input name="FBillNo" id="FBillNo" class="easyui-validatebox textbox" style="width:150px;height:22px;" />
-                            </td>
+ 
+    <script>
 
-                            <th>
-                                项目名称：
-                            </th>
-                            <td>
-                                <input name="FName" id="FName" class="easyui-validatebox textbox" style="width:150px;height:22px;" />
-                            </td>
+        $(function () {
+            //弹出搜索框
+            $("<div/>").dialog({
+                id: "ui_search_dialog",
+                href: "/Project/PMSearch",
+                title: "查询项目",
+                height: 300,
+                width: 550,
+                modal: true,
+                buttons: [{
+                    id: "search_btn",
+                    text: '搜索',
+                    handler: function () {
+                        $.ajax({     //提交数据保存
+                            url: "/Project/PMGanttJson?r=" + Math.random(),
+                            type: "post",
+                            data: {
+                                //"KeyCode": "CreatePMBill",
+                                //"KeyName": "CreatePMBill",
+                                //"ProjectID": $("#ProjectID").val(),
+                                "ProjectNo": $("#ProjectNo").val(),
+                                "ProjectName": $("#ProjectName").val(),
+                                "ProjectManager": $("#ProjectManager").val(),
+                                "ProjectClerk": $("#ProjectClerk").val(),
+                                "txtAddBeginDate": $("#txtAddBeginDate").val(),
+                                "txtAddEndDate": $("#txtAddEndDate").val()
+                            },
+                            dataType: "json",
+                            timeout: 5000,
+                            success: function (data) {                             
+                                $("#ui_search_dialog").dialog('destroy');
+                                //初始化gantt
+                                $(".gantt").gantt({
+                                    source: data.rows,
+                                    navigate: 'scroll',//buttons  scroll
+                                    scale: "weeks",// months  weeks days  hours
+                                    maxScale: "months",
+                                    minScale: "days",
+                                    itemsPerPage: 16,
+                                    // scrollToToday: true,
+                                    dow: ["日", "一", "二", "三", "四", "五", "六"],//dow:["S", "M", "T", "W", "T", "F", "S"],
+                                    onItemClick: function (data) {
+                                        // alert("Item clicked - show some details");
+                                    },
+                                    onAddClick: function (dt, rowId) {
+                                        //alert("Empty space clicked - add an item!");
+                                    },
+                                    onRender: function () {
+                                        if (window.console && typeof console.log === "function") {
+                                            //console.log("chart rendered");
+                                        }
+                                    }
+                                });
 
-                            <th>
-                                项目状态：
-                            </th>
-                            <td>
-                                <select name="FStatus" id="FStatus">
-                                    <option value="select">请选择</option>
-                                    <option value="true">已完成</option>
-                                    <option value="false">未完成</option>
-                                </select>
-                            </td>
-                            
-                        </tr>
-                        <tr>
-                            <th>
-                                项目开始时间：
-                            </th>
-                            <td>
-                                <input name="FPlanCommitDate" id="FPlanCommitDate" class="easyui-datetimebox"
-                                       editable="false" style="width:150px;height:22px;" />
-                            </td>
 
 
-                            <td colspan="4">
-                                <a href="javascript:void(0);" class="easyui-linkbutton" iconcls="icon-search" plain="true"
-                                   onclick="ui_project_searchdata();">搜索</a>
-                                <a href="javascript:void(0);" class="easyui-linkbutton" iconcls="icon-clear" plain="true"
-                                   onclick="ui_project_cleardata();">清空条件</a>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <div data-options="region:'center',border:false">
-                <div class="gantt_ot" style="width: auto; margin:2px auto;">
-                    <div class="gantt"></div>
-                </div>
-
-            </div>
-        </div>
-
-    </body>
-</html>
-
-<script src="~/jQuery.Gantt/gantt1/js/jquery-2.1.4.min.js"></script>
-<script src="~/jQuery.Gantt/gantt1/js/bootstrap.min.js"></script>
-<script src="~/jQuery.Gantt/gantt1/js/jquery.fn.gantt.js" charset="GB2312"></script>
-<script src="~/jQuery.Gantt/gantt1/js/prettify.min.js"></script>
-<script>
-
-    $(function () {
-
-        "use strict";
-
-        //初始化gantt
-        $(".gantt").gantt({
-            source: "PMGanttJson?r=" + Math.random(),
-            //source: [
-
-            //    {
-            //        name: "task  1",
-            //        desc: "",
-            //        values: [{
-            //            from: "/Date(1320192000000)/",
-            //            to: "/Date(1320592000000)/",
-            //            label: "标签label",
-            //            desc:"描述desc",
-            //            customClass: "ganttRed"
-            //        }]
-            //    }, {
-            //        name: "task  2",
-            //        desc: "这是描述",
-            //        values: [{
-            //            from: "/Date(1322611200000)/",
-            //            to: "/Date(1323302400000)/",
-            //            label: "",
-            //            customClass: "ganttRed"
-            //        }]
-            //    }, {
-            //        name: "task  3",
-            //        desc: "",
-            //        values: [{
-            //            from: "/Date(1323802400000)/",
-            //            to: "/Date(1325685200000)/",
-            //            label: "",
-            //            customClass: "ganttGreen"
-            //        }]
-            //    }, {
-            //        name: "task  4",
-            //        desc: "描述",
-            //        values: [{
-            //            from: "/Date(1325685200000)/",
-            //            to: "/Date(1325695200000)/",
-            //            label: "",
-            //            customClass: "ganttBlue"
-            //        }]
-            //    }, {
-            //        name: "task  5",
-            //        desc: "",
-            //        values: [{
-            //            from: "/Date(1326785200000)/",
-            //            to: "/Date(1325785200000)/",
-            //            label: "",
-            //            customClass: "ganttGreen"
-            //        }]
-            //    }, {
-            //        name: "task  6",
-            //        desc: "",
-            //        values: [{
-            //            from: "/Date(1328785200000)/",
-            //            to: "/Date(1328905200000)/",
-            //            label: "",
-            //            customClass: "ganttBlue"
-            //        }]
-            //    }, {
-            //        name: "task  7",
-            //        desc: "",
-            //        values: [{
-            //            from: "/Date(1330011200000)/",
-            //            to: "/Date(1336611200000)/",
-            //            label: "",
-            //            customClass: "ganttOrange"
-            //        }]
-            //    }, {
-            //        name: "task  8",
-            //        desc: "",
-            //        values: [{
-            //            from: "/Date(1336611200000)/",
-            //            to: "/Date(1338711200000)/",
-            //            label: "",
-            //            customClass: "ganttOrange"
-            //        }]
-            //    },
-
-            //    {
-            //        name: "more",
-            //        desc: "",
-            //        values: [
-            //        {
-            //            from: "/Date(1322611200000)/",
-            //            to: "/Date(1323302400000)/",
-            //            label: "",
-            //            customClass: "ganttBlue"
-            //        },
-            //        {
-            //            from: "/Date(1323802400000)/",
-            //            to: "/Date(1325685200000)/",
-            //            label: "",
-            //            customClass: "ganttOrange"
-            //        },
-            //        {
-            //            from: "/Date(1328785200000)/",
-            //            to: "/Date(1328905200000)/",
-            //            label: "",
-            //            customClass: "ganttGreen"
-            //        },
-
-            //        ]
-            //    }],
-            navigate: 'scroll',//buttons  scroll
-            scale: "weeks",// months  weeks days  hours
-            maxScale: "months",
-            minScale: "days",
-            itemsPerPage: 10,
-           // scrollToToday: true,
-            dow: ["日", "一", "二", "三", "四", "五", "六"],//dow:["S", "M", "T", "W", "T", "F", "S"],
-            onItemClick: function (data) {
-                // alert("Item clicked - show some details");
-            },
-            onAddClick: function (dt, rowId) {
-                //alert("Empty space clicked - add an item!");
-            },
-            onRender: function () {
-                if (window.console && typeof console.log === "function") {
-                    //console.log("chart rendered");
+                            },
+                            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                                if (textStatus == "timeout") {
+                                    $.show_alert("提示", "请求超时，请刷新当前页重试！");
+                                }
+                                else {
+                                    $.show_alert("错误", textStatus + "：" + errorThrown);
+                                }
+                            }
+                        })
+                    }
+                }, {
+                    text: '取 消',
+                    handler: function () {
+                        $("#ui_search_dialog").dialog('destroy');
+                    }
+                }],
+                onLoad: function () {
+                  
+                },
+                onClose: function () {
+                    $("#ui_search_dialog").dialog('destroy');  //销毁dialog对象
                 }
-            }
+            });
         });
+
+      
 
 
 
@@ -250,19 +136,34 @@
 
 
         //prettyPrint();
-    });
-
-    //搜索任务单
-    function ui_project_searchdata() {
-    alert("搜索！")
-    }
-    //清除搜索条件
-    function ui_project_cleardata() {
-        $('#ui_user_search input').val('');
-        $('#ui_user_search select').val('select');
-        $('#txtAddBeginDate').datetimebox('setValue', '');
-        $('#txtAddEndDate').datetimebox('setValue', '');
-          }
 
 
-</script>
+        //搜索任务单
+        function ui_project_searchdata() {
+            alert("搜索！")
+        }
+        //清除搜索条件
+        function ui_project_cleardata() {
+            $('#ui_user_search input').val('');
+            $('#ui_user_search select').val('select');
+            $('#txtAddBeginDate').datetimebox('setValue', '');
+            $('#txtAddEndDate').datetimebox('setValue', '');
+        }
+
+
+    </script>
+
+    </head>
+    <body>
+        <div id="ui_user_layout" class="easyui-layout" data-options="fit:true,border:false">          
+            <div data-options="region:'center',border:false">
+             
+                <div class="gantt_ot" style="width: auto; margin:2px auto;">
+                    <div class="gantt"></div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
+

@@ -22,7 +22,7 @@
     </style>
 </head>
 <body>
-    <div class="gantt_ot" style="width:800px; margin:100px auto;">
+    <div class="gantt_ot" style="width:1200px; margin:10px auto;">
         <div class="gantt"></div>
     </div>
 
@@ -37,12 +37,16 @@
 <script>
 
     $(function () {
-
-        "use strict";
-
-        //初始化gantt
+ $.ajax({
+ url:"myproj2.json",
+ data:{},
+ dataType: "json",
+                timeout: 5000,
+                success: function (data) {
+				
+				 //初始化gantt
         $(".gantt").gantt({
-            source:"myproj.json",
+            source:data.rows,
             navigate: 'scroll',//buttons  scroll
             scale: "weeks",// months  weeks days  hours
             maxScale: "months",
@@ -60,17 +64,21 @@
                 }
             }
         });
+				
+				},
+				 error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    if (textStatus == "timeout") {
+                        $.show_alert("提示", "请求超时，请刷新当前页重试！");
+                    }
+                    else {
+                        $.show_alert("错误", textStatus + "：" + errorThrown);
+                    }
+                }
+ });
+       
 
 
 
-        //弹窗功能
-        $(".gantt").popover({
-            selector: ".bar",
-            title: "I'm a popover",
-            content: "And I'm the content of said popover.",
-            trigger: "hover",
-            placement: "auto right"
-        });
 
 
         //prettyPrint();

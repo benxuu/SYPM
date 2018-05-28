@@ -314,11 +314,41 @@ namespace AchieveManageWeb.Controllers
         /// 项目管理甘特图的json数据
         /// </summary>
         /// <returns></returns>
-        public ActionResult PMGanttJson()        {
-    
-            //查找所有项目
-            string sql = "select ProjectID,ProjectNo,ProjectName from tbProject where 1=1";
-            DataTable projectdt = AchieveCommon.SqlHelper.GetDataTable(SqlHelper.connStr, sql);
+        public ActionResult PMGanttJson()        {               
+             string strWhere = "1=1";
+            string sort = Request["sort"] == null ? "CreateTime" : Request["sort"];
+            string order = Request["order"] == null ? "desc" : Request["order"];
+            string view = Request["view"] == null ? "" : Request["view"];
+
+            //首先获取前台传递过来的参数
+            int pageindex = Request["page"] == null ? 1 : Convert.ToInt32(Request["page"]);//输出的数据页码
+            int pagesize = Request["rows"] == null ? 20 : Convert.ToInt32(Request["rows"]);//每页输出数量
+
+             string ProjectNo = Request["ProjectNo"] == null ? "": Request["ProjectNo"];
+                string ProjectName = Request["ProjectName"] == null ? "" : Request["ProjectName"];
+                string ProjectManager = Request["ProjectManager"] == null ? "" : Request["ProjectManager"];
+                string ProjectClerk = Request["ProjectClerk"] == null ? "" : Request["ProjectClerk"];
+            string txtAddBeginDate = Request["txtAddBeginDate"] == null ? "" : Request["txtAddBeginDate"];
+            string txtAddEndDate = Request["txtAddEndDate"] == null ? "" : Request["txtAddEndDate"];
+
+            if (ProjectNo.Trim() != "" && !SqlInjection.GetString(ProjectNo))   //防止sql注入
+                strWhere += string.Format(" and ProjectNo like '%{0}%'", ProjectNo.Trim());
+
+            if (ProjectName.Trim() != "" && !SqlInjection.GetString(ProjectName))   //防止sql注入
+                strWhere += string.Format(" and ProjectName like '%{0}%'", ProjectName.Trim());
+
+            if (ProjectManager.Trim() != "" && !SqlInjection.GetString(ProjectManager))   //防止sql注入
+                strWhere += string.Format(" and ProjectManager = '{0}'", ProjectManager.Trim());
+
+            if (txtAddBeginDate.Trim() != "")
+                strWhere += " and CreateTime > '" + txtAddBeginDate.Trim() + "'";
+               if (txtAddEndDate.Trim() != "")
+                strWhere += " and CreateTime < '" + txtAddEndDate.Trim() + "'";
+
+               int totalCount;   //输出参数 
+               DataTable projectdt = AchieveCommon.SqlPagerHelper.GetPager("tbProject", "ProjectID,ProjectNo,ProjectName,ProjectManager,ProjectClerk,CreateBy,CreateTime,UpdateTime,UpdateBy,Remark", sort + " " + order, pagesize, pageindex, strWhere, out totalCount);
+                
+
             StringBuilder jsonResult = new StringBuilder();
             jsonResult.Append("[");
            
@@ -379,14 +409,15 @@ namespace AchieveManageWeb.Controllers
                 //根据项目对象拼接字符串
 
                  jsonResult.Append("{\"name\":");
-                jsonResult.AppendFormat("\"{0} {1}\",", pi.ProjectNo, pi.ProjectName);
+                jsonResult.AppendFormat("\"{0}\",", pi.ProjectName);
+                //jsonResult.AppendFormat("\"{0} {1}\",", pi.ProjectNo, pi.ProjectName);
                 jsonResult.AppendFormat("\"desc\": \"{0}\",","计划时间");
                 jsonResult.AppendFormat("\"values\":[");
                
                     //商务计划时间
                 jsonResult.AppendFormat("{{\"from\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.business.PSTime).ToString());
                 jsonResult.AppendFormat("\"to\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.business.PETime).ToString());
-                jsonResult.Append("\"label\":\"商务\",\"desc\":\"商务计划\",\"customClass\": \"ganttGreen\"},");
+                jsonResult.Append("\"label\":\"商务\",\"desc\":\"商务计划\",\"customClass\": \"ganttRed\"},");
                 //技术方案计划时间
                 jsonResult.AppendFormat("{{\"from\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.technology.PSTime).ToString());
                 jsonResult.AppendFormat("\"to\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.technology.PETime).ToString());
@@ -394,11 +425,11 @@ namespace AchieveManageWeb.Controllers
                 //设计计划时间
                 jsonResult.AppendFormat("{{\"from\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.design.PSTime).ToString());
                 jsonResult.AppendFormat("\"to\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.design.PETime).ToString());
-                jsonResult.Append("\"label\":\"设计\",\"desc\":\"设计计划\",\"customClass\": \"ganttGreen\"},");
+                jsonResult.Append("\"label\":\"设计\",\"desc\":\"设计计划\",\"customClass\": \"ganttOrange\"},");
                 //生产管理计划时间
                 jsonResult.AppendFormat("{{\"from\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.manufacture.PSTime).ToString());
                 jsonResult.AppendFormat("\"to\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.manufacture.PETime).ToString());
-                jsonResult.Append("\"label\":\"生产\",\"desc\":\"生产计划\",\"customClass\": \"ganttGreen\"},");
+                jsonResult.Append("\"label\":\"生产\",\"desc\":\"生产计划\",\"customClass\": \"ganttRed\"},");
                 //施工计划时间
                 jsonResult.AppendFormat("{{\"from\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.construction.PSTime).ToString());
                 jsonResult.AppendFormat("\"to\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.construction.PETime).ToString());
@@ -406,7 +437,7 @@ namespace AchieveManageWeb.Controllers
                 jsonResult.Append("]},");
                     //实际时间
                 jsonResult.Append("{\"name\":");
-                jsonResult.AppendFormat("\"{0} {1}\",","", "");
+                jsonResult.AppendFormat("\"{0}\",", pi.ProjectNo);
                 jsonResult.AppendFormat("\"desc\": \"{0}\",", "实际时间");
                 jsonResult.AppendFormat("\"values\":[");
                 //商务实际时间
@@ -416,11 +447,11 @@ namespace AchieveManageWeb.Controllers
                 //技术方案实际时间
                 jsonResult.AppendFormat("{{\"from\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.technology.RSTime).ToString());
                 jsonResult.AppendFormat("\"to\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.technology.RETime).ToString());
-                jsonResult.Append("\"label\":\"技术\",\"desc\":\"技术方案实际\",\"customClass\": \"ganttRed\"},");
+                jsonResult.Append("\"label\":\"技术\",\"desc\":\"技术方案实际\",\"customClass\": \"ganttGreen\"},");
                 //设计实际时间
                 jsonResult.AppendFormat("{{\"from\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.design.RSTime).ToString());
                 jsonResult.AppendFormat("\"to\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.design.RETime).ToString());
-                jsonResult.Append("\"label\":\"设计\",\"desc\":\"设计实际\",\"customClass\": \"ganttRed\"},");
+                jsonResult.Append("\"label\":\"设计\",\"desc\":\"设计实际\",\"customClass\": \"ganttOrange\"},");
                 //生产管理实际时间
                 jsonResult.AppendFormat("{{\"from\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.manufacture.RSTime).ToString());
                 jsonResult.AppendFormat("\"to\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.manufacture.RETime).ToString());
@@ -428,7 +459,7 @@ namespace AchieveManageWeb.Controllers
                 //施工实际时间
                 jsonResult.AppendFormat("{{\"from\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.construction.RSTime).ToString());
                 jsonResult.AppendFormat("\"to\": \"{0}\",", DateHelper.DateTimeToMilliseconds(pi.construction.RETime).ToString());
-                jsonResult.Append("\"label\":\"施工\",\"desc\":\"施工实际\",\"customClass\": \"ganttRed\"}");
+                jsonResult.Append("\"label\":\"施工\",\"desc\":\"施工实际\",\"customClass\": \"ganttGreen\"}");
                
                 if (i<projectdt.Rows.Count-1)//判断是否最后行
                 { jsonResult.Append("]},");                   
@@ -440,7 +471,7 @@ namespace AchieveManageWeb.Controllers
 
 
             }
-                return Content( "{\"total\": " + projectdt.Rows.Count.ToString() + ",\"rows\":" + jsonResult.ToString() + "}");
+                return Content("{\"total\": " + totalCount + ",\"rows\":" + jsonResult.ToString() + "}");
                    }
         public class projectNode
         {
@@ -551,6 +582,14 @@ namespace AchieveManageWeb.Controllers
         /// </summary>
         /// <returns></returns>
         public ActionResult PMEdit()
+        {
+            return View();
+        }
+        /// <summary>
+        /// 搜索项目弹出框
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult PMSearch()
         {
             return View();
         }
