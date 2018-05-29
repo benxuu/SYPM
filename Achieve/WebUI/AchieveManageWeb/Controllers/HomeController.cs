@@ -65,7 +65,7 @@ namespace AchieveManageWeb.Controllers
         public ActionResult GetOperWeekAlert()
         {
             //UserEntity uInfo = ViewData["Account"] as UserEntity;
-            int thisweek = DateHelper.GetWeekIndex(DateTime.Now);
+            int thisweek = DateHelper.GetWeekIndex(DateTime.Now)-1;
             string key = Request["key"];//调整前后周，往后调整为负值
             int weekadjust = Request["weekadjust"]==null?0: Convert.ToInt32(Request["weekadjust"]);//调整前后周，往后调整为负值
             if (key=="columns")
@@ -80,7 +80,7 @@ namespace AchieveManageWeb.Controllers
                     //DateHelper.GetMonthofWeek(DateTime.Now.Year, i, out startmonth,out endmonth);
                     DateTime dts, dte;
                     DateHelper.GetWeek(DateTime.Now.Year, i, out dts, out dte);
-                    string daterange = "<br/>" + dts.ToString("MM/dd") + "-" + dte.ToString("MM/dd");
+                    string daterange = "<br/>" + dts.ToString("MM//dd") + "-" + dte.ToString("MM//dd");
 
                     if (i == thisweek)
                     {
