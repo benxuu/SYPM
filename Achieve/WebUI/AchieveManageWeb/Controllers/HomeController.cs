@@ -64,8 +64,11 @@ namespace AchieveManageWeb.Controllers
 
         public ActionResult GetOperWeekAlert()
         {
-            //UserEntity uInfo = ViewData["Account"] as UserEntity;
-            int thisweek = DateHelper.GetWeekIndex(DateTime.Now)-1;
+            int thisweek = DateHelper.GetWeekIndex(DateTime.Now);
+            DateTime startd,endd;
+            DateHelper.GetWeek(DateTime.Now.Year,thisweek,out startd,out endd);
+            System.Diagnostics.Debug.WriteLine("年{0}，本周:{1} --日期:{2}--开始时间:{3}--结束时间{4}",DateTime.Now.Year, thisweek,DateTime.Now, startd,endd);
+
             string key = Request["key"];//调整前后周，往后调整为负值
             int weekadjust = Request["weekadjust"]==null?0: Convert.ToInt32(Request["weekadjust"]);//调整前后周，往后调整为负值
             if (key=="columns")
@@ -76,11 +79,9 @@ namespace AchieveManageWeb.Controllers
                 for (int i = (thisweek + weekadjust - 4) > 0 ? thisweek + weekadjust - 4 : 0; i <= thisweek + weekadjust; i++)
                 {
                     string cname = i.ToString();
-                    //int startmonth, endmonth;
-                    //DateHelper.GetMonthofWeek(DateTime.Now.Year, i, out startmonth,out endmonth);
                     DateTime dts, dte;
                     DateHelper.GetWeek(DateTime.Now.Year, i, out dts, out dte);
-                    string daterange = "<br/>" + dts.ToString("MM//dd") + "-" + dte.ToString("MM//dd");
+                    string daterange = "<br/>" + dts.ToString("MM") + "/" + dts.ToString("dd") + "-" + dte.ToString("MM") + "/" + dte.ToString("dd");
 
                     if (i == thisweek)
                     {
